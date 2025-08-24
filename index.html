@@ -3,9 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamad Adib Tawil - CV</title>
+    <title>Mohamad Adib Tawil - Flutter Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #003d7a;
+            --secondary-color: #0077c2;
+            --accent-color: #28a745;
+            --light-bg: #f9f9f9;
+            --dark-text: #333;
+            --light-text: #666;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+
+        /* Header section */
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-right: 30px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border: 4px solid var(--primary-color);
+            object-fit: cover;
+        }
+
+        .header-info {
+            flex-grow: 1;
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2.2em;
+            color: var(--primary-color);
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: var(--secondary-color);
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95em;
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .icon {
+            color: var(--secondary-color);
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Section styling */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 i {
+            color: var(--secondary-color);
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Project table styling */
+        .project-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .project-table th, .project-table td {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            text-align: left;
+        }
+
+        .project-table th {
+            background-color: #f5f7fa;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .project-name {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Skills section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .skill-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .skill-items {
+            color: var(--light-text);
+        }
+
+        /* Divider */
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 25px 0;
+        }
+
+        /* Link styling */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 900px;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--light-text);
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,48 +298,122 @@
             <img src="Me_blue.jpg" alt="Mohamad Adib Tawil" class="profile-pic">
             <div class="header-info">
                 <h1>Mohamad Adib Tawil</h1>
-                <p>Syria, Aleppo</p>
-                <p>Phone: +963992688759 | Email: <a href="mailto:mat.07.mat.70.mat@gmail.com">mat.07.mat.70.mat@gmail.com</a></p>
-                <p><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> | <a href="https://github.com/mohamadAdibTawil" target="_blank">GitHub</a></p>
+                <div class="title">Flutter Developer</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <a href="mailto:mohamad.adib.tawil@gmail.com">mohamad.adib.tawil@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
+                        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fab fa-github"></i></div>
+                        <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank">GitHub</a>
+                    </div>
+                </div>
             </div>
         </header>
-        <hr>
+
         <section>
-            <h2>Professional Summary</h2>
-            <p>A dedicated and detail-oriented software developer with expertise in Flutter and Dart. Proficient in building and maintaining mobile applications, I have a strong foundation in software engineering principles, particularly in mobile development and architecture design. Passionate about learning and adapting to new technologies, I am seeking opportunities to contribute to a forward-thinking team while advancing my skills in the latest technologies.</p>
+            <h2><i class="fas fa-user"></i> Professional Summary</h2>
+            <p>Passionate Flutter developer with 3 years of experience in building high-quality mobile applications. Skilled in Dart, Flutter, and state management frameworks, with a strong background in clean architecture and API integration. Experienced in publishing apps to Google Play Store and collaborating on innovative projects that reach thousands of users.</p>
         </section>
-        <hr>
+
         <section>
-            <h2>Core Competencies</h2>
+            <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+            <h3>Freelance Flutter Developer (2022 – Present)</h3>
             <ul>
-                <li>Mobile Development: Flutter, Dart, Kotlin (basic knowledge)</li>
-                <li>Architecture & Design: Clean Architecture, SOLID Principles, OOP</li>
-                <li>State Management: BLoC, Cubit, Provider</li>
-                <li>Databases & APIs: Firebase, API Integration, Hive, SQL Server, SQLite</li>
-                <li>Other: Postman, Git/GitHub, Responsive Design, Pagination</li>
-                <li>Theory: Algorithms, Data Structures</li>
+                <li>Developed and published multiple apps on Google Play Store, including live chat and office archiving solutions.</li>
+                <li>Implemented clean architecture and SOLID principles in production apps.</li>
+                <li>Collaborated with clients to design, develop, and deliver tailored mobile solutions.</li>
+                <li>Worked extensively with state management (BLoC, Cubit, Provider) and backend integrations (Firebase, Supabase, Appwrite).</li>
             </ul>
         </section>
-        <hr>
+
         <section>
-            <h2>Projects</h2>
-            <h3>Live Rooms Stream App</h3>
-            <p>A streaming application featuring live chat, profile management, search functionality, and room/profile info editing.Technologies used: RESTful API, BLoC (Cubit), Zego Cloud</p>
-            <h3>Code Book</h3>
-            <p>A mobile application providing access to technical books with features like Clean Architecture, Cubit, Hive, SOLID Principles, and Pagination.</p>
+            <h2><i class="fas fa-code"></i> Selected Projects</h2>
+            <table class="project-table">
+                <tr>
+                    <th>Project</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td class="project-name">Iklk (Live Chat App)</td>
+                    <td>Voice chat app with Zego Cloud integration, supporting real-time audio rooms, VIP rewards, mic control, and virtual gifting. Published on Google Play Store: <a href="#" target="_blank">Download Link</a></td>
+                </tr>
+                <tr>
+                    <td class="project-name">Werewolf Cars</td>
+                    <td>Car marketplace app for buying and selling vehicles with real-time updates, filters, and secure transactions.</td>
+                </tr>
+                <tr>
+                    <td class="project-name">Code Book</td>
+                    <td>Educational app providing coding tutorials, examples, and recommendations with clean UI.</td>
+                </tr>
+                <tr>
+                    <td class="project-name">Office Archiving</td>
+                    <td>File management app with SQLite integration for organizing, categorizing, and searching documents. Published on Google Play Store: <a href="#" target="_blank">Download Link</a></td>
+                </tr>
+            </table>
         </section>
-        <hr>
+
         <section>
-            <h2>Education</h2>
-            <p>Diploma in Computer Engineering, Technical Institute of Computer, Aleppo</p>
-            <p>Graduation Score: 82.89%</p>
+            <h2><i class="fas fa-tools"></i> Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-title">Mobile Development</div>
+                    <div class="skill-items">Flutter, Dart, Clean Architecture, SOLID Principles</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">State Management</div>
+                    <div class="skill-items">BLoC, Cubit, Provider</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Databases & APIs</div>
+                    <div class="skill-items">Firebase, Supabase, Appwrite, Hive, SQLite, API Integration, REST</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Tools</div>
+                    <div class="skill-items">Git, GitHub, Postman, Responsive UI Design</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Theory</div>
+                    <div class="skill-items">Data Structures, Algorithms, OOP</div>
+                </div>
+            </div>
         </section>
-        <hr>
+
         <section>
-            <h2>Volunteering</h2>
-            <p>Technical Teacher at Aleppo Trust for Development</p>
-            <p>Conducted workshops on building Flutter apps.</p>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <p>University of Aleppo – Diploma in Computer Engineering | Software Engineering (Jun 2020 – Aug 2022)</p>
         </section>
+
+        <section>
+            <h2><i class="fas fa-language"></i> Languages</h2>
+            <p>Arabic (Native), English (Professional)</p>
+        </section>
+
+        <div class="footer">
+            <p>© 2024 Mohamad Adib Tawil | Last updated: August 2025</p>
+        </div>
     </div>
+
+    <script>
+        // Simple animation for page elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('section, .skill-category, .project-table');
+            elements.forEach((element, index) => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(() => {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }, 100 + (index * 100));
+            });
+        });
+    </script>
 </body>
 </html>
