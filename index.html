@@ -1,13 +1,11 @@
-<!-- index.html -->
-<!DOCTYPE html>
+<!-- index.html --><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamad Adib Tawil - Flutter Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #0066cc;
@@ -44,8 +42,6 @@
             font-family: 'Poppins', 'Roboto', sans-serif;
             background-color: var(--light-bg);
             color: var(--dark-text);
-            margin: 0;
-            padding: 0;
             line-height: 1.6;
             transition: var(--transition);
             overflow-x: hidden;
@@ -53,13 +49,11 @@
 
         .container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 20px auto;
             background-color: var(--card-bg);
-            padding: 40px;
+            padding: 20px;
             box-shadow: var(--shadow);
             border-radius: 16px;
-            box-sizing: border-box;
-            transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
@@ -78,10 +72,10 @@
         /* Theme toggle */
         .theme-toggle {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background-color: var(--card-bg);
             box-shadow: var(--shadow);
@@ -102,8 +96,8 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 25px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
             border-bottom: 2px solid var(--border-color);
             position: relative;
             opacity: 0;
@@ -112,10 +106,10 @@
         }
 
         .profile-pic {
-            width: 160px;
-            height: 160px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            margin-right: 30px;
+            margin-right: 25px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
             border: 4px solid var(--primary-color);
             object-fit: cover;
@@ -136,7 +130,7 @@
         h1 {
             margin: 0;
             font-weight: 700;
-            font-size: 2.5em;
+            font-size: 2.2em;
             color: var(--primary-color);
             position: relative;
             display: inline-block;
@@ -158,25 +152,25 @@
         }
 
         .title {
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: var(--secondary-color);
-            margin: 10px 0;
+            margin: 8px 0;
             font-weight: 500;
         }
 
         .contact-info {
-            margin-top: 20px;
+            margin-top: 15px;
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 10px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.95em;
-            padding: 8px 15px;
+            font-size: 0.9em;
+            padding: 6px 12px;
             background-color: rgba(0, 102, 204, 0.1);
             border-radius: 30px;
             transition: var(--transition);
@@ -199,34 +193,34 @@
 
         .icon {
             color: var(--secondary-color);
-            width: 20px;
+            width: 18px;
             text-align: center;
         }
 
         /* Section styling */
         section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         h2 {
-            font-size: 1.8em;
+            font-size: 1.6em;
             color: var(--primary-color);
             border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             position: relative;
         }
 
         h2::before {
             content: '';
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             background-color: var(--accent-color);
             border-radius: 50%;
             display: inline-block;
@@ -234,16 +228,16 @@
 
         h2 i {
             color: var(--secondary-color);
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
 
         h3 {
-            font-size: 1.4em;
-            margin-top: 25px;
-            margin-bottom: 15px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 12px;
             color: var(--primary-color);
             position: relative;
-            padding-left: 15px;
+            padding-left: 12px;
         }
 
         h3::before {
@@ -252,15 +246,16 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            width: 5px;
-            height: 20px;
+            width: 4px;
+            height: 18px;
             background-color: var(--accent-color);
             border-radius: 3px;
         }
 
         p {
-            margin-bottom: 15px;
-            line-height: 1.8;
+            margin-bottom: 12px;
+            line-height: 1.7;
+            font-size: 0.95em;
         }
 
         ul {
@@ -269,10 +264,11 @@
         }
 
         ul li {
-            margin-bottom: 15px;
-            padding-left: 30px;
+            margin-bottom: 12px;
+            padding-left: 25px;
             position: relative;
             transition: var(--transition);
+            font-size: 0.95em;
         }
 
         ul li:hover {
@@ -296,7 +292,7 @@
         .project-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border-radius: 10px;
             overflow: hidden;
@@ -307,9 +303,10 @@
 
         .project-table th, .project-table td {
             border: 1px solid var(--border-color);
-            padding: 18px;
+            padding: 15px;
             text-align: left;
             transition: var(--transition);
+            font-size: 0.95em;
         }
 
         .project-table th {
@@ -356,13 +353,13 @@
         /* Skills section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .skill-category {
             background: rgba(0, 102, 204, 0.05);
-            padding: 20px;
+            padding: 18px;
             border-radius: 12px;
             border-left: 4px solid var(--secondary-color);
             transition: var(--transition);
@@ -378,19 +375,23 @@
         .skill-title {
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.2em;
+            margin-bottom: 12px;
+            font-size: 1.1em;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
         }
 
-        .skill-title i {
+        .skill-percentage {
+            font-weight: 700;
             color: var(--accent-color);
+            font-size: 0.9em;
         }
 
         .skill-items {
             color: var(--light-text);
+            margin-bottom: 10px;
+            font-size: 0.9em;
         }
 
         /* Progress bars for skills */
@@ -427,7 +428,7 @@
             border: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         /* Link styling */
@@ -460,10 +461,10 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 500;
@@ -472,6 +473,7 @@
             overflow: hidden;
             position: relative;
             z-index: 1;
+            font-size: 0.9em;
         }
 
         .btn::before {
@@ -498,46 +500,79 @@
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
-                padding: 25px;
-                margin: 20px;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 12px;
             }
 
             .profile-pic {
-                width: 130px;
-                height: 130px;
+                width: 120px;
+                height: 120px;
                 margin-right: 0;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
 
             header {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                padding-bottom: 15px;
+                margin-bottom: 20px;
             }
 
             .contact-info {
                 justify-content: center;
+                gap: 8px;
+            }
+
+            .contact-item {
+                font-size: 0.85em;
+                padding: 5px 10px;
             }
 
             h1 {
-                font-size: 2em;
+                font-size: 1.8em;
+            }
+
+            .title {
+                font-size: 1.1em;
             }
 
             h2 {
-                font-size: 1.5em;
+                font-size: 1.4em;
+                gap: 10px;
+                padding-bottom: 6px;
+                margin-bottom: 12px;
+            }
+
+            h2::before {
+                width: 6px;
+                height: 6px;
             }
 
             h3 {
-                font-size: 1.2em;
+                font-size: 1.1em;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+
+            p, ul li {
+                font-size: 0.9em;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
             
             .project-table {
                 display: block;
                 overflow-x: auto;
+                font-size: 0.85em;
+            }
+
+            .project-table th, .project-table td {
+                padding: 10px;
             }
 
             .theme-toggle {
@@ -545,6 +580,55 @@
                 right: 10px;
                 width: 40px;
                 height: 40px;
+            }
+
+            .skill-category {
+                padding: 15px;
+            }
+
+            .skill-title {
+                font-size: 1em;
+            }
+
+            .skill-items {
+                font-size: 0.85em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+            
+            h3 {
+                font-size: 1.1em;
+            }
+            
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .project-table {
+                font-size: 0.8em;
+            }
+            
+            .project-table th, .project-table td {
+                padding: 8px;
             }
         }
 
@@ -556,10 +640,10 @@
 
         .footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
             color: var(--light-text);
-            font-size: 0.9em;
-            padding-top: 20px;
+            font-size: 0.85em;
+            padding-top: 15px;
             border-top: 1px solid var(--border-color);
         }
 
@@ -604,10 +688,10 @@
         /* Scroll to top button */
         .scroll-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             color: white;
@@ -685,66 +769,83 @@
 
         <section id="projects">
             <h2><i class="fas fa-code"></i> Selected Projects</h2>
-            <table class="project-table">
-                <tr>
-                    <th>Project</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td class="project-name">Iklk (Live Chat App)</td>
-                    <td>Voice chat app with Zego Cloud integration, supporting real-time audio rooms, VIP rewards, mic control, and virtual gifting. Published on Google Play Store: <a href="#" target="_blank">Download Link</a></td>
-                </tr>
-                <tr>
-                    <td class="project-name">Werewolf Cars</td>
-                    <td>Car marketplace app for buying and selling vehicles with real-time updates, filters, and secure transactions.</td>
-                </tr>
-                <tr>
-                    <td class="project-name">Code Book</td>
-                    <td>Educational app providing coding tutorials, examples, and recommendations with clean UI.</td>
-                </tr>
-                <tr>
-                    <td class="project-name">Office Archiving</td>
-                    <td>File management app with SQLite integration for organizing, categorizing, and searching documents. Published on Google Play Store: <a href="#" target="_blank">Download Link</a></td>
-                </tr>
-            </table>
+            <div style="overflow-x: auto;">
+                <table class="project-table">
+                    <tr>
+                        <th>Project</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td class="project-name">Iklk (Live Chat App)</td>
+                        <td>Voice chat app with Zego Cloud integration, supporting real-time audio rooms, VIP rewards, mic control, and virtual gifting. Published on Google Play Store: <a href="#" target="_blank">Download Link</a></td>
+                    </tr>
+                    <tr>
+                        <td class="project-name">Werewolf Cars</td>
+                        <td>Car marketplace app for buying and selling vehicles with real-time updates, filters, and secure transactions.</td>
+                    </tr>
+                    <tr>
+                        <td class="project-name">Code Book</td>
+                        <td>Educational app providing coding tutorials, examples, and recommendations with clean UI.</td>
+                    </tr>
+                    <tr>
+                        <td class="project-name">Office Archiving</td>
+                        <td>File management app with SQLite integration for organizing, categorizing, and searching documents. Published on Google Play Store: <a href="#" target="_blank">Download Link</a></td>
+                    </tr>
+                </table>
+            </div>
         </section>
 
         <section id="skills">
             <h2><i class="fas fa-tools"></i> Core Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <div class="skill-title"><i class="fas fa-mobile-alt"></i> Mobile Development</div>
+                    <div class="skill-title">
+                        <span><i class="fas fa-mobile-alt"></i> Mobile Development</span>
+                        <span class="skill-percentage">100%</span>
+                    </div>
                     <div class="skill-items">Flutter, Dart, Clean Architecture, SOLID Principles</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">
+                        <span><i class="fas fa-sitemap"></i> State Management</span>
+                        <span class="skill-percentage">97%</span>
+                    </div>
+                    <div class="skill-items">BLoC, Cubit, Provider</div>
                     <div class="skill-bar">
                         <div class="skill-progress" data-width="97%"></div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <div class="skill-title"><i class="fas fa-sitemap"></i> State Management</div>
-                    <div class="skill-items">BLoC, Cubit, Provider</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95%"></div>
+                    <div class="skill-title">
+                        <span><i class="fas fa-database"></i> Databases & APIs</span>
+                        <span class="skill-percentage">96%</span>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-title"><i class="fas fa-database"></i> Databases & APIs</div>
                     <div class="skill-items">Firebase, Supabase, Appwrite, Hive, SQLite, API Integration, REST</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="93%"></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-title"><i class="fas fa-wrench"></i> Tools</div>
-                    <div class="skill-items">Git, GitHub, Postman, Responsive UI Design</div>
                     <div class="skill-bar">
                         <div class="skill-progress" data-width="96%"></div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <div class="skill-title"><i class="fas fa-brain"></i> Theory</div>
+                    <div class="skill-title">
+                        <span><i class="fas fa-wrench"></i> Tools</span>
+                        <span class="skill-percentage">98%</span>
+                    </div>
+                    <div class="skill-items">Git, GitHub, Postman, Responsive UI Design</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="98%"></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">
+                        <span><i class="fas fa-brain"></i> Theory</span>
+                        <span class="skill-percentage">92%</span>
+                    </div>
                     <div class="skill-items">Data Structures, Algorithms, OOP</div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-width="90%"></div>
+                        <div class="skill-progress" data-width="92%"></div>
                     </div>
                 </div>
             </div>
@@ -836,17 +937,17 @@
 
             // Create particles background
             const particlesContainer = document.getElementById('particles');
-            const numberOfParticles = 30;
+            const numberOfParticles = 20;
             
             for (let i = 0; i < numberOfParticles; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 
-                const size = Math.random() * 20 + 5;
+                const size = Math.random() * 15 + 5;
                 const posX = Math.random() * 100;
                 const posY = Math.random() * 100;
                 const delay = Math.random() * 10;
-                const duration = Math.random() * 20 + 10;
+                const duration = Math.random() * 15 + 10;
                 
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
