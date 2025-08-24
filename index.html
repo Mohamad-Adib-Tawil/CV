@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,34 +7,94 @@
     <title>Mohamad Adib Tawil - Flutter Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #003d7a;
-            --secondary-color: #0077c2;
+            --primary-color: #0066cc;
+            --secondary-color: #004d99;
             --accent-color: #28a745;
             --light-bg: #f9f9f9;
             --dark-text: #333;
             --light-text: #666;
             --border-color: #e0e0e0;
+            --card-bg: #ffffff;
+            --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
         }
-        
+
+        .dark-mode {
+            --primary-color: #4d94ff;
+            --secondary-color: #99c2ff;
+            --accent-color: #33cc33;
+            --light-bg: #121212;
+            --dark-text: #e0e0e0;
+            --light-text: #a0a0a0;
+            --border-color: #333333;
+            --card-bg: #1e1e1e;
+            --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', 'Roboto', sans-serif;
             background-color: var(--light-bg);
             color: var(--dark-text);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             line-height: 1.6;
+            transition: var(--transition);
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+            max-width: 1100px;
+            margin: 40px auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            border-radius: 16px;
             box-sizing: border-box;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            z-index: 1;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(30deg);
         }
 
         /* Header section */
@@ -41,19 +102,31 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
             border-bottom: 2px solid var(--border-color);
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         .profile-pic {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             margin-right: 30px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
             border: 4px solid var(--primary-color);
             object-fit: cover;
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
         }
 
         .header-info {
@@ -63,19 +136,36 @@
         h1 {
             margin: 0;
             font-weight: 700;
-            font-size: 2.2em;
+            font-size: 2.5em;
             color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: width 0.5s ease;
+        }
+
+        h1:hover::after {
+            width: 100%;
         }
 
         .title {
-            font-size: 1.3em;
+            font-size: 1.4em;
             color: var(--secondary-color);
-            margin: 5px 0;
+            margin: 10px 0;
             font-weight: 500;
         }
 
         .contact-info {
-            margin-top: 15px;
+            margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
@@ -86,17 +176,25 @@
             align-items: center;
             gap: 8px;
             font-size: 0.95em;
+            padding: 8px 15px;
+            background-color: rgba(0, 102, 204, 0.1);
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
         .contact-item a {
             color: var(--primary-color);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: var(--transition);
         }
 
         .contact-item a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
+            color: var(--accent-color);
         }
 
         .icon {
@@ -107,29 +205,62 @@
 
         /* Section styling */
         section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         h2 {
-            font-size: 1.6em;
+            font-size: 1.8em;
             color: var(--primary-color);
             border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 15px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: inline-block;
         }
 
         h2 i {
             color: var(--secondary-color);
+            font-size: 1.2em;
         }
 
         h3 {
-            font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
             color: var(--primary-color);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 20px;
+            background-color: var(--accent-color);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
         }
 
         ul {
@@ -138,36 +269,83 @@
         }
 
         ul li {
-            margin-bottom: 12px;
-            padding-left: 25px;
+            margin-bottom: 15px;
+            padding-left: 30px;
             position: relative;
+            transition: var(--transition);
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
         }
 
         ul li:before {
-            content: "•";
-            color: var(--secondary-color);
+            content: "▸";
+            color: var(--accent-color);
             font-weight: bold;
             position: absolute;
             left: 0;
+            transition: var(--transition);
+        }
+
+        ul li:hover:before {
+            transform: scale(1.3);
         }
 
         /* Project table styling */
         .project-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         .project-table th, .project-table td {
             border: 1px solid var(--border-color);
-            padding: 15px;
+            padding: 18px;
             text-align: left;
+            transition: var(--transition);
         }
 
         .project-table th {
-            background-color: #f5f7fa;
+            background-color: rgba(0, 102, 204, 0.1);
             color: var(--primary-color);
             font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-table th::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .project-table th:hover::after {
+            transform: translateX(0);
+        }
+
+        .project-table tr {
+            transition: var(--transition);
+        }
+
+        .project-table tr:hover {
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .project-table tr:hover td {
+            transform: translateX(5px);
         }
 
         .project-name {
@@ -179,69 +357,154 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
         .skill-category {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
+            background: rgba(0, 102, 204, 0.05);
+            padding: 20px;
+            border-radius: 12px;
             border-left: 4px solid var(--secondary-color);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .skill-title {
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-title i {
+            color: var(--accent-color);
         }
 
         .skill-items {
             color: var(--light-text);
         }
 
+        /* Progress bars for skills */
+        .skill-bar {
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Floating elements */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
         /* Divider */
         hr {
             border: 0;
             height: 1px;
-            background: var(--border-color);
-            margin: 25px 0;
+            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+            margin: 30px 0;
         }
 
         /* Link styling */
         a {
             color: var(--primary-color);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
         }
 
         a:hover {
-            color: var(--secondary-color);
+            color: var(--accent-color);
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: var(--primary-color);
+            gap: 10px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
+            padding: 12px 25px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 500;
-            transition: background 0.3s;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            transition: width 0.6s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
         }
 
         .btn:hover {
-            background: var(--secondary-color);
-            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+                margin: 20px;
+            }
+
             .profile-pic {
-                width: 120px;
-                height: 120px;
+                width: 130px;
+                height: 130px;
                 margin-right: 0;
                 margin-bottom: 20px;
             }
@@ -257,11 +520,11 @@
             }
 
             h1 {
-                font-size: 1.8em;
+                font-size: 2em;
             }
 
             h2 {
-                font-size: 1.4em;
+                font-size: 1.5em;
             }
 
             h3 {
@@ -276,26 +539,114 @@
                 display: block;
                 overflow-x: auto;
             }
+
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+            }
         }
 
         @media (min-width: 1200px) {
             .container {
-                max-width: 900px;
+                max-width: 1100px;
             }
         }
 
         .footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
             color: var(--light-text);
             font-size: 0.9em;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Particles background */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(145deg, var(--primary-color), var(--accent-color));
+            opacity: 0.3;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes particles {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
+                border-radius: 50%;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 40%;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
+    <div class="particles-container" id="particles"></div>
+    
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <div class="container">
-        <header>
-            <img src="Me_blue.jpg" alt="Mohamad Adib Tawil" class="profile-pic">
+        <header id="header">
+            <img src="Me_blue.jpg" alt="Mohamad Adib Tawil" class="profile-pic floating">
             <div class="header-info">
                 <h1>Mohamad Adib Tawil</h1>
                 <div class="title">Flutter Developer</div>
@@ -316,12 +667,12 @@
             </div>
         </header>
 
-        <section>
+        <section id="summary">
             <h2><i class="fas fa-user"></i> Professional Summary</h2>
             <p>Passionate Flutter developer with 3 years of experience in building high-quality mobile applications. Skilled in Dart, Flutter, and state management frameworks, with a strong background in clean architecture and API integration. Experienced in publishing apps to Google Play Store and collaborating on innovative projects that reach thousands of users.</p>
         </section>
 
-        <section>
+        <section id="experience">
             <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
             <h3>Freelance Flutter Developer (2022 – Present)</h3>
             <ul>
@@ -332,7 +683,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="projects">
             <h2><i class="fas fa-code"></i> Selected Projects</h2>
             <table class="project-table">
                 <tr>
@@ -358,38 +709,53 @@
             </table>
         </section>
 
-        <section>
+        <section id="skills">
             <h2><i class="fas fa-tools"></i> Core Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <div class="skill-title">Mobile Development</div>
+                    <div class="skill-title"><i class="fas fa-mobile-alt"></i> Mobile Development</div>
                     <div class="skill-items">Flutter, Dart, Clean Architecture, SOLID Principles</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="97%"></div>
+                    </div>
                 </div>
                 <div class="skill-category">
-                    <div class="skill-title">State Management</div>
+                    <div class="skill-title"><i class="fas fa-sitemap"></i> State Management</div>
                     <div class="skill-items">BLoC, Cubit, Provider</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
                 </div>
                 <div class="skill-category">
-                    <div class="skill-title">Databases & APIs</div>
+                    <div class="skill-title"><i class="fas fa-database"></i> Databases & APIs</div>
                     <div class="skill-items">Firebase, Supabase, Appwrite, Hive, SQLite, API Integration, REST</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="93%"></div>
+                    </div>
                 </div>
                 <div class="skill-category">
-                    <div class="skill-title">Tools</div>
+                    <div class="skill-title"><i class="fas fa-wrench"></i> Tools</div>
                     <div class="skill-items">Git, GitHub, Postman, Responsive UI Design</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="96%"></div>
+                    </div>
                 </div>
                 <div class="skill-category">
-                    <div class="skill-title">Theory</div>
+                    <div class="skill-title"><i class="fas fa-brain"></i> Theory</div>
                     <div class="skill-items">Data Structures, Algorithms, OOP</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section id="education">
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <p>University of Aleppo – Diploma in Computer Engineering | Software Engineering (Jun 2020 – Aug 2022)</p>
         </section>
 
-        <section>
+        <section id="languages">
             <h2><i class="fas fa-language"></i> Languages</h2>
             <p>Arabic (Native), English (Professional)</p>
         </section>
@@ -400,19 +766,123 @@
     </div>
 
     <script>
-        // Simple animation for page elements
         document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('section, .skill-category, .project-table');
-            elements.forEach((element, index) => {
-                element.style.opacity = "0";
-                element.style.transform = "translateY(20px)";
-                element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-                
-                setTimeout(() => {
-                    element.style.opacity = "1";
-                    element.style.transform = "translateY(0)";
-                }, 100 + (index * 100));
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('i');
+            
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
             });
+
+            // Scroll animations
+            const elementsToAnimate = document.querySelectorAll('section, .project-table, .skill-category, header');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('fade-in');
+                        }, 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Animate skill bars
+            const skillBars = document.querySelectorAll('.skill-progress');
+            const skillsSection = document.getElementById('skills');
+            
+            const skillsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        skillBars.forEach(bar => {
+                            const width = bar.getAttribute('data-width');
+                            bar.style.width = width;
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            skillsObserver.observe(skillsSection);
+
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+            
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Create particles background
+            const particlesContainer = document.getElementById('particles');
+            const numberOfParticles = 30;
+            
+            for (let i = 0; i < numberOfParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 20 + 5;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 10;
+                const duration = Math.random() * 20 + 10;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}vw`;
+                particle.style.top = `${posY}vh`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+
+            // Add subtle typing effect to name
+            const nameElement = document.querySelector('h1');
+            const originalName = nameElement.textContent;
+            nameElement.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < originalName.length) {
+                    nameElement.textContent += originalName.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            
+            // Start typing effect when header is in view
+            const headerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        typeWriter();
+                        headerObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            headerObserver.observe(document.getElementById('header'));
         });
     </script>
 </body>
