@@ -73,12 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
   });
 
-  // Scroll animations
+  // Scroll animations with stagger effect
   const elementsToAnimate = document.querySelectorAll('section, .project-table, .skill-category, header');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        setTimeout(() => { entry.target.classList.add('fade-in'); }, 100);
+        const delay = entry.target.classList.contains('skill-category') ? index * 100 : 100;
+        setTimeout(() => { entry.target.classList.add('fade-in'); }, delay);
       }
     });
   }, { threshold: 0.1 });
@@ -240,6 +241,47 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   if ('requestIdleCallback' in window) requestIdleCallback(createParticles);
   else setTimeout(createParticles, 0);
+
+  // Animated counter for stats
+  const animateCounter = (element, target, duration = 2000) => {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        element.textContent = target >= 1000 ? `${(target/1000).toFixed(1)}K+` : `${target}+`;
+        clearInterval(timer);
+      } else {
+        const display = current >= 1000 ? `${(current/1000).toFixed(1)}K` : Math.floor(current);
+        element.textContent = display;
+      }
+    }, 16);
+  };
+
+  // Observe stats section for counter animation
+  const statsSection = document.querySelector('.stats-section');
+  if (statsSection) {
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = document.querySelectorAll('.stat-number');
+          statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'));
+            animateCounter(stat, target);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statsObserver.observe(statsSection);
+  }
+
+  // Update current year in footer
+  const yearSpan = document.getElementById('currentYear');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
 
   // Initial adjustments
   updateThemeColorMeta();
