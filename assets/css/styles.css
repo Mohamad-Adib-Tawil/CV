@@ -26,6 +26,7 @@
   --border-color: #333333;
   --card-bg: #1e1e1e;
   --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(30, 30, 30, 0.55);
   --glass-border: rgba(255, 255, 255, 0.08);
 }
 
@@ -100,6 +101,28 @@ body.theme-midnight {
   --blob-2: radial-gradient(closest-side, rgba(167,139,250,0.35), transparent);
   --tint-weak: rgba(96,165,250,0.10);
   --tint-strong: rgba(167,139,250,0.14);
+}
+
+/* Royal Gold: two gold hues for a luxurious gradient */
+body.theme-royal {
+  --primary-color: #d4af37; /* metallic gold */
+  --secondary-color: #374151; /* slate-700 for contrast */
+  --accent-color: #b8860b; /* dark goldenrod */
+  --blob-1: radial-gradient(closest-side, rgba(212,175,55,0.35), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(184,134,11,0.35), transparent);
+  --tint-weak: rgba(212,175,55,0.08);
+  --tint-strong: rgba(184,134,11,0.12);
+}
+
+/* Silver: sleek, professional metallics */
+body.theme-silver {
+  --primary-color: #6b7280; /* slate-500 (steel) */
+  --secondary-color: #cbd5e1; /* slate-300 */
+  --accent-color: #d1d5db; /* gray-300 */
+  --blob-1: radial-gradient(closest-side, rgba(107,114,128,0.35), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(209,213,219,0.35), transparent);
+  --tint-weak: rgba(209,213,219,0.10);
+  --tint-strong: rgba(107,114,128,0.12);
 }
 
 * {
