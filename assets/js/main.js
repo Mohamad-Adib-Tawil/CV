@@ -57,10 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Theme presets switcher
   const presetSelect = document.getElementById('themePreset');
   const applyPreset = (preset) => {
-    document.body.classList.remove('theme-blue','theme-purple','theme-teal');
+    document.body.classList.remove('theme-blue','theme-purple','theme-teal','theme-slate','theme-navy','theme-emerald','theme-midnight');
     switch (preset) {
       case 'purple': document.body.classList.add('theme-purple'); break;
       case 'teal': document.body.classList.add('theme-teal'); break;
+      case 'slate': document.body.classList.add('theme-slate'); break;
+      case 'navy': document.body.classList.add('theme-navy'); break;
+      case 'emerald': document.body.classList.add('theme-emerald'); break;
+      case 'midnight': document.body.classList.add('theme-midnight'); break;
       default: document.body.classList.add('theme-blue');
     }
   };
@@ -68,11 +72,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const savedPreset = localStorage.getItem('themePreset') || 'blue';
   applyPreset(savedPreset);
   if (presetSelect) presetSelect.value = savedPreset;
+  // If midnight preset is selected, ensure dark mode is active
+  if (savedPreset === 'midnight' && !document.body.classList.contains('dark-mode')) {
+    document.body.classList.add('dark-mode');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+    themeToggle.setAttribute('aria-pressed', 'true');
+    localStorage.setItem('theme', 'dark');
+  }
   if (presetSelect) {
     presetSelect.addEventListener('change', (e) => {
       const val = e.target.value;
       applyPreset(val);
       localStorage.setItem('themePreset', val);
+      if (val === 'midnight') {
+        // Force dark mode for midnight
+        if (!document.body.classList.contains('dark-mode')) {
+          document.body.classList.add('dark-mode');
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+          themeToggle.setAttribute('aria-pressed', 'true');
+        }
+        localStorage.setItem('theme', 'dark');
+      }
     });
   }
 
