@@ -54,6 +54,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
   sections.forEach(sec => spyObserver.observe(sec));
 
+  // Theme presets switcher
+  const presetSelect = document.getElementById('themePreset');
+  const applyPreset = (preset) => {
+    document.body.classList.remove('theme-blue','theme-purple','theme-teal');
+    switch (preset) {
+      case 'purple': document.body.classList.add('theme-purple'); break;
+      case 'teal': document.body.classList.add('theme-teal'); break;
+      default: document.body.classList.add('theme-blue');
+    }
+  };
+  // Load saved preset (default blue)
+  const savedPreset = localStorage.getItem('themePreset') || 'blue';
+  applyPreset(savedPreset);
+  if (presetSelect) presetSelect.value = savedPreset;
+  if (presetSelect) {
+    presetSelect.addEventListener('change', (e) => {
+      const val = e.target.value;
+      applyPreset(val);
+      localStorage.setItem('themePreset', val);
+    });
+  }
+
+  // Header parallax on scroll (subtle)
+  const headerEl = document.getElementById('header');
+  if (headerEl) {
+    window.addEventListener('scroll', () => {
+      const offset = Math.min(window.scrollY, 200);
+      headerEl.style.transform = `translateY(${offset * 0.05}px)`;
+    }, { passive: true });
+  }
+
   // Animate skill bars
   const skillBars = document.querySelectorAll('.skill-progress');
   const skillsSection = document.getElementById('skills');
