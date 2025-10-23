@@ -714,20 +714,89 @@
                 transition: none !important;
             }
         }
-    </style>
+            /* Accessible focus styles */
+            a:focus-visible,
+            button:focus-visible,
+            .btn:focus-visible,
+            .contact-item a:focus-visible,
+            .top-nav a:focus-visible {
+                outline: 2px solid var(--accent-color);
+                outline-offset: 2px;
+            }
+
+            /* Reset default button look for custom UI controls */
+            .theme-toggle,
+            .scroll-to-top {
+                border: 0;
+                background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+                color: white;
+            }
+
+            /* Skip link */
+            .skip-link {
+                position: absolute;
+                left: -9999px;
+                top: auto;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            .skip-link:focus {
+                left: 15px;
+                top: 15px;
+                width: auto;
+                height: auto;
+                background: var(--card-bg);
+                color: var(--primary-color);
+                padding: 10px 14px;
+                border-radius: 8px;
+                box-shadow: var(--shadow);
+                z-index: 1001;
+            }
+
+            /* Top navigation */
+            .top-nav {
+                display: flex;
+                gap: 14px;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+            }
+            .top-nav a {
+                font-size: 0.9em;
+                color: var(--primary-color);
+                padding: 6px 10px;
+                border-radius: 20px;
+                background: rgba(0, 102, 204, 0.08);
+            }
+            .top-nav a:hover {
+                color: var(--accent-color);
+            }
+
+            html { scroll-behavior: smooth; }
+        </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="particles-container" id="particles"></div>
     
-    <div class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </div>
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
 
-    <div class="scroll-to-top" id="scrollToTop">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <button type="button" class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
+    <main id="main">
     <div class="container">
+        <nav class="top-nav" aria-label="Primary">
+            <a href="#summary">Summary</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#languages">Languages</a>
+        </nav>
         <header id="header">
             <img src="https://avatars.githubusercontent.com/u/223110350?s=400&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4" alt="Mohamad Adib Tawil" class="profile-pic floating" width="140" height="140" decoding="async" fetchpriority="high" loading="eager">
             <div class="header-info">
@@ -770,10 +839,13 @@
             <h2><i class="fas fa-code"></i> Selected Projects</h2>
             <div style="overflow-x: auto;">
                 <table class="project-table">
-                    <tr>
-                        <th>Project</th>
-                        <th>Description</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Project</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td class="project-name">Iklk (Live Chat App)</td>
                         <td>Voice chat app with Zego Cloud integration, supporting real-time audio rooms, VIP rewards, mic control, and virtual gifting. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer">Download Link</a></td>
@@ -790,6 +862,7 @@
                         <td class="project-name">Office Archiving</td>
                         <td>File management app with SQLite integration for organizing, categorizing, and searching documents. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer">Download Link</a></td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -873,6 +946,9 @@
                 document.body.classList.add('dark-mode');
                 themeIcon.classList.remove('fa-moon');
                 themeIcon.classList.add('fa-sun');
+                themeToggle.setAttribute('aria-pressed', 'true');
+            } else {
+                themeToggle.setAttribute('aria-pressed', 'false');
             }
             
             themeToggle.addEventListener('click', () => {
@@ -881,10 +957,12 @@
                     themeIcon.classList.remove('fa-moon');
                     themeIcon.classList.add('fa-sun');
                     localStorage.setItem('theme', 'dark');
+                    themeToggle.setAttribute('aria-pressed', 'true');
                 } else {
                     themeIcon.classList.remove('fa-sun');
                     themeIcon.classList.add('fa-moon');
                     localStorage.setItem('theme', 'light');
+                    themeToggle.setAttribute('aria-pressed', 'false');
                 }
             });
 
