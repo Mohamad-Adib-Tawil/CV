@@ -1,4 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Helpers
+  const enableThemeTransition = () => {
+    document.body.classList.add('theme-transition');
+    window.setTimeout(() => document.body.classList.remove('theme-transition'), 300);
+  };
+
+  const updateThemeColorMeta = () => {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) return;
+    const cs = getComputedStyle(document.body);
+    const primary = cs.getPropertyValue('--primary-color').trim() || '#0066cc';
+    meta.setAttribute('content', primary);
+  };
+
+  // Simple contrast check (WCAG approx) and adjustment for body text
+  const luminance = (r, g, b) => {
+    const a = [r, g, b].map(v => {
+      v /= 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+  };
+  const parseRGB = (str) => {
+    const m = str.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+    if (!m) return [0,0,0];
+    return [parseInt(m[1],10), parseInt(m[2],10), parseInt(m[3],10)];
+  };
+  const contrastRatio = (rgb1, rgb2) => {
+    const L1 = luminance(rgb1[0], rgb1[1], rgb1[2]);
+    const L2 = luminance(rgb2[0], rgb2[1], rgb2[2]);
+    const light = Math.max(L1, L2) + 0.05;
+    const dark = Math.min(L1, L2) + 0.05;
+    return light / dark;
+  };
+  const updateContrast = () => {
+    const cs = getComputedStyle(document.body);
+    const bodyBg = cs.backgroundColor;
+    const bodyColor = cs.color;
+    const ratio = contrastRatio(parseRGB(bodyBg), parseRGB(bodyColor));
+    if (ratio < 4.5) {
+      // If background is light, force darker text; else force lighter text
+      const [r,g,b] = parseRGB(bodyBg);
+      const L = luminance(r,g,b);
+      const target = L > 0.5 ? '#111111' : '#f5f5f5';
+      document.documentElement.style.setProperty('--dark-text', target);
+    } else {
+      // reset to theme default
+      document.documentElement.style.removeProperty('--dark-text');
+    }
+  };
   // Theme toggle functionality
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = themeToggle.querySelector('i');
@@ -41,7 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
     .filter(Boolean);
 
   const setActive = (id) => {
-    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+    navLinks.forEach(a => {
+      const isActive = a.getAttribute('href') === `#${id}`;
+      a.classList.toggle('active', isActive);
+      if (isActive) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    });
   };
 
   const spyObserver = new IntersectionObserver((entries) => {
@@ -69,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
       case 'midnight': document.body.classList.add('theme-midnight'); break;
       default: document.body.classList.add('theme-blue');
     }
+    updateThemeColorMeta();
+    updateContrast();
   };
   // Load saved preset (default blue)
   let savedPreset = localStorage.getItem('themePreset') || 'blue';
@@ -87,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (presetSelect) {
     presetSelect.addEventListener('change', (e) => {
       const val = e.target.value;
+      enableThemeTransition();
       applyPreset(val);
       localStorage.setItem('themePreset', val);
       if (val === 'midnight') {
@@ -104,12 +162,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Header parallax on scroll (subtle)
   const headerEl = document.getElementById('header');
-  if (headerEl) {
-    window.addEventListener('scroll', () => {
-      const offset = Math.min(window.scrollY, 200);
-      headerEl.style.transform = `translateY(${offset * 0.05}px)`;
-    }, { passive: true });
-  }
+  const reducedMotionMQ = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  const attachParallax = () => {
+    if (!headerEl) return;
+    if (reducedMotionMQ && reducedMotionMQ.matches) {
+      headerEl.style.transform = '';
+      return;
+    }
+    window.addEventListener('scroll', onScrollParallax, { passive: true });
+  };
+  const onScrollParallax = () => {
+    if (!headerEl) return;
+    const offset = Math.min(window.scrollY, 200);
+    headerEl.style.transform = `translateY(${offset * 0.03}px)`; // calmer parallax
+  };
+  if (headerEl) attachParallax();
+  if (reducedMotionMQ) reducedMotionMQ.addEventListener('change', () => {
+    window.removeEventListener('scroll', onScrollParallax);
+    attachParallax();
+  });
 
   // Animate skill bars
   const skillBars = document.querySelectorAll('.skill-progress');
@@ -170,6 +241,14 @@ document.addEventListener('DOMContentLoaded', function() {
   if ('requestIdleCallback' in window) requestIdleCallback(createParticles);
   else setTimeout(createParticles, 0);
 
+  // Initial adjustments
+  updateThemeColorMeta();
+  updateContrast();
+  // Enable theme transition
+  enableThemeTransition();
+  // Set aria-current on initial section link
+  if (sections[0]) setActive(sections[0].id);
+
   // Add subtle typing effect to name
   const nameElement = document.querySelector('h1');
   const originalName = nameElement ? nameElement.textContent : '';
@@ -183,7 +262,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 100);
       }
     }
-    // Start typing effect when header is in view
     const headerObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -192,6 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }, { threshold: 0.5 });
-    headerObserver.observe(document.getElementById('header'));
+    const headerElForTyping = document.getElementById('header');
+    if (headerElForTyping) headerObserver.observe(headerElForTyping);
   }
 });

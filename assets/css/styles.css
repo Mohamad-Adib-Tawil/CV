@@ -134,7 +134,7 @@ body.theme-silver {
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Poppins', 'Roboto', sans-serif;
+  font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
   background-color: var(--light-bg);
   color: var(--dark-text);
   line-height: 1.6;
@@ -154,6 +154,7 @@ body::after {
   opacity: 0.45;
   pointer-events: none;
   animation: blobMove 30s ease-in-out infinite;
+  will-change: transform, filter;
 }
 body::before {
   background: var(--blob-1);
@@ -193,6 +194,11 @@ body::after {
   height: 5px;
   background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   z-index: 1;
+}
+
+/* Smooth theme transition scope */
+.theme-transition * {
+  transition: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
 }
 
 /* Theme toggle */
@@ -520,6 +526,10 @@ a:hover { color: var(--accent-color); }
 .btn:hover::before { width: 100%; }
 
 .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4); }
+.btn:active { transform: translateY(-1px) scale(0.99); }
+
+/* Link micro-interaction */
+a:active { opacity: 0.85; }
 
 /* Scroll to top button */
 .scroll-to-top { position: fixed; bottom: 20px; right: 20px; width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); z-index: 999; border: 0; }
@@ -562,6 +572,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
 }
 .top-nav a:hover { color: var(--accent-color); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
 .top-nav a.active { background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); color: #fff; }
+/* aria-current mirrors active styling for accessibility */
+.top-nav a[aria-current="true"] { background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); color: #fff; }
 /* place print button to the end */
 .top-nav .print-btn { margin-left: auto; }
 .top-nav .theme-switcher { margin-left: auto; display: flex; align-items: center; gap: 8px; }
@@ -580,6 +592,22 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
 
 /* Animation classes */
 .fade-in { opacity: 1 !important; transform: translateY(0) !important; }
+
+/* Projects: responsive cards */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.project-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  transform: translateY(6px);
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+.project-card:hover { transform: translateY(0); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
+.project-card:focus-within { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+.project-card h3 { margin-bottom: 8px; }
+.project-card p { color: var(--light-text); }
 
 /* Experience timeline */
 #experience ul { position: relative; padding-left: 24px; }
@@ -618,6 +646,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
   .project-table tr { display: block; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
   .project-table td { display: block; border: 0; padding: 6px 0; }
   .project-table td.project-name { font-weight: 700; color: var(--primary-color); font-size: 1.05em; margin-bottom: 6px; }
+  /* projects grid collapses to single column nicely */
+  .projects-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
@@ -632,6 +662,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
   section { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
   body::before, body::after { opacity: 0.25; }
   section:hover { transform: none; }
+  body::before, body::after { filter: blur(30px); }
 }
 
 @media (min-width: 1200px) { .container { max-width: 1100px; } }
