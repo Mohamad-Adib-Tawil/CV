@@ -73,8 +73,9 @@
         <header id="header">
             <img src="https://avatars.githubusercontent.com/u/223110350?s=400&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4" alt="Mohamad Adib Tawil" class="profile-pic floating" width="140" height="140" decoding="async" fetchpriority="high" loading="eager">
             <div class="header-info">
-                <h1>Mohamad Adib Tawil</h1>
+                <h1 class="gradient-text">Mohamad Adib Tawil</h1>
                 <div class="title">Flutter Developer</div>
+                <span class="availability-badge">Available for Freelance</span>
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="icon"><i class="fas fa-envelope"></i></div>
@@ -89,8 +90,38 @@
                         <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+                    <a href="mailto:mohamad.adib.tawil@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get in Touch</a>
+                </div>
             </div>
         </header>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt stat-icon"></i>
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-mobile-alt stat-icon"></i>
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Apps Developed</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-download stat-icon"></i>
+                    <div class="stat-number" data-target="5000">0</div>
+                    <div class="stat-label">Total Downloads</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star stat-icon"></i>
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+            </div>
+        </section>
 
         <section id="summary">
             <h2><i class="fas fa-user"></i> Professional Summary</h2>
@@ -120,20 +151,47 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="project-name">Iklk (Live Chat App)</td>
-                        <td>Voice chat app with Zego Cloud integration, supporting real-time audio rooms, VIP rewards, mic control, and virtual gifting. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer">Download Link</a></td>
+                        <td class="project-name">
+                            Iklk (Live Chat App)
+                            <div class="project-tech">
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Zego Cloud</span>
+                                <span class="tech-badge">Firebase</span>
+                            </div>
+                        </td>
+                        <td>Voice chat app with Zego Cloud integration, supporting real-time audio rooms, VIP rewards, mic control, and virtual gifting. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a></td>
                     </tr>
                     <tr>
-                        <td class="project-name">Werewolf Cars</td>
+                        <td class="project-name">
+                            Werewolf Cars
+                            <div class="project-tech">
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">REST API</span>
+                                <span class="tech-badge">SQLite</span>
+                            </div>
+                        </td>
                         <td>Car marketplace app for buying and selling vehicles with real-time updates, filters, and secure transactions.</td>
                     </tr>
                     <tr>
-                        <td class="project-name">Code Book</td>
+                        <td class="project-name">
+                            Code Book
+                            <div class="project-tech">
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Provider</span>
+                            </div>
+                        </td>
                         <td>Educational app providing coding tutorials, examples, and recommendations with clean UI.</td>
                     </tr>
                     <tr>
-                        <td class="project-name">Office Archiving</td>
-                        <td>File management app with SQLite integration for organizing, categorizing, and searching documents. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer">Download Link</a></td>
+                        <td class="project-name">
+                            Office Archiving
+                            <div class="project-tech">
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">SQLite</span>
+                                <span class="tech-badge">BLoC</span>
+                            </div>
+                        </td>
+                        <td>File management app with SQLite integration for organizing, categorizing, and searching documents. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a></td>
                     </tr>
                     </tbody>
                 </table>
@@ -202,9 +260,32 @@
             <p>Arabic (Native), English (Professional)</p>
         </section>
 
-        <div class="footer">
-            <p>© 2024 Mohamad Adib Tawil | Last updated: August 2025</p>
-        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <nav class="footer-nav">
+                        <a href="#summary">Summary</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#skills">Skills</a>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="mailto:mohamad.adib.tawil@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Info</h3>
+                    <p class="footer-text">© <span id="currentYear">2024</span> Mohamad Adib Tawil</p>
+                    <p class="footer-text">Built with ❤️ using HTML, CSS & JavaScript</p>
+                </div>
+            </div>
+        </footer>
     </div>
     </main>
 
