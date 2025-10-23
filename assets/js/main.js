@@ -57,19 +57,23 @@ document.addEventListener('DOMContentLoaded', function() {
   // Theme presets switcher
   const presetSelect = document.getElementById('themePreset');
   const applyPreset = (preset) => {
-    document.body.classList.remove('theme-blue','theme-purple','theme-teal','theme-slate','theme-navy','theme-emerald','theme-midnight');
+    document.body.classList.remove('theme-blue','theme-purple','theme-teal','theme-slate','theme-navy','theme-emerald','theme-midnight','theme-royal','theme-silver');
     switch (preset) {
       case 'purple': document.body.classList.add('theme-purple'); break;
       case 'teal': document.body.classList.add('theme-teal'); break;
       case 'slate': document.body.classList.add('theme-slate'); break;
-      case 'navy': document.body.classList.add('theme-navy'); break;
-      case 'emerald': document.body.classList.add('theme-emerald'); break;
+      case 'navy': document.body.classList.add('theme-royal'); break; // legacy mapping
+      case 'emerald': document.body.classList.add('theme-silver'); break; // legacy mapping
+      case 'royal': document.body.classList.add('theme-royal'); break;
+      case 'silver': document.body.classList.add('theme-silver'); break;
       case 'midnight': document.body.classList.add('theme-midnight'); break;
       default: document.body.classList.add('theme-blue');
     }
   };
   // Load saved preset (default blue)
-  const savedPreset = localStorage.getItem('themePreset') || 'blue';
+  let savedPreset = localStorage.getItem('themePreset') || 'blue';
+  if (savedPreset === 'navy') savedPreset = 'royal';
+  if (savedPreset === 'emerald') savedPreset = 'silver';
   applyPreset(savedPreset);
   if (presetSelect) presetSelect.value = savedPreset;
   // If midnight preset is selected, ensure dark mode is active
