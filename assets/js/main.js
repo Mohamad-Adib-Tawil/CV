@@ -34,6 +34,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }, { threshold: 0.1 });
   elementsToAnimate.forEach(element => observer.observe(element));
 
+  // Scroll spy: highlight active nav link
+  const navLinks = Array.from(document.querySelectorAll('.top-nav a[href^="#"]'));
+  const sections = navLinks
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  const setActive = (id) => {
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+  };
+
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  sections.forEach(sec => spyObserver.observe(sec));
+
   // Animate skill bars
   const skillBars = document.querySelectorAll('.skill-progress');
   const skillsSection = document.getElementById('skills');
