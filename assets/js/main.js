@@ -195,7 +195,39 @@ document.addEventListener('DOMContentLoaded', function() {
       achievements:['Built social audio app supporting 1000+ concurrent users with 99.9% uptime','Published 4 apps on Google Play Store with 1,000+ combined downloads','Implemented advanced offline OCR system processing Arabic & English documents'],
       advancedSkills:['Performance Optimization: Code splitting, lazy loading, memory profiling','Design Patterns: Repository, Singleton, Factory, Observer','Responsive Design: Adaptive layouts for mobile, tablet, web'],
       services:['Full-cycle mobile app development (iOS & Android)','App modernization & performance optimization','Backend integration (Firebase, Supabase, Appwrite, custom APIs)','UI/UX implementation from Figma/Adobe XD','Code review & architecture consultation','App publishing & Play Store optimization'],
-      languagesText:'Arabic (Native), English (Professional)'
+      languagesText:'Arabic (Native), English (Professional)',
+      codebook:{
+        highlightsSummary:'Highlights',
+        techTitle:'Technical Skills',
+        softTitle:'Soft Skills',
+        impactTitle:'Professional Impact',
+        cvEntryTitle:'CV Project Entry',
+        techList:[
+          '[Cross-platform Flutter delivery] Built a production-ready Android/iOS app with flutter_bloc, get_it, and clean architecture layering (presentation, domain, data).',
+          '[Networking & resilience] Integrated Open Library API via dio, custom retry logic, structured failures, and pagination aligned with repository pattern.',
+          '[Local persistence] Engineered offline-first flows using Hive (entity adapters, caching strategies, synchronization hooks).',
+          '[UI/UX execution] Crafted premium theming, responsive layouts, dynamic WebView previews, and custom widgets (CustomAppBar, BookStackListBlocConsumer).',
+          '[DevOps readiness] Automated branding assets (flutter_launcher_icons), prepared store collateral, and maintained pubspec.yaml hygiene for reproducible builds.'
+        ],
+        softList:[
+          '[End-to-end ownership] Guided the project from analysis to launch without hand-offs, proving autonomy.',
+          '[Product thinking] Balanced feature scope, usability, and compliance for Play Store publishing.',
+          '[Problem solving & learning agility] Researched APIs, resolved integration issues, and refined architecture iteratively.',
+          '[Time & risk management] Sequenced tasks (design → implementation → QA → assets) under self-imposed deadlines.',
+          '[Documentation & communication] Produced prompts, descriptions, and deployment notes suitable for stakeholders.'
+        ],
+        impactList:[
+          '[Faster feature delivery] Demonstrates ability to ship complex mobile solutions solo—reducing onboarding risk for employers.',
+          '[Reusable architecture] Provides a template for future content-driven apps (education, media, libraries).',
+          '[User value focus] Blends engineering with polished branding, showing commitment to user engagement and store readiness.'
+        ],
+        cvEntryList:[
+          'Code Book – Cross-platform Flutter reading app (solo project)',
+          'Engineered clean-architecture Flutter app (BLoC, GetIt, Hive) delivering offline-capable Open Library browsing with resilient Dio networking and pagination.',
+          'Designed premium dark UI/UX, integrated WebView previews, and automated icon/theming assets for Play Store launch readiness.',
+          'Led full lifecycle (analysis → design → development → QA → deployment collateral), proving autonomous product delivery.'
+        ]
+      }
     },
     ar: {
       nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
@@ -229,7 +261,39 @@ document.addEventListener('DOMContentLoaded', function() {
       achievements:['بنيت تطبيق صوت اجتماعي يدعم +1000 مستخدم متزامن مع توافرية 99.9%','نشرت 4 تطبيقات على متجر Google Play بإجمالي تنزيلات +1,000','نفّذت نظام OCR متقدمًا دون اتصال لمعالجة النصوص العربية والإنجليزية'],
       advancedSkills:['تحسين الأداء: تقسيم الشيفرة، التحميل الكسول، تحليل الذاكرة','أنماط التصميم: Repository وSingleton وFactory وObserver','تصميم متجاوب: واجهات متكيفة للهواتف والأجهزة اللوحية والويب'],
       services:['تطوير تطبيقات جوال متكامل (iOS وAndroid)','تحديث التطبيقات وتحسين الأداء','تكامل الخلفيات (Firebase وSupabase وAppwrite وواجهات مخصّصة)','تنفيذ واجهات UI/UX من Figma/Adobe XD','مراجعة الشيفرة واستشارات المعمارية','نشر التطبيقات وتحسين ظهورها على Play Store'],
-      languagesText:'العربية (لغة أم)، الإنجليزية (احترافية)'
+      languagesText:'العربية (لغة أم)، الإنجليزية (احترافية)',
+      codebook:{
+        highlightsSummary:'أهم النقاط',
+        techTitle:'المهارات التقنية',
+        softTitle:'المهارات السلوكية',
+        impactTitle:'الأثر المهني',
+        cvEntryTitle:'مدخل مشروع في السيرة',
+        techList:[
+          '[تطوير متعدد المنصات] بناء تطبيق Android/iOS جاهز للإنتاج باستخدام flutter_bloc وget_it وتطبيق الطبقات وفق المعمارية النظيفة (العرض، المجال، البيانات).',
+          '[الشبكات والاعتمادية] دمج Open Library عبر dio مع منطق إعادة المحاولة، معالجة منهجية للأخطاء، وترقيم صفحات مطابق لنمط المستودع.',
+          '[التخزين المحلي] تصميم تدفقات Offline-first باستخدام Hive (محولات الكيانات، استراتيجيات التخزين المؤقت، وخطافات المزامنة).',
+          '[تنفيذ UI/UX] تصميم ثيم مميز، تخطيطات متجاوبة، معاينات WebView ديناميكية، وويدجتات مخصصة (CustomAppBar وBookStackListBlocConsumer).',
+          '[جاهزية DevOps] أتمتة أصول العلامة (flutter_launcher_icons)، تجهيز مواد النشر للمتجر، والحفاظ على نظافة pubspec.yaml لبناءات قابلة للتكرار.'
+        ],
+        softList:[
+          '[ملكية كاملة] قيادة المشروع من التحليل حتى الإطلاق دون تسليمات متتابعة، مما يثبت القدرة على الاعتماد الذاتي.',
+          '[تفكير منتجي] موازنة نطاق الميزات وقابلية الاستخدام والامتثال لمتطلبات نشر Play Store.',
+          '[حل المشكلات وسرعة التعلّم] البحث في الـ APIs، حل مشكلات التكامل، وتحسين المعمارية بشكل تكراري.',
+          '[إدارة الوقت والمخاطر] ترتيب المهام (تصميم → تنفيذ → اختبار جودة → أصول) ضمن مهل ذاتية.',
+          '[توثيق وتواصل] إنتاج وصف ومحاضر ونصوص نشر واضحة مناسبة لأصحاب المصلحة.'
+        ],
+        impactList:[
+          '[تسليم أسرع للميزات] يبرهن القدرة على شحن حلول جوال معقدة بمفردك — مما يقلل مخاطر التأهيل لدى أصحاب العمل.',
+          '[معمارية قابلة لإعادة الاستخدام] تشكّل قالبًا لتطبيقات المحتوى المستقبلية (تعليم، وسائط، مكتبات).',
+          '[تركيز على قيمة المستخدم] يمزج الهندسة مع هوية بصرية مصقولة، ما يعكس التزامًا بالتفاعل وجهوزية النشر.'
+        ],
+        cvEntryList:[
+          'Code Book — تطبيق قراءة متعدد المنصات (مشروع فردي)',
+          'بناء تطبيق Flutter بمعمارية نظيفة (BLoC وGetIt وHive) يوفّر تصفح Open Library مع العمل دون اتصال وشبكات Dio مرنة وترقيم صفحات.',
+          'تصميم واجهة داكنة احترافية مع معاينات WebView وأتمتة الأيقونات/الثيمات لجهوزية النشر على Play Store.',
+          'قيادة دورة الحياة كاملة (تحليل → تصميم → تطوير → ضمان الجودة → مواد النشر) بما يثبت التسليم الذاتي.'
+        ]
+      }
     }
   };
 
@@ -272,6 +336,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const srvUl=document.querySelector('.service-list'); if(srvUl){ srvUl.innerHTML=''; dict.services.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; srvUl.appendChild(li);}); }
     // Languages text
     const lt=document.getElementById('languagesText'); if(lt) lt.textContent=dict.languagesText;
+    // Code Book Highlights
+    const cb=dict.codebook;
+    const hsum=document.getElementById('codebookHighlightsSummary'); if(hsum && cb) hsum.textContent=cb.highlightsSummary;
+    const ttitle=document.getElementById('codebookTechTitle'); if(ttitle && cb) ttitle.textContent=cb.techTitle;
+    const stitle=document.getElementById('codebookSoftTitle'); if(stitle && cb) stitle.textContent=cb.softTitle;
+    const ititle=document.getElementById('codebookImpactTitle'); if(ititle && cb) ititle.textContent=cb.impactTitle;
+    const cvtitle=document.getElementById('codebookCvEntryTitle'); if(cvtitle && cb) cvtitle.textContent=cb.cvEntryTitle;
+    const techUl=document.getElementById('codebookTechList'); if(techUl && cb){ techUl.innerHTML=''; cb.techList.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; techUl.appendChild(li);}); }
+    const softUl=document.getElementById('codebookSoftList'); if(softUl && cb){ softUl.innerHTML=''; cb.softList.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; softUl.appendChild(li);}); }
+    const impUl=document.getElementById('codebookImpactList'); if(impUl && cb){ impUl.innerHTML=''; cb.impactList.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; impUl.appendChild(li);}); }
+    const cvUl=document.getElementById('codebookCvEntryList'); if(cvUl && cb){ cvUl.innerHTML=''; cb.cvEntryList.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; cvUl.appendChild(li);}); }
   };
 
   // Language switcher hookup
