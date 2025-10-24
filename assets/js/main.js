@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Performance: Memory optimization (60% reduction), FPS boost (100%), Adaptive modes',
         'DevOps: CI/CD (GitHub Actions, Fastlane), Flavors, Automated deployments'
       ],
-      education:{heading:'University of Aleppo – Diploma in Computer Engineering, Software Engineering Track (Jun 2020 – Aug 2022)', items:['Relevant Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Software Engineering','Final Project: Helping platform (web, Windows, and mobile app) for education programming by courses similar to Udemy']},
+      education:{heading:'University of Aleppo – Diploma in Computer Engineering, Software Engineering Track (Jun 2020 – Aug 2022) | GPA: 82.89%', items:['Relevant Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Software Engineering','Final Project: Helping platform (web, Windows, and mobile app) for education programming by courses similar to Udemy']},
       achievements:[
         'LKLK: Scaled to 1000+ concurrent users, reduced memory 60%, boosted FPS 100%, achieved 99.9% uptime',
         'Wolfera: Delivered 260+ features across 10 modules with real-time chat and bilingual support',
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'الأداء: تحسين الذاكرة (تقليل 60%)، زيادة FPS (100%)، الأوضاع التكيفية',
         'DevOps: CI/CD (GitHub Actions، Fastlane)، Flavors، النشر الآلي'
       ],
-      education:{heading:'جامعة حلب — دبلوم هندسة حاسبات، مسار هندسة البرمجيات (يونيو 2020 – أغسطس 2022)', items:['مواد ذات صلة: C# وهياكل البيانات والخوارزميات والبرمجة كائنية التوجه وقواعد البيانات وهندسة البرمجيات','مشروع التخرج: منصة مساعدة (ويب وويندوز وتطبيق جوال) لتعلّم البرمجة عبر دورات شبيهة بمنصات مثل Udemy']},
+      education:{heading:'جامعة حلب — دبلوم هندسة حاسبات، مسار هندسة البرمجيات (يونيو 2020 – أغسطس 2022) | المعدل: 82.89%', items:['مواد ذات صلة: C# وهياكل البيانات والخوارزميات والبرمجة كائنية التوجه وقواعد البيانات وهندسة البرمجيات','مشروع التخرج: منصة مساعدة (ويب وويندوز وتطبيق جوال) لتعلّم البرمجة عبر دورات شبيهة بمنصات مثل Udemy']},
       achievements:[
         'LKLK: توسع لـ1000+ مستخدم متزامن، تقليل الذاكرة 60%، زيادة FPS بـ100%، توافرية 99.9%',
         'Wolfera: تسليم 260+ ميزة عبر 10 وحدات مع دردشة فورية ودعم ثنائي اللغة',
