@@ -161,6 +161,131 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // ===== i18n (English / Arabic) =====
+  const i18n = {
+    en: {
+      nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
+      header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',ctaWork:'View My Work',ctaContact:'Get in Touch',print:'Print / PDF'},
+      titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
+      summaryText:'Senior Flutter Developer with 3+ years shipping production-grade apps to 1,000+ active users across social audio, OCR automation, and marketplace domains. Specialized in clean architecture, advanced state management (BLoC/Cubit), and backend integrations (Supabase, Appwrite, Firebase). Proven track record optimizing real-time streaming for 1000+ concurrent users and implementing AI-powered OCR/translation pipelines. Available for freelance projects and full-time remote roles.',
+      experienceRole:'Freelance Flutter Developer (2022 – Present)',
+      experienceList:[
+        'Architected and shipped 4 production apps with 1,000+ total downloads and 4+ average rating on Google Play Store.',
+        'Optimized LKLK social audio app to sustain 1000+ concurrent users with <100ms latency through smart caching and adaptive performance modes.',
+        'Engineered offline Arabic-English OCR pipeline in Office Archiving, reducing processing time by 40% via enhanced preprocessing.',
+        'Implemented Supabase Auth + real-time chat in Wolfera marketplace, increasing user engagement by 60%.',
+        "Collaborated with cross-functional clients to deliver pixel-perfect, multilingual UIs using Flutter's responsive design principles."
+      ],
+      projectsDesc:{
+        iklk:'LKLK is a high-performance social audio arena delivering instant multilingual rooms, synchronized gifting animations, and resilient streaming powered by Zego Cloud, Appwrite, and smart caching. Optimized pipelines, secure storage, and adaptive performance modes sustain buttery engagement for crowds of 1000+, even on constrained devices. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>',
+        wolfera:'Wolfera is the intelligent car marketplace that pairs curated listings with blazing Supabase-backed performance, secure Supabase Auth including Google Sign-In, smart filters, and live buyer-seller chat, creating a multilingual, cross-platform buying and selling experience that closes deals faster with confidence for everyone.',
+        codebook:'Code Book delivers a sleek dark library for tech enthusiasts, curating free open-source titles with smart search and daily recommendations. Personalize reading lists, save favorites offline via Hive caching, preview excerpts, and launch legal reading links instantly, keeping knowledge at your fingertips everywhere you go.',
+        office:'Office Archiving centralizes documents and media into smart sections, delivering advanced offline Arabic-English OCR, enhanced image preprocessing, multi-page PDF handling, comprehensive text search, instant translation and summarization, interactive storage analytics, smooth dark-mode interface, optional result export, and streamlined workflows for everyday archiving tasks. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>'
+      },
+      skillsList:[
+        'Flutter & Dart (Expert) | Clean Architecture & SOLID (Advanced)',
+        'State Management: BLoC, Cubit, Provider (Expert)',
+        'Backend: Supabase, Firebase, Appwrite (Advanced) | REST APIs (Expert)',
+        'Database: Hive, SQLite (Advanced)',
+        'Tools: Git, GitHub, Postman, VS Code, Android Studio',
+        'Specialized: OCR Integration, Real-time Audio Streaming (Zego Cloud), AI/ML Integration'
+      ],
+      education:{heading:'University of Aleppo – Diploma in Computer Engineering, Software Engineering Track (Jun 2020 – Aug 2022)', items:['Relevant Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Software Engineering','Final Project: Helping platform (web, Windows, and mobile app) for education programming by courses similar to Udemy']},
+      achievements:['Built social audio app supporting 1000+ concurrent users with 99.9% uptime','Published 4 apps on Google Play Store with 1,000+ combined downloads','Implemented advanced offline OCR system processing Arabic & English documents'],
+      advancedSkills:['Performance Optimization: Code splitting, lazy loading, memory profiling','Design Patterns: Repository, Singleton, Factory, Observer','Responsive Design: Adaptive layouts for mobile, tablet, web'],
+      services:['Full-cycle mobile app development (iOS & Android)','App modernization & performance optimization','Backend integration (Firebase, Supabase, Appwrite, custom APIs)','UI/UX implementation from Figma/Adobe XD','Code review & architecture consultation','App publishing & Play Store optimization'],
+      languagesText:'Arabic (Native), English (Professional)'
+    },
+    ar: {
+      nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
+      header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',print:'طباعة / PDF'},
+      titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
+      summaryText:'مطوّر Flutter بخبرة تفوق 3 سنوات في بناء تطبيقات إنتاجية تصل إلى أكثر من 1,000 مستخدم نشط في مجالات الصوت الاجتماعي وميكنة OCR والأسواق الإلكترونية. مختص في الهندسة النظيفة وإدارة الحالة المتقدمة (BLoC/Cubit) وتكامل الخلفيات (Supabase وAppwrite وFirebase). سجل مثبت في تحسين البثّ اللحظي لأكثر من 1000 مستخدم متزامن وتنفيذ مسارات OCR/ترجمة مدعومة بالذكاء الاصطناعي. متاح لمشاريع حرة وفرص عمل عن بُعد.',
+      experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
+      experienceList:[
+        'بنيت وأطلقت 4 تطبيقات إنتاجية مع +1,000 تنزيل وتقييم +4 على متجر Google Play.',
+        'حسّنت تطبيق LKLK للصوت الاجتماعي لدعم +1000 مستخدم متزامن بزمن استجابة أقل من 100ms عبر التخزين الذكي وأنماط الأداء التكيفية.',
+        'هندست مسار OCR عربي-إنجليزي للعمل دون اتصال في Office Archiving مع خفض زمن المعالجة بنسبة 40% عبر تحسين ما قبل المعالجة.',
+        'طبّقت Supabase Auth ودردشة فورية في سوق Wolfera مما رفع تفاعل المستخدمين بنسبة 60%.',
+        'تعاونت مع عملاء متعددي الاختصاصات لتنفيذ واجهات متعددة اللغات بدقة عالية وفق مبادئ التصميم المتجاوب.'
+      ],
+      projectsDesc:{
+        iklk:'يوفّر LKLK ساحة صوت اجتماعي عالية الأداء مع غرف فورية متعددة اللغات، ورسوم هدايا متزامنة، وبث مرن يعتمد Zego Cloud وAppwrite والتخزين الذكي. سلاسل معالجة مُحسّنة وتخزين آمن وأنماط أداء تكيُّفية تحافظ على تفاعلٍ سلس مع حشود تفوق 1000 مستخدم حتى على الأجهزة المحدودة. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>',
+        wolfera:'Wolfera هو سوق سيارات ذكي يجمع بين قوائم مُنتقاة وأداء فائق يعتمد Supabase مع مصادقة Supabase الآمنة (بما فيها تسجيل الدخول عبر Google)، ومرشحات ذكية، ودردشة مباشرة بين المشتري والبائع، ليقدّم تجربة شراء وبيع متعددة اللغات وعبر منصّات متعددة تُسرّع إتمام الصفقات بثقة.',
+        codebook:'يوفّر Code Book مكتبة داكنة أنيقة لعشّاق التقنية، ينتقي عناوين مفتوحة المصدر مجانًا مع بحث ذكي وتوصيات يومية. خصّص قوائم القراءة، واحفظ المفضّلة للعمل دون اتصال عبر Hive، وعاين المقتطفات، وافتح روابط القراءة القانونية فورًا لتبقى المعرفة بين يديك أينما ذهبت.',
+        office:'يجمع Office Archiving المستندات والوسائط في أقسام ذكية مع OCR عربي-إنجليزي متقدم دون اتصال، وتحسين مسبق للصور، ودعم PDF متعدد الصفحات، وبحث نصي شامل، وترجمة وتلخيص فوريين، وتحليلات تفاعلية للتخزين، وواجهة داكنة سلسة، وتصدير اختياري للنتائج، ومسارات عمل مبسّطة للمهام اليومية. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>'
+      },
+      skillsList:[
+        'Flutter وDart (خبير) | الهندسة النظيفة وSOLID (متقدم)',
+        'إدارة الحالة: BLoC وCubit وProvider (خبير)',
+        'الخلفيات: Supabase وFirebase وAppwrite (متقدم) | REST APIs (خبير)',
+        'قواعد البيانات: Hive وSQLite (متقدم)',
+        'الأدوات: Git وGitHub وPostman وVS Code وAndroid Studio',
+        'متخصص: تكامل OCR والبث الصوتي اللحظي (Zego Cloud) وتكامل الذكاء الاصطناعي/تعلّم الآلة'
+      ],
+      education:{heading:'جامعة حلب — دبلوم هندسة حاسبات، مسار هندسة البرمجيات (يونيو 2020 – أغسطس 2022)', items:['مواد ذات صلة: C# وهياكل البيانات والخوارزميات والبرمجة كائنية التوجه وقواعد البيانات وهندسة البرمجيات','مشروع التخرج: منصة مساعدة (ويب وويندوز وتطبيق جوال) لتعلّم البرمجة عبر دورات شبيهة بمنصات مثل Udemy']},
+      achievements:['بنيت تطبيق صوت اجتماعي يدعم +1000 مستخدم متزامن مع توافرية 99.9%','نشرت 4 تطبيقات على متجر Google Play بإجمالي تنزيلات +1,000','نفّذت نظام OCR متقدمًا دون اتصال لمعالجة النصوص العربية والإنجليزية'],
+      advancedSkills:['تحسين الأداء: تقسيم الشيفرة، التحميل الكسول، تحليل الذاكرة','أنماط التصميم: Repository وSingleton وFactory وObserver','تصميم متجاوب: واجهات متكيفة للهواتف والأجهزة اللوحية والويب'],
+      services:['تطوير تطبيقات جوال متكامل (iOS وAndroid)','تحديث التطبيقات وتحسين الأداء','تكامل الخلفيات (Firebase وSupabase وAppwrite وواجهات مخصّصة)','تنفيذ واجهات UI/UX من Figma/Adobe XD','مراجعة الشيفرة واستشارات المعمارية','نشر التطبيقات وتحسين ظهورها على Play Store'],
+      languagesText:'العربية (لغة أم)، الإنجليزية (احترافية)'
+    }
+  };
+
+  const applyLanguage = (lang) => {
+    const dict = i18n[lang] || i18n.en;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    // Nav
+    const navMap = [['navSummary','summary'],['navExperience','experience'],['navProjects','projects'],['navSkills','skills'],['navEducation','education'],['navAchievements','achievements'],['navAdvanced','advanced'],['navServices','services'],['navLanguages','languages']];
+    navMap.forEach(([id,key])=>{ const el=document.getElementById(id); if(el) el.textContent = dict.nav[key]; });
+    // Header
+    const jt=document.getElementById('jobTitle'); if(jt) jt.textContent=dict.header.jobTitle;
+    const av=document.getElementById('availabilityBadge'); if(av) av.textContent=dict.header.availability;
+    const ctaW=document.getElementById('ctaWorkText'); if(ctaW) ctaW.textContent=dict.header.ctaWork;
+    const ctaC=document.getElementById('ctaContactText'); if(ctaC) ctaC.textContent=dict.header.ctaContact;
+    const pb=document.getElementById('printBtnText'); if(pb) pb.textContent=dict.header.print;
+    // Titles
+    const titleMap=[['summaryTitle','summary'],['experienceTitle','experience'],['projectsTitle','projects'],['skillsTitle','skills'],['educationTitle','education'],['achievementsTitle','achievements'],['advancedSkillsTitle','advanced'],['servicesTitle','services'],['languagesTitle','languages']];
+    titleMap.forEach(([id,key])=>{const el=document.getElementById(id); if(el){ const icon=el.querySelector('i'); el.textContent=' '+dict.titles[key]; if(icon) el.prepend(icon); }});
+    // Summary
+    const st=document.getElementById('summaryText'); if(st) st.textContent=dict.summaryText;
+    // Experience
+    const er=document.getElementById('experienceRole'); if(er) er.textContent=dict.experienceRole;
+    const elist=document.getElementById('experienceList'); if(elist){ elist.innerHTML=''; dict.experienceList.forEach(item=>{ const li=document.createElement('li'); li.textContent=item; elist.appendChild(li); }); }
+    // Projects descriptions
+    const dI=document.getElementById('descIklk'); if(dI) dI.innerHTML=dict.projectsDesc.iklk;
+    const dW=document.getElementById('descWolfera'); if(dW) dW.innerHTML=dict.projectsDesc.wolfera;
+    const dC=document.getElementById('descCodeBook'); if(dC) dC.innerHTML=dict.projectsDesc.codebook;
+    const dO=document.getElementById('descOffice'); if(dO) dO.innerHTML=dict.projectsDesc.office;
+    // Skills
+    const sList=document.querySelector('.skill-list'); if(sList){ sList.innerHTML=''; dict.skillsList.forEach(s=>{ const li=document.createElement('li'); li.textContent=s; sList.appendChild(li);}); }
+    // Education
+    const edh=document.querySelector('#education h3'); if(edh) edh.textContent=dict.education.heading;
+    const edul=document.querySelector('#education ul'); if(edul){ edul.innerHTML=''; dict.education.items.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; edul.appendChild(li);}); }
+    // Achievements
+    const achUl=document.querySelector('.achievement-list'); if(achUl){ achUl.innerHTML=''; dict.achievements.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; achUl.appendChild(li);}); }
+    // Advanced skills
+    const advUl=document.querySelector('.advanced-skill-list'); if(advUl){ advUl.innerHTML=''; dict.advancedSkills.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; advUl.appendChild(li);}); }
+    // Services
+    const srvUl=document.querySelector('.service-list'); if(srvUl){ srvUl.innerHTML=''; dict.services.forEach(x=>{ const li=document.createElement('li'); li.textContent=x; srvUl.appendChild(li);}); }
+    // Languages text
+    const lt=document.getElementById('languagesText'); if(lt) lt.textContent=dict.languagesText;
+  };
+
+  // Language switcher hookup
+  const langSelect = document.getElementById('langSelect');
+  const savedLang = localStorage.getItem('lang') || 'en';
+  applyLanguage(savedLang);
+  if (langSelect) {
+    langSelect.value = savedLang;
+    langSelect.addEventListener('change', (e)=>{
+      const lang = e.target.value;
+      enableThemeTransition();
+      applyLanguage(lang);
+      localStorage.setItem('lang', lang);
+    });
+  }
+
   // Header parallax on scroll (subtle)
   const headerEl = document.getElementById('header');
   const reducedMotionMQ = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
