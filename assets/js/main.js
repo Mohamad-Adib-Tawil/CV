@@ -585,7 +585,7 @@ li { margin-bottom: 5pt; }
 <body>
 <h1>Mohamad Adib Tawil</h1>
 <div class="contact">
-📧 mohamad.adib.tawil@gmail.com | 🔗 <a href="https://github.com/Mohamad-Adib-Tawil">GitHub</a> | 🌐 <a href="https://www.linkedin.com/">LinkedIn</a>
+📧 mohamad.adib.tawil@gmail.com | 🔗 <a href="https://github.com/Mohamad-Adib-Tawil">GitHub</a> | 🌐 <a href="https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/">LinkedIn</a>
 </div>
 <p><strong>${dict.header.jobTitle}</strong> | ${dict.header.availability}</p>
 
