@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const i18n = {
     en: {
       nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
-      header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',ctaWork:'View My Work',ctaContact:'Get in Touch',print:'Print / PDF',exportWord:'Export Word'},
+      header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',ctaWork:'View My Work',ctaContact:'Get in Touch',print:'Print / PDF',exportWord:'Export Word',exportATS:'ATS Format'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
       summaryText:'Senior Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Available for freelance and full-time remote roles.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     ar: {
       nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
-      header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',print:'طباعة / PDF',exportWord:'تصدير Word'},
+      header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',print:'طباعة / PDF',exportWord:'تصدير Word',exportATS:'صيغة ATS'},
       titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
       summaryText:'مطور Flutter خبير بـ3+ سنوات في تسليم تطبيقات من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للعمل الحر والوظائف عن بُعد.',
       experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
@@ -351,6 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctaC=document.getElementById('ctaContactText'); if(ctaC) ctaC.textContent=dict.header.ctaContact;
     const pb=document.getElementById('printBtnText'); if(pb) pb.textContent=dict.header.print;
     const ewb=document.getElementById('exportWordBtnText'); if(ewb) ewb.textContent=dict.header.exportWord;
+    const atsb=document.getElementById('exportATSBtnText'); if(atsb) atsb.textContent=dict.header.exportATS;
     // Titles
     const titleMap=[['summaryTitle','summary'],['experienceTitle','experience'],['projectsTitle','projects'],['skillsTitle','skills'],['educationTitle','education'],['achievementsTitle','achievements'],['advancedSkillsTitle','advanced'],['servicesTitle','services'],['languagesTitle','languages']];
     titleMap.forEach(([id,key])=>{const el=document.getElementById(id); if(el){ const icon=el.querySelector('i'); el.textContent=' '+dict.titles[key]; if(icon) el.prepend(icon); }});
@@ -655,6 +656,111 @@ ${dict.services.map(s => `  <li>${s}</li>`).join('\n')}
       const link = document.createElement('a');
       link.href = url;
       link.download = `Mohamad_Adib_Tawil_CV_${currentLang.toUpperCase()}.doc`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  // Export ATS-friendly Word (for companies, no freelance)
+  const exportATSBtn = document.getElementById('exportATSBtn');
+  if (exportATSBtn) {
+    exportATSBtn.addEventListener('click', () => {
+      const currentLang = localStorage.getItem('lang') || 'en';
+      const dict = i18n[currentLang];
+      
+      // ATS-optimized content (simple format, keyword-rich, no graphics/icons)
+      let atsContent = `
+<!DOCTYPE html>
+<html>
+<head><meta charset='utf-8'><title>Mohamad Adib Tawil - Flutter Developer</title>
+<style>
+body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.5; margin: 0.5in; ${currentLang === 'ar' ? 'direction: rtl;' : ''} }
+h1 { font-size: 16pt; font-weight: bold; margin-bottom: 5pt; text-transform: uppercase; }
+h2 { font-size: 12pt; font-weight: bold; margin-top: 12pt; margin-bottom: 6pt; text-transform: uppercase; border-bottom: 1pt solid #000; }
+h3 { font-size: 11pt; font-weight: bold; margin-top: 8pt; margin-bottom: 4pt; }
+p, li { margin: 0; padding: 0; }
+ul { margin: 4pt 0; padding-left: ${currentLang === 'ar' ? '0' : '18pt'}; ${currentLang === 'ar' ? 'padding-right: 18pt;' : ''} }
+li { margin-bottom: 3pt; }
+.contact { margin-bottom: 8pt; font-size: 10pt; }
+.section { margin-bottom: 10pt; }
+</style>
+</head>
+<body>
+<h1>MOHAMAD ADIB TAWIL</h1>
+<div class="contact">
+${currentLang === 'ar' ? 'البريد الإلكتروني' : 'Email'}: mohamad.adib.tawil@gmail.com | LinkedIn: linkedin.com/in/mohamad-adib-tawil-54024b314 | GitHub: github.com/Mohamad-Adib-Tawil
+</div>
+
+<div class="section">
+<h2>${currentLang === 'ar' ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY'}</h2>
+<p>${currentLang === 'ar' 
+  ? 'مطور Flutter خبير بـ3+ سنوات في تسليم تطبيقات إنتاجية من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للوظائف بدوام كامل عن بُعد.'
+  : 'Senior Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Seeking full-time remote positions.'}</p>
+</div>
+
+<div class="section">
+<h2>${currentLang === 'ar' ? 'المهارات التقنية' : 'TECHNICAL SKILLS'}</h2>
+<ul>
+${dict.skillsList.map(s => `  <li>${s}</li>`).join('\n')}
+</ul>
+</div>
+
+<div class="section">
+<h2>${currentLang === 'ar' ? 'الخبرة العملية' : 'PROFESSIONAL EXPERIENCE'}</h2>
+<h3>${currentLang === 'ar' ? 'مطوّر Flutter | 2022 – حتى الآن' : 'Flutter Developer | 2022 – Present'}</h3>
+<ul>
+${dict.experienceList.map(item => `  <li>${item}</li>`).join('\n')}
+</ul>
+</div>
+
+<div class="section">
+<h2>${currentLang === 'ar' ? 'المشاريع الرئيسية' : 'KEY PROJECTS'}</h2>
+
+<h3>LKLK - ${currentLang === 'ar' ? 'منصة صوت اجتماعي مباشر' : 'Live Social Audio Platform'}</h3>
+<p>${dict.projectsDesc.iklk.replace(/<[^>]*>/g, '')}</p>
+
+<h3>Wolfera - ${currentLang === 'ar' ? 'سوق إلكتروني للسيارات' : 'Car Marketplace'}</h3>
+<p>${dict.projectsDesc.wolfera.replace(/<[^>]*>/g, '')}</p>
+
+<h3>Office Archiving - ${currentLang === 'ar' ? 'نظام أرشفة مستندات' : 'Document Management System'}</h3>
+<p>${dict.projectsDesc.office.replace(/<[^>]*>/g, '')}</p>
+
+<h3>Code Book - ${currentLang === 'ar' ? 'تطبيق قراءة تقني' : 'Technical Reading App'}</h3>
+<p>${dict.projectsDesc.codebook.replace(/<[^>]*>/g, '')}</p>
+</div>
+
+<div class="section">
+<h2>${currentLang === 'ar' ? 'أهم الإنجازات' : 'KEY ACHIEVEMENTS'}</h2>
+<ul>
+${dict.achievements.map(a => `  <li>${a}</li>`).join('\n')}
+</ul>
+</div>
+
+<div class="section">
+<h2>${currentLang === 'ar' ? 'التعليم' : 'EDUCATION'}</h2>
+<h3>${dict.education.heading}</h3>
+<ul>
+${dict.education.items.map(x => `  <li>${x}</li>`).join('\n')}
+</ul>
+</div>
+
+<div class="section">
+<h2>${currentLang === 'ar' ? 'اللغات' : 'LANGUAGES'}</h2>
+<p>${dict.languagesText}</p>
+</div>
+
+</body>
+</html>`;
+
+      const blob = new Blob(['\ufeff', atsContent], {
+        type: 'application/msword'
+      });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `Mohamad_Adib_Tawil_CV_ATS_${currentLang.toUpperCase()}.doc`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
