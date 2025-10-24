@@ -560,211 +560,202 @@ document.addEventListener('DOMContentLoaded', function() {
     if (headerElForTyping) headerObserver.observe(headerElForTyping);
   }
 
-  // Export to Word functionality
+  // Export to Word functionality (DOCX format)
   const exportWordBtn = document.getElementById('exportWordBtn');
   if (exportWordBtn) {
-    exportWordBtn.addEventListener('click', () => {
+    exportWordBtn.addEventListener('click', async () => {
       const currentLang = localStorage.getItem('lang') || 'en';
       const dict = i18n[currentLang];
       
-      // Build Word-friendly HTML
-      let wordContent = `
-<!DOCTYPE html>
-<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
-<head><meta charset='utf-8'><title>Mohamad Adib Tawil - CV</title>
-<style>
-body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.6; ${currentLang === 'ar' ? 'direction: rtl; text-align: right;' : ''} }
-h1 { font-size: 20pt; font-weight: bold; color: #0066cc; margin-bottom: 5pt; }
-h2 { font-size: 14pt; font-weight: bold; color: #0066cc; margin-top: 15pt; margin-bottom: 10pt; border-bottom: 2px solid #0066cc; }
-h3 { font-size: 12pt; font-weight: bold; margin-top: 10pt; margin-bottom: 5pt; }
-ul { margin: 5pt 0; padding-left: ${currentLang === 'ar' ? '0' : '20pt'}; ${currentLang === 'ar' ? 'padding-right: 20pt;' : ''} }
-li { margin-bottom: 5pt; }
-.contact { margin-bottom: 10pt; }
-.tech-badge { background: #e8f4fd; color: #0066cc; padding: 2pt 6pt; margin: 2pt; border-radius: 3pt; font-size: 9pt; }
-</style>
-</head>
-<body>
-<h1>Mohamad Adib Tawil</h1>
-<div class="contact">
-📧 mohamad.adib.tawil@gmail.com | 🔗 <a href="https://github.com/Mohamad-Adib-Tawil">GitHub</a> | 🌐 <a href="https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/">LinkedIn</a>
-</div>
-<p><strong>${dict.header.jobTitle}</strong> | ${dict.header.availability}</p>
+      if (!window.docx) {
+        alert('DOCX library not loaded. Please refresh the page.');
+        return;
+      }
 
-<h2>${dict.titles.summary}</h2>
-<p>${dict.summaryText}</p>
-
-<h2>${dict.titles.experience}</h2>
-<h3>${dict.experienceRole}</h3>
-<ul>
-${dict.experienceList.map(item => `  <li>${item}</li>`).join('\n')}
-</ul>
-
-<h2>${dict.titles.projects}</h2>
-<h3>LKLK (Live Chat App)</h3>
-<p><span class="tech-badge">Flutter</span> <span class="tech-badge">Zego Cloud</span> <span class="tech-badge">Appwrite</span></p>
-<p>${dict.projectsDesc.iklk.replace(/<a[^>]*>.*?<\/a>/g, '').replace(/<i[^>]*>.*?<\/i>/g, '')}</p>
-
-<h3>Wolfera</h3>
-<p><span class="tech-badge">Flutter</span> <span class="tech-badge">Supabase</span></p>
-<p>${dict.projectsDesc.wolfera}</p>
-
-<h3>Code Book</h3>
-<p><span class="tech-badge">Flutter</span> <span class="tech-badge">Hive</span> <span class="tech-badge">BLoC</span></p>
-<p>${dict.projectsDesc.codebook}</p>
-
-<h3>Office Archiving</h3>
-<p><span class="tech-badge">Flutter</span> <span class="tech-badge">OCR</span> <span class="tech-badge">AI</span></p>
-<p>${dict.projectsDesc.office.replace(/<a[^>]*>.*?<\/a>/g, '').replace(/<i[^>]*>.*?<\/i>/g, '')}</p>
-
-<h2>${dict.titles.skills}</h2>
-<ul>
-${dict.skillsList.map(s => `  <li>${s}</li>`).join('\n')}
-</ul>
-
-<h2>${dict.titles.education}</h2>
-<h3>${dict.education.heading}</h3>
-<ul>
-${dict.education.items.map(x => `  <li>${x}</li>`).join('\n')}
-</ul>
-
-<h2>${dict.titles.achievements}</h2>
-<ul>
-${dict.achievements.map(a => `  <li>${a}</li>`).join('\n')}
-</ul>
-
-<h2>${dict.titles.advanced}</h2>
-<ul>
-${dict.advancedSkills.map(s => `  <li>${s}</li>`).join('\n')}
-</ul>
-
-<h2>${dict.titles.services}</h2>
-<ul>
-${dict.services.map(s => `  <li>${s}</li>`).join('\n')}
-</ul>
-
-<h2>${dict.titles.languages}</h2>
-<p>${dict.languagesText}</p>
-
-</body>
-</html>`;
-
-      // Create blob and download
-      const blob = new Blob(['\ufeff', wordContent], {
-        type: 'application/msword'
+      const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, UnderlineType, Tab } = docx;
+      
+      // Create document sections
+      const sections = [];
+      
+      // Header
+      sections.push(
+        new Paragraph({ text: 'Mohamad Adib Tawil', heading: HeadingLevel.TITLE, alignment: AlignmentType.CENTER, spacing: { after: 200 }}),
+        new Paragraph({ children: [new TextRun({ text: 'mohamad.adib.tawil@gmail.com | LinkedIn: linkedin.com/in/mohamad-adib-tawil-54024b314 | GitHub: github.com/Mohamad-Adib-Tawil', size: 20 })], alignment: AlignmentType.CENTER, spacing: { after: 200 }}),
+        new Paragraph({ children: [new TextRun({ text: `${dict.header.jobTitle} | ${dict.header.availability}`, bold: true, size: 22 })], alignment: AlignmentType.CENTER, spacing: { after: 300 }})
+      );
+      
+      // Summary
+      sections.push(
+        new Paragraph({ text: dict.titles.summary, heading: HeadingLevel.HEADING_1, spacing: { before: 200, after: 100 }}),
+        new Paragraph({ text: dict.summaryText, spacing: { after: 200 }})
+      );
+      
+      // Skills
+      sections.push(new Paragraph({ text: dict.titles.skills, heading: HeadingLevel.HEADING_1, spacing: { before: 200, after: 100 }}));
+      dict.skillsList.forEach(skill => {
+        sections.push(new Paragraph({ text: `• ${skill}`, spacing: { after: 50 }}));
       });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `Mohamad_Adib_Tawil_CV_${currentLang.toUpperCase()}.doc`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      
+      // Experience
+      sections.push(
+        new Paragraph({ text: dict.titles.experience, heading: HeadingLevel.HEADING_1, spacing: { before: 200, after: 100 }}),
+        new Paragraph({ text: dict.experienceRole, heading: HeadingLevel.HEADING_2, spacing: { after: 100 }})
+      );
+      dict.experienceList.forEach(item => {
+        sections.push(new Paragraph({ text: `• ${item}`, spacing: { after: 50 }}));
+      });
+      
+      // Projects
+      sections.push(new Paragraph({ text: dict.titles.projects, heading: HeadingLevel.HEADING_1, spacing: { before: 200, after: 100 }}));
+      const projects = [
+        { name: 'LKLK', desc: dict.projectsDesc.iklk.replace(/<[^>]*>/g, '') },
+        { name: 'Wolfera', desc: dict.projectsDesc.wolfera.replace(/<[^>]*>/g, '') },
+        { name: 'Code Book', desc: dict.projectsDesc.codebook.replace(/<[^>]*>/g, '') },
+        { name: 'Office Archiving', desc: dict.projectsDesc.office.replace(/<[^>]*>/g, '') }
+      ];
+      projects.forEach(proj => {
+        sections.push(new Paragraph({ text: proj.name, heading: HeadingLevel.HEADING_2, spacing: { before: 100, after: 50 }}));
+        sections.push(new Paragraph({ text: proj.desc, spacing: { after: 100 }}));
+      });
+      
+      // Achievements
+      sections.push(new Paragraph({ text: dict.titles.achievements, heading: HeadingLevel.HEADING_1, spacing: { before: 200, after: 100 }}));
+      dict.achievements.forEach(ach => {
+        sections.push(new Paragraph({ text: `• ${ach}`, spacing: { after: 50 }}));
+      });
+      
+      // Education
+      sections.push(
+        new Paragraph({ text: dict.titles.education, heading: HeadingLevel.HEADING_1, spacing: { before: 200, after: 100 }}),
+        new Paragraph({ text: dict.education.heading, heading: HeadingLevel.HEADING_2, spacing: { after: 100 }})
+      );
+      dict.education.items.forEach(item => {
+        sections.push(new Paragraph({ text: `• ${item}`, spacing: { after: 50 }}));
+      });
+      
+      // Languages
+      sections.push(
+        new Paragraph({ text: dict.titles.languages, heading: HeadingLevel.HEADING_1, spacing: { before: 200, after: 100 }}),
+        new Paragraph({ text: dict.languagesText, spacing: { after: 200 }})
+      );
+      
+      // Create document
+      const doc = new Document({
+        sections: [{ properties: {}, children: sections }]
+      });
+      
+      // Generate and download
+      Packer.toBlob(doc).then(blob => {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `Mohamad_Adib_Tawil_CV_${currentLang.toUpperCase()}.docx`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      });
     });
   }
 
   // Export ATS-friendly Word (for companies, no freelance)
   const exportATSBtn = document.getElementById('exportATSBtn');
   if (exportATSBtn) {
-    exportATSBtn.addEventListener('click', () => {
+    exportATSBtn.addEventListener('click', async () => {
       const currentLang = localStorage.getItem('lang') || 'en';
       const dict = i18n[currentLang];
       
-      // ATS-optimized content (simple format, keyword-rich, no graphics/icons)
-      let atsContent = `
-<!DOCTYPE html>
-<html>
-<head><meta charset='utf-8'><title>Mohamad Adib Tawil - Flutter Developer</title>
-<style>
-body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.5; margin: 0.5in; ${currentLang === 'ar' ? 'direction: rtl;' : ''} }
-h1 { font-size: 16pt; font-weight: bold; margin-bottom: 5pt; text-transform: uppercase; }
-h2 { font-size: 12pt; font-weight: bold; margin-top: 12pt; margin-bottom: 6pt; text-transform: uppercase; border-bottom: 1pt solid #000; }
-h3 { font-size: 11pt; font-weight: bold; margin-top: 8pt; margin-bottom: 4pt; }
-p, li { margin: 0; padding: 0; }
-ul { margin: 4pt 0; padding-left: ${currentLang === 'ar' ? '0' : '18pt'}; ${currentLang === 'ar' ? 'padding-right: 18pt;' : ''} }
-li { margin-bottom: 3pt; }
-.contact { margin-bottom: 8pt; font-size: 10pt; }
-.section { margin-bottom: 10pt; }
-</style>
-</head>
-<body>
-<h1>MOHAMAD ADIB TAWIL</h1>
-<div class="contact">
-${currentLang === 'ar' ? 'البريد الإلكتروني' : 'Email'}: mohamad.adib.tawil@gmail.com | LinkedIn: linkedin.com/in/mohamad-adib-tawil-54024b314 | GitHub: github.com/Mohamad-Adib-Tawil
-</div>
+      if (!window.docx) {
+        alert('DOCX library not loaded. Please refresh the page.');
+        return;
+      }
 
-<div class="section">
-<h2>${currentLang === 'ar' ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY'}</h2>
-<p>${currentLang === 'ar' 
-  ? 'مطور Flutter خبير بـ3+ سنوات في تسليم تطبيقات إنتاجية من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للوظائف بدوام كامل عن بُعد.'
-  : 'Senior Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Seeking full-time remote positions.'}</p>
-</div>
-
-<div class="section">
-<h2>${currentLang === 'ar' ? 'المهارات التقنية' : 'TECHNICAL SKILLS'}</h2>
-<ul>
-${dict.skillsList.map(s => `  <li>${s}</li>`).join('\n')}
-</ul>
-</div>
-
-<div class="section">
-<h2>${currentLang === 'ar' ? 'الخبرة العملية' : 'PROFESSIONAL EXPERIENCE'}</h2>
-<h3>${currentLang === 'ar' ? 'مطوّر Flutter | 2022 – حتى الآن' : 'Flutter Developer | 2022 – Present'}</h3>
-<ul>
-${dict.experienceList.map(item => `  <li>${item}</li>`).join('\n')}
-</ul>
-</div>
-
-<div class="section">
-<h2>${currentLang === 'ar' ? 'المشاريع الرئيسية' : 'KEY PROJECTS'}</h2>
-
-<h3>LKLK - ${currentLang === 'ar' ? 'منصة صوت اجتماعي مباشر' : 'Live Social Audio Platform'}</h3>
-<p>${dict.projectsDesc.iklk.replace(/<[^>]*>/g, '')}</p>
-
-<h3>Wolfera - ${currentLang === 'ar' ? 'سوق إلكتروني للسيارات' : 'Car Marketplace'}</h3>
-<p>${dict.projectsDesc.wolfera.replace(/<[^>]*>/g, '')}</p>
-
-<h3>Office Archiving - ${currentLang === 'ar' ? 'نظام أرشفة مستندات' : 'Document Management System'}</h3>
-<p>${dict.projectsDesc.office.replace(/<[^>]*>/g, '')}</p>
-
-<h3>Code Book - ${currentLang === 'ar' ? 'تطبيق قراءة تقني' : 'Technical Reading App'}</h3>
-<p>${dict.projectsDesc.codebook.replace(/<[^>]*>/g, '')}</p>
-</div>
-
-<div class="section">
-<h2>${currentLang === 'ar' ? 'أهم الإنجازات' : 'KEY ACHIEVEMENTS'}</h2>
-<ul>
-${dict.achievements.map(a => `  <li>${a}</li>`).join('\n')}
-</ul>
-</div>
-
-<div class="section">
-<h2>${currentLang === 'ar' ? 'التعليم' : 'EDUCATION'}</h2>
-<h3>${dict.education.heading}</h3>
-<ul>
-${dict.education.items.map(x => `  <li>${x}</li>`).join('\n')}
-</ul>
-</div>
-
-<div class="section">
-<h2>${currentLang === 'ar' ? 'اللغات' : 'LANGUAGES'}</h2>
-<p>${dict.languagesText}</p>
-</div>
-
-</body>
-</html>`;
-
-      const blob = new Blob(['\ufeff', atsContent], {
-        type: 'application/msword'
+      const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } = docx;
+      
+      // ATS-optimized DOCX (simple, keyword-rich, company-ready)
+      const sections = [];
+      const summary = currentLang === 'ar' 
+        ? 'مطور Flutter خبير بـ3+ سنوات في تسليم تطبيقات إنتاجية من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للوظائف بدوام كامل عن بُعد.'
+        : 'Senior Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Seeking full-time remote positions.';
+      
+      // Header (ATS-friendly, no graphics)
+      sections.push(
+        new Paragraph({ children: [new TextRun({ text: 'MOHAMAD ADIB TAWIL', bold: true, size: 32 })], alignment: AlignmentType.CENTER, spacing: { after: 100 }}),
+        new Paragraph({ children: [new TextRun({ text: 'mohamad.adib.tawil@gmail.com | linkedin.com/in/mohamad-adib-tawil-54024b314 | github.com/Mohamad-Adib-Tawil', size: 20 })], alignment: AlignmentType.CENTER, spacing: { after: 200 }}),
+        new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'مطوّر Flutter' : 'FLUTTER DEVELOPER', bold: true, size: 24 })], alignment: AlignmentType.CENTER, spacing: { after: 300 }})
+      );
+      
+      // Professional Summary
+      sections.push(
+        new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY', bold: true, allCaps: true, size: 24 })], spacing: { before: 200, after: 100 }}),
+        new Paragraph({ text: summary, spacing: { after: 200 }})
+      );
+      
+      // Technical Skills
+      sections.push(new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'المهارات التقنية' : 'TECHNICAL SKILLS', bold: true, allCaps: true, size: 24 })], spacing: { before: 200, after: 100 }}));
+      dict.skillsList.forEach(skill => {
+        sections.push(new Paragraph({ text: `• ${skill}`, spacing: { after: 50 }}));
       });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `Mohamad_Adib_Tawil_CV_ATS_${currentLang.toUpperCase()}.doc`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      
+      // Professional Experience
+      sections.push(
+        new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'الخبرة العملية' : 'PROFESSIONAL EXPERIENCE', bold: true, allCaps: true, size: 24 })], spacing: { before: 200, after: 100 }}),
+        new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'مطوّر Flutter | 2022 – حتى الآن' : 'FLUTTER DEVELOPER | 2022 – PRESENT', bold: true, size: 22 })], spacing: { after: 100 }})
+      );
+      dict.experienceList.forEach(item => {
+        sections.push(new Paragraph({ text: `• ${item}`, spacing: { after: 50 }}));
+      });
+      
+      // Key Projects
+      sections.push(new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'المشاريع الرئيسية' : 'KEY PROJECTS', bold: true, allCaps: true, size: 24 })], spacing: { before: 200, after: 100 }}));
+      const atsProjects = [
+        { name: 'LKLK - ' + (currentLang === 'ar' ? 'منصة صوت اجتماعي مباشر' : 'Live Social Audio Platform'), desc: dict.projectsDesc.iklk.replace(/<[^>]*>/g, '') },
+        { name: 'Wolfera - ' + (currentLang === 'ar' ? 'سوق إلكتروني للسيارات' : 'Car Marketplace'), desc: dict.projectsDesc.wolfera.replace(/<[^>]*>/g, '') },
+        { name: 'Code Book - ' + (currentLang === 'ar' ? 'تطبيق قراءة تقني' : 'Technical Reading App'), desc: dict.projectsDesc.codebook.replace(/<[^>]*>/g, '') },
+        { name: 'Office Archiving - ' + (currentLang === 'ar' ? 'نظام أرشفة مستندات' : 'Document Management System'), desc: dict.projectsDesc.office.replace(/<[^>]*>/g, '') }
+      ];
+      atsProjects.forEach(proj => {
+        sections.push(new Paragraph({ children: [new TextRun({ text: proj.name, bold: true, size: 22 })], spacing: { before: 100, after: 50 }}));
+        sections.push(new Paragraph({ text: proj.desc, spacing: { after: 100 }}));
+      });
+      
+      // Key Achievements
+      sections.push(new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'أهم الإنجازات' : 'KEY ACHIEVEMENTS', bold: true, allCaps: true, size: 24 })], spacing: { before: 200, after: 100 }}));
+      dict.achievements.forEach(ach => {
+        sections.push(new Paragraph({ text: `• ${ach}`, spacing: { after: 50 }}));
+      });
+      
+      // Education
+      sections.push(
+        new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'التعليم' : 'EDUCATION', bold: true, allCaps: true, size: 24 })], spacing: { before: 200, after: 100 }}),
+        new Paragraph({ children: [new TextRun({ text: dict.education.heading, bold: true, size: 22 })], spacing: { after: 100 }})
+      );
+      dict.education.items.forEach(item => {
+        sections.push(new Paragraph({ text: `• ${item}`, spacing: { after: 50 }}));
+      });
+      
+      // Languages
+      sections.push(
+        new Paragraph({ children: [new TextRun({ text: currentLang === 'ar' ? 'اللغات' : 'LANGUAGES', bold: true, allCaps: true, size: 24 })], spacing: { before: 200, after: 100 }}),
+        new Paragraph({ text: dict.languagesText, spacing: { after: 200 }})
+      );
+      
+      // Create ATS document
+      const doc = new Document({
+        sections: [{ properties: {}, children: sections }]
+      });
+      
+      // Generate and download
+      Packer.toBlob(doc).then(blob => {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `Mohamad_Adib_Tawil_CV_ATS_${currentLang.toUpperCase()}.docx`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      });
     });
   }
 });
