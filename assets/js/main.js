@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
       nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
       header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',ctaWork:'View My Work',ctaContact:'Get in Touch',print:'Print / PDF'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
-      summaryText:'Senior Flutter Developer with 3+ years shipping production-grade apps to 1,000+ active users across social audio, OCR automation, and marketplace domains. Owns the full Flutter app lifecycle from product discovery and architecture through deployment, analytics, and iterative growth, with strong product thinking. Specialized in clean architecture, advanced state management (BLoC/Cubit), and backend integrations (Supabase, Appwrite, Firebase). Proven track record optimizing real-time streaming for 1000+ concurrent users and implementing AI-powered OCR/translation pipelines. Available for freelance projects and full-time remote roles.',
+      summaryText:'Senior Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Available for freelance and full-time remote roles.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
       experienceList:[
         'Owned end-to-end Flutter delivery from requirements gathering and UX flows to deployment, analytics, and post-launch iteration.',
@@ -178,41 +178,42 @@ document.addEventListener('DOMContentLoaded', function() {
         "Collaborated with cross-functional clients to deliver pixel-perfect, multilingual UIs using Flutter's responsive design principles."
       ],
       projectsDesc:{
-        iklk:'LKLK is a high-performance social audio arena delivering instant multilingual rooms, synchronized gifting animations, and resilient streaming powered by Zego Cloud, Appwrite, and smart caching. Optimized pipelines, secure storage, and adaptive performance modes sustain buttery engagement for crowds of 1000+, even on constrained devices. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>',
-        wolfera:'Wolfera is the intelligent car marketplace that pairs curated listings with blazing Supabase-backed performance, secure Supabase Auth including Google Sign-In, smart filters, and live buyer-seller chat, creating a multilingual, cross-platform buying and selling experience that closes deals faster with confidence for everyone.',
-        codebook:'Code Book is a clean-architecture Flutter app (BLoC, GetIt, Hive) that browses Open Library with resilient Dio networking (retry, structured failures), repository-driven pagination, and offline-first caching. It features a premium dark UI, WebView previews, and Play Store–ready assets.',
-        office:'Office Archiving centralizes documents and media into smart sections, delivering advanced offline Arabic-English OCR, enhanced image preprocessing, multi-page PDF handling, comprehensive text search, instant translation and summarization, interactive storage analytics, smooth dark-mode interface, optional result export, and streamlined workflows for everyday archiving tasks. Published on Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>'
+        iklk:'Architected cross-platform live audio platform supporting 1000+ concurrent users with Zego Cloud streaming, real-time chat/gifting, and 3-tier adaptive performance. Reduced memory usage 60%, improved FPS 100%, implemented CI/CD with GitHub Actions/Fastlane. Features: WebSocket messaging, synchronized animations, certificate pinning, Appwrite backend. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>',
+        wolfera:'Built end-to-end car marketplace with 260+ features across 10 modules using BLoC architecture. Integrated Supabase (Auth, Realtime, Storage), Google Sign-In/Maps, real-time bidirectional chat with emoji support. Implemented advanced search/filtering, bilingual UI (AR/EN), image caching, lazy loading. Stack: Flutter, Dart, GetIt DI, Go Router, Dio.',
+        codebook:'Engineered offline-first reading app with Clean Architecture (Presentation/Domain/Data layers), BLoC state management, GetIt DI. Integrated Open Library API via Dio with retry mechanisms, Hive for offline caching, WebView previews. Delivered production-ready assets and Play Store compliance.',
+        office:'Developed document archiving solution with offline bilingual OCR (90%+ accuracy) using ML Kit/Tesseract. Built SQLite schema with migrations, batch PDF processing, image preprocessing algorithms. Features: AI-powered translation/summarization, full-text search, storage analytics, dark mode. <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>'
       },
       skillsList:[
-        'Flutter & Dart (Expert) | Clean Architecture & SOLID (Advanced)',
-        'State Management: BLoC, Cubit, Provider (Expert)',
-        'Dependency Injection & Modularization: GetIt, layered architecture',
-        'Networking & Resilience: Dio, retry logic, structured failures, pagination, repository pattern',
-        'Offline-first & Local Storage: Hive adapters, caching strategies, sync hooks',
-        'UI/UX: Responsive layouts, WebView previews, custom widgets',
-        'Release Readiness: Play Store collateral, flutter_launcher_icons, pubspec hygiene'
+        'Flutter & Dart (Expert) | Clean Architecture & SOLID with 260+ feature files',
+        'State Management: BLoC/Cubit Pattern, GetIt DI, Stream Transformations',
+        'Real-time Systems: Zego Cloud (1000+ users), WebSocket, Supabase Realtime, Chat/Messaging',
+        'Backend Integration: Supabase, Firebase, Appwrite, REST APIs, Google Cloud Services',
+        'AI & ML: Google ML Kit, Tesseract OCR (AR/EN), Image Processing, Text Analysis',
+        'Performance: Memory optimization (60% reduction), FPS boost (100%), Adaptive modes',
+        'DevOps: CI/CD (GitHub Actions, Fastlane), Flavors, Automated deployments'
       ],
       education:{heading:'University of Aleppo – Diploma in Computer Engineering, Software Engineering Track (Jun 2020 – Aug 2022)', items:['Relevant Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Software Engineering','Final Project: Helping platform (web, Windows, and mobile app) for education programming by courses similar to Udemy']},
       achievements:[
-        'Built social audio app supporting 1000+ concurrent users with 99.9% uptime',
-        'Published 4 apps on Google Play Store with 1,000+ combined downloads',
-        'Implemented advanced offline OCR system processing Arabic & English documents',
-        'Delivered Code Book: offline-capable Open Library app with DI (GetIt), BLoC, Dio resilience, Hive caching, pagination, and Play Store readiness'
+        'LKLK: Scaled to 1000+ concurrent users, reduced memory 60%, boosted FPS 100%, achieved 99.9% uptime',
+        'Wolfera: Delivered 260+ features across 10 modules with real-time chat and bilingual support',
+        'Office Archiving: Built offline bilingual OCR with 90%+ accuracy, PDF processing, AI translation',
+        'Code Book: Engineered offline-first reading app with Clean Architecture and repository pattern',
+        'Published 4 production apps on Google Play Store with 1000+ downloads and 4+ star rating'
       ],
       advancedSkills:[
-        'Performance Optimization: Code splitting, lazy loading, memory profiling',
-        'Design Patterns & Architecture: Repository pattern, Clean Architecture',
-        'Dependency Injection: GetIt',
-        'Resilient Networking: Dio with retry & structured failures',
-        'Offline-first strategies: Hive caching, sync hooks'
+        'Performance Engineering: Virtual scrolling, object pooling, debouncing, 3-tier adaptive modes',
+        'Architecture Patterns: Clean Architecture, BLoC, Repository, DI with GetIt/Injectable',
+        'Real-time Technologies: WebSocket, Server-Sent Events, Zego Express Engine, Supabase Realtime',
+        'Mobile AI: OCR pipelines, image preprocessing, batch processing, text analysis',
+        'Security: Certificate pinning, secure storage, OAuth 2.0, network resilience'
       ],
       services:[
-        'Full-cycle mobile app delivery (analysis → launch → iteration)',
-        'Architecture audits & clean-code refactors',
-        'Offline-first implementation (Hive) & caching strategies',
-        'Resilient API integration (Dio + retry, pagination, repository)',
-        'UI/UX implementation from Figma/Adobe XD (WebView, custom widgets)',
-        'App publishing & Play Store optimization'
+        'End-to-end mobile app development (iOS & Android) from concept to deployment',
+        'Real-time features: Live audio/video, chat systems, synchronized animations',
+        'AI integration: OCR, ML Kit, image processing, text analysis, translation',
+        'Performance optimization: Memory reduction, FPS improvement, adaptive scaling',
+        'Backend architecture: Supabase, Firebase, Appwrite, custom APIs, WebSocket',
+        'CI/CD setup: Automated pipelines, testing, deployment, monitoring'
       ],
       languagesText:'Arabic (Native), English (Professional)',
       codebook:{
@@ -252,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
       nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
       header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',print:'طباعة / PDF'},
       titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
-      summaryText:'مطوّر Flutter بخبرة تفوق 3 سنوات في بناء تطبيقات إنتاجية تصل إلى أكثر من 1,000 مستخدم نشط في مجالات الصوت الاجتماعي وميكنة OCR والأسواق الإلكترونية. أتولّى كامل دورة حياة التطبيق من تحليل المتطلبات وتصميم الواجهة وتجارب المستخدم وصولًا إلى الإطلاق، القياس، والتحسين المستمر، مع تفكير منتجي قوي. مختص في الهندسة النظيفة وإدارة الحالة المتقدمة (BLoC/Cubit) وتكامل الخلفيات (Supabase وAppwrite وFirebase). سجل مثبت في تحسين البثّ اللحظي لأكثر من 1000 مستخدم متزامن وتنفيذ مسارات OCR/ترجمة مدعومة بالذكاء الاصطناعي. متاح لمشاريع حرة وفرص عمل عن بُعد.',
+      summaryText:'مطور Flutter خبير بـ3+ سنوات في تسليم تطبيقات من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للعمل الحر والوظائف عن بُعد.',
       experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
       experienceList:[
         'أتولّى تسليم تطبيقات Flutter من جمع المتطلبات وتخطيط تجربة المستخدم إلى الإطلاق، التحليلات، والتحسين بعد النشر.',
@@ -269,20 +270,21 @@ document.addEventListener('DOMContentLoaded', function() {
         office:'يجمع Office Archiving المستندات والوسائط في أقسام ذكية مع OCR عربي-إنجليزي متقدم دون اتصال، وتحسين مسبق للصور، ودعم PDF متعدد الصفحات، وبحث نصي شامل، وترجمة وتلخيص فوريين، وتحليلات تفاعلية للتخزين، وواجهة داكنة سلسة، وتصدير اختياري للنتائج، ومسارات عمل مبسّطة للمهام اليومية. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>'
       },
       skillsList:[
-        'Flutter وDart (خبير) | المعمارية النظيفة وSOLID (متقدم)',
-        'إدارة الحالة: BLoC وCubit وProvider (خبير)',
-        'الحقن الاعتمادي والتقسيم: GetIt ومعمارية طبقية',
-        'الشبكات والاعتمادية: Dio ومنطق إعادة المحاولة وأخطاء منظّمة وترقيم صفحات ونمط المستودع',
-        'Offline-first والتخزين المحلي: محولات Hive واستراتيجيات التخزين المؤقت وخطافات المزامنة',
-        'UI/UX: تخطيطات متجاوبة ومعاينات WebView وويدجتات مخصصة',
-        'جهوزية الإطلاق: أصول Play Store وflutter_launcher_icons ونظافة pubspec'
+        'Flutter وDart (خبير) | معمارية نظيفة وSOLID مع 260+ ملف ميزة',
+        'إدارة الحالة: نمط BLoC/Cubit، حقن التبعيات GetIt، تحويلات Stream',
+        'الأنظمة الفورية: Zego Cloud (1000+ مستخدم)، WebSocket، Supabase Realtime، الدردشة/الرسائل',
+        'تكامل الخلفيات: Supabase، Firebase، Appwrite، REST APIs، خدمات Google Cloud',
+        'الذكاء الاصطناعي: Google ML Kit، Tesseract OCR (عربي/إنجليزي)، معالجة الصور، تحليل النصوص',
+        'الأداء: تحسين الذاكرة (تقليل 60%)، زيادة FPS (100%)، الأوضاع التكيفية',
+        'DevOps: CI/CD (GitHub Actions، Fastlane)، Flavors، النشر الآلي'
       ],
       education:{heading:'جامعة حلب — دبلوم هندسة حاسبات، مسار هندسة البرمجيات (يونيو 2020 – أغسطس 2022)', items:['مواد ذات صلة: C# وهياكل البيانات والخوارزميات والبرمجة كائنية التوجه وقواعد البيانات وهندسة البرمجيات','مشروع التخرج: منصة مساعدة (ويب وويندوز وتطبيق جوال) لتعلّم البرمجة عبر دورات شبيهة بمنصات مثل Udemy']},
       achievements:[
-        'بنيت تطبيق صوت اجتماعي يدعم +1000 مستخدم متزامن مع توافرية 99.9%',
-        'نشرت 4 تطبيقات على متجر Google Play بإجمالي تنزيلات +1,000',
-        'نفّذت نظام OCR متقدمًا دون اتصال لمعالجة النصوص العربية والإنجليزية',
-        'إطلاق Code Book: تطبيق Open Library يعمل دون اتصال مع DI (GetIt) وBLoC وشبكات Dio مرنة وتخزين Hive وترقيم صفحات وجهوزية Play Store'
+        'LKLK: توسع لـ1000+ مستخدم متزامن، تقليل الذاكرة 60%، زيادة FPS بـ100%، توافرية 99.9%',
+        'Wolfera: تسليم 260+ ميزة عبر 10 وحدات مع دردشة فورية ودعم ثنائي اللغة',
+        'Office Archiving: بناء OCR ثنائي اللغة offline بدقة +90%، معالجة PDF، ترجمة بالذكاء الاصطناعي',
+        'Code Book: هندسة تطبيق قراءة offline-first بمعمارية نظيفة ونمط المستودع',
+        'نشر 4 تطبيقات إنتاجية على Google Play بـ1000+ تحميل وتقييم +4 نجوم'
       ],
       advancedSkills:[
         'تحسين الأداء: تقسيم الشيفرة، التحميل الكسول، تحليل الذاكرة',
@@ -292,12 +294,12 @@ document.addEventListener('DOMContentLoaded', function() {
         'إستراتيجيات Offline-first: تخزين Hive وخطافات المزامنة'
       ],
       services:[
-        'تسليم التطبيق كامل الدورة (تحليل → إطلاق → تحسين)',
-        'تقييم المعمارية وإعادة هيكلة الشيفرة',
-        'تطبيق Offline-first (Hive) واستراتيجيات التخزين المؤقت',
-        'تكامل واجهات APIs بمرونة (Dio + إعادة المحاولة، ترقيم صفحات، نمط المستودع)',
-        'تنفيذ UI/UX من Figma/Adobe XD (WebView وويدجتات مخصصة)',
-        'نشر التطبيقات وتحسين الظهور على Play Store'
+        'تطوير تطبيقات موبايل شاملة (iOS وAndroid) من الفكرة للنشر',
+        'ميزات الوقت الفعلي: صوت/فيديو مباشر، أنظمة دردشة، رسوم متحركة متزامنة',
+        'تكامل الذكاء الاصطناعي: OCR، ML Kit، معالجة الصور، تحليل النصوص، الترجمة',
+        'تحسين الأداء: تقليل الذاكرة، تحسين FPS، التوسع التكيفي',
+        'معمارية الخلفيات: Supabase، Firebase، Appwrite، APIs مخصصة، WebSocket',
+        'إعداد CI/CD: خطوط آلية، اختبار، نشر، مراقبة'
       ],
       languagesText:'العربية (لغة أم)، الإنجليزية (احترافية)',
       codebook:{
