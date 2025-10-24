@@ -167,9 +167,10 @@ document.addEventListener('DOMContentLoaded', function() {
       nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
       header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',ctaWork:'View My Work',ctaContact:'Get in Touch',print:'Print / PDF'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
-      summaryText:'Senior Flutter Developer with 3+ years shipping production-grade apps to 1,000+ active users across social audio, OCR automation, and marketplace domains. Specialized in clean architecture, advanced state management (BLoC/Cubit), and backend integrations (Supabase, Appwrite, Firebase). Proven track record optimizing real-time streaming for 1000+ concurrent users and implementing AI-powered OCR/translation pipelines. Available for freelance projects and full-time remote roles.',
+      summaryText:'Senior Flutter Developer with 3+ years shipping production-grade apps to 1,000+ active users across social audio, OCR automation, and marketplace domains. Owns the full Flutter app lifecycle from product discovery and architecture through deployment, analytics, and iterative growth. Specialized in clean architecture, advanced state management (BLoC/Cubit), and backend integrations (Supabase, Appwrite, Firebase). Proven track record optimizing real-time streaming for 1000+ concurrent users and implementing AI-powered OCR/translation pipelines. Available for freelance projects and full-time remote roles.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
       experienceList:[
+        'Owned end-to-end Flutter delivery from requirements gathering and UX flows to deployment, analytics, and post-launch iteration.',
         'Architected and shipped 4 production apps with 1,000+ total downloads and 4+ average rating on Google Play Store.',
         'Optimized LKLK social audio app to sustain 1000+ concurrent users with <100ms latency through smart caching and adaptive performance modes.',
         'Engineered offline Arabic-English OCR pipeline in Office Archiving, reducing processing time by 40% via enhanced preprocessing.',
@@ -200,9 +201,10 @@ document.addEventListener('DOMContentLoaded', function() {
       nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
       header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',print:'طباعة / PDF'},
       titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
-      summaryText:'مطوّر Flutter بخبرة تفوق 3 سنوات في بناء تطبيقات إنتاجية تصل إلى أكثر من 1,000 مستخدم نشط في مجالات الصوت الاجتماعي وميكنة OCR والأسواق الإلكترونية. مختص في الهندسة النظيفة وإدارة الحالة المتقدمة (BLoC/Cubit) وتكامل الخلفيات (Supabase وAppwrite وFirebase). سجل مثبت في تحسين البثّ اللحظي لأكثر من 1000 مستخدم متزامن وتنفيذ مسارات OCR/ترجمة مدعومة بالذكاء الاصطناعي. متاح لمشاريع حرة وفرص عمل عن بُعد.',
+      summaryText:'مطوّر Flutter بخبرة تفوق 3 سنوات في بناء تطبيقات إنتاجية تصل إلى أكثر من 1,000 مستخدم نشط في مجالات الصوت الاجتماعي وميكنة OCR والأسواق الإلكترونية. أتولّى كامل دورة حياة التطبيق من تحليل المتطلبات وتصميم الواجهة وتجارب المستخدم وصولًا إلى الإطلاق، القياس، والتحسين المستمر. مختص في الهندسة النظيفة وإدارة الحالة المتقدمة (BLoC/Cubit) وتكامل الخلفيات (Supabase وAppwrite وFirebase). سجل مثبت في تحسين البثّ اللحظي لأكثر من 1000 مستخدم متزامن وتنفيذ مسارات OCR/ترجمة مدعومة بالذكاء الاصطناعي. متاح لمشاريع حرة وفرص عمل عن بُعد.',
       experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
       experienceList:[
+        'أتولّى تسليم تطبيقات Flutter من جمع المتطلبات وتخطيط تجربة المستخدم إلى الإطلاق، التحليلات، والتحسين بعد النشر.',
         'بنيت وأطلقت 4 تطبيقات إنتاجية مع +1,000 تنزيل وتقييم +4 على متجر Google Play.',
         'حسّنت تطبيق LKLK للصوت الاجتماعي لدعم +1000 مستخدم متزامن بزمن استجابة أقل من 100ms عبر التخزين الذكي وأنماط الأداء التكيفية.',
         'هندست مسار OCR عربي-إنجليزي للعمل دون اتصال في Office Archiving مع خفض زمن المعالجة بنسبة 40% عبر تحسين ما قبل المعالجة.',
