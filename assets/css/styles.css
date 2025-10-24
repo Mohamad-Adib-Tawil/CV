@@ -100,27 +100,18 @@ body.theme-silver {
   --primary-color: #6b7280; /* slate-500 (steel) */
   --secondary-color: #cbd5e1; /* slate-300 */
   --accent-color: #d1d5db; /* gray-300 */
-  --blob-1: radial-gradient(closest-side, rgba(107,114,128,0.35), transparent);
   --blob-2: radial-gradient(closest-side, rgba(209,213,219,0.35), transparent);
   --tint-weak: rgba(209,213,219,0.10);
   --tint-strong: rgba(107,114,128,0.12);
 }
 
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
-  background-color: var(--light-bg);
+  background: var(--light-bg);
   color: var(--dark-text);
+  font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
   line-height: 1.6;
-  transition: var(--transition);
-  overflow-x: hidden;
 }
 
 /* Animated gradient blobs background */
