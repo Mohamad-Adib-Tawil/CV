@@ -568,11 +568,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const dict = i18n[currentLang];
       
       if (!window.docx) {
-        alert('DOCX library not loaded. Please refresh the page.');
+        alert('المكتبة لم تُحمّل بعد. سيتم المحاولة مرة أخرى...');
+        setTimeout(() => exportWordBtn.click(), 1000);
         return;
       }
 
-      const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, UnderlineType, Tab } = docx;
+      const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, UnderlineType, Tab } = window.docx;
       
       // Create document sections
       const sections = [];
@@ -666,11 +667,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const dict = i18n[currentLang];
       
       if (!window.docx) {
-        alert('DOCX library not loaded. Please refresh the page.');
+        alert('المكتبة لم تُحمّل بعد. سيتم المحاولة مرة أخرى...');
+        setTimeout(() => exportATSBtn.click(), 1000);
         return;
       }
 
-      const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } = docx;
+      const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } = window.docx;
       
       // ATS-optimized DOCX (simple, keyword-rich, company-ready)
       const sections = [];
