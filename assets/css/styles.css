@@ -907,13 +907,53 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
   margin-bottom: 8px;
 }
 
-/* Print styles */
-@page { size: A4; margin: 12mm; }
-@media print {
-  body { background: #fff !important; color: #000 !important; }
-  .particles-container, .theme-toggle, .scroll-to-top, .top-nav, .stats-section, .cta-buttons, .availability-badge { display: none !important; }
-  .container { box-shadow: none !important; border: 0 !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
-  a::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #555; }
-  header, section { break-inside: avoid; page-break-inside: avoid; }
-  .footer { display: none !important; }
+ 
+
+/* RTL support */
+html[dir="rtl"] { direction: rtl; }
+html[dir="rtl"] body { text-align: right; }
+html[dir="rtl"] .container { text-align: right; }
+html[dir="rtl"] header { flex-direction: row-reverse; }
+html[dir="rtl"] .profile-pic { margin-left: 20px; margin-right: 0; }
+html[dir="rtl"] .contact-item { flex-direction: row-reverse; }
+html[dir="rtl"] .contact-item .icon { margin-left: 8px; margin-right: 0; }
+html[dir="rtl"] .project-table th,
+html[dir="rtl"] .project-table td { text-align: right; }
+html[dir="rtl"] ul { padding-left: 0; padding-right: 20px; }
+html[dir="rtl"] .footer .social-links { direction: ltr; } /* keep icon order natural */
+
+/* Header flags and badges */
+.header-flags {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8px 0;
 }
+
+.employment-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: rgba(0,0,0,0.04);
+  border: 1px dashed var(--primary-color);
+}
+
+ 
+
+.header-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.header-badges .badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.06);
+  color: var(--dark-text);
+  font-size: 0.78rem;
+}
+
+/* RTL tweaks for top nav */
+html[dir="rtl"] .top-nav { direction: rtl; }
+html[dir="rtl"] .top-nav a { margin-inline: 0 10px; }
