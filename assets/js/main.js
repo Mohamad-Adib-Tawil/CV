@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const i18n = {
     en: {
       nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
-      header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',ctaWork:'View My Work',ctaContact:'Get in Touch'},
+      header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
       summaryText:'Senior Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Available for freelance and full-time remote roles.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Collaborated with cross-functional clients to deliver pixel-perfect, multilingual UIs using Flutter's responsive design principles."
       ],
       projectsDesc:{
-        iklk:'Architected cross-platform live audio platform supporting 1000+ concurrent users with Zego Cloud streaming, real-time chat/gifting, and 3-tier adaptive performance. Reduced memory usage 60%, improved FPS 100%, implemented CI/CD with GitHub Actions/Fastlane. Features: WebSocket messaging, synchronized animations, certificate pinning, Appwrite backend. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>',
+        iklk:'Architected cross-platform live audio platform supporting 1000+ concurrent users with Zego Cloud streaming, real-time chat/gifting, and 3-tier adaptive performance. Reduced memory usage 60%, improved FPS 100%, implemented CI/CD with GitHub Actions/Fastlane. Features: WebSocket messaging, synchronized animations, certificate pinning, mixed backend (Appwrite services + RESTful APIs). <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>',
         wolfera:'Built end-to-end car marketplace with 260+ features across 10 modules using BLoC architecture. Integrated Supabase (Auth, Realtime, Storage), Google Sign-In/Maps, real-time bidirectional chat with emoji support. Implemented advanced search/filtering, bilingual UI (AR/EN), image caching, lazy loading. Stack: Flutter, Dart, GetIt DI, Go Router, Dio.',
         codebook:'Engineered offline-first reading app with Clean Architecture (Presentation/Domain/Data layers), BLoC state management, GetIt DI. Integrated Open Library API via Dio with retry mechanisms, Hive for offline caching, WebView previews. Delivered production-ready assets and Play Store compliance.',
         office:'Developed document archiving solution with offline bilingual OCR (90%+ accuracy) using ML Kit/Tesseract. Built SQLite schema with migrations, batch PDF processing, image preprocessing algorithms. Features: AI-powered translation/summarization, full-text search, storage analytics, dark mode. <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>'
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     ar: {
       nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
-      header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي'},
+      header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',employment:'متاح لعقود/دوام كامل',badges:['+1000 مستخدم متزامن','توافرية 99.9%','4 تطبيقات منشورة'],ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي'},
       titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
       summaryText:'مطور Flutter خبير بـ3+ سنوات في تسليم تطبيقات من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للعمل الحر والوظائف عن بُعد.',
       experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
@@ -264,9 +264,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'تعاونت مع عملاء متعددي الاختصاصات لتنفيذ واجهات متعددة اللغات بدقة عالية وفق مبادئ التصميم المتجاوب.'
       ],
       projectsDesc:{
-        iklk:'يوفّر LKLK ساحة صوت اجتماعي عالية الأداء مع غرف فورية متعددة اللغات، ورسوم هدايا متزامنة، وبث مرن يعتمد Zego Cloud وAppwrite والتخزين الذكي. سلاسل معالجة مُحسّنة وتخزين آمن وأنماط أداء تكيُّفية تحافظ على تفاعلٍ سلس مع حشود تفوق 1000 مستخدم حتى على الأجهزة المحدودة. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>',
+        iklk:'يوفّر LKLK ساحة صوت اجتماعي عالية الأداء مع غرف فورية متعددة اللغات، ورسوم هدايا متزامنة، وبث مرن يعتمد Zego Cloud وAppwrite وواجهات RESTful والتخزين الذكي. سلاسل معالجة مُحسّنة وتخزين آمن وأنماط أداء تكيُّفية تحافظ على تفاعلٍ سلس مع حشود تفوق 1000 مستخدم حتى على الأجهزة المحدودة. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>',
         wolfera:'Wolfera هو سوق سيارات ذكي يجمع بين قوائم مُنتقاة وأداء فائق يعتمد Supabase مع مصادقة Supabase الآمنة (بما فيها تسجيل الدخول عبر Google)، ومرشحات ذكية، ودردشة مباشرة بين المشتري والبائع، ليقدّم تجربة شراء وبيع متعددة اللغات وعبر منصّات متعددة تُسرّع إتمام الصفقات بثقة.',
-        codebook:'Code Book تطبيق Flutter بمعمارية نظيفة (BLoC وGetIt وHive) لتصفح Open Library مع شبكات Dio مرنة (إعادة المحاولة، أخطاء منظَّمة)، وترقيم صفحات يقوده نمط المستودع، وتخزين مؤقت يعمل دون اتصال. واجهة داكنة احترافية، معاينات WebView، وأصول جاهزة للنشر على Play Store.',
+        codebook:'Code Book تطبيق Flutter بمعمارية نظيفة (BLoC وGetIt وHive) لتصفح Open Library مع شبكات Dio مرنة (إعادة المحاولة، أخطاء منظَّمة)، وترقيم صفحات يقوده نمط المستودع، وتخزين مؤقت يعمل دون اتصال. واجهة داكنة احترافية، معاينات WebView، وأصول جاهزة للنشر على Play Store.',
         office:'يجمع Office Archiving المستندات والوسائط في أقسام ذكية مع OCR عربي-إنجليزي متقدم دون اتصال، وتحسين مسبق للصور، ودعم PDF متعدد الصفحات، وبحث نصي شامل، وترجمة وتلخيص فوريين، وتحليلات تفاعلية للتخزين، وواجهة داكنة سلسة، وتصدير اختياري للنتائج، ومسارات عمل مبسّطة للمهام اليومية. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>'
       },
       skillsList:[
@@ -347,6 +347,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Header
     const jt=document.getElementById('jobTitle'); if(jt) jt.textContent=dict.header.jobTitle;
     const av=document.getElementById('availabilityBadge'); if(av) av.textContent=dict.header.availability;
+    const emp=document.getElementById('employmentBadge'); if(emp && dict.header.employment) emp.textContent = dict.header.employment;
+    const hb=document.getElementById('headerBadges');
+    if (hb && Array.isArray(dict.header.badges)) {
+      hb.innerHTML = '';
+      dict.header.badges.forEach(txt => { const s=document.createElement('span'); s.className='badge'; s.textContent=txt; hb.appendChild(s); });
+    }
     const ctaW=document.getElementById('ctaWorkText'); if(ctaW) ctaW.textContent=dict.header.ctaWork;
     const ctaC=document.getElementById('ctaContactText'); if(ctaC) ctaC.textContent=dict.header.ctaContact;
     
@@ -449,13 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
   scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-  // Print button (if present)
-  const printBtn = document.getElementById('printBtn');
-  if (printBtn) {
-    printBtn.addEventListener('click', () => window.print());
-  }
-
+  
   // Create particles background (defer to idle time, and respect reduced motion)
   const createParticles = () => {
     const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
