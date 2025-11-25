@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const i18n = {
     en: {
       nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
-      header: {jobTitle:'Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch'},
+      header: {jobTitle:'Mid-level Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch',ctaWebsite:'Website'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
-      summaryText:'Mid-level Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Available for freelance and full-time remote roles.',
+      summaryText:'Mid-level Flutter Developer (3+ years). Delivered end-to-end apps with BLoC/Cubit, clean architecture, and Supabase/Firebase. Scaled live audio to 1000+ CCU (−60% memory, +100% FPS) using Zego Cloud and smart caching. Built offline AR/EN OCR pipelines with ML Kit/Tesseract. Open to full‑time remote and contract roles.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
       experienceList:[
         'Owned end-to-end Flutter delivery from requirements gathering and UX flows to deployment, analytics, and post-launch iteration.',
@@ -184,13 +184,13 @@ document.addEventListener('DOMContentLoaded', function() {
         office:'Developed document archiving solution with offline bilingual OCR (90%+ accuracy) using ML Kit/Tesseract. Built SQLite schema with migrations, batch PDF processing, image preprocessing algorithms. Features: AI-powered translation/summarization, full-text search, storage analytics, dark mode. <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>'
       },
       skillsList:[
-        'Flutter & Dart (Expert) | Clean Architecture & SOLID with 260+ feature files',
-        'State Management: BLoC/Cubit Pattern, GetIt DI, Stream Transformations',
-        'Real-time Systems: Zego Cloud (1000+ users), WebSocket, Supabase Realtime, Chat/Messaging',
-        'Backend Integration: Supabase, Firebase, Appwrite, REST APIs, Google Cloud Services',
-        'AI & ML: Google ML Kit, Tesseract OCR (AR/EN), Image Processing, Text Analysis',
-        'Performance: Memory optimization (60% reduction), FPS boost (100%), Adaptive modes',
-        'DevOps: CI/CD (GitHub Actions, Fastlane), Flavors, Automated deployments'
+        'State Management: BLoC/Cubit, GetIt DI',
+        'Architecture: Clean Architecture, SOLID, Repository Pattern',
+        'Realtime: Zego Cloud, WebSocket, Supabase Realtime',
+        'Backend: Supabase, Firebase, Appwrite, REST APIs',
+        'Data & Storage: Hive, SQLite',
+        'AI & OCR: ML Kit, Tesseract, Image Processing',
+        'DevOps: CI/CD (GitHub Actions, Fastlane), Flavors'
       ],
       education:{heading:'University of Aleppo – Diploma in Computer Engineering, Software Engineering Track (Jun 2020 – Aug 2022) | GPA: 82.89%', items:['Relevant Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Software Engineering','Final Project: Helping platform (web, Windows, and mobile app) for education programming by courses similar to Udemy']},
       achievements:[
@@ -341,6 +341,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const dict = i18n[lang] || i18n.en;
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    // Set font family based on language
+    document.body.style.fontFamily = (lang === 'ar')
+      ? "'Tajawal', 'Poppins', Arial, sans-serif"
+      : "'Inter', 'Poppins', Arial, sans-serif";
     // Nav
     const navMap = [['navSummary','summary'],['navExperience','experience'],['navProjects','projects'],['navSkills','skills'],['navEducation','education'],['navAchievements','achievements'],['navAdvanced','advanced'],['navServices','services'],['navLanguages','languages']];
     navMap.forEach(([id,key])=>{ const el=document.getElementById(id); if(el) el.textContent = dict.nav[key]; });
@@ -355,6 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     const ctaW=document.getElementById('ctaWorkText'); if(ctaW) ctaW.textContent=dict.header.ctaWork;
     const ctaC=document.getElementById('ctaContactText'); if(ctaC) ctaC.textContent=dict.header.ctaContact;
+    const ctaWB=document.getElementById('ctaWebsiteText'); if(ctaWB && dict.header.ctaWebsite) ctaWB.textContent = dict.header.ctaWebsite;
     
     // Titles
     const titleMap=[['summaryTitle','summary'],['experienceTitle','experience'],['projectsTitle','projects'],['skillsTitle','skills'],['educationTitle','education'],['achievementsTitle','achievements'],['advancedSkillsTitle','advanced'],['servicesTitle','services'],['languagesTitle','languages']];
@@ -640,8 +645,12 @@ li { margin-bottom: 6pt; }
       
       // ATS-optimized (simple, keyword-rich, no fancy formatting)
       const summary = currentLang === 'ar' 
-        ? 'مطور Flutter متوسط المستوى بـ3+ سنوات في تسليم تطبيقات إنتاجية من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للوظائف بدوام كامل عن بُعد.'
-        : 'Mid-level Flutter Developer with 3+ years delivering production apps from A-Z. Built LKLK (1000+ concurrent users, 60% RAM reduction), Wolfera (260+ features, real-time chat), Office Archiving (bilingual OCR, AI-powered), and Code Book (offline-first, Clean Architecture). Expert in BLoC/Cubit, real-time streaming (Zego Cloud), Supabase/Firebase, ML Kit OCR, and CI/CD automation. Proven track record: 4 published apps, 1000+ downloads, 99.9% uptime, 40-100% performance improvements. Seeking full-time remote positions.';
+        ? 'مطوّر Flutter متوسط المستوى (3+ سنوات). مع BLoC/Cubit والمعمارية النظيفة وتكامل Supabase/Firebase. وسّعت بثًا حيًا لـ1000+ مستخدم (−60% ذاكرة، +100% FPS) عبر Zego Cloud. OCR ثنائي اللغة (ML Kit/Tesseract). متاح عن بُعد/عقود.'
+        : 'Mid-level Flutter Developer (3+ yrs). End-to-end delivery with BLoC/Cubit, clean architecture, and Supabase/Firebase. Scaled live audio to 1000+ CCU (−60% memory, +100% FPS) via Zego Cloud. Built AR/EN OCR (ML Kit/Tesseract). Open to remote/contract.';
+
+      const keywords = currentLang === 'ar'
+        ? ['Flutter','Dart','BLoC/Cubit','المعمارية النظيفة','Supabase','Firebase','Appwrite','Zego Cloud','WebSocket','Realtime','OCR','ML Kit','Tesseract','Hive','SQLite','CI/CD','GitHub Actions','Fastlane']
+        : ['Flutter','Dart','BLoC/Cubit','Clean Architecture','Supabase','Firebase','Appwrite','Zego Cloud','WebSocket','Realtime','OCR','ML Kit','Tesseract','Hive','SQLite','CI/CD','GitHub Actions','Fastlane'];
       
       const atsHTML = `
 <!DOCTYPE html>
@@ -661,7 +670,7 @@ li { margin-bottom: 4pt; }
 <body>
 <h1>MOHAMAD ADIB TAWIL</h1>
 <div class="contact">mohamad.adib.tawil@gmail.com | linkedin.com/in/mohamad-adib-tawil-54024b314 | github.com/Mohamad-Adib-Tawil</div>
-<div class="job-title">${currentLang === 'ar' ? 'مطوّر Flutter' : 'FLUTTER DEVELOPER'}</div>
+<div class="job-title">${currentLang === 'ar' ? 'مطوّر Flutter متوسط المستوى' : 'MID-LEVEL FLUTTER DEVELOPER'}</div>
 
 <h2>${currentLang === 'ar' ? 'الملخص المهني' : 'PROFESSIONAL SUMMARY'}</h2>
 <p>${summary}</p>
@@ -670,7 +679,7 @@ li { margin-bottom: 4pt; }
 <ul>${dict.skillsList.map(s => `<li>${s}</li>`).join('')}</ul>
 
 <h2>${currentLang === 'ar' ? 'الخبرة العملية' : 'PROFESSIONAL EXPERIENCE'}</h2>
-<h3>${currentLang === 'ar' ? 'مطوّر Flutter | 2022 – حتى الآن' : 'FLUTTER DEVELOPER | 2022 – PRESENT'}</h3>
+<h3>${currentLang === 'ar' ? 'مطوّر Flutter متوسط المستوى | 2022 – حتى الآن' : 'MID-LEVEL FLUTTER DEVELOPER | 2022 – PRESENT'}</h3>
 <ul>${dict.experienceList.map(i => `<li>${i}</li>`).join('')}</ul>
 
 <h2>${currentLang === 'ar' ? 'المشاريع الرئيسية' : 'KEY PROJECTS'}</h2>
@@ -692,6 +701,9 @@ li { margin-bottom: 4pt; }
 
 <h2>${currentLang === 'ar' ? 'اللغات' : 'LANGUAGES'}</h2>
 <p>${dict.languagesText}</p>
+
+<h2>${currentLang === 'ar' ? 'الكلمات المفتاحية' : 'KEYWORDS'}</h2>
+<p>${keywords.join(', ')}</p>
 
 </body>
 </html>`;
