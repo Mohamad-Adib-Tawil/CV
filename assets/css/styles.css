@@ -322,7 +322,7 @@ h1:hover::after { width: 100%; }
   margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .contact-item {
@@ -778,7 +778,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
   .profile-pic { width: 120px; height: 120px; margin-right: 0; margin-bottom: 15px; }
   header { flex-direction: column; align-items: center; text-align: center; padding-bottom: 15px; margin-bottom: 20px; margin-top: 20px; gap: 14px; }
   .top-nav { row-gap: 10px; margin-bottom: 24px; }
-  .contact-info { justify-content: center; gap: 8px; }
+  .contact-info { justify-content: center; gap: 12px; }
   .contact-item { font-size: 0.85em; padding: 5px 10px; }
   h1 { font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2rem); }
   .title { font-size: clamp(1rem, 0.95rem + 0.5vw, 1.1rem); }
@@ -957,3 +957,46 @@ html[dir="rtl"] .footer .social-links { direction: ltr; } /* keep icon order nat
 /* RTL tweaks for top nav */
 html[dir="rtl"] .top-nav { direction: rtl; }
 html[dir="rtl"] .top-nav a { margin-inline: 0 10px; }
+
+/* Mobile contact links improvements */
+@media (max-width: 600px) {
+  /* Render contact items as compact, equal-width chips */
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 26px;
+    justify-items: center;
+  }
+
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+    background: var(--tint-weak);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 8px 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .contact-item .icon { width: 18px; }
+
+  /* Keep labels on one line; truncate long email nicely */
+  .contact-item a {
+    flex: 1;
+    min-width: 0; /* allow flex text to shrink for ellipsis */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  /* Mobile gap for CTA buttons */
+  .cta-buttons { gap: 26px; }
+}
+
+/* Ultra-narrow screens: ensure readability */
+@media (max-width: 360px) {
+  .contact-info { grid-template-columns: 1fr 1fr; }
+  .contact-item a { font-size: 0.85em; }
+}
