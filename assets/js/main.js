@@ -165,23 +165,23 @@ document.addEventListener('DOMContentLoaded', function() {
   const i18n = {
     en: {
       nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
-      header: {jobTitle:'Mid-level Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch',ctaWebsite:'Website'},
+      header: {jobTitle:'Mid-level Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['Remote (GMT+3)','1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch',ctaWebsite:'GitHub'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
-      summaryText:'Mid-level Flutter Developer (3+ years). Delivered end-to-end apps with BLoC/Cubit, clean architecture, and Supabase/Firebase. Scaled live audio to 1000+ CCU (−60% memory, +100% FPS) using Zego Cloud and smart caching. Built offline AR/EN OCR pipelines with ML Kit/Tesseract. Open to full‑time remote and contract roles.',
+      summaryText:'Mid-level Flutter Developer (3+ years). Delivered end-to-end apps with BLoC/Cubit, clean architecture, and Supabase/Firebase. Scaled live audio to 1000+ CCU (−60% memory, improved frame pacing) using Zego Cloud and smart caching. Built offline AR/EN OCR pipelines with ML Kit/Tesseract. Open to full‑time remote and contract roles.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
       experienceList:[
         'Owned end-to-end Flutter delivery from requirements gathering and UX flows to deployment, analytics, and post-launch iteration.',
         'Architected and shipped 4 production apps with 1,000+ total downloads and 4+ average rating on Google Play Store.',
-        'Optimized LKLK social audio app to sustain 1000+ concurrent users with <100ms latency through smart caching and adaptive performance modes.',
+        'Optimized LKLK social audio app to sustain 1000+ concurrent users with measurable latency improvements through smart caching and adaptive performance modes.',
         'Engineered offline Arabic-English OCR pipeline in Office Archiving, reducing processing time by 40% via enhanced preprocessing.',
         'Implemented Supabase Auth + real-time chat in Wolfera marketplace, increasing user engagement by 60%.',
         "Collaborated with cross-functional clients to deliver pixel-perfect, multilingual UIs using Flutter's responsive design principles."
       ],
       projectsDesc:{
-        iklk:'Architected cross-platform live audio platform supporting 1000+ concurrent users with Zego Cloud streaming, real-time chat/gifting, and 3-tier adaptive performance. Reduced memory usage 60%, improved FPS 100%, implemented CI/CD with GitHub Actions/Fastlane. Features: WebSocket messaging, synchronized animations, certificate pinning, mixed backend (Appwrite services + RESTful APIs). <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>',
-        wolfera:'Built end-to-end car marketplace with 260+ features across 10 modules using BLoC architecture. Integrated Supabase (Auth, Realtime, Storage), Google Sign-In/Maps, real-time bidirectional chat with emoji support. Implemented advanced search/filtering, bilingual UI (AR/EN), image caching, lazy loading. Stack: Flutter, Dart, GetIt DI, Go Router, Dio.',
-        codebook:'Engineered offline-first reading app with Clean Architecture (Presentation/Domain/Data layers), BLoC state management, GetIt DI. Integrated Open Library API via Dio with retry mechanisms, Hive for offline caching, WebView previews. Delivered production-ready assets and Play Store compliance.',
-        office:'Developed document archiving solution with offline bilingual OCR (90%+ accuracy) using ML Kit/Tesseract. Built SQLite schema with migrations, batch PDF processing, image preprocessing algorithms. Features: AI-powered translation/summarization, full-text search, storage analytics, dark mode. <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>'
+        iklk:'Architected cross-platform live audio platform supporting 1000+ concurrent users with Zego Cloud streaming, real-time chat/gifting, and adaptive performance modes. Reduced memory usage 60%, improved frame pacing, implemented CI/CD with GitHub Actions/Fastlane. Features: WebSocket messaging, synchronized animations, mixed backend (Appwrite services + RESTful APIs). Role: Sole mobile developer (collaborated with backend engineer). Code private on Bitbucket. Handled publishing and release pipeline. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>',
+        wolfera:'Built end-to-end car marketplace with 260+ features across 10 modules using BLoC architecture. Integrated Supabase (Auth, Realtime, Storage), Google Sign-In/Maps, real-time bidirectional chat with emoji support. Implemented advanced search/filtering, bilingual UI (AR/EN), image caching, lazy loading. Stack: Flutter, Dart, GetIt DI, Go Router, Dio. Role: Solo developer (end-to-end). <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
+        codebook:'Engineered offline-first reading app with Clean Architecture (Presentation/Domain/Data layers), BLoC state management, GetIt DI. Integrated Open Library API via Dio with retry mechanisms, Hive for offline caching, WebView previews. Delivered production-ready assets and Play Store compliance. Role: Solo developer. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
+        office:'Developed document archiving solution with offline bilingual OCR (90%+ accuracy) using ML Kit/Tesseract. Built SQLite schema with migrations, batch PDF processing, image preprocessing algorithms. Features: AI-powered translation/summarization, full-text search, storage analytics, dark mode. Role: Solo developer. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Download</a>'
       },
       skillsList:[
         'State Management: BLoC/Cubit, GetIt DI',
@@ -194,11 +194,12 @@ document.addEventListener('DOMContentLoaded', function() {
       ],
       education:{heading:'University of Aleppo – Diploma in Computer Engineering, Software Engineering Track (Jun 2020 – Aug 2022) | GPA: 82.89%', items:['Relevant Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Software Engineering','Final Project: Helping platform (web, Windows, and mobile app) for education programming by courses similar to Udemy']},
       achievements:[
-        'LKLK: Scaled to 1000+ concurrent users, reduced memory 60%, boosted FPS 100%, achieved 99.9% uptime',
+        'LKLK: Scaled to 1000+ concurrent users, reduced memory 60%, improved frame pacing and reduced jank, achieved 99.9% uptime',
         'Wolfera: Delivered 260+ features across 10 modules with real-time chat and bilingual support',
         'Office Archiving: Built offline bilingual OCR with 90%+ accuracy, PDF processing, AI translation',
         'Code Book: Engineered offline-first reading app with Clean Architecture and repository pattern',
-        'Published 4 production apps on Google Play Store with 1000+ downloads and 4+ star rating'
+        'Published 4 production apps on Google Play Store with 1000+ downloads and 4+ star rating',
+        '963SY: Resolved Play Console compliance and publishing (privacy policy, location permissions for maps, protection), supporting a beginner team'
       ],
       advancedSkills:[
         'Performance Engineering: Virtual scrolling, object pooling, debouncing, 3-tier adaptive modes',
@@ -213,7 +214,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'AI integration: OCR, ML Kit, image processing, text analysis, translation',
         'Performance optimization: Memory reduction, FPS improvement, adaptive scaling',
         'Backend architecture: Supabase, Firebase, Appwrite, custom APIs, WebSocket',
-        'CI/CD setup: Automated pipelines, testing, deployment, monitoring'
+        'CI/CD setup: Automated pipelines, testing, deployment, monitoring',
+        'Play Console compliance & publishing (privacy policy, permissions, content rating, store listing)'
       ],
       languagesText:'Arabic (Native), English (Professional)',
       codebook:{
@@ -251,23 +253,23 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     ar: {
       nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
-      header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',employment:'متاح لعقود/دوام كامل',badges:['+1000 مستخدم متزامن','توافرية 99.9%','4 تطبيقات منشورة'],ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي'},
+      header:{jobTitle:'مطوّر Flutter',availability:'متاح للعمل الحر',employment:'متاح لعقود/دوام كامل',badges:['عن بُعد (GMT+3)','+1000 مستخدم متزامن','توافرية 99.9%','4 تطبيقات منشورة'],ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',ctaWebsite:'GitHub'},
       titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
-      summaryText:'مطور Flutter متوسط المستوى بـ3+ سنوات في تسليم تطبيقات من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% uptime، تحسينات أداء 40-100%. متاح للعمل الحر والوظائف عن بُعد.',
+      summaryText:'مطور Flutter متوسط المستوى بـ3+ سنوات في تسليم تطبيقات من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% توافرية، وتحسينات أداء ملموسة (تحسين السلاسة وتقليل التقطيع). متاح للعمل الحر والوظائف عن بُعد.',
       experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
       experienceList:[
         'أتولّى تسليم تطبيقات Flutter من جمع المتطلبات وتخطيط تجربة المستخدم إلى الإطلاق، التحليلات، والتحسين بعد النشر.',
         'بنيت وأطلقت 4 تطبيقات إنتاجية مع +1,000 تنزيل وتقييم +4 على متجر Google Play.',
-        'حسّنت تطبيق LKLK للصوت الاجتماعي لدعم +1000 مستخدم متزامن بزمن استجابة أقل من 100ms عبر التخزين الذكي وأنماط الأداء التكيفية.',
+        'حسّنت تطبيق LKLK للصوت الاجتماعي لدعم +1000 مستخدم متزامن مع تحسينات قابلة للقياس في زمن الاستجابة عبر التخزين الذكي وأنماط الأداء التكيفية.',
         'هندست مسار OCR عربي-إنجليزي للعمل دون اتصال في Office Archiving مع خفض زمن المعالجة بنسبة 40% عبر تحسين ما قبل المعالجة.',
         'طبّقت Supabase Auth ودردشة فورية في سوق Wolfera مما رفع تفاعل المستخدمين بنسبة 60%.',
         'تعاونت مع عملاء متعددي الاختصاصات لتنفيذ واجهات متعددة اللغات بدقة عالية وفق مبادئ التصميم المتجاوب.'
       ],
       projectsDesc:{
-        iklk:'يوفّر LKLK ساحة صوت اجتماعي عالية الأداء مع غرف فورية متعددة اللغات، ورسوم هدايا متزامنة، وبث مرن يعتمد Zego Cloud وAppwrite وواجهات RESTful والتخزين الذكي. سلاسل معالجة مُحسّنة وتخزين آمن وأنماط أداء تكيُّفية تحافظ على تفاعلٍ سلس مع حشود تفوق 1000 مستخدم حتى على الأجهزة المحدودة. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>',
-        wolfera:'Wolfera هو سوق سيارات ذكي يجمع بين قوائم مُنتقاة وأداء فائق يعتمد Supabase مع مصادقة Supabase الآمنة (بما فيها تسجيل الدخول عبر Google)، ومرشحات ذكية، ودردشة مباشرة بين المشتري والبائع، ليقدّم تجربة شراء وبيع متعددة اللغات وعبر منصّات متعددة تُسرّع إتمام الصفقات بثقة.',
-        codebook:'Code Book تطبيق Flutter بمعمارية نظيفة (BLoC وGetIt وHive) لتصفح Open Library مع شبكات Dio مرنة (إعادة المحاولة، أخطاء منظَّمة)، وترقيم صفحات يقوده نمط المستودع، وتخزين مؤقت يعمل دون اتصال. واجهة داكنة احترافية، معاينات WebView، وأصول جاهزة للنشر على Play Store.',
-        office:'يجمع Office Archiving المستندات والوسائط في أقسام ذكية مع OCR عربي-إنجليزي متقدم دون اتصال، وتحسين مسبق للصور، ودعم PDF متعدد الصفحات، وبحث نصي شامل، وترجمة وتلخيص فوريين، وتحليلات تفاعلية للتخزين، وواجهة داكنة سلسة، وتصدير اختياري للنتائج، ومسارات عمل مبسّطة للمهام اليومية. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>'
+        iklk:'يوفّر LKLK ساحة صوت اجتماعي عالية الأداء مع غرف فورية متعددة اللغات، ورسوم هدايا متزامنة، وبث يعتمد Zego Cloud مع خلفية مختلطة (Appwrite وواجهات REST) وتخزين ذكي. تم خفض استخدام الذاكرة 60% وتحسين سلاسة العرض، مع CI/CD عبر GitHub Actions وFastlane. الدور: مطوّر الموبايل الوحيد (بتعاون مع مبرمج باك-إند). الكود خاص على Bitbucket. تولّيت النشر وخط الإصدار. متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>',
+        wolfera:'Wolfera هو سوق سيارات ذكي يجمع بين قوائم مُنتقاة وأداء سريع يعتمد Supabase مع مصادقة آمنة (بما فيها تسجيل الدخول عبر Google)، ومرشحات ذكية، ودردشة مباشرة بين المشتري والبائع. واجهة ثنائية اللغة (عربي/إنجليزي) وتخزين مؤقت للصور وتحميل كسول. المكدس: Flutter وDart وGetIt DI وGo Router وDio. الدور: مطوّر منفرد من البداية للنهاية. <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
+        codebook:'Code Book تطبيق Flutter بمعمارية نظيفة (طبقات العرض/المجال/البيانات) وإدارة حالة BLoC وحقن GetIt. تكامل Open Library عبر Dio مع إعادة المحاولة وتخزين Hive للعمل دون اتصال ومعاينات WebView. جاهزية نشر Play. الدور: مطوّر منفرد. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
+        office:'يجمع Office Archiving المستندات والوسائط في أقسام ذكية مع OCR عربي-إنجليزي متقدم دون اتصال، وتحسين مسبق للصور، ودعم PDF متعدد الصفحات، وبحث نصي شامل، وترجمة/تلخيص، وتحليلات تخزين، ووضع داكن. الدور: مطوّر منفرد. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · متاح على متجر Google Play: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> تحميل</a>'
       },
       skillsList:[
         'Flutter وDart (خبير) | معمارية نظيفة وSOLID مع 260+ ملف ميزة',
@@ -275,16 +277,17 @@ document.addEventListener('DOMContentLoaded', function() {
         'الأنظمة الفورية: Zego Cloud (1000+ مستخدم)، WebSocket، Supabase Realtime، الدردشة/الرسائل',
         'تكامل الخلفيات: Supabase، Firebase، Appwrite، REST APIs، خدمات Google Cloud',
         'الذكاء الاصطناعي: Google ML Kit، Tesseract OCR (عربي/إنجليزي)، معالجة الصور، تحليل النصوص',
-        'الأداء: تحسين الذاكرة (تقليل 60%)، زيادة FPS (100%)، الأوضاع التكيفية',
+        'الأداء: تحسين الذاكرة (تقليل 60%)، تحسين سلاسة الرسوم وتقليل التقطيع، الأوضاع التكيفية',
         'DevOps: CI/CD (GitHub Actions، Fastlane)، Flavors، النشر الآلي'
       ],
       education:{heading:'جامعة حلب — دبلوم هندسة حاسبات، مسار هندسة البرمجيات (يونيو 2020 – أغسطس 2022) | المعدل: 82.89%', items:['مواد ذات صلة: C# وهياكل البيانات والخوارزميات والبرمجة كائنية التوجه وقواعد البيانات وهندسة البرمجيات','مشروع التخرج: منصة مساعدة (ويب وويندوز وتطبيق جوال) لتعلّم البرمجة عبر دورات شبيهة بمنصات مثل Udemy']},
       achievements:[
-        'LKLK: توسع لـ1000+ مستخدم متزامن، تقليل الذاكرة 60%، زيادة FPS بـ100%، توافرية 99.9%',
+        'LKLK: توسّع لـ1000+ مستخدم متزامن، تقليل الذاكرة 60%، تحسين سلاسة الرسوم وتقليل التقطيع، توافرية 99.9%',
         'Wolfera: تسليم 260+ ميزة عبر 10 وحدات مع دردشة فورية ودعم ثنائي اللغة',
         'Office Archiving: بناء OCR ثنائي اللغة offline بدقة +90%، معالجة PDF، ترجمة بالذكاء الاصطناعي',
         'Code Book: هندسة تطبيق قراءة offline-first بمعمارية نظيفة ونمط المستودع',
-        'نشر 4 تطبيقات إنتاجية على Google Play بـ1000+ تحميل وتقييم +4 نجوم'
+        'نشر 4 تطبيقات إنتاجية على Google Play بـ1000+ تحميل وتقييم +4 نجوم',
+        '963SY: حلّ مشاكل الامتثال والنشر على Play Console (سياسة الخصوصية، أذونات الموقع للخرائط، الحماية) ودعم فريق مبتدئ'
       ],
       advancedSkills:[
         'تحسين الأداء: تقسيم الشيفرة، التحميل الكسول، تحليل الذاكرة',
@@ -299,7 +302,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'تكامل الذكاء الاصطناعي: OCR، ML Kit، معالجة الصور، تحليل النصوص، الترجمة',
         'تحسين الأداء: تقليل الذاكرة، تحسين FPS، التوسع التكيفي',
         'معمارية الخلفيات: Supabase، Firebase، Appwrite، APIs مخصصة، WebSocket',
-        'إعداد CI/CD: خطوط آلية، اختبار، نشر، مراقبة'
+        'إعداد CI/CD: خطوط آلية، اختبار، نشر، مراقبة',
+        'امتثال Play Console والنشر (سياسة الخصوصية، الأذونات، تصنيف المحتوى، صفحة المتجر)'
       ],
       languagesText:'العربية (لغة أم)، الإنجليزية (احترافية)',
       codebook:{
