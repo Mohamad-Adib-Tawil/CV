@@ -1,0 +1,114 @@
+<!-- downloads.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download CV – Mohamad Adib Tawil</title>
+    <meta name="description" content="Download Mohamad Adib Tawil CV in DOCX or PDF (English and Arabic)." />
+    <meta name="theme-color" content="#0066cc" />
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/223110350?s=64&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4" sizes="64x64" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260120-2306" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+      <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+
+    <main id="main">
+      <div class="container">
+        <nav class="top-nav" aria-label="Primary">
+          <a href="index.html#summary">Back to CV</a>
+          <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+
+        <header id="header">
+          <img src="https://avatars.githubusercontent.com/u/223110350?s=400&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4" alt="Mohamad Adib Tawil" class="profile-pic floating" width="120" height="120" />
+          <div class="header-info">
+            <h1 class="gradient-text">Download CV</h1>
+            <div id="jobTitle" class="title">Mid-level Flutter Developer • Remote (GMT+3)</div>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <a href="mailto:mohamad.adib.tawil@gmail.com">mohamad.adib.tawil@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <div class="icon"><i class="fab fa-linkedin"></i></div>
+                <a href="https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+              <div class="contact-item">
+                <div class="icon"><i class="fab fa-github"></i></div>
+                <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section>
+          <h2><i class="fas fa-file-download"></i> CV Downloads</h2>
+          <p>Place your DOCX/PDF files in <code>assets/downloads/</code>. Use the filenames below so links work automatically.</p>
+          <div class="project-table" style="padding:1rem;">
+            <ul>
+              <li>
+                <strong>English</strong> —
+                <a href="assets/downloads/CV_EN.docx" download>DOCX</a> ·
+                <a href="assets/downloads/CV_EN.pdf" target="_blank" rel="noopener">PDF</a>
+              </li>
+              <li>
+                <strong>العربية</strong> —
+                <a href="assets/downloads/CV_AR.docx" download>DOCX</a> ·
+                <a href="assets/downloads/CV_AR.pdf" target="_blank" rel="noopener">PDF</a>
+              </li>
+            </ul>
+          </div>
+          <div class="cta-buttons" style="margin-top:1rem;">
+            <button id="exportWordBtn" class="btn btn-primary"><i class="fas fa-file-word"></i> Generate Word (current language)</button>
+            <button id="exportATSBtn" class="btn btn-secondary"><i class="fas fa-robot"></i> Generate ATS Word</button>
+          </div>
+        </section>
+
+        <section>
+          <h2><i class="fas fa-file-alt"></i> Plain Text Version</h2>
+          <p>
+            You can copy the bilingual CV text directly from
+            <a href="assets/cv/CV_Text_EN_AR.md" target="_blank" rel="noopener">CV_Text_EN_AR.md</a>
+          </p>
+        </section>
+
+        <footer class="footer" style="margin-top:2rem;">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <nav class="footer-nav">
+                <a href="index.html#summary">Summary</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="downloads.html">Download CV</a>
+              </nav>
+            </div>
+            <div class="footer-section">
+              <h3>Connect</h3>
+              <div class="social-links">
+                <a href="mailto:mohamad.adib.tawil@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3>Info</h3>
+              <p class="footer-text">© <span id="currentYear">2024</span> Mohamad Adib Tawil</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="assets/js/main.js?v=20260120-2306" defer></script>
+  </body>
+</html>

@@ -164,10 +164,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // ===== i18n (English / Arabic) =====
   const i18n = {
     en: {
-      nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages'},
-      header: {jobTitle:'Mid-level Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['Remote (GMT+3)','1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch',ctaWebsite:'GitHub'},
+      nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages',download:'Download CV'},
+      header: {jobTitle:'Mid-level Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['Remote (GMT+3)','1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch',ctaWebsite:'GitHub',ctaDownload:'Download Resume (PDF)',ctaHire:'Hire Me'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
-      summaryText:'Mid-level Flutter Developer (3+ years). Delivered end-to-end apps with BLoC/Cubit, clean architecture, and Supabase/Firebase. Scaled live audio to 1000+ CCU (−60% memory, improved frame pacing) using Zego Cloud and smart caching. Built offline AR/EN OCR pipelines with ML Kit/Tesseract. Open to full‑time remote and contract roles.',
+      summaryText:'Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4★+, 1K+ installs). Realtime (Zego/WebSocket), Clean Architecture (BLoC), offline AR/EN OCR. Focus on performance (−60% memory), CI/CD, secure storage. Open to full‑time remote and contract roles.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
       experienceList:[
         'Owned end-to-end Flutter delivery from requirements gathering and UX flows to deployment, analytics, and post-launch iteration.',
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
       skillsList:[
         'State Management: BLoC/Cubit, GetIt DI',
         'Architecture: Clean Architecture, SOLID, Repository Pattern',
-        'Realtime: Zego Cloud, WebSocket, Supabase Realtime',
+        'Realtime: Zego Cloud, LiveKit, WebSocket, Supabase Realtime',
         'Backend: Supabase, Firebase, Appwrite, REST APIs',
         'Data & Storage: Hive, SQLite',
         'AI & OCR: ML Kit, Tesseract, Image Processing',
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
       education:{heading:'University of Aleppo – Diploma in Computer Engineering, Software Engineering Track (Jun 2020 – Aug 2022) | GPA: 82.89%', items:['Relevant Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Software Engineering','Final Project: Helping platform (web, Windows, and mobile app) for education programming by courses similar to Udemy']},
       achievements:[
         'LKLK: Scaled to 1000+ concurrent users, reduced memory 60%, improved frame pacing and reduced jank, achieved 99.9% uptime',
-        'Wolfera: Delivered 260+ features across 10 modules with real-time chat and bilingual support',
+        'Wolfera: +60% user engagement via Supabase Auth and real-time chat; bilingual support',
         'Office Archiving: Built offline bilingual OCR with 90%+ accuracy, PDF processing, AI translation',
         'Code Book: Engineered offline-first reading app with Clean Architecture and repository pattern',
         'Published 4 production apps on Google Play Store with 1000+ downloads and 4+ star rating',
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
       advancedSkills:[
         'Performance Engineering: Virtual scrolling, object pooling, debouncing, 3-tier adaptive modes',
         'Architecture Patterns: Clean Architecture, BLoC, Repository, DI with GetIt/Injectable',
-        'Real-time Technologies: WebSocket, Server-Sent Events, Zego Express Engine, Supabase Realtime',
+        'Real-time Technologies: WebSocket, LiveKit, Server-Sent Events, Zego Express Engine, Supabase Realtime',
         'Mobile AI: OCR pipelines, image preprocessing, batch processing, text analysis',
         'Security: Certificate pinning, secure storage, OAuth 2.0, network resilience'
       ],
@@ -252,10 +252,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
     ar: {
-      nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات'},
-      header:{jobTitle:'مطوّر Flutter متوسط المستوى',availability:'متاح للعمل الحر',employment:'متاح لعقود/دوام كامل',badges:['عن بُعد (GMT+3)','+1000 مستخدم متزامن','توافرية 99.9%','4 تطبيقات منشورة'],ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',ctaWebsite:'GitHub'},
+      nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات',download:'تحميل السيرة'},
+      header:{jobTitle:'مطوّر Flutter متوسط المستوى',availability:'متاح للعمل الحر',employment:'متاح لعقود/دوام كامل',badges:['عن بُعد (GMT+3)','+1000 مستخدم متزامن','توافرية 99.9%','4 تطبيقات منشورة'],ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',ctaWebsite:'GitHub',ctaDownload:'تحميل السيرة (PDF)',ctaHire:'وظّفني'},
       titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
-      summaryText:'مطور Flutter متوسط المستوى بـ3+ سنوات في تسليم تطبيقات من الألف للياء. بنيت LKLK (1000+ مستخدم متزامن، تقليل RAM 60%)، Wolfera (260+ ميزة، دردشة فورية)، Office Archiving (OCR ثنائي اللغة، ذكاء اصطناعي)، وCode Book (offline-first، معمارية نظيفة). خبير في BLoC/Cubit، البث المباشر (Zego Cloud)، Supabase/Firebase، ML Kit OCR، وأتمتة CI/CD. سجل مثبت: 4 تطبيقات منشورة، 1000+ تحميل، 99.9% توافرية، وتحسينات أداء ملموسة (تحسين السلاسة وتقليل التقطيع). متاح للعمل الحر والوظائف عن بُعد.',
+      summaryText:'مطوّر Flutter متوسط المستوى (3+ سنوات). شحنت 4 تطبيقات (تقييم +4 نجوم، 1K+ تنزيل). وقت فعلي (Zego/WebSocket)، معمارية نظيفة (BLoC)، OCR عربي/إنجليزي دون اتصال. تركيز على الأداء (−60% ذاكرة)، CI/CD، والتخزين الآمن. متاح لوظائف عن بُعد/عقود.',
       experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
       experienceList:[
         'أتولّى تسليم تطبيقات Flutter من جمع المتطلبات وتخطيط تجربة المستخدم إلى الإطلاق، التحليلات، والتحسين بعد النشر.',
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
       skillsList:[
         'Flutter وDart (خبير) | معمارية نظيفة وSOLID مع 260+ ملف ميزة',
         'إدارة الحالة: نمط BLoC/Cubit، حقن التبعيات GetIt، تحويلات Stream',
-        'الأنظمة الفورية: Zego Cloud (1000+ مستخدم)، WebSocket، Supabase Realtime، الدردشة/الرسائل',
+        'الأنظمة الفورية: Zego Cloud (1000+ مستخدم)، LiveKit، WebSocket، Supabase Realtime، الدردشة/الرسائل',
         'تكامل الخلفيات: Supabase، Firebase، Appwrite، REST APIs، خدمات Google Cloud',
         'الذكاء الاصطناعي: Google ML Kit، Tesseract OCR (عربي/إنجليزي)، معالجة الصور، تحليل النصوص',
         'الأداء: تحسين الذاكرة (تقليل 60%)، تحسين سلاسة الرسوم وتقليل التقطيع، الأوضاع التكيفية',
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
       education:{heading:'جامعة حلب — دبلوم هندسة حاسبات، مسار هندسة البرمجيات (يونيو 2020 – أغسطس 2022) | المعدل: 82.89%', items:['مواد ذات صلة: C# وهياكل البيانات والخوارزميات والبرمجة كائنية التوجه وقواعد البيانات وهندسة البرمجيات','مشروع التخرج: منصة مساعدة (ويب وويندوز وتطبيق جوال) لتعلّم البرمجة عبر دورات شبيهة بمنصات مثل Udemy']},
       achievements:[
         'LKLK: توسّع لـ1000+ مستخدم متزامن، تقليل الذاكرة 60%، تحسين سلاسة الرسوم وتقليل التقطيع، توافرية 99.9%',
-        'Wolfera: تسليم 260+ ميزة عبر 10 وحدات مع دردشة فورية ودعم ثنائي اللغة',
+        'Wolfera: +60% تفاعل المستخدمين عبر مصادقة Supabase والدردشة الفورية؛ دعم ثنائي اللغة',
         'Office Archiving: بناء OCR ثنائي اللغة offline بدقة +90%، معالجة PDF، ترجمة بالذكاء الاصطناعي',
         'Code Book: هندسة تطبيق قراءة offline-first بمعمارية نظيفة ونمط المستودع',
         'نشر 4 تطبيقات إنتاجية على Google Play بـ1000+ تحميل وتقييم +4 نجوم',
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
       ? "'Tajawal', 'Poppins', Arial, sans-serif"
       : "'Inter', 'Poppins', Arial, sans-serif";
     // Nav
-    const navMap = [['navSummary','summary'],['navExperience','experience'],['navProjects','projects'],['navSkills','skills'],['navEducation','education'],['navAchievements','achievements'],['navAdvanced','advanced'],['navServices','services'],['navLanguages','languages']];
+    const navMap = [['navSummary','summary'],['navExperience','experience'],['navProjects','projects'],['navSkills','skills'],['navEducation','education'],['navAchievements','achievements'],['navAdvanced','advanced'],['navServices','services'],['navLanguages','languages'],['navDownload','download']];
     navMap.forEach(([id,key])=>{ const el=document.getElementById(id); if(el) el.textContent = dict.nav[key]; });
     // Header
     const jt=document.getElementById('jobTitle'); if(jt) jt.textContent=dict.header.jobTitle;
@@ -364,6 +364,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctaW=document.getElementById('ctaWorkText'); if(ctaW) ctaW.textContent=dict.header.ctaWork;
     const ctaC=document.getElementById('ctaContactText'); if(ctaC) ctaC.textContent=dict.header.ctaContact;
     const ctaWB=document.getElementById('ctaWebsiteText'); if(ctaWB && dict.header.ctaWebsite) ctaWB.textContent = dict.header.ctaWebsite;
+    const ctaD=document.getElementById('ctaDownloadText'); if(ctaD && dict.header.ctaDownload) ctaD.textContent = dict.header.ctaDownload;
+    const ctaH=document.getElementById('ctaHireText'); if(ctaH && dict.header.ctaHire) ctaH.textContent = dict.header.ctaHire;
     
     // Titles
     const titleMap=[['summaryTitle','summary'],['experienceTitle','experience'],['projectsTitle','projects'],['skillsTitle','skills'],['educationTitle','education'],['achievementsTitle','achievements'],['advancedSkillsTitle','advanced'],['servicesTitle','services'],['languagesTitle','languages']];
@@ -723,4 +725,64 @@ li { margin-bottom: 4pt; }
       URL.revokeObjectURL(url);
     });
   }
+});
+document.addEventListener('DOMContentLoaded', () => {
+  // Snackbar host and styles
+  function ensureSnackbarHost() {
+    let host = document.getElementById('snackbarHost');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'snackbarHost';
+      host.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;display:flex;gap:8px;flex-direction:column;align-items:center;pointer-events:none';
+      document.body.appendChild(host);
+      const style = document.createElement('style');
+      style.textContent = `
+.snackbar{min-width:220px;max-width:90vw;background:#111;color:#fff;padding:12px 16px;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,.15);font:500 14px/1.4 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;opacity:0;transform:translateY(8px);transition:.3s;pointer-events:auto}
+.snackbar.show{opacity:1;transform:translateY(0)}
+.snackbar.success{background:#10b981}
+.snackbar.warn{background:#f59e0b}
+.snackbar.error{background:#ef4444}`;
+      document.head.appendChild(style);
+    }
+    return host;
+  }
+  function showSnackbar(msg, type='warn', timeout=2500) {
+    const host = ensureSnackbarHost();
+    const el = document.createElement('div');
+    el.className = `snackbar ${type}`;
+    el.textContent = msg;
+    host.appendChild(el);
+    requestAnimationFrame(()=> el.classList.add('show'));
+    setTimeout(()=> {
+      el.classList.remove('show');
+      setTimeout(()=> host.removeChild(el), 300);
+    }, timeout);
+  }
+  // Guard missing downloads
+  function setupDownloadGuard() {
+    const selector = 'a[href*="assets/downloads/"]';
+    document.querySelectorAll(selector).forEach((a) => {
+      a.addEventListener('click', async (e) => {
+        const href = a.getAttribute('href') || '';
+        const isFile = /(\.pdf|\.docx?|\.PDF|\.DOCX?)$/.test(href);
+        if (!isFile) return; // only file links
+        e.preventDefault();
+        let ok = false;
+        try {
+          try {
+            const r = await fetch(href, { method: 'HEAD', cache: 'no-store' });
+            ok = r.ok;
+          } catch (_) {}
+          if (!ok) {
+            const r2 = await fetch(href, { method: 'GET', headers: { 'Range': 'bytes=0-0' }, cache: 'no-store' });
+            ok = r2.ok;
+          }
+        } catch (_) {}
+        if (ok) window.location.href = href;
+        else showSnackbar('Soon — file will be available shortly.', 'warn', 3000);
+      }, { passive: false });
+    });
+  }
+  setupDownloadGuard();
+  window.CVShowSnackbar = showSnackbar;
 });
