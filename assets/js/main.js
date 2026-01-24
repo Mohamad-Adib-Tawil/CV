@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
       nav:{summary:'الملخص',experience:'الخبرة',projects:'المشاريع',skills:'المهارات',education:'التعليم',achievements:'الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات',languages:'اللغات',download:'تحميل السيرة'},
       header:{jobTitle:'مطوّر Flutter متوسط المستوى',availability:'متاح للعمل الحر',employment:'متاح لعقود/دوام كامل',badges:['عن بُعد (GMT+3)','+1000 مستخدم متزامن','توافرية 99.9%','4 تطبيقات منشورة'],ctaWork:'استعرض أعمالي',ctaContact:'تواصل معي',ctaWebsite:'GitHub',ctaDownload:'تحميل السيرة (PDF)',ctaHire:'وظّفني'},
       titles:{summary:'الملخص المهني',experience:'الخبرة العملية',projects:'أبرز المشاريع',skills:'المهارات الأساسية',education:'التعليم',achievements:'أهم الإنجازات',advanced:'مهارات متقدمة',services:'الخدمات المقدّمة',languages:'اللغات'},
-      summaryText:'مطوّر Flutter متوسط المستوى (3+ سنوات). شحنت 4 تطبيقات (تقييم +4 نجوم، 1K+ تنزيل). وقت فعلي (Zego/WebSocket)، معمارية نظيفة (BLoC)، OCR عربي/إنجليزي دون اتصال. تركيز على الأداء (−60% ذاكرة)، CI/CD، والتخزين الآمن. متاح لوظائف عن بُعد/عقود.',
+      summaryText:'مطوّر Flutter متوسط المستوى (3+ سنوات). طورت 4 تطبيقات (تقييم +4 نجوم، 1K+ تنزيل). وقت فعلي (Zego/WebSocket)، معمارية نظيفة (BLoC)، OCR عربي/إنجليزي دون اتصال. تركيز على الأداء (−60% ذاكرة)، CI/CD، والتخزين الآمن. متاح لوظائف عن بُعد/عقود.',
       experienceRole:'مطوّر Flutter حر (2022 – حتى الآن)',
       experienceList:[
         'أتولّى تسليم تطبيقات Flutter من جمع المتطلبات وتخطيط تجربة المستخدم إلى الإطلاق، التحليلات، والتحسين بعد النشر.',
