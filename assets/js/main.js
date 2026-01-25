@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const i18n = {
     en: {
       nav: {summary:'Summary',experience:'Experience',projects:'Projects',skills:'Skills',education:'Education',achievements:'Achievements',advanced:'Advanced Skills',services:'Services',languages:'Languages',download:'Download CV'},
-      header: {jobTitle:'Mid-level Flutter Developer',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['Remote (GMT+3)','1000+ concurrent users','99.9% uptime','4 apps published'],ctaWork:'View My Work',ctaContact:'Get in Touch',ctaWebsite:'GitHub',ctaDownload:'Download Resume (PDF)',ctaHire:'Hire Me'},
+      header: {jobTitle:'Flutter Developer | Production Mobile Apps',availability:'Available for Freelance',employment:'Open to Full-time/Contract',badges:['Remote (GMT+3)','Google Play published','Clean, maintainable code','Bilingual AR/EN'],ctaWork:'View My Work',ctaContact:'Get in Touch',ctaWebsite:'GitHub',ctaDownload:'Download Resume (PDF)',ctaHire:'Hire Me'},
       titles:{summary:'Professional Summary',experience:'Work Experience',projects:'Selected Projects',skills:'Core Skills',education:'Education',achievements:'Key Achievements',advanced:'Advanced Skills',services:'Services Offered',languages:'Languages'},
-      summaryText:'Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4★+, 1K+ installs). Realtime (Zego/WebSocket), Clean Architecture (BLoC), offline AR/EN OCR. Focus on performance (−60% memory), CI/CD, secure storage. Open to full‑time remote and contract roles.',
+      summaryText:'Mid-level Flutter developer (3 years). Built and launched production apps on Google Play. Focus on clean, maintainable code and stable user experiences. Hands-on with authentication and REST APIs, local storage (Hive/SQLite), realtime chat and live audio, and performance tuning. Remote, independent contributor.',
       experienceRole:'Freelance Flutter Developer (2022 – Present)',
       experienceList:[
         'Owned end-to-end Flutter delivery from requirements gathering and UX flows to deployment, analytics, and post-launch iteration.',
