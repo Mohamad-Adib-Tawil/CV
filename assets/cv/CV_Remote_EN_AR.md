@@ -5,14 +5,14 @@ Freelance / Remote (GMT+3)
 Email: mohamad.adib.tawil@gmail.com  
 LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/  
 GitHub: https://github.com/Mohamad-Adib-Tawil
-
+CV: https://mohamad-adib-tawil.github.io/CV
 ---
 
 ## Professional Summary (EN)
-Mid-level Flutter developer with 3 years of experience. Built and launched 4 production apps on Google Play. Focused on clean, maintainable code and stable user experiences. Hands-on with authentication and REST integrations, local storage, realtime chat and live audio, and performance tuning. Work independently or with a backend developer.
+Mid-level Flutter developer with 3 years of experience building and launching production mobile apps on Google Play. I focus on clean, maintainable code and stable user experiences. Hands-on with authentication, REST APIs, local storage (Hive/SQLite), realtime chat and live audio, as well as performance tuning and memory management. Work remotely .
 
 ## الملخص المهني (AR)
-مطوّر Flutter متوسط المستوى بخبرة 3 سنوات. بنيت وأطلقت 4 تطبيقات إنتاجية على Google Play. أركّز على كود نظيف قابل للصيانة وتجربة مستخدم مستقرة. لدي خبرة عملية في المصادقة وتكامل REST، التخزين المحلي، الدردشة الفورية والصوت المباشر، وتحسين الأداء. أعمل بشكل مستقل أو بالتعاون مع مطوّر باك‑إند.
+مطوّر Flutter بخبرة 3 سنوات في بناء وإطلاق تطبيقات موبايل إنتاجية على Google Play. أركّز على كتابة كود نظيف وقابل للصيانة وتجربة مستخدم مستقرة. لدي خبرة عملية في المصادقة، تكامل REST APIs، التخزين المحلي، الدردشة الفورية والصوت المباشر، إضافة إلى تحسين الأداء وإدارة الذاكرة. أعمل عن بُعد.
 
 ## Technical Skills (EN)
 - Flutter / Dart
@@ -20,33 +20,37 @@ Mid-level Flutter developer with 3 years of experience. Built and launched 4 pro
 - REST APIs
 - Firebase or Supabase
 - Local Storage: Hive / SQLite
-- Git
+- Git (GitHub & Bitbucket)
 - CI/CD basics
+- Clean Architecture and SOLID principles for maintainability and scalability
+- Backend Integration: Supabase, Firebase, Appwrite, REST APIs
 
 ## المهارات التقنية (AR)
 - Flutter / Dart
 - إدارة الحالة: BLoC أو Cubit
 - REST APIs
 - Firebase أو Supabase
-- التخزين المحلي: Hive / SQLite
-- Git
+- التخزين المحلي وإدارة البيانات باستخدام Hive و SQLite
+- Git (GitHub و Bitbucket)
 - أساسيات CI/CD
+- تنظيم المشاريع باستخدام مبادئ Clean Architecture و SOLID لتحسين قابلية الصيانة والتوسّع.
+- التكامل مع Backends مختلفة: Supabase، Firebase، Appwrite، و REST APIs.
 
 ## Work Experience (EN)
 - Freelance Flutter Developer (2022 – Present)
-  - Implemented sign-in/authentication, REST integrations, local storage (Hive/SQLite), realtime chat, and live audio.
-  - Improved responsiveness and addressed memory-related issues.
-  - Prepared releases and published apps on Google Play, handling store requirements.
-  - Organized code for clarity and maintainability using BLoC/Cubit.
-  - Worked independently and with backend developers when needed.
+  - Deliver applications from requirements gathering to launch and subsequent updates.
+  - Implement authentication and REST API integrations; work with local databases using Hive and SQLite; build realtime chat and live audio features.
+  - Improve responsiveness and memory management; resolve common crashes.
+  - Prepare releases and handle Google Play requirements (descriptions, permissions, screenshots).
+  - Collaborate with a backend developer and use Git to organize work and manage code.
 
 ## الخبرة العملية (AR)
 - مطوّر Flutter حر (2022 – حتى الآن)
-  - تنفيذ تسجيل الدخول والمصادقة، تكامل REST، التخزين المحلي (Hive/SQLite)، دردشة فورية وصوت مباشر.
-  - تحسين الاستجابة العامة ومعالجة مشاكل الذاكرة.
-  - تجهيز الإصدارات ورفع التطبيقات على Google Play والتعامل مع متطلبات المتجر.
-  - تنظيم الشيفرة بوضوح وقابلية صيانة باستخدام BLoC/Cubit.
-  - العمل بشكل مستقل أو بالتعاون مع Backend Developer.
+  - تسليم التطبيقات من جمع المتطلبات حتى الإطلاق والتحديثات اللاحقة.
+  - تنفيذ المصادقة وتكامل REST APIs، والتعامل مع قواعد بيانات محلية باستخدام Hive و SQLite، إضافة إلى الدردشة الفورية وميزات الصوت المباشر.
+  - تحسين استجابة التطبيقات وإدارة الذاكرة ومعالجة الأعطال الشائعة.
+  - تجهيز الإصدارات والتعامل مع متطلبات متجر Google Play (الوصف، الأذونات، لقطات الشاشة).
+  - التعاون مع مطوّر باك‑إند واستخدام Git لتنظيم العمل وإدارة الشيفرة.
 
 ## Selected Projects (EN)
 - LKLK — Social Audio Platform
