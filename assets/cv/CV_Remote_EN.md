@@ -1,83 +1,59 @@
-# Mohamad Adib Tawil
-
+Mohamad Adib Tawil
 Flutter Developer | Production Mobile Apps
-Freelance / Remote (GMT+3)
+Remote (GMT+3) | mohamad.adib.tawil@gmail.com | mohamad-adib-tawil.github.io/CV
+linkedin.com/in/mohamad-adib-tawil-54024b314 | github.com/Mohamad-Adib-Tawil
 
-Email: mohamad.adib.tawil@gmail.com
-LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
-GitHub: https://github.com/Mohamad-Adib-Tawil
-CV: https://mohamad-adib-tawil.github.io/CV
+SUMMARY
+Flutter Developer with 3 years of experience in developing production-grade mobile applications deployed on Google Play, including audio platforms, productivity apps, and e-commerce marketplaces. Focused on writing organized and scalable code, with practical experience in integrating multiple backends, real-time systems, and performance optimization in production environments. Proficient in developing applications compatible with both iOS and Android, adhering to Apple and Google Play design and deployment standards, committed to deadlines and maintaining continuous communication with clients and team members.
 
----
+SKILLS
+Frameworks: Flutter / Dart (iOS & Android Compatible)
+State Management: BLoC, Cubit
+Local Storage: Hive, SQLite
+Version Control: Git (GitHub, Bitbucket)
+DevOps: CI/CD Basics
+Architecture: Clean Architecture, SOLID Principles
+Backend Integration: Supabase, Firebase, Appwrite, REST APIs
 
-## Professional Summary
+EXPERIENCE
+Freelance Flutter Developer — Remote (2022 – Present)
 
-Mid-level Flutter developer with 3 years of experience building and launching production mobile apps on Google Play. I focus on writing clean, maintainable code and delivering stable user experiences. Hands-on with authentication, REST APIs, local storage (Hive/SQLite), realtime chat and live audio, as well as performance tuning and memory management. Work remotely .
+- Delivered end-to-end applications from requirement gathering to deployment.
+- Implemented authentication and REST API integrations.
+- Managed local databases and real-time features.
+- Optimized performance and resolved crashes.
+- Managed Google Play requirements.
+- Collaborated with backend developers.
 
----
-
-## Technical Skills
-- Flutter / Dart
-- State Management: BLoC, Cubit
-- REST APIs
-- Firebase, Supabase
-- Local Storage and data management with Hive and SQLite
-- Git (GitHub & Bitbucket)
-- CI/CD basics
-- Clean Architecture and SOLID principles for maintainability and scalability
-- Backend integration: Supabase, Firebase, Appwrite, REST APIs
-
----
-
-## Work Experience
-
-Freelance Flutter Developer — Remote
-
-2022 – Present
-- Deliver applications from requirements gathering to launch and subsequent updates.
-- Implement authentication and REST API integrations; work with local databases using Hive and SQLite; build realtime chat and live audio features.
-- Improve responsiveness and memory management; resolve common crashes.
-- Prepare releases and handle Google Play requirements (descriptions, permissions, screenshots).
-- Collaborate with a backend developer and use Git to organize work and manage code.
-
----
-
-## Selected Projects
-
+PROJECTS
 LKLK — Social Audio Platform
-- Live voice rooms and text chat with sign‑in.
-- Role: Sole mobile developer in collaboration with a backend engineer; handled publishing and release pipeline.
-- Tech: Flutter, Zego Cloud, WebSocket, Appwrite, REST APIs.
-- Link:
-https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+Role: Sole Mobile Developer
+Tech: Flutter, Zego Cloud, Appwrite, REST APIs
+Impact: Reached 1,000+ downloads and stable real-time audio sessions.
+Note: iOS builds are ready and tested on simulators, available upon request.
+Link: Play Store
+https://play.google.com/store/apps/details\?id\=com.bwmatbw.lklklivechatapp
 
----
-
-Wolfera — Car Marketplace
-- Marketplace and classifieds with listings, search/filtering, buyer–seller chat, and bilingual UI (Arabic/English).
-- Role: Built the app end‑to‑end, including UI, state management, integration with Supabase (Auth / Realtime / Storage) and Google Sign‑In, plus local storage.
-- Link:
+Wolfera — Automotive Marketplace
+Role: Full App Development
+Tech: Flutter, Supabase, Clean Architecture
+Impact: Built a complete marketplace system with real-time chat and bilingual support.
+Note: iOS builds are ready and tested on simulators, available upon request.
+Link: GitHub
 https://github.com/Mohamad-Adib-Tawil/Wolfera
 
----
-
 Office Archiving — OCR & Productivity
-- File management app with offline Arabic/English OCR, local database, and PDF processing.
-- Role: Built the entire app, including UI and OCR flows, and improved responsiveness.
-- Links:
-GitHub: https://github.com/Mohamad-Adib-Tawil/office_archiving
-Google Play: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
+Role: OCR & Performance
+Tech: Flutter, OCR, SQLite, PDF Processing
+Impact: Enabled offline OCR for Arabic and English documents with local database management.
+Note: iOS builds are ready and tested on simulators, available upon request.
+Link: Play Store , GitHub
+https://play.google.com/store/apps/details\?id\=com.werewolf.office_archiving
+https://github.com/Mohamad-Adib-Tawil/office_archiving
 
----
+EDUCATION
+University of Aleppo — Diploma in Computer Engineering (2020 – 2022)
 
-## Education
-
-University of Aleppo — Diploma in Computer Engineering
-Software Engineering Track — 2020–2022
-
----
-
-## Languages
-- Arabic: Native
-- English: Professional Working Proficiency
-
+LANGUAGES
+Arabic: Native
+English: Professional Working Proficiency
