@@ -1,58 +1,83 @@
 محمد أديب طويل
+
 Flutter Developer | Production Mobile Apps
-عن بُعد (GMT+3) | mohamad.adib.tawil@gmail.com | mohamad-adib-tawil.github.io/CV
-linkedin.com/in/mohamad-adib-tawil-54024b314 | github.com/Mohamad-Adib-Tawil
+Freelance / Remote (GMT+3)
+
+البريد: mohamad.adib.tawil@gmail.com
+LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
+GitHub: https://github.com/Mohamad-Adib-Tawil
+CV: https://mohamad-adib-tawil.github.io/CV
+
+⸻
 
 الملخص المهني
-مطوّر Flutter بخبرة 3 سنوات في تطوير تطبيقات موبايل جاهزة للإنتاج منشورة على Google Play، تشمل منصّات صوتية، تطبيقات إنتاجية، وأسواق إلكترونية. أركّز على كتابة شيفرة منظّمة وقابلة للتوسّع، مع خبرة عملية في التكامل مع خلفيات متعددة، الأنظمة اللحظية، وتحسين الأداء في بيئات الإنتاج. متمرس في تطوير تطبيقات متوافقة مع iOS وAndroid وفق معايير التصميم والنشر لدى Apple وGoogle Play، ملتزم بالمواعيد النهائية وبالتواصل المستمر مع العملاء وأعضاء الفريق.
+
+مطوّر Flutter بخبرة 3 سنوات في تطوير تطبيقات موبايل حقيقية تم نشرها على Google Play، تشمل منصّات صوتية، تطبيقات إنتاجية، وتطبيقات سوق إلكتروني. أركّز على كتابة كود منظم وقابل للتوسّع، مع خبرة عملية في التكامل مع Backends متعددة، الأنظمة اللحظية، وتحسين الأداء في بيئات الإنتاج. كما أمتلك خبرة في تطوير تطبيقات متوافقة مع iOS و Android، والالتزام بمعايير Apple و Google Play للتصميم والنشر الالتزام بالمواعيد النهائية والتواصل المستمر مع العملاء وأعضاء الفريق.
+
+
+⸻
 
 المهارات التقنية
-- Flutter / Dart (متوافق مع iOS وAndroid)
-- إدارة الحالة: BLoC، Cubit
-- التخزين المحلي: Hive، SQLite
-- إدارة الإصدارات: Git (GitHub، Bitbucket)
-- DevOps: أساسيات CI/CD
-- المعمارية: Clean Architecture، مبادئ SOLID
-- التكامل الخلفي: Supabase، Firebase، Appwrite، REST APIs
+	•	Flutter / Dart (متوافق مع iOS و Android)
+	•	إدارة الحالة: BLoC، Cubit
+	•	التخزين المحلي وإدارة البيانات باستخدام Hive و SQLite
+	•	Git (GitHub و Bitbucket)
+	•	أساسيات CI/CD
+	•	تنظيم المشاريع باستخدام مبادئ Clean Architecture و SOLID لتحسين قابلية الصيانة والتوسّع.
+	•	التكامل مع Backends مختلفة: Supabase، Firebase، Appwrite، و REST APIs.
+
+⸻
 
 الخبرة العملية
-مطوّر Flutter حر — عن بُعد (2022 – حتى الآن)
-- تسليم التطبيقات من جمع المتطلبات حتى النشر والتحديثات.
-- تنفيذ المصادقة وتكامل REST APIs.
-- إدارة قواعد بيانات محلية والميزات اللحظية.
-- تحسين الأداء وحل الأعطال.
-- التعامل مع متطلبات Google Play.
-- التعاون مع مطوّري الباك‑إند.
+
+مطوّر Flutter حر — Remote
+
+2022 – حتى الآن
+	•	تسليم التطبيقات من جمع المتطلبات حتى الإطلاق والتحديثات اللاحقة.
+	•	تنفيذ المصادقة وتكامل REST APIs، والتعامل مع قواعد بيانات محلية باستخدام Hive و SQLite، إضافة إلى الدردشة الفورية وميزات الصوت المباشر.
+	•	تحسين استجابة التطبيقات وإدارة الذاكرة ومعالجة الأعطال الشائعة.
+	•	تجهيز الإصدارات والتعامل مع متطلبات متجر Google Play (الوصف، الأذونات، لقطات الشاشة).
+	•	التعاون مع مطوّر باك-إند واستخدام Git لتنظيم العمل وإدارة الشيفرة.
+
+⸻
 
 أبرز المشاريع
+
 LKLK — منصّة صوت اجتماعي
-- الدور: مطوّر الموبايل الوحيد
-- التقنيات: Flutter، Zego Cloud، Appwrite، REST APIs
-- الأثر: الوصول إلى 1,000+ تنزيل وجلسات صوتية مستقرة لحظيًا.
-- ملاحظة: بناءات iOS جاهزة ومختبرة على المحاكيات.
-- الرابط: Google Play
-https://play.google.com/store/apps/details\?id\=com.bwmatbw.lklklivechatapp
+	•	تطبيق محادثات صوتية مباشرة مع غرف صوتية ودردشة نصية وتسجيل دخول.
+	•	الدور: مطوّر الموبايل الوحيد بالتعاون مع مطوّر باك-إند، إضافة إلى تولّي النشر وإدارة خط الإصدار.
+	•	التقنيات: Flutter، Zego Cloud، WebSocket، Appwrite، REST APIs.
+	•	حقق التطبيق أكثر من 1,000 تحميل على Google Play.
+	•	الرابط:
+
+https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+
+⸻
 
 Wolfera — سوق سيارات
-- الدور: تطوير التطبيق بالكامل
-- التقنيات: Flutter، Supabase، معمارية نظيفة
-- الأثر: سوق متكامل مع دردشة لحظية ودعم ثنائي اللغة.
-- ملاحظة: بناءات iOS جاهزة ومختبرة على المحاكيات.
-- الرابط: GitHub
+	•	تطبيق سوق وإعلانات مع قوائم، بحث وترشيح، ودردشة بين البائع والمشتري، وواجهة ثنائية اللغة (عربي / إنجليزي).
+	•	الدور: تطوير التطبيق بالكامل، بما يشمل واجهة المستخدم، إدارة الحالة، والتكامل مع Supabase (Auth / Realtime / Storage) و Google Sign-In، مع دعم التخزين المحلي.
+	•	الرابط:
 https://github.com/Mohamad-Adib-Tawil/Wolfera
 
+⸻
+
 Office Archiving — OCR وإنتاجية
-- الدور: OCR والأداء
-- التقنيات: Flutter، OCR، SQLite، معالجة PDF
-- الأثر: تمكين OCR دون اتصال للغتين مع إدارة قاعدة بيانات محلية.
-- ملاحظة: بناءات iOS جاهزة ومختبرة على المحاكيات.
-- الروابط: Google Play , GitHub
-https://play.google.com/store/apps/details\?id\=com.werewolf.office_archiving
-https://github.com/Mohamad-Adib-Tawil/office_archiving
+	•	تطبيق لإدارة الملفات يتضمن OCR عربي/إنجليزي يعمل دون اتصال، قاعدة بيانات محلية، ومعالجة ملفات PDF.
+	•	الدور: تطوير التطبيق بالكامل، بما يشمل واجهة المستخدم، مسارات OCR، وتحسين استجابة التطبيق.
+	•	الروابط:
+GitHub: https://github.com/Mohamad-Adib-Tawil/office_archiving
+Google Play: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
+
+⸻
 
 التعليم
-جامعة حلب — دبلوم هندسة حاسبات (2020–2022)
+
+جامعة حلب — دبلوم هندسة حاسبات
+مسار هندسة البرمجيات — 2020–2022
+
+⸻
 
 اللغات
-- العربية: Native
-- الإنجليزية: Professional Working Proficiency
+	•	العربية: Native
+	•	الإنجليزية: Professional Working Proficiency
