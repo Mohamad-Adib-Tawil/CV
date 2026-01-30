@@ -1,59 +1,57 @@
 Mohamad Adib Tawil
-Flutter Developer | Production Mobile Apps
-Remote (GMT+3) | mohamad.adib.tawil@gmail.com | mohamad-adib-tawil.github.io/CV
+Mid-level Flutter Developer | Mobile Application Engineer
+Remote (GMT+3) | Syria | mohamad.adib.tawil@gmail.com | +963 992 688 759 | mohamad-adib-tawil.github.io/CV
 linkedin.com/in/mohamad-adib-tawil-54024b314 | github.com/Mohamad-Adib-Tawil
 
 SUMMARY
-Flutter Developer with 3 years of experience in developing production-grade mobile applications deployed on Google Play, including audio platforms, productivity apps, and e-commerce marketplaces. Focused on writing organized and scalable code, with practical experience in integrating multiple backends, real-time systems, and performance optimization in production environments. Proficient in developing applications compatible with both iOS and Android, adhering to Apple and Google Play design and deployment standards, committed to deadlines and maintaining continuous communication with clients and team members.
+Results-driven Flutter Developer with over 3 years of experience building and maintaining production mobile applications. Strong background in Clean Architecture and SOLID principles, with a focus on robust error handling and scalable architecture. Experienced in integrating real-time audio systems, OCR solutions, and advanced state management (BLoC/Cubit). Specialized in optimizing app performance, improving stability, and delivering secure, maintainable cross-platform solutions for iOS and Android.
 
 SKILLS
-Frameworks: Flutter / Dart (iOS & Android Compatible)
-State Management: BLoC, Cubit
-Local Storage: Hive, SQLite
-Version Control: Git (GitHub, Bitbucket)
-DevOps: CI/CD Basics
-Architecture: Clean Architecture, SOLID Principles
-Backend Integration: Supabase, Firebase, Appwrite, REST APIs
-
+Architecture & Logic: Clean Architecture (Data, Domain, Presentation), SOLID Principles, MVVM, Functional Error Handling (Either/Dartz), Dependency Injection (GetIt/Injectable), Code Generation (Freezed, JsonSerializable)
+State Management: BLoC, Cubit, Provider, Bloc Concurrency (Droppable/Restartable)
+Networking & Data: REST APIs (Dio + Interceptors), WebSockets, Offline-First Strategy, Smart Caching (Hive, SQLite), Secure Storage, Infinite Pagination, Postman API Testing
+Real-time & Media: Zego Cloud (Express & ZIM), LiveKit, Audio Streaming (Just_Audio), Audio Recording, SVGA/Lottie Animations
+System & Performance: ProGuard/R8 Obfuscation, App Flavoring (Dev/Prod), Multi-threading (Isolates), Image Optimization, Background/Foreground Tasks
+AI & Services: OCR (Tesseract , Google ML Kit), Firebase (Auth, FCM, Analytics, Crashlytics), Supabase, Appwrite, In-App Purchases, Google Mobile Ads
+UI/UX: Responsive Design, Figma-to-Code, Dark/Light Mode, Internationalization (i18n)
 EXPERIENCE
-Freelance Flutter Developer — Remote (2022 – Present)
-
-- Delivered end-to-end applications from requirement gathering to deployment.
-- Implemented authentication and REST API integrations.
-- Managed local databases and real-time features.
-- Optimized performance and resolved crashes.
-- Managed Google Play requirements.
-- Collaborated with backend developers.
-
+Flutter Developer (Independent / Contract)
+07/2022 – Present
+- Architected and delivered multiple production mobile applications using Clean Architecture.
+- Implemented functional error handling using Either to improve stability and predictability.
+- Configured ProGuard/R8 rules to enhance application security and reduce APK size.
+- Developed offline caching layers using Hive and SQLite for better user experience.
+- Implemented App Flavoring to manage Development and Production environments.
+- Optimized UI performance using Isolates and background processing for heavy tasks.
 PROJECTS
-LKLK — Social Audio Platform
-Role: Sole Mobile Developer
-Tech: Flutter, Zego Cloud, Appwrite, REST APIs
-Impact: Reached 1,000+ downloads and stable real-time audio sessions.
-Note: iOS builds are ready and tested on simulators, available upon request.
-Link: Play Store
+LKLK – Social Real-time Audio Platform
+Tech: Zego Cloud, Appwrite, BLoC, GetIt, Hive, ProGuard, Crashlytics
+Developed a social platform with real-time audio rooms and messaging. Integrated Zego Express and ZIM for audio streaming and signaling. Secured the application using ProGuard obfuscation. Implemented virtual gifting and in-app purchases.
+Status: 1,000+ Downloads. Link Play Store
 https://play.google.com/store/apps/details\?id\=com.bwmatbw.lklklivechatapp
 
-Wolfera — Automotive Marketplace
-Role: Full App Development
-Tech: Flutter, Supabase, Clean Architecture
-Impact: Built a complete marketplace system with real-time chat and bilingual support.
-Note: iOS builds are ready and tested on simulators, available upon request.
-Link: GitHub
+Wolfera – Automotive E-commerce Marketplace
+Tech: Supabase, Clean Architecture, Dartz (Either), Infinite Pagination, GoRouter
+Built a marketplace with advanced search and real-time chat. Integrated Supabase for authentication, storage, and realtime features. Applied functional error handling to improve network reliability. Implemented infinite scroll pagination for large datasets.
+Link Github
 https://github.com/Mohamad-Adib-Tawil/Wolfera
 
-Office Archiving — OCR & Productivity
-Role: OCR & Performance
-Tech: Flutter, OCR, SQLite, PDF Processing
-Impact: Enabled offline OCR for Arabic and English documents with local database management.
-Note: iOS builds are ready and tested on simulators, available upon request.
-Link: Play Store , GitHub
+Office Archiving – AI & Productivity (OCR)
+Tech: Google ML Kit, Tesseract OCR, SQLite, PDF Processing
+Developed an offline-first document scanning and archiving system. Implemented bilingual OCR (Arabic/English). Built PDF generation and printing features. Added full-text search using indexed local databases.
+Links: Play Store , GitHub
 https://play.google.com/store/apps/details\?id\=com.werewolf.office_archiving
 https://github.com/Mohamad-Adib-Tawil/office_archiving
+
+Code Book – Offline-First Digital Library
+Tech: Clean Architecture, BLoC, GetIt, Hive, Dio, WebView
+Developed an offline reading application using Open Library APIs. Implemented caching and retry mechanisms. Built deep linking and advanced navigation flows.
+Link Github
+https://github.com/Mohamad-Adib-Tawil/Code-Books-
 
 EDUCATION
 University of Aleppo — Diploma in Computer Engineering (2020 – 2022)
 
 LANGUAGES
 Arabic: Native
-English: Professional Working Proficiency
+English: Good Technical English

@@ -1,5 +1,5 @@
 # Mohamad Adib Tawil
-Mid-level Flutter Developer | Remote (GMT+3)
+Mid-level Flutter Developer | Mobile Application Engineer
 Email: mohamad.adib.tawil@gmail.com
 LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
 GitHub: https://github.com/Mohamad-Adib-Tawil
@@ -7,7 +7,7 @@ GitHub: https://github.com/Mohamad-Adib-Tawil
 ---
 
 ## Professional Summary (EN)
-Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4+ star rating, 1,000+ installs). Realtime (Zego/WebSocket), Clean Architecture (BLoC), offline AR/EN OCR. Strong focus on performance optimization (-60% memory), CI/CD automation, and secure data handling. Currently advancing CI fundamentals with GitHub Actions (triggers, flutter analyze/test, build artifacts, secrets, caching/concurrency). Open to remote full‑time/contract.
+Results-driven Flutter Developer with over 3 years of experience building and maintaining production mobile applications. Strong background in Clean Architecture and SOLID principles, with a focus on robust error handling and scalable architecture. Experienced in integrating real-time audio systems, OCR solutions, and advanced state management (BLoC/Cubit). Specialized in optimizing app performance, improving stability, and delivering secure, maintainable cross-platform solutions for iOS and Android.
 
 ## Work Experience (EN)
 ### Freelance Flutter Developer (2022 - Present)
@@ -78,4 +78,4 @@ Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4+ star rating, 1,000+ ins
 - Play Console compliance & publishing (privacy policy, permissions, content rating, store listing)
 
 ## Languages (EN)
-- Arabic (Native), English (Professional)
+- Arabic (Native), English (Good Technical English)
