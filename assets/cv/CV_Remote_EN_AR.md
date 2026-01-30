@@ -1,5 +1,5 @@
 # Mohamad Adib Tawil
-Flutter Developer | Production Mobile Apps  
+Mid-level Flutter Developer | Mobile Application Engineer  
 Remote (GMT+3)
 
 Email: mohamad.adib.tawil@gmail.com  
@@ -10,10 +10,10 @@ CV: https://mohamad-adib-tawil.github.io/CV
 ---
 
 ## Professional Summary (EN)
-Flutter Developer with 3 years of experience in developing production-grade mobile applications deployed on Google Play, including audio platforms, productivity apps, and e-commerce marketplaces. Focused on writing organized and scalable code, with practical experience in integrating multiple backends, real-time systems, and performance optimization in production environments. Proficient in developing applications compatible with both iOS and Android, adhering to Apple and Google Play design and deployment standards, committed to deadlines and maintaining continuous communication with clients and team members.
+Results-driven Flutter Developer with over 3 years of experience building and maintaining production mobile applications. Strong background in Clean Architecture and SOLID principles, with a focus on robust error handling and scalable architecture. Experienced in integrating real-time audio systems, OCR solutions, and advanced state management (BLoC/Cubit). Specialized in optimizing app performance, improving stability, and delivering secure, maintainable cross-platform solutions for iOS and Android.
 
 ## الملخص المهني (AR)
-مطوّر Flutter بخبرة 3 سنوات في تطوير تطبيقات موبايل جاهزة للإنتاج منشورة على Google Play، تشمل منصّات صوتية، تطبيقات إنتاجية، وأسواق إلكترونية. أركّز على كتابة شيفرة منظّمة وقابلة للتوسّع، مع خبرة عملية في التكامل مع خلفيات متعددة، الأنظمة اللحظية، وتحسين الأداء في بيئات الإنتاج. متمرس في تطوير تطبيقات متوافقة مع iOS وAndroid وفق معايير التصميم والنشر لدى Apple وGoogle Play، ملتزم بالمواعيد النهائية وبالتواصل المستمر مع العملاء وأعضاء الفريق.
+مطوّر Flutter بنتائج ملموسة ولديه أكثر من 3 سنوات خبرة في بناء وصيانة تطبيقات موبايل إنتاجية. خلفية قوية في المعمارية النظيفة ومبادئ SOLID مع تركيز على معالجة الأخطاء بشكل وظيفي وبناء معماريات قابلة للتوسّع. خبرة بدمج أنظمة الصوت اللحظية وحلول OCR وإدارة الحالة المتقدّمة (BLoC/Cubit). مختص في تحسين الأداء والاستقرار وتقديم حلول عبر المنصّات آمنة وقابلة للصيانة على iOS وAndroid.
 
 ## Technical Skills (EN)
 - Frameworks: Flutter / Dart (iOS & Android Compatible)
@@ -103,8 +103,8 @@ Flutter Developer with 3 years of experience in developing production-grade mobi
 
 ## Languages (EN)
 - Arabic: Native
-- English: Professional Working Proficiency
+- English: Good Technical English
 
 ## اللغات (AR)
 - العربية: لغة أم
-- الإنجليزية: احترافية
+- الإنجليزية: إنجليزية تقنية جيدة

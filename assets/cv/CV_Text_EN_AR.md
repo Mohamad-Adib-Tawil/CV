@@ -1,5 +1,5 @@
 # Mohamad Adib Tawil
-Mid-level Flutter Developer | Remote (GMT+3)
+Mid-level Flutter Developer | Mobile Application Engineer | Remote (GMT+3)
 Email: mohamad.adib.tawil@gmail.com
 LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
 GitHub: https://github.com/Mohamad-Adib-Tawil
@@ -7,7 +7,7 @@ GitHub: https://github.com/Mohamad-Adib-Tawil
 ---
 
 ## Professional Summary (EN)
-Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4+ star rating, 1,000+ installs). Realtime (Zego/WebSocket), Clean Architecture (BLoC), offline AR/EN OCR. Strong focus on performance optimization (-60% memory), CI/CD automation, and secure data handling. Currently advancing CI fundamentals with GitHub Actions (triggers, flutter analyze/test, build artifacts, secrets, caching/concurrency). Open to remote full‑time/contract.
+Results-driven Flutter Developer with over 3 years of experience building and maintaining production mobile applications. Strong background in Clean Architecture and SOLID principles, with a focus on robust error handling and scalable architecture. Experienced in integrating real-time audio systems, OCR solutions, and advanced state management (BLoC/Cubit). Specialized in optimizing app performance, improving stability, and delivering secure, maintainable cross-platform solutions for iOS and Android.
 
 ## Work Experience (EN)
 ### Freelance Flutter Developer (2022 - Present)
@@ -78,12 +78,12 @@ Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4+ star rating, 1,000+ ins
 - Play Console compliance & publishing (privacy policy, permissions, content rating, store listing)
 
 ## Languages (EN)
-- Arabic (Native), English (Professional)
+- Arabic (Native), English (Good Technical English)
 
 ---
 
 # محمد أديب طويل
-مطوّر Flutter متوسط المستوى | عن بُعد (GMT+3)
+مطوّر Flutter متوسط المستوى | مهندس تطبيقات موبايل | عن بُعد (GMT+3)
 البريد: mohamad.adib.tawil@gmail.com
 لينكدإن: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
 جيتهاب: https://github.com/Mohamad-Adib-Tawil
@@ -91,7 +91,7 @@ Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4+ star rating, 1,000+ ins
 ---
 
 ## الملخص المهني (AR)
-مطوّر Flutter متوسط المستوى (3+ سنوات). طورت 4 تطبيقات (تقييم +4 نجوم، 1,000+ تنزيل). وقت فعلي (Zego/WebSocket)، معمارية نظيفة (BLoC)، OCR عربي/إنجليزي دون اتصال. تركيز قوي على تحسين الأداء (-60% للذاكرة)، أتمتة CI/CD، والتعامل الآمن مع البيانات. متاح لوظائف عن بُعد/عقود. أعمل حالياً على تطوير أساسيات CI باستخدام GitHub Actions (triggers، flutter analyze/test، build artifacts، GitHub Secrets، caching/concurrency).
+مطوّر Flutter بنتائج ملموسة ولديه أكثر من 3 سنوات خبرة في بناء وصيانة تطبيقات موبايل إنتاجية. خلفية قوية في المعمارية النظيفة ومبادئ SOLID مع تركيز على معالجة الأخطاء بشكل وظيفي وبناء معماريات قابلة للتوسّع. خبرة بدمج أنظمة الصوت اللحظية وحلول OCR وإدارة الحالة المتقدّمة (BLoC/Cubit). مختص في تحسين الأداء والاستقرار وتقديم حلول عبر المنصّات آمنة وقابلة للصيانة على iOS وAndroid.
 
 ## الخبرة العملية (AR)
 ### مطوّر Flutter حر (2022 - حتى الآن)
@@ -162,4 +162,4 @@ Mid-level Flutter Developer (3+ yrs). Shipped 4 apps (4+ star rating, 1,000+ ins
 - امتثال Play Console والنشر (سياسة الخصوصية، الأذونات، تصنيف المحتوى، صفحة المتجر)
 
 ## اللغات (AR)
-- العربية (لغة أم)، الإنجليزية (احترافية)
+- العربية (لغة أم)، الإنجليزية (إنجليزية تقنية جيدة)
