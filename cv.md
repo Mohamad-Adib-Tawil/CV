@@ -11,14 +11,14 @@
   [![linkedin badge](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/)
   [![github badge](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Mohamad-Adib-Tawil)
   [![website badge](https://img.shields.io/badge/Website-CV-0A66C2?style=flat&logo=google-chrome&logoColor=white)](https://mohamad-adib-tawil.github.io/CV/)
-- Flutter Developer • Open to Full‑time/Contract • Available for Freelance
+- Mid-level Flutter Developer | Mobile Application Engineer • Open to Full‑time/Contract • Available for Freelance
 - Email: [mohamad.adib.tawil@gmail.com](mailto:mohamad.adib.tawil@gmail.com)
 - LinkedIn: [mohamad-adib-tawil](https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/)
 - GitHub: [Mohamad-Adib-Tawil](https://github.com/Mohamad-Adib-Tawil)
 
 ## Professional Summary
 
-Mid-level Flutter Developer with 3+ years delivering production apps end-to-end across social audio, OCR automation, and marketplace domains. Specialized in clean architecture (BLoC/Cubit, GetIt), backend integrations (Supabase, Firebase, Appwrite), and performance engineering (memory −60%, FPS +100%). Proven at scaling real-time features for 1000+ concurrent users and building offline-capable OCR/translation pipelines.
+Results-driven Flutter Developer with over 3 years of experience building and maintaining production mobile applications. Strong background in Clean Architecture and SOLID principles, with a focus on robust error handling and scalable architecture. Experienced in integrating real-time audio systems, OCR solutions, and advanced state management (BLoC/Cubit). Specialized in optimizing app performance, improving stability, and delivering secure, maintainable cross-platform solutions for iOS and Android.
 
 ---
 
