@@ -1,9 +1,10 @@
 محمد أديب طويل
 
-Flutter Developer | Production Mobile Apps
-Freelance / Remote (GMT+3)
+مطوّر Flutter متوسط المستوى | مهندس تطبيقات موبايل
+عن بُعد (GMT+3) • سوريا
 
 البريد: mohamad.adib.tawil@gmail.com
+الهاتف: +963 992 688 759
 LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
 GitHub: https://github.com/Mohamad-Adib-Tawil
 CV: https://mohamad-adib-tawil.github.io/CV
@@ -12,42 +13,42 @@ CV: https://mohamad-adib-tawil.github.io/CV
 
 الملخص المهني
 
-مطوّر Flutter بخبرة 3 سنوات في تطوير تطبيقات موبايل حقيقية تم نشرها على Google Play، تشمل منصّات صوتية، تطبيقات إنتاجية، وتطبيقات سوق إلكتروني. أركّز على كتابة كود منظم وقابل للتوسّع، مع خبرة عملية في التكامل مع Backends متعددة، الأنظمة اللحظية، وتحسين الأداء في بيئات الإنتاج. كما أمتلك خبرة في تطوير تطبيقات متوافقة مع iOS و Android، والالتزام بمعايير Apple و Google Play للتصميم والنشر الالتزام بالمواعيد النهائية والتواصل المستمر مع العملاء وأعضاء الفريق.
+مطوّر Flutter بنتائج ملموسة ولديه أكثر من 3 سنوات خبرة في بناء وصيانة تطبيقات موبايل إنتاجية. خلفية قوية في المعمارية النظيفة (Clean Architecture) ومبادئ SOLID مع تركيز على معالجة الأخطاء بشكل وظيفي (Either) وبناء معماريات قابلة للتوسّع. خبرة في تكامل أنظمة الصوت اللحظية، حلول OCR، وإدارة الحالة المتقدّمة (BLoC/Cubit). مختص في تحسين الأداء والاستقرار وتقديم حلول آمنة وقابلة للصيانة عبر iOS وAndroid.
 
 
 ⸻
 
 المهارات التقنية
-	•	Flutter / Dart (متوافق مع iOS و Android)
-	•	إدارة الحالة: BLoC، Cubit
-	•	التخزين المحلي وإدارة البيانات باستخدام Hive و SQLite
-	•	Git (GitHub و Bitbucket)
-	•	أساسيات CI/CD
-	•	تنظيم المشاريع باستخدام مبادئ Clean Architecture و SOLID لتحسين قابلية الصيانة والتوسّع.
-	•	التكامل مع Backends مختلفة: Supabase، Firebase، Appwrite، و REST APIs.
+	•	المعمارية والمنطق: معمارية نظيفة (البيانات/المجال/العرض)، SOLID، MVVM، معالجة أخطاء وظيفية (Either/Dartz)، DI (GetIt/Injectable)، توليد الشيفرة (Freezed/JsonSerializable)
+	•	إدارة الحالة: BLoC، Cubit، Provider، تزامن Bloc (Droppable/Restartable)
+	•	الشبكات والبيانات: REST (Dio + Interceptors)، WebSocket، إستراتيجية Offline‑first، كاش ذكي (Hive/SQLite)، تخزين آمن، ترقيم لا نهائي، اختبار Postman
+	•	الوقت الحقيقي والوسائط: Zego Cloud (Express & ZIM)، LiveKit، Just_Audio، تسجيل الصوت، SVGA/Lottie
+	•	النظام والأداء: ProGuard/R8، نكهات التطبيق (Dev/Prod)، Isolates، تحسين الصور، مهام خلفية/أمامية
+	•	الذكاء الاصطناعي والخدمات: OCR (Tesseract، Google ML Kit)، Firebase (Auth/FCM/Analytics/Crashlytics)، Supabase، Appwrite، مشتريات داخل التطبيق، Google Mobile Ads
+	•	الواجهة/التجربة: تصميم متجاوب، تحويل Figma إلى كود، وضع فاتح/داكن، تدويل (i18n)
 
 ⸻
 
 الخبرة العملية
 
-مطوّر Flutter حر — Remote
+مطوّر Flutter (مستقل/عقود) — 07/2022 – حتى الآن
 
-2022 – حتى الآن
-	•	تسليم التطبيقات من جمع المتطلبات حتى الإطلاق والتحديثات اللاحقة.
-	•	تنفيذ المصادقة وتكامل REST APIs، والتعامل مع قواعد بيانات محلية باستخدام Hive و SQLite، إضافة إلى الدردشة الفورية وميزات الصوت المباشر.
-	•	تحسين استجابة التطبيقات وإدارة الذاكرة ومعالجة الأعطال الشائعة.
-	•	تجهيز الإصدارات والتعامل مع متطلبات متجر Google Play (الوصف، الأذونات، لقطات الشاشة).
-	•	التعاون مع مطوّر باك-إند واستخدام Git لتنظيم العمل وإدارة الشيفرة.
+	•	هندسة وتسليم عدّة تطبيقات إنتاجية بمعمارية نظيفة.
+	•	تطبيق معالجة أخطاء وظيفية باستخدام Either لرفع الاستقرار والتوقّعية.
+	•	تهيئة ProGuard/R8 لتعزيز الأمان وتقليل حجم الحزمة.
+	•	تطوير طبقات كاش أوفلاين باستخدام Hive وSQLite لتحسين التجربة.
+	•	تطبيق Flavors لإدارة بيئتي التطوير والإنتاج.
+	•	تحسين أداء الواجهات باستخدام Isolates والمهام الخلفية للأعمال الثقيلة.
 
 ⸻
 
 أبرز المشاريع
 
 LKLK — منصّة صوت اجتماعي
-	•	تطبيق محادثات صوتية مباشرة مع غرف صوتية ودردشة نصية وتسجيل دخول.
-	•	الدور: مطوّر الموبايل الوحيد بالتعاون مع مطوّر باك-إند، إضافة إلى تولّي النشر وإدارة خط الإصدار.
-	•	التقنيات: Flutter، Zego Cloud، WebSocket، Appwrite، REST APIs.
-	•	حقق التطبيق أكثر من 1,000 تحميل على Google Play.
+	•	منصّة اجتماعية بغرف صوت ودردشة لحظية مع رسائل نصية وهدايا افتراضية وعمليات شراء داخل التطبيق.
+	•	التقنيات: Zego Express/ZIM، Appwrite، BLoC، GetIt، Hive، ProGuard، Crashlytics.
+	•	تأمين عبر تشويش ProGuard وتحسينات أداء قابلة للقياس.
+	•	الحالة: 1,000+ تنزيل على Google Play.
 	•	الرابط:
 
 https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
@@ -55,19 +56,29 @@ https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
 ⸻
 
 Wolfera — سوق سيارات
-	•	تطبيق سوق وإعلانات مع قوائم، بحث وترشيح، ودردشة بين البائع والمشتري، وواجهة ثنائية اللغة (عربي / إنجليزي).
-	•	الدور: تطوير التطبيق بالكامل، بما يشمل واجهة المستخدم، إدارة الحالة، والتكامل مع Supabase (Auth / Realtime / Storage) و Google Sign-In، مع دعم التخزين المحلي.
+	•	سوق سيارات ببحث متقدّم ودردشة لحظية وواجهة ثنائية اللغة (عربي/إنجليزي).
+	•	التقنيات: Supabase، معمارية نظيفة، Dartz (Either)، ترقيم لا نهائي، GoRouter.
 	•	الرابط:
 https://github.com/Mohamad-Adib-Tawil/Wolfera
 
 ⸻
 
 Office Archiving — OCR وإنتاجية
-	•	تطبيق لإدارة الملفات يتضمن OCR عربي/إنجليزي يعمل دون اتصال، قاعدة بيانات محلية، ومعالجة ملفات PDF.
-	•	الدور: تطوير التطبيق بالكامل، بما يشمل واجهة المستخدم، مسارات OCR، وتحسين استجابة التطبيق.
+	•	نظام مسح وأرشفة يعمل دون اتصال مع OCR ثنائي اللغة وإدارة قاعدة بيانات محلية.
+	•	التقنيات: Google ML Kit، Tesseract OCR، SQLite، معالجة PDF، بحث نصي كامل.
 	•	الروابط:
 GitHub: https://github.com/Mohamad-Adib-Tawil/office_archiving
 Google Play: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
+
+⸻
+
+Code Book — مكتبة رقمية Offline‑First
+
+	•	تطبيق قراءة أوفلاين بمعمارية نظيفة وإدارة حالة BLoC وحقن GetIt مع تخزين Hive.
+	•	التقنيات: Clean Architecture، BLoC، GetIt، Hive، Dio، WebView.
+	•	الوصف: تكامل Open Library، كاش وإعادة المحاولة، روابط عميقة وتدفّقات تنقّل متقدّمة.
+	•	الرابط:
+GitHub: https://github.com/Mohamad-Adib-Tawil/Code-Books-
 
 ⸻
 
@@ -80,4 +91,4 @@ Google Play: https://play.google.com/store/apps/details?id=com.werewolf.office_a
 
 اللغات
 	•	العربية: Native
-	•	الإنجليزية: Professional Working Proficiency
+	•	الإنجليزية: إنجليزية تقنية جيدة
