@@ -16,13 +16,13 @@ Results-driven Flutter Developer with over 3 years of experience building and ma
 مطوّر Flutter بنتائج ملموسة ولديه أكثر من 3 سنوات خبرة في بناء وصيانة تطبيقات موبايل إنتاجية. خلفية قوية في المعمارية النظيفة ومبادئ SOLID مع تركيز على معالجة الأخطاء بشكل وظيفي وبناء معماريات قابلة للتوسّع. خبرة بدمج أنظمة الصوت اللحظية وحلول OCR وإدارة الحالة المتقدّمة (BLoC/Cubit). مختص في تحسين الأداء والاستقرار وتقديم حلول عبر المنصّات آمنة وقابلة للصيانة على iOS وAndroid.
 
 ## Technical Skills (EN)
-- Frameworks: Flutter / Dart (iOS & Android Compatible)
-- State Management: BLoC, Cubit
-- Local Storage: Hive, SQLite
-- Version Control: Git (GitHub, Bitbucket)
-- DevOps: CI/CD Basics
-- Architecture: Clean Architecture, SOLID Principles
-- Backend Integration: Supabase, Firebase, Appwrite, REST APIs
+- Architecture & Logic: Clean Architecture (Data, Domain, Presentation), SOLID, MVVM, Functional Error Handling (Either/Dartz), DI (GetIt/Injectable), Code Generation (Freezed, JsonSerializable)
+- State Management: BLoC, Cubit, Provider, Bloc Concurrency (Droppable/Restartable)
+- Networking & Data: REST (Dio + Interceptors), WebSockets, Offline-First, Smart Caching (Hive/SQLite), Secure Storage, Infinite Pagination, Postman Testing
+- Real-time & Media: Zego Cloud (Express & ZIM), LiveKit, Just_Audio, Audio Recording, SVGA/Lottie
+- System & Performance: ProGuard/R8, App Flavors (Dev/Prod), Isolates, Image Optimization, Background/Foreground Tasks
+- AI & Services: OCR (Tesseract, Google ML Kit), Firebase (Auth/FCM/Analytics/Crashlytics), Supabase, Appwrite, In-App Purchases, Google Mobile Ads
+- UI/UX: Responsive Design, Figma-to-Code, Dark/Light Mode, Internationalization (i18n)
 
 ## المهارات التقنية (AR)
 - أطر العمل: Flutter / Dart (متوافق مع iOS وAndroid)
@@ -34,14 +34,13 @@ Results-driven Flutter Developer with over 3 years of experience building and ma
 - التكامل الخلفي: Supabase، Firebase، Appwrite، REST APIs
 
 ## Work Experience (EN)
-- Freelance Flutter Developer — Remote (2022 – Present)  
-  - Delivered end-to-end applications from requirement gathering to deployment.  
-  - Implemented authentication and REST API integrations.  
-  - Managed local databases and real-time features.  
-  - Optimized performance and resolved crashes.  
-  - Managed Google Play requirements.  
-  - Collaborated with backend developers.
-
+- Flutter Developer (Independent / Contract) — 07/2022 – Present
+  - Architected and delivered multiple production mobile applications using Clean Architecture.
+  - Implemented functional error handling using Either to improve stability and predictability.
+  - Configured ProGuard/R8 rules to enhance application security and reduce APK size.
+  - Developed offline caching layers using Hive and SQLite for better user experience.
+  - Implemented App Flavoring to manage Development and Production environments.
+  - Optimized UI performance using Isolates and background processing for heavy tasks.
 ## الخبرة العملية (AR)
 - مطوّر Flutter حر — عن بُعد (2022 – حتى الآن)  
   - تسليم التطبيقات من جمع المتطلبات حتى النشر والتحديثات.  
@@ -73,6 +72,11 @@ Results-driven Flutter Developer with over 3 years of experience building and ma
   - Note: iOS builds are ready and tested on simulators, available upon request.  
   - Links: Play Store — https://play.google.com/store/apps/details\?id\=com.werewolf.office_archiving | GitHub — https://github.com/Mohamad-Adib-Tawil/office_archiving
 
+- Code Book — Reading App (solo)
+  - Tech: Clean Architecture (Presentation/Domain/Data), BLoC, GetIt, Hive (offline caching), Dio with retry and structured failures, WebView previews.
+  - Impact: Offline-first reading experience; store-ready assets.
+  - Link: GitHub — https://github.com/Mohamad-Adib-Tawil/Code-Books-
+
 ## أبرز المشاريع (AR)
 - LKLK — منصّة صوت اجتماعي  
   - الدور: مطوّر الموبايل الوحيد  
@@ -94,6 +98,11 @@ Results-driven Flutter Developer with over 3 years of experience building and ma
   - الأثر: تمكين OCR دون اتصال للغتين مع إدارة قاعدة بيانات محلية.  
   - ملاحظة: بناءات iOS جاهزة ومختبرة على المحاكيات.  
   - الروابط: Google Play — https://play.google.com/store/apps/details\?id\=com.werewolf.office_archiving | GitHub — https://github.com/Mohamad-Adib-Tawil/office_archiving
+
+- Code Book — تطبيق قراءة (فردي)
+  - التقنيات: معمارية نظيفة (العرض/المجال/البيانات)، BLoC، GetIt، Hive (تخزين دون اتصال)، Dio مع إعادة المحاولة وأخطاء منظّمة، ومعاينات WebView.
+  - الأثر: تجربة قراءة Offline‑first؛ أصول جاهزة للمتجر.
+  - الرابط: GitHub — https://github.com/Mohamad-Adib-Tawil/Code-Books-
 
 ## Education (EN)
 - University of Aleppo — Diploma in Computer Engineering (2020–2022)
