@@ -178,10 +178,11 @@ document.addEventListener('DOMContentLoaded', function() {
         'Optimized UI performance using Isolates and background processing for heavy tasks.'
       ],
       projectsDesc:{
-        iklk:'Tech: Zego Cloud, Appwrite, BLoC, GetIt, Hive, ProGuard, Crashlytics — Developed a social platform with real-time audio rooms and messaging. Integrated Zego Express and ZIM for audio streaming and signaling. Secured the application using ProGuard obfuscation. Implemented virtual gifting and in-app purchases. Link: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>',
+        iklk:'Tech: Zego Cloud, Appwrite, BLOC, GetIt, Hive, ProGuard, Crashlytics — Developed a social platform with real-time audio rooms and messaging. Integrated Zego Express and ZIM for audio streaming and signaling. Secured the application using ProGuard obfuscation. Implemented virtual gifting and in-app purchases. Status: 1,000+ Downloads. Link: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>',
         wolfera:'Tech: Supabase, Clean Architecture, Dartz (Either), Infinite Pagination, GoRouter — Built a marketplace with advanced search and real-time chat. Integrated Supabase for authentication, storage, and realtime features. Applied functional error handling to improve network reliability. Link: <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
         codebook:'Tech: Clean Architecture, BLoC, GetIt, Hive, Dio, WebView — Developed an offline reading application using Open Library APIs. Implemented caching and retry mechanisms. Built deep linking and advanced navigation flows. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
-        office:'Tech: Google ML Kit, Tesseract OCR, SQLite, PDF Processing — Developed an offline-first document scanning and archiving system. Implemented bilingual OCR (Arabic/English). Built PDF generation and printing features. Added full-text search using indexed local databases. Links: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a> · <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>'
+        office:'Tech: Google ML Kit, Tesseract OCR, SQLite, PDF Processing — Developed an offline-first document scanning and archiving system. Implemented bilingual OCR (Arabic/English). Built PDF generation and printing features. Added full-text search using indexed local databases. Links: <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>',
+        quran:'Tech: Flutter, Clean Architecture, Cubit, just_audio, background_downloader, gen-l10n — Built a production-grade Quran reading and audio app with offline audio playback and precise text-audio synchronization across Surah/Juz/Hizb navigation, supporting ayah-level interaction, Arabic/German localization, and an optimized Material 3 UI. Link: <a href="https://github.com/Mohamad-Adib-Tawil/Quran" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>'
       },
       skillsList:[
         'Architecture & Logic: Clean Architecture (Data/Domain/Presentation), SOLID, MVVM, Functional Error Handling (Either/Dartz), DI (GetIt/Injectable), Codegen (Freezed, JsonSerializable)',
@@ -268,7 +269,8 @@ document.addEventListener('DOMContentLoaded', function() {
         iklk:'تقنيات: Zego Cloud، Appwrite، BLoC، GetIt، Hive، ProGuard، Crashlytics — تطوير منصّة اجتماعية بغرف صوت ودردشة. دمج Zego Express وZIM للبث والإشارة. حماية عبر تشويش ProGuard. تنفيذ الهدايا الافتراضية وعمليات الشراء داخل التطبيق. الرابط: <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>',
         wolfera:'تقنيات: Supabase، معمارية نظيفة، Dartz (Either)، ترقيم لا نهائي، GoRouter — بناء سوق بسيط ببحث متقدّم ودردشة لحظية. دمج Supabase للمصادقة والتخزين والوقت الحقيقي. معالجة أخطاء وظيفية لزيادة الاعتمادية. الرابط: <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
         codebook:'تقنيات: معمارية نظيفة، BLoC، GetIt، Hive، Dio، WebView — تطوير تطبيق قراءة أوفلاين باستخدام Open Library. تطبيق الكاش وإعادة المحاولة والروابط العميقة. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
-        office:'تقنيات: Google ML Kit، Tesseract OCR، SQLite، معالجة PDF — تطوير نظام مسح وأرشفة يعمل دون اتصال مع OCR ثنائي اللغة. إنشاء PDF والطباعة وبحث نصي كامل. الروابط: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a> · <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>'
+        office:'تقنيات: Google ML Kit، Tesseract OCR، SQLite، معالجة PDF — تطوير نظام مسح وأرشفة يعمل دون اتصال مع OCR ثنائي اللغة. إنشاء PDF والطباعة وبحث نصي كامل. الروابط: <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a> · <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>',
+        quran:'تقنيات: Flutter، Clean Architecture، Cubit، just_audio، background_downloader، gen-l10n — تطبيق قرآن للإنتاج مع تشغيل صوت دون اتصال ومزامنة دقيقة بين النص والصوت عبر السور/الأجزاء/الأحزاب مع تفاعل على مستوى الآية ودعم العربية/الألمانية وواجهة Material 3 محسّنة. الرابط: <a href="https://github.com/Mohamad-Adib-Tawil/Quran" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>'
       },
       skillsList:[
         'المعمارية والمنطق: معمارية نظيفة (البيانات/المجال/العرض)، SOLID، MVVM، معالجة أخطاء وظيفية (Either/Dartz)، DI (GetIt/Injectable)، توليد الشيفرة (Freezed/JsonSerializable)',
@@ -378,6 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dW=document.getElementById('descWolfera'); if(dW) dW.innerHTML=dict.projectsDesc.wolfera;
     const dC=document.getElementById('descCodeBook'); if(dC) dC.innerHTML=dict.projectsDesc.codebook;
     const dO=document.getElementById('descOffice'); if(dO) dO.innerHTML=dict.projectsDesc.office;
+    const dQ=document.getElementById('descQuran'); if(dQ) dQ.innerHTML=dict.projectsDesc.quran || '';
     // Skills
     const sList=document.querySelector('.skill-list'); if(sList){ sList.innerHTML=''; dict.skillsList.forEach(s=>{ const li=document.createElement('li'); li.textContent=s; sList.appendChild(li);}); }
     // Education
@@ -614,6 +617,8 @@ li { margin-bottom: 6pt; }
 <p>${dict.projectsDesc.codebook.replace(/<[^>]*>/g, '')}</p>
 <h3>Office Archiving</h3>
 <p>${dict.projectsDesc.office.replace(/<[^>]*>/g, '')}</p>
+<h3>Quran Ahmed Karasi</h3>
+<p>${(dict.projectsDesc.quran || '').replace(/<[^>]*>/g, '')}</p>
 
 <h2>${dict.titles.achievements}</h2>
 <ul>${dict.achievements.map(a => `<li>${a}</li>`).join('')}</ul>
@@ -695,6 +700,8 @@ li { margin-bottom: 4pt; }
 <p>${dict.projectsDesc.codebook.replace(/<[^>]*>/g, '')}</p>
 <h3>Office Archiving - ${currentLang === 'ar' ? 'نظام أرشفة مستندات' : 'Document Management System'}</h3>
 <p>${dict.projectsDesc.office.replace(/<[^>]*>/g, '')}</p>
+<h3>Quran Ahmed Karasi - ${currentLang === 'ar' ? 'تطبيق قرآن دون اتصال' : 'Offline-First Quran Reader'}</h3>
+<p>${(dict.projectsDesc.quran || '').replace(/<[^>]*>/g, '')}</p>
 
 <h2>${currentLang === 'ar' ? 'أهم الإنجازات' : 'KEY ACHIEVEMENTS'}</h2>
 <ul>${dict.achievements.map(a => `<li>${a}</li>`).join('')}</ul>
