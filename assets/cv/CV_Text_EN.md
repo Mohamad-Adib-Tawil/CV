@@ -77,7 +77,7 @@ Tech: Flutter, Clean Architecture, Cubit, just_audio, background_downloader, gen
 - Built a production-grade Quran reading and audio app using Clean Architecture and Cubit.
 - Implemented offline audio playback and precise text-audio synchronization across Surah/Juz/Hizb navigation.
 - Supported ayah-level interaction, Arabic/German localization, and an optimized Material 3 UI.
-- Link: GitHub https://github.com/Mohamad-Adib-Tawil/Quran
+- Links: GitHub https://github.com/Mohamad-Adib-Tawil/Quran | Play Store https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1 | App Store https://apps.apple.com/app/id6759857104
 
 ## EDUCATION
 Diploma in Computer Engineering, University of Aleppo  
