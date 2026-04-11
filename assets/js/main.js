@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Helpers
+  const themeRoot = document.documentElement;
   const enableThemeTransition = () => {
     document.body.classList.add('theme-transition');
     window.setTimeout(() => document.body.classList.remove('theme-transition'), 300);
@@ -52,25 +53,21 @@ document.addEventListener('DOMContentLoaded', function() {
   // Theme toggle functionality
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = themeToggle.querySelector('i');
-  // Apply saved theme or system preference
   const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.body.classList.add('dark-mode');
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
-    themeToggle.setAttribute('aria-pressed', 'true');
-  } else {
-    themeToggle.setAttribute('aria-pressed', 'false');
-  }
+  const isDarkTheme = savedTheme !== 'light';
+  themeRoot.classList.toggle('dark-mode', isDarkTheme);
+  themeIcon.classList.toggle('fa-sun', isDarkTheme);
+  themeIcon.classList.toggle('fa-moon', !isDarkTheme);
+  themeToggle.setAttribute('aria-pressed', isDarkTheme ? 'true' : 'false');
   
   themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const dark = document.body.classList.contains('dark-mode');
+    themeRoot.classList.toggle('dark-mode');
+    const dark = themeRoot.classList.contains('dark-mode');
     themeIcon.classList.toggle('fa-sun', dark);
     themeIcon.classList.toggle('fa-moon', !dark);
     localStorage.setItem('theme', dark ? 'dark' : 'light');
     themeToggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    updateContrast();
   });
 
   // Scroll animations with stagger effect
@@ -135,8 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
   applyPreset(savedPreset);
   if (presetSelect) presetSelect.value = savedPreset;
   // If midnight preset is selected, ensure dark mode is active
-  if (savedPreset === 'midnight' && !document.body.classList.contains('dark-mode')) {
-    document.body.classList.add('dark-mode');
+  if (savedPreset === 'midnight' && !themeRoot.classList.contains('dark-mode')) {
+    themeRoot.classList.add('dark-mode');
     themeIcon.classList.remove('fa-moon');
     themeIcon.classList.add('fa-sun');
     themeToggle.setAttribute('aria-pressed', 'true');
@@ -150,8 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('themePreset', val);
       if (val === 'midnight') {
         // Force dark mode for midnight
-        if (!document.body.classList.contains('dark-mode')) {
-          document.body.classList.add('dark-mode');
+        if (!themeRoot.classList.contains('dark-mode')) {
+          themeRoot.classList.add('dark-mode');
           themeIcon.classList.remove('fa-moon');
           themeIcon.classList.add('fa-sun');
           themeToggle.setAttribute('aria-pressed', 'true');
@@ -446,27 +443,31 @@ document.addEventListener('DOMContentLoaded', function() {
   // Animate skill bars
   const skillBars = document.querySelectorAll('.skill-progress');
   const skillsSection = document.getElementById('skills');
-  const skillsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        skillBars.forEach(bar => {
-          const width = bar.getAttribute('data-width');
-          bar.style.width = width;
-        });
-      }
-    });
-  }, { threshold: 0.5 });
-  skillsObserver.observe(skillsSection);
+  if (skillsSection && skillBars.length > 0) {
+    const skillsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          skillBars.forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            bar.style.width = width;
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+    skillsObserver.observe(skillsSection);
+  }
 
   // Scroll to top button
   const scrollToTopBtn = document.getElementById('scrollToTop');
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) scrollToTopBtn.classList.add('show');
-    else scrollToTopBtn.classList.remove('show');
-  });
-  scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) scrollToTopBtn.classList.add('show');
+      else scrollToTopBtn.classList.remove('show');
+    });
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
   
   // Create particles background (defer to idle time, and respect reduced motion)
   const createParticles = () => {

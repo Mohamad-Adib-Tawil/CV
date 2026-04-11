@@ -17,6 +17,17 @@
         <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/223110350?s=400&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4">
         <meta property="og:locale" content="en_US">
         <meta property="og:site_name" content="Mohamad Adib Tawil CV">
+        <script>
+        (function() {
+          try {
+            if (localStorage.getItem('theme') !== 'light') {
+              document.documentElement.classList.add('dark-mode');
+            }
+          } catch (_) {
+            document.documentElement.classList.add('dark-mode');
+          }
+        })();
+        </script>
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -65,35 +76,39 @@
 
     <main id="main">
     <div class="container">
-        <nav class="top-nav" aria-label="Primary">
-            <a id="navSummary" href="#summary">Summary</a>
-            <a id="navExperience" href="#experience">Experience</a>
-            <a id="navProjects" href="#projects">Projects</a>
-            <a id="navSkills" href="#skills">Skills</a>
-            <a id="navEducation" href="#education">Education</a>
-            <a id="navAchievements" href="#achievements">Achievements</a>
-            <a id="navAdvanced" href="#advanced-skills">Advanced Skills</a>
-            <a id="navServices" href="#services">Services</a>
-            <a id="navLanguages" href="#languages">Languages</a>
-            <a id="navDownload" href="downloads.html">Download CV</a>
-            <div class="theme-switcher">
-                <label for="themePreset" class="visually-hidden">Theme</label>
-                <select id="themePreset" class="theme-select" aria-label="Theme preset">
-                    <option value="blue">Blue</option>
-                    <option value="purple">Purple</option>
-                    <option value="teal">Teal</option>
-                    <option value="slate">Slate</option>
-                    <option value="royal">RoyalGold</option>
-                    <option value="silver">Silver</option>
-                    <option value="midnight">Midnight</option>
-                </select>
+        <nav class="top-nav cv-nav" aria-label="Primary">
+            <div class="nav-links">
+                <a id="navSummary" href="#summary">Summary</a>
+                <a id="navExperience" href="#experience">Experience</a>
+                <a id="navProjects" href="#projects">Projects</a>
+                <a id="navSkills" href="#skills">Skills</a>
+                <a id="navEducation" href="#education">Education</a>
+                <a id="navAchievements" href="#achievements">Achievements</a>
+                <a id="navAdvanced" href="#advanced-skills">Advanced Skills</a>
+                <a id="navServices" href="#services">Services</a>
+                <a id="navLanguages" href="#languages">Languages</a>
             </div>
-            <div class="lang-switcher">
-                <label for="langSelect" class="visually-hidden">Language</label>
-                <select id="langSelect" class="theme-select" aria-label="Language">
-                    <option value="en">English</option>
-                    <option value="ar">العربية</option>
-                </select>
+            <div class="nav-controls">
+                <a id="navDownload" class="nav-download" href="downloads.html">Download CV</a>
+                <div class="theme-switcher">
+                    <label for="themePreset" class="visually-hidden">Theme</label>
+                    <select id="themePreset" class="theme-select" aria-label="Theme preset">
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="teal">Teal</option>
+                        <option value="slate">Slate</option>
+                        <option value="royal">RoyalGold</option>
+                        <option value="silver">Silver</option>
+                        <option value="midnight">Midnight</option>
+                    </select>
+                </div>
+                <div class="lang-switcher">
+                    <label for="langSelect" class="visually-hidden">Language</label>
+                    <select id="langSelect" class="theme-select" aria-label="Language">
+                        <option value="en">English</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
             </div>
         </nav>
         <header id="header">
