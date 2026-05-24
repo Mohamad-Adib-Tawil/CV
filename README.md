@@ -18,27 +18,29 @@ Just open `index.html` in a browser.
 ```
 CV/
 ├─ index.html                # Main page markup
+├─ downloads.html            # Download/export page
 ├─ assets/
 │  ├─ css/
 │  │  └─ styles.css          # Main stylesheet (used)
 │  └─ js/
-│     └─ main.js             # Interactivity, i18n, theming, counters
-├─ styles.css                # Legacy/unused stylesheet (kept for reference)
+│     ├─ cv-data.js          # Shared content/data source
+│     └─ main.js             # UI rendering, theming, interactions, exports
+├─ scripts/
+│  └─ generate_cv.js         # Optional DOCX/PDF generation script
 └─ README.md
 ```
 
-Note: `CV/styles.css` at the root is not referenced by `index.html`. The active stylesheet is `assets/css/styles.css`.
-
 ## Development Notes
-- i18n/RTL: The script sets `<html lang>` and `<html dir>` and dynamically updates text content and lists.
+- Content architecture: shared CV copy now lives in `assets/js/cv-data.js`, so homepage, downloads page, and exports pull from one source.
+- i18n/RTL: The script sets `<html lang>` and `<html dir>` and dynamically renders translated sections from shared data.
 - Theming: CSS variables with body classes like `theme-blue`, `theme-purple`, etc. `meta[name="theme-color"]` updates automatically.
 - Accessibility: Skip link, ARIA attributes, reduced-motion handling.
 - Counters: `.stat-number` elements use `data-target` for animated values.
 
 ## Customize
-- Update personal info and links in `index.html` header.
-- Adjust skills, achievements, and service lists via `assets/js/main.js` i18n dictionaries.
-- Edit theme palettes in `assets/css/styles.css` under theme classes.
+- Update CV content in `assets/js/cv-data.js`.
+- Adjust rendering behavior and interactions in `assets/js/main.js`.
+- Edit theme palettes and responsive layout rules in `assets/css/styles.css`.
 
 ## Printing
 Use the browser’s print dialog (File → Print). The page includes optimized print CSS for A4.

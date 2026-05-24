@@ -1,165 +1,96 @@
 # Mohamad Adib Tawil
-Mid-level Flutter Developer | Mobile Application Engineer | Remote (GMT+3)
-Email: mohamad.adib.tawil@gmail.com
-LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
+Flutter Developer / Mobile Application Engineer
+
+Email: mohamad.adib.tawil@gmail.com  
+Phone: +963 992 688 759  
+Location: Remote from Syria  
+CV: https://mohamad-adib-tawil.github.io/CV  
+LinkedIn: https://linkedin.com/in/mohamad-adib-tawil-54024b314  
 GitHub: https://github.com/Mohamad-Adib-Tawil
 
----
+## Profile
+Flutter developer with 3+ years of independent and contract experience building production-oriented mobile apps with Flutter and Dart. I work across UI implementation, API integration, offline storage, real-time features, release preparation, and store publishing. My strongest work is in Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase integrations, offline-first flows, audio features, OCR/document workflows, and apps that need to stay usable under weak network conditions.
 
-## Professional Summary (EN)
-Results-driven Flutter Developer with over 3 years of experience building and maintaining production mobile applications. Strong background in Clean Architecture and SOLID principles, with a focus on robust error handling and scalable architecture. Experienced in integrating real-time audio systems, OCR solutions, and advanced state management (BLoC/Cubit). Specialized in optimizing app performance, improving stability, and delivering secure, maintainable cross-platform solutions for iOS and Android.
+## Experience
+### Flutter Developer, Independent / Contract
+07/2022 - Present  
+Remote
 
-## Work Experience (EN)
-### Freelance Flutter Developer (2022 - Present)
-- End-to-end delivery: requirements, UX flows, implementation, deployment, analytics, and iteration.
-- Built and shipped 4 production apps with 1,000+ total downloads and 4+ average rating on Google Play.
-- Optimized LKLK social audio platform to reliably sustain 1,000+ concurrent users per room in production, with measurable latency improvements via smart caching and adaptive performance modes.
-- Engineered offline AR/EN OCR pipeline (Office Archiving), reducing processing time by 40% through enhanced preprocessing.
-- Implemented Supabase Auth + realtime chat (Wolfera), increasing engagement by ~60%.
-- Delivered pixel-perfect, multilingual UIs (AR/EN) with responsive layouts.
+- Built and maintained Flutter applications for independent and contract projects, covering UI implementation, API integration, local persistence, release preparation, and publishing.
+- Structured medium-sized apps using Clean Architecture, BLoC/Cubit, GetIt, and feature-based modules to keep UI, business logic, and data layers separated.
+- Integrated REST APIs, Supabase, Appwrite, WebSockets, Zego audio rooms, messaging flows, Firebase services, and in-app purchases.
+- Implemented offline-first behavior with Hive, SQLite, pagination, retry handling, and typed failure responses to make key flows more predictable.
+- Prepared production builds with app flavors, ProGuard/R8, Crashlytics, secure storage, and separate development/production environments.
+- Used isolates and background processing for heavier work such as OCR, PDF handling, audio features, and background tasks.
+- Published and maintained apps on Google Play and App Store, including one public app with 5,000+ downloads.
 
-## Selected Projects (EN)
-- LKLK - Social Audio Platform
-  - Role: Sole mobile developer (collab with backend). Handled publishing and release pipeline.
-  - Tech: Flutter, Zego Cloud, WebSocket, Appwrite + REST APIs, Flavors, Gradle signing/keystore, tag-based releases (auto-generated notes), smart caching.
-  - Impact: 1,000+ CCU per room; platform capacity scales to thousands overall; -60% memory (via Android Profiler + image/cache tuning); improved frame pacing (verified via Flutter DevTools); 99.9% uptime.
-  - Repo: Private Bitbucket repository (client code protection)
-  - Link: Google Play - https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+## Technical Skills
+- Flutter & Mobile: Flutter, Dart, Material 3, Android, iOS
+- Architecture & State: Clean Architecture, SOLID, MVVM, BLoC, Cubit, Provider, GetIt, Injectable, Dartz/Either
+- APIs & Backend Services: REST APIs, Dio, Interceptors, WebSockets, Supabase, Appwrite, Firebase Auth, FCM, Analytics, Crashlytics
+- Storage & Offline: Hive, SQLite, Secure Storage, offline-first caching, pagination, retry handling
+- Media, OCR & Documents: Zego Express, ZIM, LiveKit, just_audio, audio recording, Google ML Kit, Tesseract OCR, PDF generation, printing
+- Release & Tools: ProGuard/R8, app flavors, isolates, background tasks, image optimization, Google Play, App Store, Git, GitHub, Postman, Figma
 
-- Wolfera - Car Marketplace (solo)
-  - Tech: Flutter, BLoC, Supabase (Auth/Realtime/Storage), Google Sign‑In/Maps, GetIt DI, go_router, Dio.
-  - Features: Advanced filtering, bidirectional chat with emoji, AR/EN UI, image caching, lazy loading.
-  - Link: GitHub - https://github.com/Mohamad-Adib-Tawil/Wolfera
+## Selected Projects
+- LKLK, Real-time Audio Rooms Social App: Built live rooms, messaging, virtual gifts, and in-app purchases. Public result: 5,000+ downloads. Play Store: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+- Wolfera, Automotive Marketplace: Marketplace flows for discovery, search, auth, media storage, and buyer/seller communication. GitHub: https://github.com/Mohamad-Adib-Tawil/Wolfera | Play Store: https://play.google.com/store/apps/details?id=com.wolfera.wolfera
+- Quran Ahmed Karasi, Offline Quran Reader & Audio App: Offline audio downloads, background playback, ayah-level interaction, and Arabic/German localization. GitHub: https://github.com/Mohamad-Adib-Tawil/Quran | Play Store: https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1 | Apple Store: https://apps.apple.com/app/id6759857104
+- Office Archiving, Document Scanning & OCR: Offline-first document archiving with Arabic/English OCR, PDF generation, printing, and local full-text search. GitHub: https://github.com/Mohamad-Adib-Tawil/office_archiving | Play Store: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
+- Code Book, Offline Digital Library: Open Library API reading app with cached content, retry handling, deep linking, and structured navigation. GitHub: https://github.com/Mohamad-Adib-Tawil/Code-Books-
 
-- Office Archiving - OCR + Productivity (solo)
-  - Tech: Flutter, ML Kit & Tesseract OCR (offline AR/EN), SQLite with migrations, batch PDF processing, image preprocessing, analytics, dark mode.
-  - Impact: ~90% OCR accuracy; streamlined offline workflows.
-  - Links: GitHub - https://github.com/Mohamad-Adib-Tawil/office_archiving | Google Play - https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
+## Education
+Diploma in Computer Engineering, University of Aleppo  
+Focus: Software Engineering  
+2020 - 2022  
+Aleppo, Syria
 
-- Code Book - Reading App (solo)
-  - Tech: Clean Architecture (Presentation/Domain/Data), BLoC, GetIt, Hive (offline caching), Dio with retry and structured failures, WebView previews.
-  - Impact: Offline-first reading experience; store-ready assets.
-  - Link: GitHub - https://github.com/Mohamad-Adib-Tawil/Code-Books-
-
-## Core Skills (EN)
-- State Management: BLoC/Cubit, GetIt DI
-- Architecture: Clean Architecture, SOLID, Repository Pattern
-- Realtime: Zego Cloud, LiveKit, WebSocket, Supabase Realtime
-- Backend: Supabase, Firebase, Appwrite, REST APIs
-- Data & Storage: Hive, SQLite
-- AI & OCR: ML Kit, Tesseract, Image Processing
-- DevOps: CI/CD (GitHub Actions - learning, Fastlane), Flavors
-
-- CI (learning): GitHub Actions: workflow triggers (push/PR/tag); flutter analyze/test; APK/AAB artifacts; GitHub Secrets; CI cache/concurrency/branch conditions
-
-- Tooling: Flutter DevTools, Android Profiler
-
-## Key Achievements (EN)
-- LKLK: 1,000+ CCU, -60% memory, improved frame pacing, 99.9% uptime
-- Wolfera: +60% user engagement via Supabase Auth and realtime chat; bilingual AR/EN UI
-- Office Archiving: Offline AR/EN OCR ~90% accuracy; batch PDF; AI translation
-- Code Book: Offline-first architecture with repository pattern and Dio retry
-- Release management: tag-based releases with auto-generated release notes; multi-flavor builds
-- Published 4 production apps, 1,000+ downloads, 4+ average rating
-- 963SY: Play Console compliance/publishing (privacy, permissions, protection)
-
-## Education (EN)
-- University of Aleppo - Diploma in Computer Engineering, Software Engineering Track (Jun 2020 - Aug 2022) | GPA: 82.89%
-  - Relevant Coursework: C#, Data Structures, Algorithms, OOP, DB Systems, Software Engineering
-  - Final Project: Helping platform (web, Windows, mobile) for programming education (Udemy-like)
-
-## Services (EN)
-- End-to-end mobile app development (iOS & Android)
-- Realtime features: live audio/video, chat systems, synchronized animations
-- AI/OCR: ML Kit, Tesseract, image processing, text analysis, translation
-- Performance optimization: memory reduction, frame pacing/jank reduction, adaptive scaling
-- Backend architecture: Supabase, Firebase, Appwrite, custom APIs, WebSocket
-- CI/CD setup: automated pipelines, testing, deployment, monitoring
-- Play Console compliance & publishing (privacy policy, permissions, content rating, store listing)
-
-## Languages (EN)
-- Arabic (Native), English (Good Technical English)
+## Languages
+- Arabic: Native
+- English: Technical working proficiency
 
 ---
 
 # محمد أديب طويل
-مطوّر Flutter متوسط المستوى | مهندس تطبيقات موبايل | عن بُعد (GMT+3)
-البريد: mohamad.adib.tawil@gmail.com
-لينكدإن: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
-جيتهاب: https://github.com/Mohamad-Adib-Tawil
+مطوّر Flutter / مهندس تطبيقات موبايل
 
----
+البريد: mohamad.adib.tawil@gmail.com  
+الهاتف: +963 992 688 759  
+الموقع: عن بُعد من سوريا  
+السيرة: https://mohamad-adib-tawil.github.io/CV  
+LinkedIn: https://linkedin.com/in/mohamad-adib-tawil-54024b314  
+GitHub: https://github.com/Mohamad-Adib-Tawil
 
-## الملخص المهني (AR)
-مطوّر Flutter بنتائج ملموسة ولديه أكثر من 3 سنوات خبرة في بناء وصيانة تطبيقات موبايل إنتاجية. خلفية قوية في المعمارية النظيفة ومبادئ SOLID مع تركيز على معالجة الأخطاء بشكل وظيفي وبناء معماريات قابلة للتوسّع. خبرة بدمج أنظمة الصوت اللحظية وحلول OCR وإدارة الحالة المتقدّمة (BLoC/Cubit). مختص في تحسين الأداء والاستقرار وتقديم حلول عبر المنصّات آمنة وقابلة للصيانة على iOS وAndroid.
+## الملخص
+مطوّر Flutter بخبرة 3+ سنوات في العمل المستقل والعقود، مع بناء تطبيقات موبايل موجهة للإنتاج باستخدام Flutter وDart. أعمل على تنفيذ الواجهات، تكامل APIs، التخزين المحلي، ميزات الوقت الحقيقي، تجهيز الإصدارات، والنشر على المتاجر. أقوى خبراتي في Clean Architecture وBLoC/Cubit وتكامل Supabase/Appwrite/Firebase وتدفّقات offline-first وميزات الصوت وOCR/المستندات والتطبيقات التي يجب أن تبقى قابلة للاستخدام في ظروف الشبكة الضعيفة.
 
-## الخبرة العملية (AR)
-### مطوّر Flutter حر (2022 - حتى الآن)
-- تسليم شامل: جمع المتطلبات، تصميم تجربة المستخدم، التنفيذ، الإطلاق، التحليلات، والتحسين.
-- بناء وإطلاق 4 تطبيقات إنتاجية مع 1,000+ تنزيل وتقييم +4 على Google Play.
-- تحسين منصّة LKLK للصوت الاجتماعي لتدعم بشكل موثوق 1,000+ مستخدم متزامن لكل غرفة في بيئة الإنتاج، مع تحسينات قابلة للقياس في زمن الاستجابة عبر التخزين الذكي وأنماط أداء تكيّفية.
-- هندسة OCR عربي/إنجليزي للعمل دون اتصال (Office Archiving) مع تقليل زمن المعالجة 40% عبر تحسين المعالجة المسبقة.
-- تطبيق Supabase Auth ودردشة فورية (Wolfera) مما زاد التفاعل ~60%.
-- تنفيذ واجهات ثنائية اللغة متجاوبة بدقة عالية.
+## الخبرة
+### مطوّر Flutter، مستقل / عقود
+07/2022 - حتى الآن  
+عن بُعد
 
-## أبرز المشاريع (AR)
-- LKLK - منصّة صوت اجتماعي
-  - الدور: مطوّر الموبايل الوحيد (تعاون مع باك‑إند). تولّيت النشر وخط الإصدار.
-  - التقنيات: Flutter، Zego Cloud، WebSocket، Appwrite + REST، Flavors، توقيع/keystore عبر Gradle، إصدارات مبنية على tags (ملاحظات تلقائية)، تخزين ذكي.
-  - الأثر: 1,000+ مستخدم متزامن لكل غرفة؛ قابلية توسّع منصّية لاستيعاب آلاف المستخدمين إجمالاً؛ -60% ذاكرة (عبر Android Profiler + ضبط الصور/الكاش)، تحسين سلاسة العرض (موثّقة عبر Flutter DevTools)، 99.9% توافرية.
-  - المستودع: مستودع Bitbucket خاص (حماية كود العميل)
-  - الرابط: Google Play - https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+- بناء وصيانة تطبيقات Flutter لمشاريع مستقلة وعقود تشمل تنفيذ الواجهات، تكامل APIs، التخزين المحلي، تجهيز الإصدارات، والنشر.
+- تنظيم تطبيقات متوسطة الحجم باستخدام Clean Architecture وBLoC/Cubit وGetIt ووحدات feature-based لفصل الواجهة ومنطق العمل وطبقة البيانات.
+- دمج REST APIs وSupabase وAppwrite وWebSockets وغرف Zego الصوتية وتدفّقات الرسائل وخدمات Firebase والمشتريات داخل التطبيق.
+- تنفيذ سلوك offline-first باستخدام Hive وSQLite والترقيم وإعادة المحاولة وأخطاء typed لجعل التدفقات الأساسية أكثر توقّعية.
+- تجهيز إصدارات إنتاجية باستخدام app flavors وProGuard/R8 وCrashlytics والتخزين الآمن وبيئات تطوير/إنتاج منفصلة.
+- استخدام isolates والمعالجة الخلفية للأعمال الأثقل مثل OCR والتعامل مع PDF وميزات الصوت والمهام الخلفية.
+- نشر وصيانة تطبيقات على Google Play وApp Store، منها تطبيق عام واحد حقق 5,000+ تنزيل.
 
-- Wolfera - سوق سيارات (فردي)
-  - التقنيات: Flutter وBLoC وSupabase (مصادقة/Realtime/Storage) وتسجيل دخول Google وخرائط وGetIt DI وgo_router وDio.
-  - الميزات: ترشيح متقدم، دردشة ثنائية الاتجاه مع إيموجي، واجهة عربي/إنجليزي، كاش صور وتحميل كسول.
-  - الرابط: GitHub - https://github.com/Mohamad-Adib-Tawil/Wolfera
+## المهارات التقنية
+- Flutter والموبايل: Flutter، Dart، Material 3، Android، iOS
+- المعمارية وإدارة الحالة: Clean Architecture، SOLID، MVVM، BLoC، Cubit، Provider، GetIt، Injectable، Dartz/Either
+- APIs وخدمات الخلفية: REST APIs، Dio، Interceptors، WebSockets، Supabase، Appwrite، Firebase Auth، FCM، Analytics، Crashlytics
+- التخزين والعمل دون اتصال: Hive، SQLite، Secure Storage، offline-first caching، pagination، retry handling
+- الوسائط وOCR والمستندات: Zego Express، ZIM، LiveKit، just_audio، audio recording، Google ML Kit، Tesseract OCR، PDF generation، printing
+- الإصدار والأدوات: ProGuard/R8، app flavors، isolates، background tasks، image optimization، Google Play، App Store، Git، GitHub، Postman، Figma
 
-- Office Archiving - OCR وإنتاجية (فردي)
-  - التقنيات: ML Kit وTesseract OCR (عربي/إنجليزي دون اتصال)، SQLite مع ترحيلات، معالجة PDF دفعات، تحسين صور، تحليلات، وضع داكن.
-  - الأثر: دقّة OCR ~90%، مسارات عمل مبسّطة.
-  - الروابط: GitHub - https://github.com/Mohamad-Adib-Tawil/office_archiving | Google Play - https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
+## التعليم
+دبلوم هندسة حاسبات، جامعة حلب  
+التركيز: هندسة البرمجيات  
+2020 - 2022  
+حلب، سوريا
 
-- Code Book - تطبيق قراءة (فردي)
-  - التقنيات: معمارية نظيفة (العرض/المجال/البيانات)، BLoC، GetIt، Hive (تخزين دون اتصال)، Dio مع إعادة المحاولة وأخطاء منظّمة، ومعاينات WebView.
-  - الأثر: تجربة قراءة Offline‑first؛ أصول جاهزة للمتجر.
-  - الرابط: GitHub - https://github.com/Mohamad-Adib-Tawil/Code-Books-
-
-## المهارات الأساسية (AR)
-- إدارة الحالة: BLoC/Cubit، GetIt DI
-- المعمارية: معمارية نظيفة، SOLID، نمط المستودع
-- الوقت الفعلي: Zego Cloud، LiveKit، WebSocket، Supabase Realtime
-- الخلفيات: Supabase، Firebase، Appwrite، REST APIs
-- البيانات والتخزين: Hive، SQLite
-- الذكاء الاصطناعي وOCR: ML Kit، Tesseract، معالجة الصور
-- DevOps: CI/CD (GitHub Actions - قيد التعلم، Fastlane)، Flavors
-
-- CI (قيد التعلم): GitHub Actions: triggers (push/PR/tag)، flutter analyze/test، APK/AAB artifacts، GitHub Secrets، CI cache/concurrency/branch conditions
-
-- الأدوات: Flutter DevTools، Android Profiler
-
-## الإنجازات (AR)
-- LKLK: 1,000+ مستخدم متزامن، -60% ذاكرة، تحسين سلاسة العرض، 99.9% توافرية
-- Wolfera: +60% تفاعل المستخدمين عبر مصادقة Supabase والدردشة الفورية؛ واجهة ثنائية اللغة (عربي/إنجليزي)
-- Office Archiving: OCR ثنائي اللغة ~90% دقّة؛ معالجة PDF؛ ترجمة بالذكاء الاصطناعي
-- Code Book: معمارية Offline‑first بنمط المستودع وDio retry
-- إدارة الإصدارات: إصدارات مبنية على tags مع توليد تلقائي لملاحظات الإصدار؛ بناء متعدد الـFlavors
-- 4 تطبيقات إنتاجية منشورة، 1,000+ تنزيل، تقييم +4
-- 963SY: امتثال ونشر Play Console (سياسة الخصوصية، الأذونات، الحماية)
-
-## التعليم (AR)
-- جامعة حلب - دبلوم هندسة حاسبات، مسار هندسة البرمجيات (يونيو 2020 - أغسطس 2022) | 82.89%
-  - مواد: C#، هياكل بيانات، خوارزميات، OOP، قواعد بيانات، هندسة برمجيات
-  - مشروع تخرج: منصة مساعدة تعليمية (ويب/ويندوز/موبايل)
-
-## الخدمات (AR)
-- تطوير تطبيقات موبايل شاملة (iOS وAndroid)
-- مزايا الوقت الفعلي: صوت/فيديو مباشر، أنظمة دردشة، رسوم متزامنة
-- AI/OCR: ML Kit وTesseract ومعالجة صور وتحليل نص وترجمة
-- تحسين الأداء: تقليل الذاكرة، تحسين سلاسة العرض وتقليل التقطيع
-- معمارية الخلفيات: Supabase وFirebase وAppwrite وAPIs مخصصة وWebSocket
-- إعداد CI/CD: خطوط آلية، اختبار، نشر، مراقبة
-- امتثال Play Console والنشر (سياسة الخصوصية، الأذونات، تصنيف المحتوى، صفحة المتجر)
-
-## اللغات (AR)
-- العربية (لغة أم)، الإنجليزية (إنجليزية تقنية جيدة)
+## اللغات
+- العربية: لغة أم
+- الإنجليزية: كفاءة عمل تقنية
