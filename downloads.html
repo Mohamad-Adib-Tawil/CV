@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css?v=20260120-2306" />
   </head>
-  <body>
+  <body data-page="downloads">
     <a class="skip-link" href="#main">Skip to main content</a>
     <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
       <i class="fas fa-moon" aria-hidden="true"></i>
@@ -35,15 +35,15 @@
     <main id="main">
       <div class="container">
         <nav class="top-nav" aria-label="Primary">
-          <a href="index.html#summary">Back to CV</a>
+          <a id="downloadsBackLink" href="index.html#summary">Back to CV</a>
           <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener">GitHub</a>
         </nav>
 
         <header id="header">
           <img src="https://avatars.githubusercontent.com/u/223110350?s=400&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4" alt="Mohamad Adib Tawil" class="profile-pic floating" width="120" height="120" />
           <div class="header-info">
-            <h1 class="gradient-text">Download CV</h1>
-            <div id="jobTitle" class="title">Mid-level Flutter Developer • Remote (GMT+3)</div>
+            <h1 id="downloadsPageTitle" class="gradient-text">Download CV</h1>
+            <div id="jobTitle" class="title">Flutter Developer / Mobile Application Engineer • Remote from Syria</div>
             <div class="contact-info">
               <div class="contact-item">
                 <div class="icon"><i class="fas fa-envelope"></i></div>
@@ -62,49 +62,49 @@
         </header>
 
         <section>
-          <h2><i class="fas fa-file-download"></i> CV Downloads</h2>
-          <p>Place your DOCX/PDF files in <code>assets/downloads/</code>. Use the filenames below so links work automatically.</p>
+          <h2 id="downloadsSectionTitle"><i class="fas fa-file-download"></i> CV Downloads</h2>
+          <p id="downloadsIntro">Place your DOCX/PDF files in <code>assets/downloads/</code>. Use the filenames below so links work automatically.</p>
           <div class="project-table" style="padding:1rem;">
             <ul>
               <li>
-                <strong>English</strong> —
-                <a href="assets/downloads/CV_EN.docx" download>DOCX</a> ·
-                <a href="assets/downloads/CV_EN.pdf" target="_blank" rel="noopener">PDF</a>
+                <strong id="downloadEnglishLabel">English</strong> —
+                <a id="downloadEnglishDocx" href="assets/downloads/CV_EN.docx" download>DOCX</a> ·
+                <a id="downloadEnglishPdf" href="assets/downloads/CV_EN.pdf" target="_blank" rel="noopener">PDF</a>
               </li>
               <li>
-                <strong>العربية</strong> —
-                <a href="assets/downloads/CV_AR.docx" download>DOCX</a> ·
-                <a href="assets/downloads/CV_AR.pdf" target="_blank" rel="noopener">PDF</a>
+                <strong id="downloadArabicLabel">العربية</strong> —
+                <a id="downloadArabicDocx" href="assets/downloads/CV_AR.docx" download>DOCX</a> ·
+                <a id="downloadArabicPdf" href="assets/downloads/CV_AR.pdf" target="_blank" rel="noopener">PDF</a>
               </li>
             </ul>
           </div>
           <div class="cta-buttons" style="margin-top:1rem;">
-            <button id="exportWordBtn" class="btn btn-primary"><i class="fas fa-file-word"></i> Generate Word (current language)</button>
-            <button id="exportATSBtn" class="btn btn-secondary"><i class="fas fa-robot"></i> Generate ATS Word</button>
+            <button id="exportWordBtn" class="btn btn-primary"><i class="fas fa-file-word"></i> <span id="exportWordText">Generate Word (current language)</span></button>
+            <button id="exportATSBtn" class="btn btn-secondary"><i class="fas fa-robot"></i> <span id="exportATSText">Generate ATS Word</span></button>
           </div>
         </section>
 
         <section>
-          <h2><i class="fas fa-file-alt"></i> Plain Text Version</h2>
-          <p>
+          <h2 id="plainTextSectionTitle"><i class="fas fa-file-alt"></i> Plain Text Version</h2>
+          <p id="plainTextIntro">
             You can copy the bilingual CV text directly from
-            <a href="assets/cv/CV_Text_EN_AR.md" target="_blank" rel="noopener">CV_Text_EN_AR.md</a>
+            <a id="plainTextLink" href="assets/cv/CV_Text_EN_AR.md" target="_blank" rel="noopener">CV_Text_EN_AR.md</a>
           </p>
         </section>
 
         <footer class="footer" style="margin-top:2rem;">
           <div class="footer-content">
             <div class="footer-section">
-              <h3>Quick Links</h3>
+              <h3 id="footerQuickLinksTitle">Quick Links</h3>
               <nav class="footer-nav">
-                <a href="index.html#summary">Summary</a>
-                <a href="index.html#projects">Projects</a>
-                <a href="index.html#skills">Skills</a>
-                <a href="downloads.html">Download CV</a>
+                <a id="footerSummaryLink" href="index.html#summary">Summary</a>
+                <a id="footerProjectsLink" href="index.html#projects">Projects</a>
+                <a id="footerSkillsLink" href="index.html#skills">Skills</a>
+                <a id="footerDownloadLink" href="downloads.html">Download CV</a>
               </nav>
             </div>
             <div class="footer-section">
-              <h3>Connect</h3>
+              <h3 id="footerConnectTitle">Connect</h3>
               <div class="social-links">
                 <a href="mailto:mohamad.adib.tawil@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -112,7 +112,7 @@
               </div>
             </div>
             <div class="footer-section">
-              <h3>Info</h3>
+              <h3 id="footerInfoTitle">Info</h3>
               <p class="footer-text">© <span id="currentYear">2024</span> Mohamad Adib Tawil</p>
             </div>
           </div>
@@ -120,6 +120,7 @@
       </div>
     </main>
 
-    <script src="assets/js/main.js?v=20260120-2306" defer></script>
+    <script src="assets/js/cv-data.js?v=20260411-1200" defer></script>
+    <script src="assets/js/main.js?v=20260411-1200" defer></script>
   </body>
 </html>
