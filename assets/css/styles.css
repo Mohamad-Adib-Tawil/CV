@@ -994,6 +994,95 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
 
  
 
+/* CV Version Switcher Tabs */
+.cv-version-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 5px;
+  margin: 0 auto 20px;
+  width: fit-content;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.cv-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-size: 0.82em;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--light-text);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.cv-tab:hover { color: var(--primary-color); background: var(--tint-weak); }
+.cv-tab.active {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.22);
+  pointer-events: none;
+}
+.cv-tab-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--glass-border);
+  flex-shrink: 0;
+}
+@media (max-width: 560px) {
+  .cv-version-tabs { width: calc(100% - 0px); justify-content: center; }
+  .cv-tab { padding: 7px 14px; font-size: 0.78em; }
+}
+
+/* Multi-entry experience entries */
+.exp-entry + .exp-entry {
+  border-top: 1px solid var(--border-color);
+  margin-top: 1.2rem;
+  padding-top: 0.8rem;
+}
+.exp-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+.exp-entry-header h3 {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  flex: 1 1 auto;
+  min-width: 180px;
+}
+.exp-entry-meta {
+  flex-shrink: 0;
+  text-align: right;
+  padding-top: 12px;
+  font-size: 0.82em;
+  color: var(--light-text);
+  line-height: 1.5;
+}
+.exp-period {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.exp-location {
+  display: block;
+}
+/* Additional tech sections inside a section */
+.additional-tech-section + .additional-tech-section {
+  margin-top: 0.5rem;
+}
+html[dir="rtl"] .exp-entry-meta { text-align: left; }
+html[dir="rtl"] .exp-entry-header { flex-direction: row-reverse; }
+
 /* RTL support */
 html[dir="rtl"] { direction: rtl; }
 html[dir="rtl"] body { text-align: right; }

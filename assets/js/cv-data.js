@@ -421,6 +421,170 @@
     },
   };
 
+  const _cvVersion = (typeof window !== 'undefined' && window.CV_VERSION) || 'flutter';
+  if (_cvVersion === 'se') {
+    // ── English overrides ──────────────────────────────────────────────
+    translations.en.header.jobTitle = 'Software Engineer & Flutter Developer';
+    translations.en.experienceRole = 'Software Engineer & Flutter Developer, Independent / Contract — 07/2022 – Present';
+    translations.en.downloadsPage.subtitle = 'Software Engineer & Flutter Developer • Remote from Syria';
+    translations.en.nav.additionalExp = 'Add. Exp.';
+    translations.en.summaryText =
+      'Software Engineer and Flutter Developer with more than three years of experience building mobile applications using Flutter and Dart, with an academic background in software engineering, systems analysis, databases, and algorithms. I work across the various stages of software development, starting from requirements analysis and software solution design, through building user interfaces and connecting backend services and databases, to testing applications and preparing them for release and publishing. I have strong experience designing applications using Clean Architecture and managing state with BLoC and Cubit, integrating with Supabase, Appwrite, and Firebase, in addition to building applications that work efficiently under poor internet connectivity. I also have experience with audio applications, optical character recognition (OCR), and document and file processing.';
+    translations.en.downloadsPage.atsSummary =
+      'Software Engineer and Flutter Developer with 3+ years of independent and contract experience. Production-oriented Flutter/Dart apps, Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase, offline-first flows, audio features, OCR/document workflows, and store publishing.';
+
+    translations.en.experienceEntries = [
+      {
+        role: 'Flutter Developer, Freelance & Contract',
+        period: '07/2022 – Present',
+        location: 'Remote',
+        items: [
+          'Developing and maintaining Flutter applications for independent and contract projects.',
+          'Building user interfaces, connecting backend services (APIs), and managing local storage.',
+          'Designing applications using: Clean Architecture, BLoC / Cubit, GetIt (Dependency Injection), Feature-Based Architecture.',
+          'Integrating many services and technologies such as: REST APIs, Supabase, Appwrite, Firebase, WebSockets, live audio rooms via Zego / LiveKit, instant messaging and real-time chat systems, in-app purchases.',
+          'Implementing Offline-First solutions using Hive and SQLite to ensure the application keeps working without a constant internet connection.',
+          'Developing Pagination systems and handling errors and retries professionally.',
+          'Preparing final application releases using: App Flavors, ProGuard / R8, Crashlytics, Secure Storage.',
+          'Using Isolates and background tasks to process heavy operations such as: OCR, PDF files, audio playback and processing.',
+          'Publishing and maintaining applications on Google Play and the Apple App Store.',
+          'Contributing to the launch of a public application that exceeded 5,000 downloads.',
+        ],
+      },
+      {
+        role: 'Android Developer (Kotlin), University & Independent Projects',
+        period: '2022 – 2022',
+        location: 'Aleppo, Syria',
+        items: [
+          'Developing an educational platform specialized in programming (graduation project) that includes courses, information, and code samples (2022).',
+          '"Ana Mubarmej" (I Am a Programmer) application: a section for programming specializations with the best resources to learn them; a section for general information about programming; a WebView section for online code execution sites (console) for 8 languages; a section with automated questions for 8 programming languages with score calculation.',
+        ],
+      },
+      {
+        role: 'Windows Application Developer, University Projects',
+        period: '2021 – 2022',
+        location: 'Aleppo, Syria',
+        items: [
+          'Developing a warehouse management system for the Faculty of Pharmacy using Windows Forms (2021), which received a special acknowledgment from the Dean of the Faculty of Pharmacy.',
+          'Developing a warehouse management system for the Faculty of Science – Chemistry Department using Windows Forms (2022), which received a special acknowledgment from the Dean of the Faculty of Science and a special acknowledgment from the Presidency of the University of Aleppo.',
+        ],
+      },
+    ];
+
+    translations.en.additionalTechExperience = {
+      title: 'Additional Technical Experience',
+      sections: [
+        {
+          title: 'Android Software & Device Maintenance',
+          items: [
+            'Installing and updating official and custom Android systems.',
+            'Performing flashing operations and system recovery for devices.',
+            'Working with Recovery Mode and Bootloader.',
+            'Diagnosing and solving software problems related to the Android system.',
+            'Practical experience in maintaining and programming personal Android devices across a number of different devices.',
+          ],
+        },
+        {
+          title: 'General Programming & Technical Skills',
+          items: [
+            'C# programming language',
+            'Data Structures & Algorithms',
+            'Software Engineering',
+            'Object-Oriented Programming (OOP)',
+            'Systems Analysis & Design',
+            'Relational database design and writing SQL queries',
+            'UML diagrams and systems modeling',
+            'Software Development Life Cycle (SDLC)',
+            'Software requirements analysis and preparing technical documentation',
+          ],
+        },
+      ],
+    };
+
+    // ── Arabic overrides ───────────────────────────────────────────────
+    translations.ar.header.jobTitle = 'مطوّر برمجيات ومطوّر Flutter';
+    translations.ar.experienceRole = 'مطوّر برمجيات ومطوّر Flutter (مستقل/عقود) — 07/2022 – حتى الآن';
+    translations.ar.downloadsPage.subtitle = 'مطوّر برمجيات ومطوّر Flutter • عن بُعد من سوريا';
+    translations.ar.nav.additionalExp = 'خبرة إضافية';
+    translations.ar.summaryText =
+      'مطوّر برمجيات ومطوّر Flutter يمتلك أكثر من ثلاث سنوات من الخبرة في تطوير تطبيقات الهواتف الذكية باستخدام Flutter وDart، مع خلفية أكاديمية في هندسة البرمجيات وتحليل الأنظمة وقواعد البيانات والخوارزميات. أعمل على مختلف مراحل تطوير البرمجيات، بدءاً من تحليل المتطلبات وتصميم الحلول البرمجية، مروراً بتطوير واجهات المستخدم وربط الخدمات الخلفية وقواعد البيانات، وصولاً إلى اختبار التطبيقات وتجهيزها للإطلاق والنشر. أمتلك خبرة قوية في تصميم التطبيقات باستخدام Clean Architecture وإدارة الحالة عبر BLoC وCubit، والتكامل مع Supabase وAppwrite وFirebase، بالإضافة إلى تطوير التطبيقات التي تعمل بكفاءة في ظروف الاتصال الضعيف بالإنترنت. كما أمتلك خبرة في تطبيقات الصوت، والتعرف الضوئي على النصوص (OCR)، ومعالجة المستندات والملفات.';
+    translations.ar.downloadsPage.atsSummary =
+      'مطوّر برمجيات ومطوّر Flutter بخبرة 3+ سنوات في العمل المستقل والعقود. خبرة في تطبيقات Flutter/Dart الإنتاجية، Clean Architecture، BLoC/Cubit، Supabase/Appwrite/Firebase، تدفقات offline-first، ميزات الصوت، OCR/المستندات، والنشر على المتاجر.';
+
+    translations.ar.experienceEntries = [
+      {
+        role: 'مطوّر Flutter, عمل مستقل وتعاقدي',
+        period: '07/2022 – حتى الآن',
+        location: 'عن بُعد',
+        items: [
+          'تطوير وصيانة تطبيقات Flutter لمشاريع مستقلة وتعاقدية.',
+          'بناء واجهات المستخدم وربط الخدمات الخلفية (APIs) وإدارة التخزين المحلي.',
+          'تصميم التطبيقات باستخدام: Clean Architecture، BLoC / Cubit، GetIt (Dependency Injection)، Feature-Based Architecture.',
+          'دمج العديد من الخدمات والتقنيات مثل: REST APIs، Supabase، Appwrite، Firebase، WebSockets، غرف الصوت المباشرة عبر Zego / LiveKit، أنظمة المحادثة والدردشة الفورية، عمليات الشراء داخل التطبيق.',
+          'تنفيذ حلول Offline-First باستخدام Hive وSQLite لضمان استمرار عمل التطبيق دون اتصال دائم بالإنترنت.',
+          'تطوير أنظمة Pagination ومعالجة الأخطاء وإعادة المحاولة بشكل احترافي.',
+          'تجهيز الإصدارات النهائية للتطبيقات باستخدام: App Flavors، ProGuard / R8، Crashlytics، Secure Storage.',
+          'استخدام Isolates والمهام الخلفية لمعالجة العمليات الثقيلة مثل: OCR، ملفات PDF، تشغيل ومعالجة الصوت.',
+          'نشر وصيانة التطبيقات على Google Play وApple App Store.',
+          'المساهمة في إطلاق تطبيق عام تجاوز عدد تنزيلاته 5000 تنزيل.',
+        ],
+      },
+      {
+        role: 'مطوّر تطبيقات أندرويد Kotlin، مشاريع جامعية ومستقلة',
+        period: '2022 – 2022',
+        location: 'حلب، سوريا',
+        items: [
+          'تطوير منصة تعليمية متخصصة في البرمجة (مشروع تخرج) تضم كورسات ومعلومات وأكواد برمجية (2022).',
+          'تطبيق "أنا مبرمج": قسم لاختصاصات البرمجة مع أفضل المصادر لتعلمها؛ قسم لمعلومات عامة عن البرمجة؛ قسم WebView لمواقع تنفيذ الأكواد البرمجية (كونسول) لـ 8 لغات؛ قسم لأسئلة أتمتة لـ 8 لغات برمجة مع حساب السكور.',
+        ],
+      },
+      {
+        role: 'مطوّر تطبيقات ويندوز – مشاريع جامعية',
+        period: '2021 – 2022',
+        location: 'حلب، سوريا',
+        items: [
+          'تطوير نظام إدارة مستودعات لكلية الصيدلة باستخدام Windows Forms (2021) وحصل على شكر خاص من عميد كلية الصيدلة.',
+          'تطوير نظام إدارة مستودعات لكلية العلوم – قسم الكيمياء باستخدام Windows Forms (2022) وحصل على شكر خاص من عميد كلية العلوم وشكر خاص من رئاسة جامعة حلب.',
+        ],
+      },
+    ];
+
+    translations.ar.additionalTechExperience = {
+      title: 'خبرة تقنية إضافية',
+      sections: [
+        {
+          title: 'برمجيات وصيانة أجهزة Android',
+          items: [
+            'تثبيت وتحديث أنظمة Android الرسمية والمخصصة.',
+            'تنفيذ عمليات Flash واستعادة النظام للأجهزة.',
+            'التعامل مع Recovery Mode وBootloader.',
+            'تشخيص وحل المشكلات البرمجية المتعلقة بنظام Android.',
+            'خبرة عملية في صيانة وبرمجة أجهزة Android الشخصية على عدد من الأجهزة المختلفة.',
+          ],
+        },
+        {
+          title: 'المهارات البرمجية والتقنية العامة',
+          items: [
+            'لغة البرمجة C#',
+            'هياكل البيانات والخوارزميات (Data Structures & Algorithms)',
+            'هندسة البرمجيات (Software Engineering)',
+            'البرمجة كائنية التوجه (OOP)',
+            'تحليل وتصميم الأنظمة (Systems Analysis & Design)',
+            'تصميم قواعد البيانات العلائقية وكتابة استعلامات SQL',
+            'مخططات UML ونمذجة الأنظمة',
+            'دورة حياة تطوير البرمجيات (SDLC)',
+            'تحليل المتطلبات البرمجية وإعداد الوثائق التقنية',
+          ],
+        },
+      ],
+    };
+
+    downloads.files.en.docx = 'assets/downloads/CV_SE_EN.docx';
+    downloads.files.en.pdf = 'assets/downloads/CV_SE_EN.pdf';
+    downloads.files.ar.docx = 'assets/downloads/CV_SE_AR.docx';
+    downloads.files.ar.pdf = 'assets/downloads/CV_SE_AR.pdf';
+  }
+
   const CV_DATA = {
     profile,
     downloads,
