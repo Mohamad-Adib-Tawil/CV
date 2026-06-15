@@ -64,8 +64,21 @@
 </head>
 <body data-page="home">
     <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="cv-switch-bar" role="tablist" aria-label="CV Version">
+        <div class="cv-switch-inner">
+            <a href="index.html" class="cv-tab active" role="tab" aria-selected="true">
+                <i class="fas fa-mobile-alt" aria-hidden="true"></i> Flutter Developer
+            </a>
+            <div class="cv-tab-divider"></div>
+            <a href="se.html" class="cv-tab" role="tab" aria-selected="false">
+                <i class="fas fa-code" aria-hidden="true"></i> Software Engineer
+            </a>
+        </div>
+    </div>
+
     <div class="particles-container" id="particles"></div>
-    
+
     <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
         <i class="fas fa-moon" aria-hidden="true"></i>
     </button>
@@ -76,15 +89,6 @@
 
     <main id="main">
     <div class="container">
-        <div class="cv-version-tabs" role="tablist" aria-label="CV Version">
-            <a href="index.html" class="cv-tab active" role="tab" aria-selected="true">
-                <i class="fas fa-mobile-alt" aria-hidden="true"></i> Flutter Developer
-            </a>
-            <div class="cv-tab-divider"></div>
-            <a href="se.html" class="cv-tab" role="tab" aria-selected="false">
-                <i class="fas fa-code" aria-hidden="true"></i> Software Engineer
-            </a>
-        </div>
         <nav class="top-nav cv-nav" aria-label="Primary">
             <div class="nav-links">
                 <a id="navSummary" href="#summary">Summary</a>

@@ -994,51 +994,59 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
 
  
 
-/* CV Version Switcher Tabs */
-.cv-version-tabs {
+/* CV Version Switcher — sticky top bar */
+.cv-switch-bar {
+  position: sticky;
+  top: 0;
+  z-index: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.cv-switch-inner {
   display: flex;
   align-items: center;
   gap: 4px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 14px;
-  padding: 5px;
-  margin: 0 auto 20px;
-  width: fit-content;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 4px;
 }
 .cv-tab {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 22px;
-  border-radius: 10px;
+  padding: 7px 20px;
+  border-radius: 9px;
   font-size: 0.82em;
   font-weight: 600;
   text-decoration: none;
   color: var(--light-text);
-  transition: all 0.25s ease;
+  transition: all 0.22s ease;
   white-space: nowrap;
-  letter-spacing: 0.01em;
 }
 .cv-tab:hover { color: var(--primary-color); background: var(--tint-weak); }
 .cv-tab.active {
   background: var(--primary-color);
   color: #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.22);
   pointer-events: none;
 }
 .cv-tab-divider {
   width: 1px;
-  height: 20px;
+  height: 18px;
   background: var(--glass-border);
   flex-shrink: 0;
 }
-@media (max-width: 560px) {
-  .cv-version-tabs { width: calc(100% - 0px); justify-content: center; }
-  .cv-tab { padding: 7px 14px; font-size: 0.78em; }
+@media (max-width: 480px) {
+  .cv-tab { padding: 6px 12px; font-size: 0.76em; }
+  .cv-tab i { display: none; }
 }
 
 /* Multi-entry experience entries */
