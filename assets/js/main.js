@@ -289,10 +289,13 @@
       ["navAdvanced", "advanced"],
       ["navServices", "services"],
       ["navLanguages", "languages"],
+      ["navAdditionalExp", "additionalExp"],
       ["navDownload", "download"],
     ];
 
-    navMap.forEach(([id, key]) => setText(id, dict.nav[key]));
+    navMap.forEach(([id, key]) => {
+      if (dict.nav[key] != null) setText(id, dict.nav[key]);
+    });
   };
 
   const renderHeader = (dict) => {
@@ -329,12 +332,45 @@
 
   const renderContentSections = (dict) => {
     setText("summaryText", dict.summaryText);
-    setText("experienceRole", dict.experienceRole);
     setText("languagesText", dict.languagesText);
 
-    const experienceList = $("experienceList");
-    if (experienceList) {
-      experienceList.innerHTML = dict.experienceList.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    // Multi-entry experience (SE version) vs single entry (Flutter version)
+    if (dict.experienceEntries && Array.isArray(dict.experienceEntries)) {
+      const container = $("experienceContainer");
+      if (container) {
+        container.innerHTML = dict.experienceEntries.map((entry) => `
+          <div class="exp-entry">
+            <div class="exp-entry-header">
+              <h3>${escapeHtml(entry.role)}</h3>
+              <div class="exp-entry-meta">
+                <span class="exp-period">${escapeHtml(entry.period)}</span>
+                <span class="exp-location">${escapeHtml(entry.location)}</span>
+              </div>
+            </div>
+            <ul>${entry.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </div>
+        `).join("");
+      }
+    } else {
+      setText("experienceRole", dict.experienceRole);
+      const experienceList = $("experienceList");
+      if (experienceList) {
+        experienceList.innerHTML = dict.experienceList.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+      }
+    }
+
+    // Additional technical experience section (SE version only)
+    if (dict.additionalTechExperience) {
+      setHeadingText("additionalTechTitle", dict.additionalTechExperience.title);
+      const container = $("additionalTechContainer");
+      if (container) {
+        container.innerHTML = dict.additionalTechExperience.sections.map((sec) => `
+          <div class="additional-tech-section">
+            <h3>${escapeHtml(sec.title)}</h3>
+            <ul>${sec.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </div>
+        `).join("");
+      }
     }
 
     renderList(".skill-list", dict.skillsList);
