@@ -1,33 +1,60 @@
 /* Global variables */
 :root {
-  --primary-color: #0066cc;
-  --secondary-color: #004d99;
-  --accent-color: #28a745;
-  --light-bg: #f9f9f9;
-  --dark-text: #333;
-  --light-text: #666;
-  --border-color: #e0e0e0;
-  --card-bg: #ffffff;
-  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --transition: all 0.3s ease;
-  --glass-bg: rgba(255, 255, 255, 0.55);
-  --glass-border: rgba(255, 255, 255, 0.35);
+  /* Accent (overridden by theme presets on <body>) */
+  --primary-color: #4F5BD5;
+  --secondary-color: #5A616B;
+  --accent-color: #6E7BFF;
+  /* Surfaces & text — Light theme (R-01: dark-text on light-bg ≈ 15:1) */
+  --light-bg: #FBFBFD;
+  --dark-text: #1A1D23;
+  --light-text: #5A616B;
+  --border-color: rgba(0,0,0,0.08);
+  --card-bg: #FFFFFF;
+  --shadow: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-hover: 0 6px 20px rgba(0,0,0,0.10);
+  --transition: all 0.18s ease;
+  /* "glass" vars are now SOLID surfaces + hairline borders */
+  --glass-bg: #FFFFFF;
+  --glass-border: rgba(0,0,0,0.08);
   --blob-1: radial-gradient(closest-side, rgba(0,102,204,0.35), transparent);
   --blob-2: radial-gradient(closest-side, rgba(40,167,69,0.35), transparent);
   /* default tints (overridden by theme presets) */
   --tint-weak: rgba(0,102,204,0.08);
   --tint-strong: rgba(0,102,204,0.12);
+
+  /* ---- Spacing (8pt grid) ---- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 40px; --space-8: 48px;
+  --space-9: 64px; --space-10: 96px; --space-11: 128px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px; --radius-md: 12px; --radius-pill: 999px;
+
+  /* ---- Typography scale (fluid) ---- */
+  --fs-display: clamp(2.5rem, 1.8rem + 3vw, 3.75rem);
+  --fs-h2: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --fs-h3: clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
+  --fs-lead: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+  --fs-body: 1rem;
+  --fs-meta: 0.8125rem;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 120ms; --dur: 180ms; --dur-slow: 220ms;
 }
 
 .dark-mode {
-  --light-bg: #121212;
-  --dark-text: #e0e0e0;
-  --light-text: #a0a0a0;
-  --border-color: #333333;
-  --card-bg: #1e1e1e;
-  --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  --glass-bg: rgba(30, 30, 30, 0.55);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  /* Surfaces & text — Dark theme (R-01: E6E9EE on 0B0D10 ≈ 14:1) */
+  --light-bg: #0B0D10;
+  --dark-text: #E6E9EE;
+  --light-text: #9AA1AC;
+  --border-color: rgba(255,255,255,0.09);
+  --card-bg: #14181E;
+  --shadow: 0 1px 2px rgba(0,0,0,0.20);
+  --shadow-hover: 0 6px 20px rgba(0,0,0,0.28);
+  --glass-bg: #14181E;
+  --glass-border: rgba(255,255,255,0.09);
   color-scheme: dark;
 }
 
@@ -111,11 +138,15 @@ body {
   padding: 0;
   background: var(--light-bg);
   color: var(--dark-text);
-  font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+/* R-14 lock: Arabic font is applied via class (set by applyLanguage) instead of
+   an inline body style, so it no longer overrides the typography system. */
+body.lang-ar { font-family: 'Tajawal', 'Poppins', Arial, sans-serif; }
 
 /* Animated gradient blobs background */
 body::before,
@@ -693,6 +724,22 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .contact-item a:focus
 .cv-nav .nav-download {
   white-space: nowrap;
 }
+
+/* Mobile nav toggle — hidden on desktop, shown ≤768px */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 1.05em;
+}
+.nav-toggle:hover { color: var(--accent-color); }
 
 .top-nav a {
   font-size: 0.9em;

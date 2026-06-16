@@ -442,10 +442,9 @@
     const dict = getDict();
     themeRoot.lang = state.currentLang;
     themeRoot.dir = state.currentLang === "ar" ? "rtl" : "ltr";
-    body.style.fontFamily =
-      state.currentLang === "ar"
-        ? "'Tajawal', 'Poppins', Arial, sans-serif"
-        : "'Inter', 'Poppins', Arial, sans-serif";
+    // R-14 lock: switch font via class, not an inline body style, so the
+    // language system never globally overrides the CSS font/typography system.
+    body.classList.toggle("lang-ar", state.currentLang === "ar");
 
     renderNav(dict);
     renderHeader(dict);
@@ -999,6 +998,29 @@
     window.CVShowSnackbar = showSnackbar;
   };
 
+  const initMobileNav = () => {
+    const nav = document.querySelector(".cv-nav");
+    const toggle = $("navToggle");
+
+    if (!nav || !toggle) {
+      return;
+    }
+
+    const setOpen = (open) => {
+      nav.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    toggle.addEventListener("click", () => {
+      setOpen(!nav.classList.contains("nav-open"));
+    });
+
+    // Close the menu after navigating to a section.
+    nav.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+  };
+
   const initYear = () => {
     const year = $("currentYear");
 
@@ -1017,7 +1039,7 @@
     initParticles();
     initStatsAnimation();
     initYear();
-    initTypingEffect();
+    initMobileNav();
     initExports();
     initDownloadGuard();
     updateThemeColorMeta();
