@@ -1034,9 +1034,7 @@
     initLanguage();
     initRevealAnimations();
     initNavSpy();
-    initParallax();
     initScrollToTop();
-    initParticles();
     initStatsAnimation();
     initYear();
     initMobileNav();
