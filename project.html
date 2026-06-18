@@ -1,0 +1,132 @@
+<!-- project.html --><!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project — Mohamad Adib Tawil</title>
+        <meta name="description" content="Project case study — screenshots, video, downloads, and overview by Mohamad Adib Tawil.">
+        <meta name="theme-color" content="#0066cc">
+        <link rel="icon" href="https://avatars.githubusercontent.com/u/223110350?s=64&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4" sizes="64x64">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Project — Mohamad Adib Tawil">
+        <meta property="og:description" content="Project case study — screenshots, video, downloads, and overview.">
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/223110350?s=400&u=75cb795be7688812bda8863968c8139a0fe6a96a&v=4">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Mohamad Adib Tawil CV">
+        <script>
+        (function() {
+          try {
+            if (localStorage.getItem('theme') !== 'light') {
+              document.documentElement.classList.add('dark-mode');
+            }
+          } catch (_) {
+            document.documentElement.classList.add('dark-mode');
+          }
+        })();
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/styles.css?v=20260618-1">
+        <link rel="stylesheet" href="assets/css/home.css?v=20260618-1">
+</head>
+<body data-page="project" class="home-redesign">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="particles-container" id="particles"></div>
+
+    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+
+    <button type="button" class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <main id="main">
+    <div class="container">
+        <nav class="top-nav cv-nav" aria-label="Primary">
+            <a id="detailBackLink" class="detail-back" href="index.html#projects">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> <span id="detailBackText">Back to CV</span>
+            </a>
+            <div class="nav-controls">
+                <div class="theme-switcher">
+                    <label for="themePreset" class="visually-hidden">Theme</label>
+                    <select id="themePreset" class="theme-select" aria-label="Theme preset">
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="teal">Teal</option>
+                        <option value="slate">Slate</option>
+                        <option value="royal">RoyalGold</option>
+                        <option value="silver">Silver</option>
+                        <option value="midnight">Midnight</option>
+                    </select>
+                </div>
+                <div class="lang-switcher">
+                    <label for="langSelect" class="visually-hidden">Language</label>
+                    <select id="langSelect" class="theme-select" aria-label="Language">
+                        <option value="en">English</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+
+        <article id="projectDetail" class="project-detail" hidden>
+            <header class="detail-hero">
+                <img id="detailIcon" class="detail-icon" width="96" height="96" decoding="async" alt="">
+                <div class="detail-hero-info">
+                    <h1 id="detailName" class="gradient-text"></h1>
+                    <ul id="detailTech" class="detail-tech" aria-label="Tech stack"></ul>
+                    <div id="detailActions" class="detail-actions"></div>
+                </div>
+            </header>
+
+            <section id="detailOverview" class="detail-section">
+                <h2><i class="fas fa-circle-info" aria-hidden="true"></i> <span id="overviewTitle"></span></h2>
+                <div id="detailBio" class="detail-bio"></div>
+                <div id="detailDescription" class="detail-description"></div>
+            </section>
+
+            <section id="detailVideoSection" class="detail-section">
+                <h2><i class="fas fa-circle-play" aria-hidden="true"></i> <span id="videoTitle"></span></h2>
+                <div id="detailVideo" class="detail-video"></div>
+            </section>
+
+            <section id="detailScreens" class="detail-section">
+                <h2><i class="fas fa-images" aria-hidden="true"></i> <span id="screensTitle"></span></h2>
+                <div id="detailGallery" class="detail-gallery"></div>
+            </section>
+        </article>
+
+        <div id="projectNotFound" class="project-notfound" hidden>
+            <h1 id="notFoundTitle"></h1>
+            <p id="notFoundBody"></p>
+            <a class="btn btn-primary" id="notFoundBackLink" href="index.html#projects"><span id="notFoundBack"></span></a>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footerConnectTitle">Connect</h3>
+                    <div class="social-links">
+                        <a href="mailto:mohamad.adib.tawil@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <p class="footer-text">© <span id="currentYear">2024</span> Mohamad Adib Tawil</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </main>
+
+    <script src="assets/js/cv-data.js?v=20260618-1" defer></script>
+    <script src="assets/js/main.js?v=20260618-1" defer></script>
+    <!-- Analytics -->
+    <script defer data-domain="mohamad-adib-tawil.github.io" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
