@@ -55,6 +55,9 @@
 
   const fileSafeName = (value) => value.replace(/\s+/g, "_");
 
+  const getQueryParam = (key) =>
+    new URLSearchParams(window.location.search).get(key);
+
   const setText = (id, value) => {
     const element = $(id);
 
@@ -243,10 +246,17 @@
       return;
     }
 
+    const dict = getDict(lang);
+    const fromParam =
+      typeof window !== "undefined" && window.CV_VERSION === "se" ? "&from=se" : "";
+    const viewDetailsLabel = dict.detailPage?.viewDetails || "View details";
+
     tableBody.innerHTML = data.projects
       .map((project) => {
         const alt = project.image.alt[lang] || project.image.alt.en;
         const description = project.description[lang] || project.description.en;
+        const slug = project.slug || project.id;
+        const detailsHref = `project.html?id=${encodeURIComponent(slug)}${fromParam}`;
 
         return `
           <tr>
@@ -270,6 +280,9 @@
                   decoding="async"
                 >
                 <p>${description}</p>
+                <a class="project-details-link" href="${escapeHtml(detailsHref)}">
+                  ${escapeHtml(viewDetailsLabel)} <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
               </div>
             </td>
           </tr>
@@ -436,6 +449,236 @@
     });
   };
 
+  // ── Project detail page (project.html) ───────────────────────────────
+  let lightbox = null;
+  let lightboxLastFocus = null;
+
+  const closeLightbox = () => {
+    if (!lightbox) {
+      return;
+    }
+
+    lightbox.classList.remove("show");
+    lightbox.setAttribute("hidden", "");
+    body.style.removeProperty("overflow");
+
+    if (lightboxLastFocus && typeof lightboxLastFocus.focus === "function") {
+      lightboxLastFocus.focus();
+    }
+  };
+
+  const ensureLightbox = () => {
+    if (lightbox) {
+      return lightbox;
+    }
+
+    lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+    lightbox.id = "lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("hidden", "");
+    lightbox.innerHTML = `
+      <button type="button" class="lightbox-close" aria-label="Close">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <img class="lightbox-img" alt="">
+    `;
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox || event.target.closest(".lightbox-close")) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox && !lightbox.hasAttribute("hidden")) {
+        closeLightbox();
+      }
+    });
+
+    return lightbox;
+  };
+
+  const openLightbox = (src, alt) => {
+    const box = ensureLightbox();
+    const image = box.querySelector(".lightbox-img");
+    image.src = src;
+    image.alt = alt || "";
+    lightboxLastFocus = document.activeElement;
+    box.removeAttribute("hidden");
+    window.requestAnimationFrame(() => box.classList.add("show"));
+    body.style.overflow = "hidden";
+    box.querySelector(".lightbox-close").focus();
+  };
+
+  const renderProjectDetail = () => {
+    if (page !== "project") {
+      return;
+    }
+
+    const dict = getDict();
+    const lang = state.currentLang;
+    const detail = $("projectDetail");
+    const notFound = $("projectNotFound");
+    const id = getQueryParam("id");
+    const from = getQueryParam("from") === "se" ? "se.html" : "index.html";
+    const backHref = `${from}#projects`;
+
+    setText("detailBackText", dict.detailPage.back);
+    const backLink = $("detailBackLink");
+    if (backLink) backLink.href = backHref;
+    const nfBackLink = $("notFoundBackLink");
+    if (nfBackLink) nfBackLink.href = backHref;
+    setText("footerConnectTitle", dict.footer.connectTitle);
+
+    const project = data.projects.find((item) => (item.slug || item.id) === id);
+
+    if (!project) {
+      if (detail) detail.hidden = true;
+      if (notFound) notFound.hidden = false;
+      setText("notFoundTitle", dict.detailPage.notFound);
+      setText("notFoundBody", dict.detailPage.notFoundBody);
+      setText("notFoundBack", dict.detailPage.back);
+      document.title = `${dict.detailPage.notFound} — ${profile.name}`;
+      return;
+    }
+
+    if (notFound) notFound.hidden = true;
+    if (detail) detail.hidden = false;
+
+    const alt = project.image.alt[lang] || project.image.alt.en;
+    document.title = `${project.name} — ${profile.name}`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", stripHtml(project.description[lang] || project.description.en));
+    }
+
+    const icon = $("detailIcon");
+    if (icon) {
+      icon.src = project.image.src;
+      icon.alt = alt;
+    }
+
+    setText("detailName", project.name);
+
+    const techHost = $("detailTech");
+    if (techHost) {
+      techHost.innerHTML = project.tech
+        .map((item) => `<li class="tech-badge">${escapeHtml(item)}</li>`)
+        .join("");
+    }
+
+    // Section titles
+    setText("overviewTitle", dict.detailPage.overview);
+    setText("screensTitle", dict.detailPage.screenshots);
+    setText("videoTitle", dict.detailPage.video);
+
+    // Bio (owner-authored; treated as plain text for safety)
+    const bioHost = $("detailBio");
+    if (bioHost) {
+      const bioText = (project.bio && (project.bio[lang] || project.bio.en)) || "";
+      if (bioText.trim()) {
+        bioHost.innerHTML = `<p>${escapeHtml(bioText)}</p>`;
+        bioHost.hidden = false;
+      } else {
+        bioHost.innerHTML = "";
+        bioHost.hidden = true;
+      }
+    }
+
+    // Description (raw HTML — same accepted pattern as renderProjects)
+    setHtml("detailDescription", project.description[lang] || project.description.en);
+
+    // Action buttons
+    const actionsHost = $("detailActions");
+    if (actionsHost) {
+      const links = project.links || {};
+      const buttons = [];
+
+      if (links.directDownload) {
+        const isLocal = !/^https?:\/\//.test(links.directDownload);
+        buttons.push(
+          `<a class="btn btn-primary" href="${escapeHtml(links.directDownload)}"${
+            isLocal ? " download" : ' target="_blank" rel="noopener noreferrer"'
+          }><i class="fas fa-download" aria-hidden="true"></i> ${escapeHtml(
+            dict.detailPage.directDownload
+          )}</a>`
+        );
+      }
+
+      const external = [
+        [links.playStore, "fab fa-google-play", dict.detailPage.playStore],
+        [links.appStore, "fab fa-apple", dict.detailPage.appStore],
+        [links.github, "fab fa-github", dict.detailPage.github],
+        [links.website, "fas fa-globe", dict.detailPage.website],
+      ];
+
+      external.forEach(([href, iconClass, label]) => {
+        if (href) {
+          buttons.push(
+            `<a class="btn btn-secondary" href="${escapeHtml(
+              href
+            )}" target="_blank" rel="noopener noreferrer"><i class="${iconClass}" aria-hidden="true"></i> ${escapeHtml(
+              label
+            )}</a>`
+          );
+        }
+      });
+
+      actionsHost.innerHTML = buttons.join("");
+    }
+
+    // Screenshots gallery
+    const media = project.media || {};
+    const screensSection = $("detailScreens");
+    const gallery = $("detailGallery");
+    const screenshots = Array.isArray(media.screenshots) ? media.screenshots : [];
+
+    if (gallery && screenshots.length) {
+      gallery.innerHTML = screenshots
+        .map((shot) => {
+          const shotAlt = (shot.alt && (shot.alt[lang] || shot.alt.en)) || alt;
+          return `
+            <button type="button" class="gallery-item" data-src="${escapeHtml(
+              shot.src
+            )}" data-alt="${escapeHtml(shotAlt)}">
+              <img src="${escapeHtml(shot.src)}" alt="${escapeHtml(
+            shotAlt
+          )}" loading="lazy" decoding="async">
+            </button>
+          `;
+        })
+        .join("");
+
+      gallery.querySelectorAll(".gallery-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          openLightbox(item.getAttribute("data-src"), item.getAttribute("data-alt"));
+        });
+      });
+
+      if (screensSection) screensSection.hidden = false;
+    } else if (screensSection) {
+      screensSection.hidden = true;
+    }
+
+    // Video
+    const videoSection = $("detailVideoSection");
+    const videoHost = $("detailVideo");
+    if (videoHost && media.video) {
+      const poster = media.poster || project.image.src;
+      videoHost.innerHTML = `
+        <video controls preload="none" poster="${escapeHtml(poster)}">
+          <source src="${escapeHtml(media.video)}" type="video/mp4">
+        </video>
+      `;
+      if (videoSection) videoSection.hidden = false;
+    } else if (videoSection) {
+      videoSection.hidden = true;
+    }
+  };
+
   const applyLanguage = (lang) => {
     state.currentLang = data.translations[lang] ? lang : "en";
 
@@ -452,6 +695,7 @@
     renderContentSections(dict);
     renderFooter(dict);
     renderDownloadsPage(dict);
+    renderProjectDetail();
   };
 
   const formatStatValue = (value) => {

@@ -25,6 +25,7 @@
 | All plain text CVs in `assets/cv/` | Keeps content copies separate from source |
 | All download files in `assets/downloads/` | Single location for generated documents |
 | Scripts go in `scripts/` | Node.js tooling isolated from web-facing code |
+| Per-project media lives in `assets/projects/<slug>/{screenshots,video}/` | `<slug>` === `project.id`/`project.slug`; screenshots `screenshot-01.png`…, video `demo.mp4` (+ optional `poster.jpg`), direct APK `<slug>-latest.apk` |
 | Do NOT create new top-level folders without documenting the change | Project is flat and organized |
 
 ## Component Rules
@@ -118,7 +119,7 @@
 |---|------|
 | 1 | Do NOT add a JavaScript framework or build system |
 | 2 | Do NOT add CSS frameworks |
-| 3 | Do NOT modify `cv-data.js` structure (profile, stats, projects, translations, downloads keys) |
+| 3 | Do NOT remove/rename existing `cv-data.js` keys (profile, stats, projects, translations, downloads). New OPTIONAL keys MAY be added additively — e.g. each project now also has `slug`, `bio`, `links`, `media`, and each translation has a `detailPage` block (added for the project detail pages) |
 | 4 | Do NOT break the IIFE pattern in `main.js` |
 | 5 | Do NOT use inline event handlers in HTML (`onclick`, etc.) |
 | 6 | Do NOT remove `aria-hidden="true"` from decorative icons |
