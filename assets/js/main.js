@@ -259,7 +259,7 @@
         const detailsHref = `project.html?id=${encodeURIComponent(slug)}${fromParam}`;
 
         return `
-          <tr>
+          <tr class="project-row" data-href="${escapeHtml(detailsHref)}" role="button" tabindex="0" aria-label="${escapeHtml(project.name)}">
             <td class="project-name">
               ${escapeHtml(project.name)}
               <div class="project-tech">
@@ -1247,6 +1247,31 @@
     window.CVShowSnackbar = showSnackbar;
   };
 
+  const initProjectRows = () => {
+    const table = $("projectsTableBody");
+    if (!table) return;
+
+    const navigate = (row) => {
+      const href = row.dataset.href;
+      if (href) window.location.href = href;
+    };
+
+    table.addEventListener("click", (e) => {
+      const row = e.target.closest("tr.project-row");
+      if (!row) return;
+      if (e.target.closest("a")) return;
+      navigate(row);
+    });
+
+    table.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const row = e.target.closest("tr.project-row");
+      if (!row) return;
+      e.preventDefault();
+      navigate(row);
+    });
+  };
+
   const initMobileNav = () => {
     const nav = document.querySelector(".cv-nav");
     const toggle = $("navToggle");
@@ -1289,6 +1314,7 @@
     initMobileNav();
     initExports();
     initDownloadGuard();
+    initProjectRows();
     updateThemeColorMeta();
     updateContrast();
     enableThemeTransition();

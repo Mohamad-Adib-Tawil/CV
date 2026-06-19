@@ -523,6 +523,7 @@ ul li:hover:before { transform: scale(1.3); }
 .project-table th:hover::after { transform: translateX(0); }
 
 .project-table tr { transition: var(--transition); }
+.project-table tr.project-row { cursor: pointer; }
 
 .project-table tr:hover {
   background-color: var(--tint-weak);
