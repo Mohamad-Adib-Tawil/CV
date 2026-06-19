@@ -667,11 +667,16 @@
     const videoSection = $("detailVideoSection");
     const videoHost = $("detailVideo");
     if (videoHost && media.video) {
-      const poster = media.poster || project.image.src;
+      const ytId = media.video;
       videoHost.innerHTML = `
-        <video controls preload="none" poster="${escapeHtml(poster)}">
-          <source src="${escapeHtml(media.video)}" type="video/mp4">
-        </video>
+        <iframe
+          src="https://www.youtube.com/embed/${escapeHtml(ytId)}"
+          title="Demo video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
       `;
       if (videoSection) videoSection.hidden = false;
     } else if (videoSection) {

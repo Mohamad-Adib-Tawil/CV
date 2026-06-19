@@ -1,0 +1,6 @@
+# Large media files — hosted externally (YouTube / GitHub Releases)
+assets/projects/**/*.mp4
+assets/projects/**/*.apk
+
+# OS
+.DS_Store

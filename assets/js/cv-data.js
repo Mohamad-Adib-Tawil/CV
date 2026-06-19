@@ -89,7 +89,7 @@
       },
       media: {
         poster: "",
-        video: "assets/projects/lklk/video/demo.mp4",
+        video: "xUxeqG3S7jc",
         screenshots: [
           { src: "assets/projects/lklk/screenshots/screenshot-01.png", alt: { en: "", ar: "" } },
           { src: "assets/projects/lklk/screenshots/screenshot-02.png", alt: { en: "", ar: "" } },
@@ -206,7 +206,7 @@
         ar: "",
       },
       links: {
-        directDownload: "assets/projects/wolfera/wolfera-latest.apk",
+        directDownload: "https://github.com/Mohamad-Adib-Tawil/Wolfera/releases/download/wolfera/wolfera-latest.apk",
         playStore: "https://play.google.com/store/apps/details?id=com.wolfera.wolfera",
         appStore: "",
         github: "https://github.com/Mohamad-Adib-Tawil/Wolfera",
@@ -214,7 +214,7 @@
       },
       media: {
         poster: "",
-        video: "assets/projects/wolfera/video/demo.mp4",
+        video: "aE0mbXFFe7o",
         screenshots: [
           { src: "assets/projects/wolfera/screenshots/screenshot-01.png", alt: { en: "", ar: "" } },
           { src: "assets/projects/wolfera/screenshots/screenshot-02.png", alt: { en: "", ar: "" } },
@@ -312,7 +312,7 @@
         ar: "",
       },
       links: {
-        directDownload: "assets/projects/codebook/codebook-latest.apk",
+        directDownload: "https://github.com/Mohamad-Adib-Tawil/Code-Books/releases/download/codebook/codebook-latest.apk",
         playStore: "",
         appStore: "",
         github: "https://github.com/Mohamad-Adib-Tawil/Code-Books-",
@@ -345,7 +345,7 @@
         ar: "",
       },
       links: {
-        directDownload: "assets/projects/office/office-latest.apk",
+        directDownload: "https://github.com/Mohamad-Adib-Tawil/office_archiving/releases/download/office/office-latest.apk",
         playStore: "https://play.google.com/store/apps/details?id=com.werewolf.office_archiving",
         appStore: "",
         github: "https://github.com/Mohamad-Adib-Tawil/office_archiving",
@@ -428,7 +428,7 @@
         ar: "",
       },
       links: {
-        directDownload: "assets/projects/quran/quran-latest.apk",
+        directDownload: "https://github.com/Mohamad-Adib-Tawil/Quran/releases/download/quran/quran-latest.apk",
         playStore: "https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1",
         appStore: "https://apps.apple.com/app/id6759857104",
         github: "https://github.com/Mohamad-Adib-Tawil/Quran",
@@ -436,7 +436,7 @@
       },
       media: {
         poster: "",
-        video: "assets/projects/quran/video/demo.mp4",
+        video: "h08cGHLkMLo",
         screenshots: [],
       },
     },
