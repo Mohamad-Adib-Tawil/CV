@@ -867,38 +867,6 @@
     }
   };
 
-  const initParallax = () => {
-    const header = $("header");
-    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
-
-    if (!header) {
-      return;
-    }
-
-    const onScroll = () => {
-      const offset = Math.min(window.scrollY, 200);
-      header.style.transform = `translateY(${offset * 0.03}px)`;
-    };
-
-    const attach = () => {
-      if (reducedMotion?.matches) {
-        header.style.transform = "";
-        return;
-      }
-
-      window.addEventListener("scroll", onScroll, { passive: true });
-    };
-
-    attach();
-
-    if (reducedMotion) {
-      reducedMotion.addEventListener("change", () => {
-        window.removeEventListener("scroll", onScroll);
-        attach();
-      });
-    }
-  };
-
   const initScrollToTop = () => {
     const button = $("scrollToTop");
 
@@ -913,42 +881,6 @@
     button.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  };
-
-  const initParticles = () => {
-    const createParticles = () => {
-      if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
-        return;
-      }
-
-      const container = $("particles");
-
-      if (!container) {
-        return;
-      }
-
-      const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-      const total = viewportWidth >= 1200 ? 30 : viewportWidth >= 768 ? 20 : 12;
-
-      for (let index = 0; index < total; index += 1) {
-        const particle = document.createElement("div");
-        particle.className = "particle";
-        particle.style.width = `${Math.random() * 15 + 5}px`;
-        particle.style.height = particle.style.width;
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.animationDelay = `${Math.random() * 10}s`;
-        particle.style.animationDuration = `${Math.random() * 15 + 10}s`;
-        container.appendChild(particle);
-      }
-    };
-
-    if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(createParticles);
-      return;
-    }
-
-    window.setTimeout(createParticles, 0);
   };
 
   const initStatsAnimation = () => {
@@ -977,47 +909,6 @@
     );
 
     observer.observe(section);
-  };
-
-  const initTypingEffect = () => {
-    const heading = document.querySelector("h1");
-
-    if (!heading) {
-      return;
-    }
-
-    const originalText = heading.textContent || "";
-    heading.textContent = "";
-
-    let index = 0;
-    const typeWriter = () => {
-      if (index < originalText.length) {
-        heading.textContent += originalText.charAt(index);
-        index += 1;
-        window.setTimeout(typeWriter, 100);
-      }
-    };
-
-    const header = $("header");
-
-    if (!header) {
-      typeWriter();
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            typeWriter();
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(header);
   };
 
   const downloadBlob = (html, filename) => {
