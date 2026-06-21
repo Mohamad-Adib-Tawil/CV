@@ -1,269 +1,85 @@
 /* =====================================================================
-   home.css — index-only signature redesign
-   Identity: "Signal" — deep indigo canvas + electric cyan accent.
+   home.css — "Signal" signature layer
+   Scope: every rule targets `body.home-redesign` (present on index / se /
+   downloads / project). Loaded LAST, so it wins at equal specificity.
 
-   Scope: every rule is scoped to `body.home-redesign`, a static marker
-   class present ONLY on index.html. This file is linked ONLY from
-   index.html, so se.html / downloads.html are completely unaffected.
-   Loaded AFTER styles.css, so it wins the cascade at equal specificity.
-
-   Color VALUES for the signature are scoped to `.theme-blue` (the default
-   preset) so the other six presets keep their own palettes. All structural
-   styling uses CSS variables, so it adapts to whichever preset is active.
+   This file is now PURELY additive flourish — the base look lives in
+   tokens.css + styles.css. Here we add only the few signature moments:
+   a gradient accent rule on section titles, a soft hero backdrop, and a
+   premium staggered hero entrance. No colours/sizes are hard-coded; all
+   derive from tokens so every preset + both themes stay consistent.
    ===================================================================== */
 
-/* ---------------------------------------------------------------------
-   1. Default preset → signature indigo → cyan
-   (scoped to .theme-blue + the pre-JS no-theme state, so other presets
-   are untouched)
-   --------------------------------------------------------------------- */
-body.home-redesign.theme-blue,
-body.home-redesign:not([class*="theme-"]) {
-  --primary-color: #4f46e5;   /* indigo-600 */
-  --secondary-color: #818cf8; /* indigo-400 */
-  --accent-color: #22d3ee;    /* cyan-400  */
-  --blob-1: radial-gradient(closest-side, rgba(79,70,229,0.40), transparent);
-  --blob-2: radial-gradient(closest-side, rgba(34,211,238,0.35), transparent);
-  --tint-weak: rgba(79,70,229,0.08);
-  --tint-strong: rgba(34,211,238,0.12);
-}
-
-/* Signature gradient + rhythm tokens available to all presets on home */
 body.home-redesign {
   --accent-gradient: linear-gradient(120deg, var(--primary-color), var(--accent-color));
-  --fs-display: clamp(2.75rem, 2rem + 3.4vw, 4.25rem);
 }
 
 /* ---------------------------------------------------------------------
-   2. Canvas deepening (dark mode) — neutral, applies to every preset
+   1. Section titles — a short gradient "eyebrow" rule before the icon.
+   This is the single recurring signature mark across the page.
    --------------------------------------------------------------------- */
-body.home-redesign.dark-mode {
-  --light-bg: #0A0B12;
-  --dark-text: #EAECF2;
-  --light-text: #9AA1B2;
-  --border-color: rgba(255,255,255,0.08);
-  --card-bg: #13151D;
-  --glass-bg: #13151D;
-  --glass-border: rgba(255,255,255,0.08);
-  --shadow: 0 1px 2px rgba(0,0,0,0.35);
-  --shadow-hover: 0 14px 40px -12px rgba(0,0,0,0.55);
-}
-
-/* Slightly cooler ambient blobs on the deep canvas */
-body.home-redesign::before,
-body.home-redesign::after { opacity: 0.55; }
-
-/* ---------------------------------------------------------------------
-   3. Typography — Poppins headings vs Inter body, stronger hierarchy
-   --------------------------------------------------------------------- */
-body.home-redesign h1,
-body.home-redesign h2,
-body.home-redesign h3,
-body.home-redesign .stat-number {
-  font-family: 'Poppins', 'Inter', Arial, sans-serif;
-}
-
-body.home-redesign h1 {
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 1.05;
-}
-
-/* Section titles: eyebrow accent bar + icon chip */
-body.home-redesign h2 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  gap: 14px;
-  padding-bottom: 14px;
-  margin-bottom: var(--space-5);
-  border-bottom: 1px solid var(--border-color);
-}
-body.home-redesign h2::before {        /* replaces the small dot */
-  width: 24px;
-  height: 4px;
-  border-radius: 999px;
+body.home-redesign h2::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 22px;
+  height: 3px;
+  border-radius: var(--radius-pill);
   background: var(--accent-gradient);
 }
-body.home-redesign h2 i {
-  color: var(--primary-color);
-  background: var(--tint-weak);
-  width: 1.85em;
-  height: 1.85em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 11px;
-  font-size: 0.92em;
-}
-
-body.home-redesign h3 {
-  font-weight: 600;
-  letter-spacing: -0.015em;
-}
-
-body.home-redesign p { color: var(--dark-text); }
-body.home-redesign #summaryText { font-size: var(--fs-lead); color: var(--light-text); }
 
 /* ---------------------------------------------------------------------
-   4. Spacing / rhythm between sections
+   2. Hero — soft signature backdrop glow (decorative, CSS-only).
+   Sits behind the header content; never intercepts pointer events.
    --------------------------------------------------------------------- */
-body.home-redesign section {
-  margin-bottom: var(--space-7);
-  padding: var(--space-6);
-  border-radius: 18px;
-}
-
-/* ---------------------------------------------------------------------
-   5. Hero redesign
-   --------------------------------------------------------------------- */
-body.home-redesign #header {
-  border-bottom: 0;
-  gap: var(--space-6);
-  padding: var(--space-7) 0 var(--space-6);
-  margin-bottom: var(--space-6);
-  position: relative;
-}
-
-/* Signature backdrop glow behind the hero (decorative, CSS-only) */
+body.home-redesign #header { position: relative; }
 body.home-redesign #header::before {
   content: '';
   position: absolute;
-  inset: -28% -8% auto -8%;
-  height: 360px;
-  background:
-    radial-gradient(55% 80% at 18% 0%, rgba(79,70,229,0.22), transparent 70%),
-    radial-gradient(45% 70% at 88% 8%, rgba(34,211,238,0.16), transparent 72%);
+  inset: -32% -6% auto -6%;
+  height: 320px;
   z-index: -1;
   pointer-events: none;
-  filter: blur(6px);
+  background:
+    radial-gradient(52% 80% at 16% 0%, var(--tint-strong), transparent 70%),
+    radial-gradient(42% 70% at 88% 8%, var(--tint-weak), transparent 72%);
+  filter: blur(8px);
 }
 
-/* Avatar: gradient-tone ring + cyan glow */
-body.home-redesign .profile-pic {
-  border: 4px solid var(--card-bg);
-  box-shadow:
-    0 0 0 2px var(--primary-color),
-    0 0 40px -6px var(--accent-color),
-    0 18px 44px -14px rgba(0,0,0,0.55);
+/* A thin gradient accent under the name — small, intentional, RTL-safe. */
+body.home-redesign .header-info > h1 {
+  position: relative;
+  padding-bottom: var(--space-3);
 }
-body.home-redesign .profile-pic:hover {
-  box-shadow:
-    0 0 0 2px var(--accent-color),
-    0 0 56px -4px var(--accent-color),
-    0 22px 50px -14px rgba(0,0,0,0.6);
-}
-
-body.home-redesign .title {
-  color: var(--secondary-color);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-/* Primary CTA carries the signature gradient (one strong accent) */
-body.home-redesign .btn-primary {
-  background: var(--accent-gradient);
-  border-color: transparent;
-  color: #fff;
-}
-body.home-redesign .btn-primary:hover { filter: brightness(1.08); }
-
-/* Contact chips adopt the theme tint instead of the hard-coded blue */
-body.home-redesign .contact-item {
-  background: var(--tint-weak);
-  border: 1px solid var(--glass-border);
-}
-
-/* ---------------------------------------------------------------------
-   6. Stats — dashboard-style cards with gradient numerals
-   --------------------------------------------------------------------- */
-body.home-redesign #stats.stats-section {
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  margin-bottom: var(--space-7);
-}
-body.home-redesign .stat-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
-  padding: 28px 20px;
-}
-body.home-redesign .stat-icon { color: var(--accent-color); }
-body.home-redesign .stat-number {
-  font-size: 3em;
-  font-weight: 700;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ---------------------------------------------------------------------
-   7. Lists → modern portfolio cards with a left accent rail
-   --------------------------------------------------------------------- */
-body.home-redesign .skill-list,
-body.home-redesign .advanced-skill-list,
-body.home-redesign .service-list,
-body.home-redesign .achievement-list {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-4);
-}
-
-body.home-redesign .skill-list li,
-body.home-redesign .achievement-list li,
-body.home-redesign .advanced-skill-list li,
-body.home-redesign .service-list li {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-left: 3px solid var(--primary-color);
-  border-radius: 14px;
-  padding: 16px 18px;
-  box-shadow: var(--shadow);
-  align-items: center;
-  gap: 14px;
-}
-
-/* Marker: small accent gem instead of a bullet glyph */
-body.home-redesign .skill-list li::before,
-body.home-redesign .achievement-list li::before,
-body.home-redesign .advanced-skill-list li::before,
-body.home-redesign .service-list li::before {
+body.home-redesign .header-info > h1::after {
   content: '';
-  flex: 0 0 auto;
-  width: 9px;
-  height: 9px;
-  border-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 56px;
+  height: 3px;
+  border-radius: var(--radius-pill);
   background: var(--accent-gradient);
-  margin-top: 0;
-}
-
-body.home-redesign .skill-list li:hover,
-body.home-redesign .achievement-list li:hover,
-body.home-redesign .advanced-skill-list li:hover,
-body.home-redesign .service-list li:hover {
-  transform: translateY(-3px);
-  border-color: var(--primary-color);
-  border-left-color: var(--accent-color);
-  box-shadow: var(--shadow-hover);
 }
 
 /* ---------------------------------------------------------------------
-   8. Responsive: keep list cards single-column on small screens
+   3. Above-the-fold robustness + premium staggered entrance.
+   The base reveal (styles.css) hides #header until JS adds .fade-in.
+   For the LCP hero we instead make it visible by DEFAULT and run a
+   transform-only rise on the SUPPORTING content (not the name/avatar),
+   so the hero never depends on JS/animation to be readable.
+   Reduced motion: the global `* { animation:none }` rule disables it and
+   the visible resting state takes over.
    --------------------------------------------------------------------- */
-@media (max-width: 768px) {
-  body.home-redesign .skill-list,
-  body.home-redesign .advanced-skill-list,
-  body.home-redesign .service-list,
-  body.home-redesign .achievement-list {
-    grid-template-columns: 1fr;
-  }
-  body.home-redesign .skill-list li,
-  body.home-redesign .achievement-list li,
-  body.home-redesign .advanced-skill-list li,
-  body.home-redesign .service-list li {
-    align-items: flex-start;
-  }
-  body.home-redesign #header { padding-top: var(--space-6); }
+body.home-redesign #header { opacity: 1; transform: none; }
+
+body.home-redesign .header-info > *:not(h1) {
+  animation: homeHeroRise 0.6s var(--ease-out) both;
+}
+body.home-redesign .header-info > *:nth-child(2) { animation-delay: 0.04s; }
+body.home-redesign .header-info > *:nth-child(3) { animation-delay: 0.10s; }
+body.home-redesign .header-info > *:nth-child(4) { animation-delay: 0.16s; }
+body.home-redesign .header-info > *:nth-child(5) { animation-delay: 0.22s; }
+@keyframes homeHeroRise {
+  from { transform: translateY(14px); }
+  to   { transform: translateY(0); }
 }

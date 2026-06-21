@@ -1,0 +1,247 @@
+/* =====================================================================
+   tokens.css — Design System single source of truth
+   Concept: "Engineered Calm" (Linear / Vercel register)
+   - One accent (indigo) + a rare cyan signature highlight
+   - Confident neutral surfaces, hairline borders, subtle layered shadows
+   - Disciplined type scale (Inter), 8pt spacing grid, constrained measure
+
+   Load order: tokens.css → styles.css → home.css
+   All colour/space/type/radius/shadow/motion values live HERE so every
+   component stays consistent. Variable NAMES are kept backward-compatible
+   (--primary-color, --light-bg, --card-bg, …) because main.js and the
+   theme-preset classes depend on them.
+   ===================================================================== */
+
+:root {
+  /* ---------------------------------------------------------------
+     ACCENT — overridden per preset on <body>. Default = "Signal".
+     --primary-color : fills (buttons) — white text sits on it
+     --accent-color  : rare signature highlight (cyan)
+     --accent-text   : accent used as TEXT (theme-aware, AA-safe)
+     --------------------------------------------------------------- */
+  --primary-color: #4f46e5;     /* indigo-600 — 5.3:1 on white  */
+  --secondary-color: #6366f1;   /* indigo-500 — subtitles        */
+  --accent-color: #06b6d4;      /* cyan-500  — signature accent  */
+  --accent-text: #4f46e5;       /* link/accent text (light theme) */
+  --accent-contrast: #ffffff;   /* text on a --primary-color fill */
+
+  /* Accent tints (translucent, sit on any surface) */
+  --tint-weak: rgba(79, 70, 229, 0.07);
+  --tint-strong: rgba(79, 70, 229, 0.12);
+
+  /* Ambient signature glows (static, very subtle — see styles.css) */
+  --blob-1: radial-gradient(closest-side, rgba(79, 70, 229, 0.22), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(6, 182, 212, 0.18), transparent);
+
+  /* ---------------------------------------------------------------
+     SURFACES & TEXT — Light theme
+     Calm off-white canvas, pure-white cards, near-black ink.
+     --------------------------------------------------------------- */
+  --light-bg: #fafafb;          /* page canvas            */
+  --card-bg: #ffffff;           /* raised card surface    */
+  --glass-bg: #ffffff;          /* (legacy name) solid surface, no blur */
+  --surface-2: #f3f4f6;         /* recessed / hover fill  */
+
+  --dark-text: #15171c;         /* primary ink            */
+  --light-text: #565c68;        /* muted / secondary      */
+  --text-subtle: #868d9a;       /* meta / tertiary        */
+
+  --border-color: rgba(20, 22, 28, 0.09);
+  --glass-border: rgba(20, 22, 28, 0.09);
+  --border-strong: rgba(20, 22, 28, 0.14);
+
+  /* ---------------------------------------------------------------
+     ELEVATION — soft, layered, low-opacity (premium = restraint)
+     --------------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(16, 18, 24, 0.05);
+  --shadow-md: 0 6px 20px -8px rgba(16, 18, 24, 0.14);
+  --shadow-lg: 0 24px 60px -22px rgba(16, 18, 24, 0.22);
+  --shadow: var(--shadow-sm);          /* legacy alias */
+  --shadow-hover: var(--shadow-md);    /* legacy alias */
+  --ring: 0 0 0 3px var(--tint-strong);
+
+  /* ---------------------------------------------------------------
+     SPACING — 8pt grid
+     --------------------------------------------------------------- */
+  --space-1: 4px;   --space-2: 8px;   --space-3: 12px;  --space-4: 16px;
+  --space-5: 24px;  --space-6: 32px;  --space-7: 40px;  --space-8: 48px;
+  --space-9: 64px;  --space-10: 96px; --space-11: 128px;
+
+  /* ---------------------------------------------------------------
+     RADIUS
+     --------------------------------------------------------------- */
+  --radius-sm: 8px;  --radius-md: 12px;  --radius-lg: 16px;
+  --radius-xl: 20px; --radius-pill: 999px;
+
+  /* ---------------------------------------------------------------
+     TYPOGRAPHY — single Latin family (Inter); Arabic = Tajawal.
+     Display weight + tight tracking does the "premium" work, not a
+     decorative heading font.
+     --------------------------------------------------------------- */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+
+  --fs-display: clamp(2.5rem, 1.85rem + 3vw, 4rem);
+  --fs-h2: clamp(1.45rem, 1.2rem + 1.1vw, 2.05rem);
+  --fs-h3: clamp(1.125rem, 1.04rem + 0.42vw, 1.35rem);
+  --fs-lead: clamp(1.0625rem, 1rem + 0.34vw, 1.25rem);
+  --fs-body: 1rem;          /* 16px */
+  --fs-sm: 0.875rem;        /* 14px */
+  --fs-meta: 0.78rem;       /* 12.5px */
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.3;
+  --lh-normal: 1.6;
+
+  --tracking-tighter: -0.035em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.06em;     /* eyebrow / mono labels */
+
+  --measure: 68ch;             /* max paragraph line-length */
+
+  /* ---------------------------------------------------------------
+     MOTION — short, eased, purposeful
+     --------------------------------------------------------------- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur: 180ms;
+  --dur-slow: 260ms;
+  --transition: color var(--dur) var(--ease), background-color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+
+  /* ---------------------------------------------------------------
+     Z-INDEX scale
+     --------------------------------------------------------------- */
+  --z-base: 1; --z-nav: 50; --z-switchbar: 400; --z-float: 999;
+  --z-toggle: 1000; --z-skip: 1001; --z-lightbox: 10000;
+}
+
+/* =====================================================================
+   DARK THEME — deep, slightly-blue canvas. This is the DEFAULT paint
+   (the pre-paint script adds .dark-mode), so it must be flawless first.
+   ===================================================================== */
+.dark-mode {
+  --light-bg: #0a0b0f;
+  --card-bg: #111318;
+  --glass-bg: #111318;
+  --surface-2: #171a21;
+
+  --dark-text: #eceef2;
+  --light-text: #9ca3af;
+  --text-subtle: #6b7280;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  /* On dark, shadows barely read — borders carry elevation instead */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px -12px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 28px 64px -24px rgba(0, 0, 0, 0.7);
+
+  /* Accent text needs to be lighter to keep AA on the dark canvas */
+  --accent-text: #a5b4fc;       /* indigo-300 */
+  --secondary-color: #a5b4fc;
+
+  color-scheme: dark;
+}
+
+/* =====================================================================
+   THEME PRESETS — each is ONE disciplined accent (no loud gradients).
+   Values chosen to read well in BOTH themes; --accent-text is re-set
+   under .dark-mode where the base accent would be too dark.
+   ===================================================================== */
+
+/* Signal (default) — indigo + cyan */
+body.theme-blue {
+  --primary-color: #4f46e5;
+  --secondary-color: #6366f1;
+  --accent-color: #06b6d4;
+  --accent-text: #4f46e5;
+  --tint-weak: rgba(79, 70, 229, 0.07);
+  --tint-strong: rgba(79, 70, 229, 0.12);
+  --blob-1: radial-gradient(closest-side, rgba(79, 70, 229, 0.22), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(6, 182, 212, 0.18), transparent);
+}
+.dark-mode body.theme-blue,
+body.theme-blue.dark-mode { --accent-text: #a5b4fc; --secondary-color: #a5b4fc; }
+
+/* Violet */
+body.theme-purple {
+  --primary-color: #7c3aed;
+  --secondary-color: #a78bfa;
+  --accent-color: #d946ef;
+  --accent-text: #7c3aed;
+  --tint-weak: rgba(124, 58, 237, 0.08);
+  --tint-strong: rgba(124, 58, 237, 0.13);
+  --blob-1: radial-gradient(closest-side, rgba(124, 58, 237, 0.22), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(217, 70, 239, 0.16), transparent);
+}
+body.theme-purple.dark-mode { --accent-text: #c4b5fd; --secondary-color: #c4b5fd; }
+
+/* Teal */
+body.theme-teal {
+  --primary-color: #0d9488;
+  --secondary-color: #2dd4bf;
+  --accent-color: #22d3ee;
+  --accent-text: #0f766e;
+  --tint-weak: rgba(13, 148, 136, 0.08);
+  --tint-strong: rgba(13, 148, 136, 0.13);
+  --blob-1: radial-gradient(closest-side, rgba(13, 148, 136, 0.22), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(34, 211, 238, 0.16), transparent);
+}
+body.theme-teal.dark-mode { --accent-text: #5eead4; --secondary-color: #5eead4; }
+
+/* Slate */
+body.theme-slate {
+  --primary-color: #334155;
+  --secondary-color: #64748b;
+  --accent-color: #0ea5e9;
+  --accent-text: #0369a1;
+  --tint-weak: rgba(51, 65, 85, 0.08);
+  --tint-strong: rgba(14, 165, 233, 0.12);
+  --blob-1: radial-gradient(closest-side, rgba(51, 65, 85, 0.20), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(14, 165, 233, 0.16), transparent);
+}
+body.theme-slate.dark-mode { --primary-color: #94a3b8; --accent-text: #7dd3fc; --secondary-color: #cbd5e1; }
+
+/* Midnight (always pairs with dark) */
+body.theme-midnight {
+  --primary-color: #6366f1;
+  --secondary-color: #a78bfa;
+  --accent-color: #22d3ee;
+  --accent-text: #a5b4fc;
+  --tint-weak: rgba(99, 102, 241, 0.12);
+  --tint-strong: rgba(167, 139, 250, 0.16);
+  --blob-1: radial-gradient(closest-side, rgba(99, 102, 241, 0.24), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(34, 211, 238, 0.18), transparent);
+}
+
+/* Royal Gold */
+body.theme-royal {
+  --primary-color: #b8860b;
+  --secondary-color: #d4af37;
+  --accent-color: #d4af37;
+  --accent-text: #a16207;
+  --tint-weak: rgba(212, 175, 55, 0.10);
+  --tint-strong: rgba(184, 134, 11, 0.14);
+  --blob-1: radial-gradient(closest-side, rgba(212, 175, 55, 0.20), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(184, 134, 11, 0.16), transparent);
+}
+body.theme-royal.dark-mode { --primary-color: #d4af37; --accent-text: #fcd34d; --secondary-color: #fcd34d; }
+
+/* Silver / steel */
+body.theme-silver {
+  --primary-color: #475569;
+  --secondary-color: #94a3b8;
+  --accent-color: #94a3b8;
+  --accent-text: #475569;
+  --tint-weak: rgba(148, 163, 184, 0.12);
+  --tint-strong: rgba(100, 116, 139, 0.16);
+  --blob-1: radial-gradient(closest-side, rgba(148, 163, 184, 0.18), transparent);
+  --blob-2: radial-gradient(closest-side, rgba(203, 213, 225, 0.14), transparent);
+}
+body.theme-silver.dark-mode { --primary-color: #cbd5e1; --accent-text: #e2e8f0; --secondary-color: #e2e8f0; }
