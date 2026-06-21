@@ -574,6 +574,7 @@
     setText("overviewTitle", dict.detailPage.overview);
     setText("screensTitle", dict.detailPage.screenshots);
     setText("videoTitle", dict.detailPage.video);
+    setText("linkedinTitle", dict.detailPage.linkedin);
 
     // Bio (owner-authored; treated as plain text for safety)
     const bioHost = $("detailBio");
@@ -661,6 +662,31 @@
       if (screensSection) screensSection.hidden = false;
     } else if (screensSection) {
       screensSection.hidden = true;
+    }
+
+    // LinkedIn post
+    const linkedinSection = $("detailLinkedinSection");
+    if (linkedinSection) {
+      const linkedinText = (project.linkedin && (project.linkedin[lang] || project.linkedin.en)) || "";
+      if (linkedinText.trim()) {
+        setText("detailLinkedinText", linkedinText);
+        setText("linkedinCopyLabel", dict.detailPage.linkedinCopy);
+        linkedinSection.hidden = false;
+        const copyBtn = $("linkedinCopyBtn");
+        if (copyBtn) {
+          copyBtn.onclick = () => {
+            navigator.clipboard.writeText(linkedinText).then(() => {
+              const lbl = $("linkedinCopyLabel");
+              if (lbl) {
+                lbl.textContent = "✓";
+                setTimeout(() => setText("linkedinCopyLabel", dict.detailPage.linkedinCopy), 2000);
+              }
+            });
+          };
+        }
+      } else {
+        linkedinSection.hidden = true;
+      }
     }
 
     // Video

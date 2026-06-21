@@ -62,7 +62,7 @@
     {
       id: "lklk",
       name: "LKLK",
-      tech: ["Flutter", "Zego Express", "ZIM", "Appwrite", "BLoC", "Hive"],
+      tech: ["Flutter", "flutter_bloc (Cubit)", "GetIt", "ZEGOCLOUD", "LiveKit", "ZIM", "Appwrite", "Dio", "Hive", "in_app_purchase"],
       image: {
         src: "https://play-lh.googleusercontent.com/SprB1SlxKXYMOK-ZO4iOe1An9fgJ7dgDW-JhRYan9YMphWuEFiSoGH2l0lhNmJuYBtQ=w480-h960-rw",
         alt: {
@@ -71,14 +71,18 @@
         },
       },
       description: {
-        en: `Real-time audio rooms social app with live rooms, messaging, virtual gifts, and in-app purchases. Integrated Zego Express and ZIM for audio streaming/signaling with Appwrite backend services, local storage, crash reporting, and production release hardening. Public result: 5,000+ downloads. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
-        ar: `تطبيق اجتماعي لغرف الصوت المباشرة مع غرف حيّة، رسائل، هدايا افتراضية، ومشتريات داخل التطبيق. تم دمج Zego Express وZIM للبث والإشارة مع Appwrite، وإضافة تخزين محلي، Crashlytics، وتجهيزات إصدار إنتاجي. النتيجة العامة: 5,000+ تنزيل. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
+        en: `Production real-time social audio platform — live rooms with up to 500 concurrent users and 20 mic seats. Dual audio SDKs (ZEGOCLOUD ZegoExpress + LiveKit), SVGA/VAP virtual-gift engine (8 concurrent), coin economy with 6 in-app purchase tiers, multi-tier VIP &amp; gamification, and Appwrite Realtime on Clean Architecture with flutter_bloc + GetIt. 5,000+ downloads. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
+        ar: `منصة صوت اجتماعي لحظية بمستوى إنتاجي — غرف حيّة حتى 500 مستخدم متزامن و20 مقعد ميكروفون. SDK صوت مزدوج (ZEGOCLOUD ZegoExpress + LiveKit)، محرّك هدايا SVGA/VAP (8 هدايا متزامنة)، اقتصاد عملات بـ6 باقات شراء داخلي، نظام VIP وتحفيز متدرّج، وAppwrite Realtime بمعمارية نظيفة مع flutter_bloc وGetIt. 5,000+ تنزيل. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
       },
       // ── Detail page fields (all optional; the detail page hides empty sections) ──
       slug: "lklk",
       bio: {
-        en: "",
-        ar: "",
+        en: "A production Arabic-market social audio app where users create live rooms, send animated gifts, climb VIP ladders, and buy coins — Clubhouse meets Yalla, built entirely in Flutter. I was the sole Flutter developer for the entire client: architecture, state management, ZEGOCLOUD/LiveKit/Appwrite integrations, and the in-app economy.",
+        ar: "تطبيق صوت اجتماعي إنتاجي للسوق العربي — غرف حيّة، هدايا متحركة، مستويات VIP، وشراء عملات. كنت المطوّر الوحيد للتطبيق بالكامل: المعمارية، إدارة الحالة، تكاملات ZEGOCLOUD وLiveKit وAppwrite، والاقتصاد الداخلي.",
+      },
+      linkedin: {
+        en: "🎙️ Built a real-time social audio platform in Flutter — 500 users/room, dual audio SDKs (ZEGOCLOUD + LiveKit), a queued SVGA/VAP gift engine, and a full coin economy with 6 in-app purchase tiers. Live on Google Play with 5,000+ downloads.\n\n#Flutter #LiveAudio #FlutterBloc #ZEGOCLOUD #CleanArchitecture",
+        ar: "🎙️ بنيت منصة صوت اجتماعي لحظية بـFlutter — 500 مستخدم/غرفة، SDK صوت مزدوج (ZEGOCLOUD + LiveKit)، محرّك هدايا SVGA/VAP، واقتصاد عملات متكامل بـ6 باقات شراء. منشور على Google Play بـ5,000+ تنزيل.\n\n#Flutter #فلاتر #FlutterBloc #LiveAudio",
       },
       links: {
         directDownload: "",
@@ -188,7 +192,7 @@
     {
       id: "wolfera",
       name: "Wolfera",
-      tech: ["Flutter", "Supabase", "Clean Architecture", "Dartz/Either", "GoRouter"],
+      tech: ["Flutter", "Supabase", "Firebase (FCM/Crashlytics)", "BLoC/Cubit", "GoRouter", "GetIt + Injectable", "Freezed", "TFLite"],
       image: {
         src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Wolfera/main/assets/images/appIcon.png",
         alt: {
@@ -197,13 +201,17 @@
         },
       },
       description: {
-        en: `Automotive marketplace flows for car discovery, search, authentication, media storage, and buyer/seller communication. Used Supabase Auth, Storage, and Realtime, with typed error handling and infinite pagination for network-driven lists. <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.wolfera.wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
-        ar: `سوق سيارات لتدفّقات اكتشاف السيارات والبحث والمصادقة وتخزين الوسائط والتواصل بين البائع والمشتري. استخدم Supabase Auth وStorage وRealtime مع معالجة أخطاء typed وترقيم لا نهائي للقوائم الشبكية. <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.wolfera.wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
+        en: `Bilingual (AR/EN) car marketplace for buying, selling, and renting with multi-tier pricing. Built on Supabase (PostgreSQL, Auth incl. Google Sign-In, Realtime chat, Storage) with Clean Architecture, BLoC/Cubit, and GetIt+Injectable. Features FCM price-drop alerts, on-device TFLite NSFW moderation, and advanced search across 15+ filters with infinite scroll. <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.wolfera.wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
+        ar: `سوق سيارات ثنائي اللغة (ع/إ) للبيع والشراء والإيجار بتسعير متعدّد المستويات. مبني على Supabase (PostgreSQL، مصادقة تشمل Google، محادثة لحظية، تخزين) بمعمارية نظيفة وBLoC/Cubit وGetIt+Injectable. تنبيهات FCM لانخفاض السعر، فلترة NSFW على الجهاز عبر TFLite، وبحثًا متقدمًا بـ15+ فلتر مع تمرير لانهائي. <a href="https://github.com/Mohamad-Adib-Tawil/Wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.wolfera.wolfera" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
       },
       slug: "wolfera",
       bio: {
-        en: "",
-        ar: "",
+        en: "A production marketplace connecting car buyers, sellers, and renters with real-time chat, favorites, and price-drop alerts. I was the sole Flutter developer: architecture, Supabase + Firebase integration, the multi-step listing wizard, and admin tooling.",
+        ar: "سوق إنتاجي يربط بائعي السيارات والمشترين والمستأجرين بمحادثة لحظية ومفضّلة وتنبيهات سعر. كنت المطوّر الوحيد: المعمارية، تكامل Supabase وFirebase، معالج الإضافة متعدد الخطوات، وأدوات المشرف.",
+      },
+      linkedin: {
+        en: "🚗 Built Wolfera — a bilingual car marketplace in Flutter with Supabase realtime chat, on-device TFLite image moderation, admin approval workflow, and FCM price-drop alerts for favorited cars.\n\n#Flutter #Supabase #CleanArchitecture #Firebase",
+        ar: "🚗 بنيت Wolfera — سوق سيارات ثنائي اللغة بـFlutter مع محادثة Supabase لحظية، فلترة صور TFLite على الجهاز، موافقة المشرف، وتنبيهات FCM لانخفاض الأسعار.\n\n#Flutter #Supabase #فلاتر #CleanArchitecture",
       },
       links: {
         directDownload: "https://github.com/Mohamad-Adib-Tawil/Wolfera/releases/download/wolfera/wolfera-latest.apk",
@@ -294,7 +302,7 @@
     {
       id: "codebook",
       name: "Code Book",
-      tech: ["Flutter", "Clean Architecture", "BLoC", "Hive", "Dio", "WebView"],
+      tech: ["Flutter", "flutter_bloc (Cubit)", "Dio", "Google Books API", "Hive", "GetIt", "GoRouter", "WebView", "dartz"],
       image: {
         src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Code-Books-/main/assets/images/logo.png?raw=1",
         alt: {
@@ -303,13 +311,17 @@
         },
       },
       description: {
-        en: `Offline digital library that consumes Open Library APIs and supports cached content for offline access. Implemented local caching, retry handling, deep linking, and structured navigation as an API integration and Flutter architecture practice project. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
-        ar: `مكتبة رقمية دون اتصال تعتمد على Open Library APIs وتدعم المحتوى المخزّن للاستخدام دون إنترنت. تم تنفيذ التخزين المحلي، إعادة المحاولة، الروابط العميقة، والتنقّل المنظّم كمشروع لتقوية تكامل APIs ومعمارية Flutter. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
+        en: `Cross-platform book-discovery app consuming the Google Books REST API with an offline-first Hive cache for instant cold-start. Built on Clean Architecture (Dio + dartz Either typed errors, 3-retry exponential backoff), flutter_bloc Cubits, debounced search with advanced filters and infinite scroll, and an in-app WebView reader with HTTPS enforcement. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
+        ar: `تطبيق اكتشاف كتب عبر Google Books REST API مع تخزين Hive offline-first لإقلاع فوري. مبني على معمارية نظيفة (Dio + معالجة أخطاء dartz Either، إعادة محاولة أُسّية 3 مرات)، وflutter_bloc، وبحث مع فلاتر متقدمة وتمرير لانهائي، وقارئ WebView داخلي مع فرض HTTPS. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
       },
       slug: "codebook",
       bio: {
-        en: "",
-        ar: "",
+        en: "A cross-platform app to discover, search, and read free programming e-books sourced from Google Books, with a premium dark UI and an offline-first Hive cache so content loads instantly. Solo project covering architecture, API integration, caching strategy, and the embedded WebView reader.",
+        ar: "تطبيق لاكتشاف وقراءة كتب البرمجة المجانية من Google Books، بواجهة داكنة أنيقة وتخزين Hive offline-first لتحميل فوري. مشروع فردي شمل المعمارية، تكامل API، استراتيجية التخزين، والقارئ WebView المدمج.",
+      },
+      linkedin: {
+        en: "📚 Built Code Books — a Flutter e-book discovery app on the Google Books API with an offline-first Hive cache, typed error handling via dartz Either, 3-retry exponential backoff, and an in-app WebView reader.\n\n#Flutter #CleanArchitecture #Dart #Hive",
+        ar: "📚 بنيت Code Books — تطبيق اكتشاف كتب بـFlutter على Google Books API مع تخزين Hive offline-first، معالجة أخطاء typed عبر dartz Either، وقارئ WebView مدمج.\n\n#Flutter #فلاتر #Dart #CleanArchitecture",
       },
       links: {
         directDownload: "https://github.com/Mohamad-Adib-Tawil/Code-Books/releases/download/codebook/codebook-latest.apk",
@@ -327,7 +339,7 @@
     {
       id: "office",
       name: "Office Archiving",
-      tech: ["Flutter", "Google ML Kit", "Tesseract OCR", "SQLite", "PDF Processing"],
+      tech: ["Flutter", "flutter_bloc (Cubit)", "SQLite (sqflite)", "Google ML Kit", "Tesseract OCR", "pdf", "printing", "flutter_doc_scanner"],
       image: {
         src: "https://play-lh.googleusercontent.com/2xsTQC6G7T22nIa93fSh6dxw-l92NLMWhKXskipm7KbKs84NZUI9rwoWgWh3AGOReTM=w480-h960-rw",
         alt: {
@@ -336,13 +348,17 @@
         },
       },
       description: {
-        en: `Offline-first document scanning and archiving app for local document organization. Implemented Arabic/English OCR, PDF generation, printing, local full-text search, and SQLite-backed storage so core document flows work without a constant internet connection. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
-        ar: `تطبيق أرشفة ومسح مستندات يعمل بمنهجية offline-first لتنظيم المستندات محلياً. تم تنفيذ OCR عربي/إنجليزي، إنشاء PDF، الطباعة، البحث النصي المحلي، وتخزين SQLite حتى تبقى تدفقات المستندات الأساسية قابلة للاستخدام دون اتصال دائم. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
+        en: `Offline-first document scanning &amp; archiving app — no account, no cloud. Dual-engine OCR pipeline (Google ML Kit + Tesseract) for Arabic/English with preprocessing and best-result scoring, full-text SQLite search, a complete PDF toolkit (create, edit, watermark, sign, password-protect), AI translation/summarization with offline fallbacks, and a 16-theme engine — built with Flutter and flutter_bloc. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
+        ar: `تطبيق مسح وأرشفة مستندات offline-first — بلا حساب أو سحابة. خطّ OCR مزدوج (Google ML Kit + Tesseract) للعربية/الإنجليزية مع معالجة مسبقة واختيار أفضل نتيجة، وبحثًا نصيًا كاملًا في SQLite، وأدوات PDF متكاملة (إنشاء، تعديل، علامة مائية، توقيع، حماية بكلمة سر)، وترجمة/تلخيص AI مع بدائل دون اتصال، ومحرّك 16 ثيم — بـFlutter وflutter_bloc. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
       },
       slug: "office",
       bio: {
-        en: "",
-        ar: "",
+        en: "An offline-first, privacy-focused app to scan, organize, and search documents entirely on-device — no account or cloud required. Covers desktop-grade PDF tooling and Arabic-first OCR. Solo project across architecture, the dual-engine OCR pipeline, PDF tools, AI services, and the fully bilingual UI.",
+        ar: "تطبيق offline-first يركّز على الخصوصية لمسح وتنظيم والبحث في المستندات على الجهاز بالكامل — بلا حساب أو سحابة. يوفّر أدوات PDF احترافية وOCR عربي أولًا. مشروع فردي شمل المعمارية، خطّ OCR المزدوج، أدوات PDF، خدمات AI، والواجهة الثنائية.",
+      },
+      linkedin: {
+        en: "🗂️ Built Office Archiving — an offline-first Flutter document manager with dual-engine Arabic/English OCR (ML Kit + Tesseract), full-text SQLite search, and a complete on-device PDF toolkit (create, edit, watermark, sign, password-protect).\n\n#Flutter #OCR #OfflineFirst #FlutterBloc",
+        ar: "🗂️ بنيت Office Archiving — مدير مستندات offline-first بـFlutter مع OCR عربي/إنجليزي مزدوج (ML Kit + Tesseract)، بحث نصي كامل في SQLite، وأدوات PDF متكاملة على الجهاز.\n\n#Flutter #OCR #فلاتر #FlutterBloc",
       },
       links: {
         directDownload: "https://github.com/Mohamad-Adib-Tawil/office_archiving/releases/download/office/office-latest.apk",
@@ -410,7 +426,7 @@
     {
       id: "quran",
       name: "Quran Ahmed Karasi",
-      tech: ["Flutter", "Cubit", "just_audio", "Offline Audio"],
+      tech: ["Flutter", "flutter_bloc (Cubit)", "GetIt", "just_audio", "audio_session", "background_downloader", "quran_library", "Offline Audio"],
       image: {
         src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Quran/main/assets/home/%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%A7%D8%AD%D9%85%D8%AF%20%D9%83%D8%B1%D8%A7%D8%B3%D9%8A%20%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9.png",
         alt: {
@@ -419,13 +435,17 @@
         },
       },
       description: {
-        en: `Offline Quran reader and audio app with offline audio downloads, background playback, and ayah-level interaction. Implemented Surah, Juz, and Hizb navigation with text-audio synchronization, Arabic/German localization, and a Material 3 interface for Android and iOS. <a href="https://github.com/Mohamad-Adib-Tawil/Quran" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a> · <a href="https://apps.apple.com/app/id6759857104" target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i> App Store</a>`,
-        ar: `تطبيق قرآن للقراءة والصوت دون اتصال مع تنزيلات صوتية، تشغيل بالخلفية، وتفاعل على مستوى الآية. تم تنفيذ تنقّل السور والأجزاء والأحزاب مع مزامنة النص والصوت، ودعم العربية/الألمانية، وواجهة Material 3 على Android وiOS. <a href="https://github.com/Mohamad-Adib-Tawil/Quran" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a> · <a href="https://apps.apple.com/app/id6759857104" target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i> App Store</a>`,
+        en: `Offline-capable Quran reader &amp; audio app with Surah/Juz/Hizb navigation. Multi-phase audio engine (just_audio + audio_session) with an explicit state machine, OS audio-focus, repeat/speed/sleep-timer, and background per-surah downloads with live progress. Includes a local study hub (ayah tagging, notes, daily/weekly goals) on Clean Architecture with flutter_bloc + GetIt — no backend. Arabic/German, Android &amp; iOS. <a href="https://github.com/Mohamad-Adib-Tawil/Quran" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a> · <a href="https://apps.apple.com/app/id6759857104" target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i> App Store</a>`,
+        ar: `تطبيق قرآن للقراءة والصوت يعمل دون اتصال مع تنقّل سور/أجزاء/أحزاب. محرّك صوت متعدد المراحل (just_audio + audio_session) بآلة حالة صريحة، وإدارة تركيز صوت النظام، وتكرار/سرعة/مؤقّت نوم، وتنزيلات خلفية لكل سورة مع تقدّم لحظي. ويتضمّن مركز دراسة محلي (وسم آيات، ملاحظات، أهداف يومية/أسبوعية) بمعمارية نظيفة مع flutter_bloc وGetIt — بلا خادم. عربي/ألماني، Android وiOS. <a href="https://github.com/Mohamad-Adib-Tawil/Quran" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a> · <a href="https://apps.apple.com/app/id6759857104" target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i> App Store</a>`,
       },
       slug: "quran",
       bio: {
-        en: "",
-        ar: "",
+        en: "A focused, backend-free Quran app built around three pillars — reading, fully-offline listening, and structured personal study. Solo project covering the audio engine with an explicit state machine, offline per-surah download flow, study tools (tags, notes, goals), and a Figma-derived design system.",
+        ar: "تطبيق قرآن مركّز بلا خادم حول ثلاث ركائز — القراءة، الاستماع دون اتصال بالكامل، والدراسة الشخصية المنظّمة. مشروع فردي شمل محرّك الصوت بآلة حالة صريحة، تدفّق التنزيل دون اتصال لكل سورة، أدوات الدراسة (وسم، ملاحظات، أهداف)، ونظام تصميم من Figma.",
+      },
+      linkedin: {
+        en: "📖 Built a Quran app in Flutter — a state-machine audio engine (just_audio + audio_session), fully-offline per-surah background downloads, and a personal study hub (ayah tagging, notes, daily/weekly goals). No backend. Published on Google Play & App Store.\n\n#Flutter #Dart #just_audio #CleanArchitecture",
+        ar: "📖 بنيت تطبيق قرآن بـFlutter — محرّك صوت بآلة حالة (just_audio + audio_session)، تنزيلات سور دون اتصال في الخلفية، ومركز دراسة شخصي (وسم آيات، ملاحظات، أهداف). بلا خادم. منشور على Google Play وApp Store.\n\n#Flutter #فلاتر #Dart #just_audio",
       },
       links: {
         directDownload: "https://github.com/Mohamad-Adib-Tawil/Quran/releases/download/quran/quran-latest.apk",
@@ -595,6 +615,8 @@
         website: "Website",
         techStack: "Tech Stack",
         comingSoon: "Coming soon",
+        linkedin: "LinkedIn Post",
+        linkedinCopy: "Copy",
         notFound: "Project not found",
         notFoundBody:
           "This project doesn't exist. Return to the CV to browse all projects.",
@@ -751,6 +773,8 @@
         website: "الموقع",
         techStack: "التقنيات",
         comingSoon: "قريباً",
+        linkedin: "منشور LinkedIn",
+        linkedinCopy: "نسخ",
         notFound: "المشروع غير موجود",
         notFoundBody: "هذا المشروع غير موجود. عُد إلى السيرة لتصفّح كل المشاريع.",
       },
