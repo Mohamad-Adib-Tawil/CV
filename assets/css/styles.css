@@ -858,7 +858,7 @@ button:focus-visible,
   transition: var(--transition);
 }
 .gallery-item:hover { transform: translateY(-3px); border-color: var(--primary-color); box-shadow: var(--shadow-md); }
-.gallery-item img { display: block; width: 100%; aspect-ratio: 9 / 19.5; object-fit: cover; }
+.gallery-item img { display: block; width: 100%; min-height: 150px; aspect-ratio: 18 / 39; object-fit: cover; }
 
 .detail-video iframe,
 .detail-video video {
