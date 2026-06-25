@@ -647,7 +647,7 @@
             )}" data-alt="${escapeHtml(shotAlt)}">
               <img src="${escapeHtml(shot.src)}" alt="${escapeHtml(
             shotAlt
-          )}" loading="lazy" decoding="async">
+          )}" decoding="async">
             </button>
           `;
         })
