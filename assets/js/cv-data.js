@@ -554,51 +554,55 @@
         ],
       },
       summaryText:
-        "Flutter developer with 3+ years of independent and contract experience building production-oriented mobile apps with Flutter and Dart. I work across UI implementation, API integration, offline storage, real-time features, release preparation, and store publishing. My strongest work is in Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase integrations, offline-first flows, audio features, OCR/document workflows, and apps that need to stay usable under weak network conditions.",
-      experienceRole: "Flutter Developer, Independent / Contract — 07/2022 – Present",
+        "Flutter developer with 4 years designing, building, and shipping production mobile apps to Google Play and the App Store — including a live social-audio platform that surpassed 5,000+ downloads. Specialized in Clean Architecture, BLoC/Cubit state management, and offline-first systems, with deep hands-on work in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and multi-backend integration (Supabase, Firebase, Appwrite). Owns the full mobile lifecycle end-to-end: requirements, architecture, UI, backend integration, performance tuning, and store release.",
+      experienceRole: "Flutter Developer — Independent & Contract (Remote) — 07/2022 – Present",
       experienceList: [
-        "Built and maintained Flutter applications for independent and contract projects, covering UI implementation, API integration, local persistence, release preparation, and publishing.",
-        "Structured medium-sized apps using Clean Architecture, BLoC/Cubit, GetIt, and feature-based modules to keep UI, business logic, and data layers separated.",
-        "Integrated REST APIs, Supabase, Appwrite, WebSockets, Zego audio rooms, messaging flows, Firebase services, and in-app purchases.",
-        "Implemented offline-first behavior with Hive, SQLite, pagination, retry handling, and typed failure responses to make key flows more predictable.",
-        "Prepared production builds with app flavors, ProGuard/R8, Crashlytics, secure storage, and separate development/production environments.",
-        "Used isolates and background processing for heavier work such as OCR, PDF handling, audio features, and background tasks.",
-        "Published and maintained apps on Google Play and App Store, including one public app with 5,000+ downloads.",
+        "Designed and shipped 5+ production Flutter apps end-to-end across social-audio, marketplace, document-management, and content domains — owning architecture, state management, backend integration, performance, and store release on Google Play and the App Store.",
+        "Built a real-time social-audio platform (LKLK) architected for up to 500 listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD + LiveKit) and three concurrent realtime channels (Appwrite Realtime, WebSockets, ZIM) with per-channel reconnect and exponential backoff; app surpassed 5,000+ downloads.",
+        "Engineered the app's monetization and engagement stack: in-app purchases (6 coin tiers), an SVGA/VAP virtual-gift animation engine (concurrency-capped at 8, sub-100 ms queue interval), VIP tiers, and gamified progression.",
+        "Delivered a bilingual (AR/EN) car marketplace (Wolfera) on Supabase (PostgreSQL with Row-Level Security, Auth + Google/Apple SSO, Realtime chat, Storage), with on-device TFLite image moderation, FCM price-drop alerts, and advanced search across 15+ filters with infinite scroll.",
+        "Built an offline-first document scanner (Office Archiving) with a dual-engine OCR pipeline (Google ML Kit + Tesseract) for Arabic/English — multi-orientation, preprocessing, best-result scoring — plus a full PDF toolkit (watermark, sign, password-protect) and SQLite full-text search, all on-device with no backend.",
+        "Standardized engineering across apps: Clean Architecture with feature-based modules, BLoC/Cubit + GetIt/Injectable, typed Either error handling, offline-first caching with pagination and 3-retry exponential backoff, and isolates/background tasks for OCR, PDF, and audio.",
+        "Hardened releases with app flavors, ProGuard/R8, secure storage, environment separation, and Crashlytics crash filtering; published and maintained apps on both Google Play and the Apple App Store.",
       ],
       skillsList: [
-        "Flutter & Mobile: Flutter, Dart, Material 3, Android, iOS",
-        "Architecture & State: Clean Architecture, SOLID, MVVM, BLoC, Cubit, Provider, GetIt, Injectable, Dartz/Either",
-        "APIs & Backend Services: REST APIs, Dio, Interceptors, WebSockets, Supabase, Appwrite, Firebase Auth, FCM, Analytics, Crashlytics",
-        "Storage & Offline: Hive, SQLite, Secure Storage, offline-first caching, pagination, retry handling",
-        "Media, OCR & Documents: Zego Express, ZIM, LiveKit, just_audio, audio recording, Google ML Kit, Tesseract OCR, PDF generation, printing",
-        "Release & Tools: ProGuard/R8, app flavors, isolates, background tasks, image optimization, Google Play, App Store, Git, GitHub, Postman, Figma",
+        "Languages: Dart, SQL, C# (academic), Kotlin (basic)",
+        "Mobile & UI: Flutter, Material 3, Android, iOS, responsive UI, RTL & localization (AR/EN), image optimization",
+        "Architecture & State: Clean Architecture, SOLID, MVVM, feature-based modules, BLoC, Cubit, Provider, GetIt, Injectable, Freezed, dartz/Either",
+        "Backend & APIs: REST, Dio (interceptors, retry/backoff), WebSockets, Supabase (PostgreSQL, Auth, Realtime, Storage, RLS), Firebase (Auth, FCM, Analytics, Crashlytics), Appwrite",
+        "Real-time & Media: ZEGOCLOUD (ZegoExpress), LiveKit, ZIM, just_audio, audio_session, SVGA/VAP animation, background_downloader",
+        "Storage & Offline: Hive, SQLite (sqflite), secure storage, offline-first caching, pagination, stale-while-revalidate, typed failures",
+        "On-device ML & Docs: Google ML Kit, Tesseract OCR, TFLite, PDF generation/editing, printing, full-text search",
+        "Release & Quality: App flavors, ProGuard/R8, Crashlytics, secure storage, environment separation, isolates & background tasks, in-app purchases, Google Play & App Store publishing",
+        "Navigation & Tools: GoRouter, Git, GitHub, Postman, Figma, build_runner / codegen",
       ],
       education: {
         heading: "Diploma in Computer Engineering, University of Aleppo (2020–2022)",
         items: ["Focus: Software Engineering", "Aleppo, Syria"],
       },
       achievements: [
-        "Published and maintained apps on Google Play and App Store",
-        "Delivered one public app with 5,000+ downloads",
-        "Built real-time audio rooms, messaging flows, virtual gifts, and in-app purchases",
-        "Implemented Arabic/English OCR, PDF generation, printing, and local full-text search",
-        "Built offline-first flows with Hive, SQLite, pagination, retry handling, and typed failures",
+        "Designed and shipped 5+ production apps to Google Play and the App Store",
+        "Built real-time social-audio rooms supporting up to 500 concurrent listeners and 20 mic seats using ZEGOCLOUD + LiveKit",
+        "Delivered one public app (LKLK) with 5,000+ downloads over 80+ build releases",
+        "Implemented a custom dual-engine OCR pipeline (ML Kit + Tesseract) for reliable Arabic/English extraction on mixed real-world documents",
+        "Engineered offline-first flows with Hive, SQLite, pagination, stale-while-revalidate, 3-retry exponential backoff, and typed Either failures",
+        "Shipped on-device TFLite image moderation, PDF security tooling, and AI summarization without any backend dependency",
       ],
       advancedSkills: [
-        "Clean Architecture with feature-based modules and separated UI, business, and data layers",
-        "Offline-first mobile flows using Hive, SQLite, pagination, retry handling, and typed failure responses",
-        "Real-time integrations with WebSockets, Supabase Realtime, Zego Express, and ZIM",
-        "Document workflows including OCR, PDF handling, printing, and local full-text search",
-        "Production release preparation with flavors, ProGuard/R8, Crashlytics, secure storage, and separate environments",
+        "Clean Architecture with feature-based modules and strictly separated UI, domain, and data layers — applied across 5 production apps",
+        "Offline-first systems using Hive, SQLite, pagination, stale-while-revalidate caching, and typed failure responses",
+        "Real-time integrations with WebSockets, Supabase Realtime, ZEGOCLOUD ZegoExpress, and ZIM signaling — with per-channel reconnect logic",
+        "On-device ML pipelines: OCR (ML Kit + Tesseract), TFLite inference, multi-candidate scoring, and memory-safe PDF rasterization",
+        "Production release engineering: flavors, ProGuard/R8, Crashlytics, secure storage, environment separation, isolates, and background tasks",
       ],
       services: [
-        "End-to-end mobile app development (iOS & Android) from concept to deployment",
-        "UI implementation, API integration, local persistence, and release preparation",
-        "Real-time features: audio rooms, messaging flows, WebSockets, and Supabase Realtime",
-        "OCR and document workflows with ML Kit, Tesseract OCR, SQLite, PDF generation, and printing",
-        "Offline-first architecture with caching, retry handling, and predictable error states",
-        "Backend service integration with Supabase, Appwrite, Firebase, and REST APIs",
-        "Store publishing and production build preparation for Google Play and App Store",
+        "End-to-end mobile app development (iOS & Android) from concept to store",
+        "Clean Architecture design: feature-based modules, BLoC/Cubit, DI setup",
+        "Real-time features: audio rooms, messaging flows, WebSockets, Supabase Realtime",
+        "OCR and document workflows: ML Kit, Tesseract, SQLite, PDF generation/editing",
+        "Offline-first architecture: caching, retry handling, predictable error states",
+        "Backend integration: Supabase, Appwrite, Firebase, REST APIs",
+        "Store publishing and production build preparation (Google Play & App Store)",
       ],
       languagesText: "Arabic (Native), English (Technical working proficiency)",
       detailPage: {
@@ -712,51 +716,55 @@
         ],
       },
       summaryText:
-        "مطوّر Flutter بخبرة 3+ سنوات في العمل المستقل والعقود، مع بناء تطبيقات موبايل موجهة للإنتاج باستخدام Flutter وDart. أعمل على تنفيذ الواجهات، تكامل APIs، التخزين المحلي، ميزات الوقت الحقيقي، تجهيز الإصدارات، والنشر على المتاجر. أقوى خبراتي في Clean Architecture وBLoC/Cubit وتكامل Supabase/Appwrite/Firebase وتدفّقات offline-first وميزات الصوت وOCR/المستندات والتطبيقات التي يجب أن تبقى قابلة للاستخدام في ظروف الشبكة الضعيفة.",
-      experienceRole: "مطوّر Flutter (مستقل/عقود) — 07/2022 – حتى الآن",
+        "مطوّر Flutter بخبرة 4 سنوات في تصميم وبناء ونشر تطبيقات موبايل إنتاجية على Google Play وApp Store — من بينها منصة صوت اجتماعي حيّة تجاوزت 5,000 تنزيل. متخصص في Clean Architecture وإدارة الحالة بـ BLoC/Cubit وأنظمة offline-first، مع خبرة عميقة في الصوت/الدردشة اللحظية (ZEGOCLOUD وLiveKit وWebSockets)، ومعالجة OCR على الجهاز، والتكامل مع خدمات خلفية متعددة (Supabase وFirebase وAppwrite). يمتلك دورة الحياة الكاملة للموبايل: المتطلبات، المعمارية، الواجهات، تكامل الخلفية، ضبط الأداء، والنشر على المتاجر.",
+      experienceRole: "مطوّر Flutter — مستقل وعقود (عن بُعد) — 07/2022 – حتى الآن",
       experienceList: [
-        "بناء وصيانة تطبيقات Flutter لمشاريع مستقلة وعقود تشمل تنفيذ الواجهات، تكامل APIs، التخزين المحلي، تجهيز الإصدارات، والنشر.",
-        "تنظيم تطبيقات متوسطة الحجم باستخدام Clean Architecture وBLoC/Cubit وGetIt ووحدات feature-based لفصل الواجهة ومنطق العمل وطبقة البيانات.",
-        "دمج REST APIs وSupabase وAppwrite وWebSockets وغرف Zego الصوتية وتدفّقات الرسائل وخدمات Firebase والمشتريات داخل التطبيق.",
-        "تنفيذ سلوك offline-first باستخدام Hive وSQLite والترقيم وإعادة المحاولة وأخطاء typed لجعل التدفقات الأساسية أكثر توقّعية.",
-        "تجهيز إصدارات إنتاجية باستخدام app flavors وProGuard/R8 وCrashlytics والتخزين الآمن وبيئات تطوير/إنتاج منفصلة.",
-        "استخدام isolates والمعالجة الخلفية للأعمال الأثقل مثل OCR والتعامل مع PDF وميزات الصوت والمهام الخلفية.",
-        "نشر وصيانة تطبيقات على Google Play وApp Store، منها تطبيق عام واحد حقق 5,000+ تنزيل.",
+        "صممت وأطلقت أكثر من 5 تطبيقات Flutter إنتاجية من الصفر حتى النشر في مجالات الصوت الاجتماعي والمتاجر وإدارة المستندات والمحتوى — مع التحكم الكامل بالمعمارية وإدارة الحالة وتكامل الخلفية والأداء والنشر على Google Play وApp Store.",
+        "بنيت منصة صوت اجتماعي لحظية (LKLK) مصمّمة لتحمّل 500 مستمع و20 مقعد ميكروفون في الغرفة الواحدة، مع تكامل SDK صوت مزدوج (ZEGOCLOUD + LiveKit) وثلاثة قنوات لحظية متزامنة مع منطق إعادة اتصال لكل قناة — تجاوز التطبيق 5,000 تنزيل.",
+        "صممت منظومة تحقيق الدخل والتفاعل: مشتريات داخل التطبيق (6 باقات عملات)، محرّك رسوم هدايا SVGA/VAP بسعة 8 رسوم متزامنة وفاصل طابور أقل من 100ms، ونظام VIP وتحفيز متدرّج.",
+        "سلّمت سوق سيارات ثنائي اللغة (Wolfera) على Supabase (PostgreSQL مع Row-Level Security، مصادقة مع Google/Apple SSO، محادثة لحظية، تخزين)، مع فلترة NSFW على الجهاز بـ TFLite، وتنبيهات FCM عند انخفاض الأسعار، وبحث متقدم بأكثر من 15 فلتراً مع تمرير لانهائي.",
+        "بنيت ماسح مستندات offline-first (Office Archiving) بخط OCR مزدوج المحرّك (Google ML Kit + Tesseract) للعربية/الإنجليزية — متعدد الاتجاهات، معالجة مسبقة، اختيار أفضل نتيجة — إضافةً لمجموعة أدوات PDF كاملة وبحث نصي في SQLite، كل ذلك على الجهاز بلا خادم.",
+        "وحّدت أسلوب الهندسة عبر جميع التطبيقات: Clean Architecture مع وحدات feature-based وBLoC/Cubit وGetIt/Injectable، معالجة أخطاء typed Either، تخزين offline-first مع ترقيم وإعادة محاولة أُسّية 3 مرات، وisolates ومهام خلفية لـ OCR وPDF والصوت.",
+        "حصّنت الإصدارات بـ app flavors وProGuard/R8 وتخزين آمن وبيئات منفصلة وفلترة أعطال Crashlytics؛ نشرت وصنت التطبيقات على Google Play وApple App Store.",
       ],
       skillsList: [
-        "Flutter والموبايل: Flutter، Dart، Material 3، Android، iOS",
-        "المعمارية وإدارة الحالة: Clean Architecture، SOLID، MVVM، BLoC، Cubit، Provider، GetIt، Injectable، Dartz/Either",
-        "APIs وخدمات الخلفية: REST APIs، Dio، Interceptors، WebSockets، Supabase، Appwrite، Firebase Auth، FCM، Analytics، Crashlytics",
-        "التخزين والعمل دون اتصال: Hive، SQLite، Secure Storage، offline-first caching، pagination، retry handling",
-        "الوسائط وOCR والمستندات: Zego Express، ZIM، LiveKit، just_audio، audio recording، Google ML Kit، Tesseract OCR، PDF generation، printing",
-        "الإصدار والأدوات: ProGuard/R8، app flavors، isolates، background tasks، image optimization، Google Play، App Store، Git، GitHub، Postman، Figma",
+        "اللغات: Dart، SQL، C# (أكاديمي)، Kotlin (أساسي)",
+        "الموبايل والواجهات: Flutter، Material 3، Android، iOS، واجهات تكيّفية، RTL وتعريب (عربي/إنجليزي)، تحسين الصور",
+        "المعمارية وإدارة الحالة: Clean Architecture، SOLID، MVVM، وحدات feature-based، BLoC، Cubit، Provider، GetIt، Injectable، Freezed، dartz/Either",
+        "الخلفية والـ APIs: REST، Dio (interceptors، إعادة المحاولة)، WebSockets، Supabase (PostgreSQL، Auth، Realtime، Storage، RLS)، Firebase (Auth، FCM، Analytics، Crashlytics)، Appwrite",
+        "الوقت الحقيقي والوسائط: ZEGOCLOUD (ZegoExpress)، LiveKit، ZIM، just_audio، audio_session، رسوم SVGA/VAP، background_downloader",
+        "التخزين ودون اتصال: Hive، SQLite (sqflite)، تخزين آمن، offline-first caching، ترقيم، stale-while-revalidate، أخطاء typed",
+        "ML والمستندات: Google ML Kit، Tesseract OCR، TFLite، إنشاء/تعديل PDF، طباعة، بحث نصي كامل",
+        "الإصدار والجودة: App flavors، ProGuard/R8، Crashlytics، تخزين آمن، بيئات منفصلة، isolates ومهام خلفية، مشتريات داخل التطبيق، نشر على Google Play وApp Store",
+        "التنقّل والأدوات: GoRouter، Git، GitHub، Postman، Figma، build_runner",
       ],
       education: {
         heading: "دبلوم هندسة حاسبات، جامعة حلب (2020–2022)",
         items: ["التركيز: هندسة البرمجيات", "حلب، سوريا"],
       },
       achievements: [
-        "نشر وصيانة تطبيقات على Google Play وApp Store",
-        "تسليم تطبيق عام واحد حقق 5,000+ تنزيل",
-        "بناء غرف صوت لحظية وتدفّقات رسائل وهدايا افتراضية ومشتريات داخل التطبيق",
-        "تنفيذ OCR عربي/إنجليزي وإنشاء PDF والطباعة والبحث النصي المحلي",
-        "بناء تدفّقات offline-first باستخدام Hive وSQLite والترقيم وإعادة المحاولة وأخطاء typed",
+        "صممت وأطلقت أكثر من 5 تطبيقات إنتاجية على Google Play وApp Store",
+        "بنيت غرف صوت اجتماعية لحظية تدعم حتى 500 مستمع متزامن و20 مقعد ميكروفون باستخدام ZEGOCLOUD + LiveKit",
+        "تجاوز أحد التطبيقات العامة (LKLK) 5,000 تنزيل عبر أكثر من 80 إصداراً",
+        "نفّذت خط OCR مزدوج المحرّك (ML Kit + Tesseract) لاستخراج نصي موثوق من المستندات العربية والإنجليزية المختلطة",
+        "صممت أنظمة offline-first بـ Hive وSQLite وترقيم وstale-while-revalidate وإعادة محاولة أُسّية وأخطاء typed Either",
+        "أطلقت فلترة صور TFLite وأمان PDF وتلخيص AI بلا أي تبعية على خادم",
       ],
       advancedSkills: [
-        "Clean Architecture مع وحدات feature-based وفصل الواجهة ومنطق العمل وطبقة البيانات",
-        "تدفّقات offline-first باستخدام Hive وSQLite والترقيم وإعادة المحاولة وأخطاء typed",
-        "تكاملات الوقت الحقيقي عبر WebSockets وSupabase Realtime وZego Express وZIM",
-        "تدفّقات المستندات: OCR، معالجة PDF، الطباعة، والبحث النصي المحلي",
-        "تجهيز الإصدارات الإنتاجية باستخدام flavors وProGuard/R8 وCrashlytics والتخزين الآمن وبيئات منفصلة",
+        "Clean Architecture مع وحدات feature-based وطبقات UI ومجال وبيانات مفصولة تماماً — مطبّقة على 5 تطبيقات إنتاجية",
+        "أنظمة offline-first بـ Hive وSQLite وترقيم وstale-while-revalidate وردود فعل أخطاء typed",
+        "تكامل لحظي بـ WebSockets وSupabase Realtime وZEGOCLOUD ZegoExpress وZIM — مع منطق إعادة اتصال مستقل لكل قناة",
+        "خطوط ML على الجهاز: OCR (ML Kit + Tesseract)، استنتاج TFLite، تسجيل متعدد المرشّحين، ومعالجة PDF آمنة من الذاكرة",
+        "هندسة إصدار إنتاجي: flavors وProGuard/R8 وCrashlytics وتخزين آمن وبيئات منفصلة وisolates ومهام خلفية",
       ],
       services: [
-        "تطوير تطبيقات موبايل شاملة (iOS وAndroid) من الفكرة للنشر",
-        "تنفيذ الواجهات، تكامل APIs، التخزين المحلي، وتجهيز الإصدارات",
-        "ميزات الوقت الحقيقي: غرف صوت، رسائل، WebSockets، وSupabase Realtime",
-        "OCR وتدفّقات المستندات باستخدام ML Kit وTesseract OCR وSQLite وإنشاء PDF والطباعة",
-        "معمارية offline-first مع caching وإعادة المحاولة وحالات خطأ توقّعية",
-        "تكامل خدمات الخلفية مع Supabase وAppwrite وFirebase وREST APIs",
-        "النشر على المتاجر وتجهيز الإصدارات الإنتاجية لـGoogle Play وApp Store",
+        "تطوير تطبيقات موبايل كاملة (iOS وAndroid) من الفكرة حتى المتجر",
+        "تصميم Clean Architecture: وحدات feature-based وBLoC/Cubit وإعداد DI",
+        "ميزات لحظية: غرف صوت، تدفقات رسائل، WebSockets، Supabase Realtime",
+        "تدفّقات OCR والمستندات: ML Kit وTesseract وSQLite وإنشاء/تعديل PDF",
+        "معمارية offline-first: تخزين، معالجة إعادة المحاولة، حالات خطأ متوقعة",
+        "تكامل خلفي: Supabase وAppwrite وFirebase وREST APIs",
+        "نشر على المتاجر وإعداد إصدارات إنتاجية (Google Play وApp Store)",
       ],
       languagesText: "العربية (لغة أم)، الإنجليزية (كفاءة عمل تقنية)",
       detailPage: {
@@ -785,155 +793,199 @@
   if (_cvVersion === 'se') {
     // ── English overrides ──────────────────────────────────────────────
     translations.en.header.jobTitle = 'Software Engineer & Flutter Developer';
-    translations.en.experienceRole = 'Software Engineer & Flutter Developer, Independent / Contract — 07/2022 – Present';
+    translations.en.experienceRole = 'Flutter Developer — Independent & Contract (Remote) — 07/2022 – Present';
     translations.en.downloadsPage.subtitle = 'Software Engineer & Flutter Developer • Remote from Syria';
     translations.en.nav.additionalExp = 'Add. Exp.';
+
     translations.en.summaryText =
-      'Software Engineer and Flutter Developer with more than three years of experience building mobile applications using Flutter and Dart, with an academic background in software engineering, systems analysis, databases, and algorithms. I work across the various stages of software development, starting from requirements analysis and software solution design, through building user interfaces and connecting backend services and databases, to testing applications and preparing them for release and publishing. I have strong experience designing applications using Clean Architecture and managing state with BLoC and Cubit, integrating with Supabase, Appwrite, and Firebase, in addition to building applications that work efficiently under poor internet connectivity. I also have experience with audio applications, optical character recognition (OCR), and document and file processing.';
+      'Software Engineer and Flutter Developer with 4 years designing, building, and shipping production mobile apps to Google Play and the App Store — including a live social-audio platform that surpassed 5,000+ downloads. Grounded in a software-engineering foundation: systems analysis, requirements analysis, relational database design, algorithms, OOP, and SDLC — applied from the first sketch to the shipped product. Specialized in Clean Architecture, BLoC/Cubit state management, and offline-first systems, with deep hands-on work in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and multi-backend integration (Supabase, Firebase, Appwrite). Owns the full software development lifecycle end-to-end.';
+
     translations.en.downloadsPage.atsSummary =
-      'Software Engineer and Flutter Developer with 3+ years of independent and contract experience. Production-oriented Flutter/Dart apps, Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase, offline-first flows, audio features, OCR/document workflows, and store publishing.';
+      'Software Engineer and Flutter Developer with 4 years of independent and contract experience. Production-oriented Flutter/Dart apps, Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase, offline-first flows, real-time audio/chat, OCR/document workflows, systems analysis, relational DB design, and store publishing.';
+
+    // SE-specific skills list — Flutter skills kept, SE foundations added
+    translations.en.skillsList = [
+      'Languages: Dart, SQL, C#, Kotlin (basic)',
+      'Mobile & UI: Flutter, Material 3, Android, iOS, responsive UI, RTL & localization (AR/EN), image optimization',
+      'Architecture & State: Clean Architecture, SOLID, MVVM, feature-based modules, BLoC, Cubit, Provider, GetIt, Injectable, Freezed, dartz/Either',
+      'Backend & APIs: REST, Dio (interceptors, retry/backoff), WebSockets, Supabase (PostgreSQL, Auth, Realtime, Storage, RLS), Firebase (Auth, FCM, Analytics, Crashlytics), Appwrite',
+      'Real-time & Media: ZEGOCLOUD (ZegoExpress), LiveKit, ZIM, just_audio, audio_session, SVGA/VAP animation, background_downloader',
+      'Storage & Offline: Hive, SQLite (sqflite), secure storage, offline-first caching, pagination, stale-while-revalidate, typed failures',
+      'On-device ML & Docs: Google ML Kit, Tesseract OCR, TFLite, PDF generation/editing, printing, full-text search',
+      'Release & Quality: App flavors, ProGuard/R8, Crashlytics, secure storage, env separation, isolates & background tasks, in-app purchases, Google Play & App Store',
+      'CS & Engineering Foundations: Data Structures & Algorithms, OOP, Software Engineering, Systems Analysis & Design, relational DB design & SQL, UML & systems modeling, SDLC, requirements analysis & technical documentation',
+      'Tools: GoRouter, Git, GitHub, Postman, Figma, build_runner / codegen',
+    ];
+
+    // SE-specific achievements — adds university recognition & SE scope
+    translations.en.achievements = [
+      'Designed and shipped 5+ production mobile apps end-to-end across social-audio, marketplace, document-management, and content domains',
+      'Built real-time social-audio rooms (LKLK) supporting up to 500 concurrent listeners and 20 mic seats — surpassed 5,000+ downloads',
+      'Implemented a custom dual-engine OCR pipeline (ML Kit + Tesseract) for reliable Arabic/English extraction on mixed real-world documents',
+      'Delivered two warehouse-management systems (Windows Forms) for the University of Aleppo — both recognized by faculty deans, one commended by the University Presidency',
+      'Applied full SDLC: requirements analysis, UML system modeling, relational DB schema design, implementation, and store publishing — across all major projects',
+      'Engineered offline-first architectures (Hive, SQLite, stale-while-revalidate, 3-retry exponential backoff, typed Either failures) across multiple apps',
+    ];
+
+    // SE-specific advanced skills
+    translations.en.advancedSkills = [
+      'Full software development lifecycle (SDLC): requirements analysis → UML modeling → DB design → implementation → release — applied end-to-end on all major projects',
+      'Clean Architecture with feature-based modules and strictly separated UI, domain, and data layers — across 5 production apps',
+      'Offline-first systems using Hive, SQLite, pagination, stale-while-revalidate caching, and typed failure responses',
+      'Real-time integrations with WebSockets, Supabase Realtime, ZEGOCLOUD ZegoExpress, and ZIM — with per-channel reconnect logic',
+      'On-device ML pipelines: OCR (ML Kit + Tesseract), TFLite inference, multi-candidate scoring, and memory-safe PDF rasterization',
+      'Relational database design: schema normalization, SQL queries, SQLite migration strategies (additive-only, safe for existing users)',
+    ];
 
     translations.en.experienceEntries = [
       {
-        role: 'Flutter Developer, Freelance & Contract',
+        role: 'Flutter Developer — Independent & Contract',
         period: '07/2022 – Present',
         location: 'Remote',
         items: [
-          'Developing and maintaining Flutter applications for independent and contract projects.',
-          'Building user interfaces, connecting backend services (APIs), and managing local storage.',
-          'Designing applications using: Clean Architecture, BLoC / Cubit, GetIt (Dependency Injection), Feature-Based Architecture.',
-          'Integrating many services and technologies such as: REST APIs, Supabase, Appwrite, Firebase, WebSockets, live audio rooms via Zego / LiveKit, instant messaging and real-time chat systems, in-app purchases.',
-          'Implementing Offline-First solutions using Hive and SQLite to ensure the application keeps working without a constant internet connection.',
-          'Developing Pagination systems and handling errors and retries professionally.',
-          'Preparing final application releases using: App Flavors, ProGuard / R8, Crashlytics, Secure Storage.',
-          'Using Isolates and background tasks to process heavy operations such as: OCR, PDF files, audio playback and processing.',
-          'Publishing and maintaining applications on Google Play and the Apple App Store.',
-          'Contributing to the launch of a public application that exceeded 5,000 downloads.',
+          'Designed and shipped 5+ production Flutter apps end-to-end — owning architecture, state management, backend integration, performance, and store release on Google Play and the App Store.',
+          'Built a real-time social-audio platform (LKLK) architected for up to 500 listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD + LiveKit) and three concurrent realtime channels with per-channel reconnect and exponential backoff; app surpassed 5,000+ downloads.',
+          'Engineered the app\'s monetization and engagement stack: in-app purchases (6 coin tiers), an SVGA/VAP virtual-gift animation engine (concurrency-capped at 8, sub-100 ms queue interval), VIP tiers, and gamified progression.',
+          'Delivered a bilingual (AR/EN) car marketplace (Wolfera) on Supabase (PostgreSQL with Row-Level Security, Auth + Google/Apple SSO, Realtime chat, Storage), with on-device TFLite image moderation, FCM price-drop alerts, and advanced search across 15+ filters with infinite scroll.',
+          'Built an offline-first document scanner (Office Archiving) with a dual-engine OCR pipeline (ML Kit + Tesseract) for Arabic/English — multi-orientation, preprocessing, best-result scoring — plus a full PDF toolkit and SQLite full-text search, all on-device.',
+          'Standardized engineering across apps: Clean Architecture, BLoC/Cubit + GetIt/Injectable, typed Either error handling, offline-first caching with 3-retry exponential backoff, and isolates/background tasks for OCR, PDF, and audio.',
+          'Hardened releases with app flavors, ProGuard/R8, secure storage, environment separation, and Crashlytics crash filtering.',
         ],
       },
       {
-        role: 'Android Developer (Kotlin), University & Independent Projects',
-        period: '2022 – 2022',
+        role: 'Android Developer (Kotlin) — University & Independent Projects',
+        period: '2022',
         location: 'Aleppo, Syria',
         items: [
-          'Developing an educational platform specialized in programming (graduation project) that includes courses, information, and code samples (2022).',
-          '"Ana Mubarmej" (I Am a Programmer) application: a section for programming specializations with the best resources to learn them; a section for general information about programming; a WebView section for online code execution sites (console) for 8 languages; a section with automated questions for 8 programming languages with score calculation.',
+          'Built "Ana Mubarmej" (I Am a Programmer): curated learning tracks for 8 languages, an in-app WebView code console, and auto-graded quizzes with scoring.',
+          'Graduation project: a programming-education platform (courses, articles, and runnable code samples) — covered requirements analysis, system design, and full implementation.',
         ],
       },
       {
-        role: 'Windows Application Developer, University Projects',
+        role: 'Windows Application Developer — University Projects',
         period: '2021 – 2022',
         location: 'Aleppo, Syria',
         items: [
-          'Developing a warehouse management system for the Faculty of Pharmacy using Windows Forms (2021), which received a special acknowledgment from the Dean of the Faculty of Pharmacy.',
-          'Developing a warehouse management system for the Faculty of Science – Chemistry Department using Windows Forms (2022), which received a special acknowledgment from the Dean of the Faculty of Science and a special acknowledgment from the Presidency of the University of Aleppo.',
+          'Delivered a warehouse-management system for the Faculty of Pharmacy (Windows Forms, 2021) — recognized with a special commendation from the Dean of Pharmacy.',
+          'Delivered a warehouse-management system for the Faculty of Science / Chemistry Department (Windows Forms, 2022) — recognized by the Dean of Science and awarded a special commendation from the University of Aleppo Presidency.',
         ],
       },
     ];
 
     translations.en.additionalTechExperience = {
-      title: 'Additional Technical Experience',
+      title: 'CS & Engineering Foundations',
       sections: [
         {
-          title: 'Android Software & Device Maintenance',
+          title: 'Academic & Applied Software Engineering',
           items: [
-            'Installing and updating official and custom Android systems.',
-            'Performing flashing operations and system recovery for devices.',
-            'Working with Recovery Mode and Bootloader.',
-            'Diagnosing and solving software problems related to the Android system.',
-            'Practical experience in maintaining and programming personal Android devices across a number of different devices.',
-          ],
-        },
-        {
-          title: 'General Programming & Technical Skills',
-          items: [
-            'C# programming language',
-            'Data Structures & Algorithms',
-            'Software Engineering',
-            'Object-Oriented Programming (OOP)',
-            'Systems Analysis & Design',
-            'Relational database design and writing SQL queries',
-            'UML diagrams and systems modeling',
-            'Software Development Life Cycle (SDLC)',
-            'Software requirements analysis and preparing technical documentation',
+            'Data Structures & Algorithms — applied in search, pagination, caching, and scoring logic across production apps',
+            'Object-Oriented Programming (OOP) — foundation for all Flutter, Kotlin, and C# work',
+            'Systems Analysis & Design — requirements gathering, use-case modeling, and system specification',
+            'Relational database design — schema normalization, SQL queries, foreign keys, and index strategy',
+            'UML diagrams and systems modeling — class, sequence, and ER diagrams',
+            'Software Development Life Cycle (SDLC) — applied from requirements to store release on every major project',
+            'Software requirements analysis and technical documentation — written for all university and contract projects',
+            'C# programming (Windows Forms projects, academic coursework)',
           ],
         },
       ],
     };
 
     // ── Arabic overrides ───────────────────────────────────────────────
-    translations.ar.header.jobTitle = 'مطوّر برمجيات ومطوّر Flutter';
-    translations.ar.experienceRole = 'مطوّر برمجيات ومطوّر Flutter (مستقل/عقود) — 07/2022 – حتى الآن';
-    translations.ar.downloadsPage.subtitle = 'مطوّر برمجيات ومطوّر Flutter • عن بُعد من سوريا';
-    translations.ar.nav.additionalExp = 'خبرة إضافية';
+    translations.ar.header.jobTitle = 'مهندس برمجيات ومطوّر Flutter';
+    translations.ar.experienceRole = 'مطوّر Flutter — مستقل وعقود (عن بُعد) — 07/2022 – حتى الآن';
+    translations.ar.downloadsPage.subtitle = 'مهندس برمجيات ومطوّر Flutter • عن بُعد من سوريا';
+    translations.ar.nav.additionalExp = 'أسس هندسة البرمجيات';
+
     translations.ar.summaryText =
-      'مطوّر برمجيات ومطوّر Flutter يمتلك أكثر من ثلاث سنوات من الخبرة في تطوير تطبيقات الهواتف الذكية باستخدام Flutter وDart، مع خلفية أكاديمية في هندسة البرمجيات وتحليل الأنظمة وقواعد البيانات والخوارزميات. أعمل على مختلف مراحل تطوير البرمجيات، بدءاً من تحليل المتطلبات وتصميم الحلول البرمجية، مروراً بتطوير واجهات المستخدم وربط الخدمات الخلفية وقواعد البيانات، وصولاً إلى اختبار التطبيقات وتجهيزها للإطلاق والنشر. أمتلك خبرة قوية في تصميم التطبيقات باستخدام Clean Architecture وإدارة الحالة عبر BLoC وCubit، والتكامل مع Supabase وAppwrite وFirebase، بالإضافة إلى تطوير التطبيقات التي تعمل بكفاءة في ظروف الاتصال الضعيف بالإنترنت. كما أمتلك خبرة في تطبيقات الصوت، والتعرف الضوئي على النصوص (OCR)، ومعالجة المستندات والملفات.';
+      'مهندس برمجيات ومطوّر Flutter بخبرة 4 سنوات في تصميم وبناء ونشر تطبيقات موبايل إنتاجية على Google Play وApp Store — من بينها منصة صوت اجتماعي حيّة تجاوزت 5,000 تنزيل. مدعوم بأساس هندسة برمجيات أكاديمي تطبيقي: تحليل الأنظمة، تحليل المتطلبات، تصميم قواعد البيانات العلائقية، الخوارزميات، OOP، وSDLC — مطبّقة من أول رسمة حتى المنتج المنشور. متخصص في Clean Architecture وBLoC/Cubit وأنظمة offline-first، مع خبرة عميقة في الصوت/الدردشة اللحظية ومعالجة OCR على الجهاز والتكامل مع خدمات خلفية متعددة.';
+
     translations.ar.downloadsPage.atsSummary =
-      'مطوّر برمجيات ومطوّر Flutter بخبرة 3+ سنوات في العمل المستقل والعقود. خبرة في تطبيقات Flutter/Dart الإنتاجية، Clean Architecture، BLoC/Cubit، Supabase/Appwrite/Firebase، تدفقات offline-first، ميزات الصوت، OCR/المستندات، والنشر على المتاجر.';
+      'مهندس برمجيات ومطوّر Flutter بخبرة 4 سنوات في العمل المستقل والعقود. تطبيقات Flutter/Dart إنتاجية، Clean Architecture، BLoC/Cubit، Supabase/Appwrite/Firebase، تدفقات offline-first، صوت/دردشة لحظية، OCR/مستندات، تحليل أنظمة، تصميم قواعد بيانات، والنشر على المتاجر.';
+
+    // SE-specific skills list (Arabic)
+    translations.ar.skillsList = [
+      'اللغات البرمجية: Dart، SQL، C#، Kotlin (أساسي)',
+      'الموبايل والواجهات: Flutter، Material 3، Android، iOS، واجهات تكيّفية، RTL وتعريب (عربي/إنجليزي)، تحسين الصور',
+      'المعمارية وإدارة الحالة: Clean Architecture، SOLID، MVVM، وحدات feature-based، BLoC، Cubit، Provider، GetIt، Injectable، Freezed، dartz/Either',
+      'الخلفية والـ APIs: REST، Dio (interceptors، إعادة المحاولة)، WebSockets، Supabase (PostgreSQL، Auth، Realtime، Storage، RLS)، Firebase (Auth، FCM، Analytics، Crashlytics)، Appwrite',
+      'الوقت الحقيقي والوسائط: ZEGOCLOUD (ZegoExpress)، LiveKit، ZIM، just_audio، audio_session، رسوم SVGA/VAP، background_downloader',
+      'التخزين ودون اتصال: Hive، SQLite (sqflite)، تخزين آمن، offline-first caching، ترقيم، stale-while-revalidate، أخطاء typed',
+      'ML والمستندات: Google ML Kit، Tesseract OCR، TFLite، إنشاء/تعديل PDF، طباعة، بحث نصي كامل',
+      'الإصدار والجودة: App flavors، ProGuard/R8، Crashlytics، تخزين آمن، بيئات منفصلة، isolates ومهام خلفية، مشتريات داخل التطبيق، Google Play وApp Store',
+      'أسس علوم الحاسب وهندسة البرمجيات: هياكل البيانات والخوارزميات، OOP، هندسة البرمجيات، تحليل وتصميم الأنظمة، تصميم قواعد البيانات العلائقية وSQL، مخططات UML، SDLC، تحليل المتطلبات والتوثيق التقني',
+      'الأدوات: GoRouter، Git، GitHub، Postman، Figma، build_runner',
+    ];
+
+    // SE-specific achievements (Arabic)
+    translations.ar.achievements = [
+      'صممت وأطلقت أكثر من 5 تطبيقات موبايل إنتاجية من الصفر حتى النشر في مجالات الصوت الاجتماعي والمتاجر وإدارة المستندات والمحتوى',
+      'بنيت غرف صوت اجتماعية لحظية (LKLK) تدعم حتى 500 مستمع متزامن و20 مقعد ميكروفون — تجاوزت 5,000 تنزيل',
+      'نفّذت خط OCR مزدوج المحرّك (ML Kit + Tesseract) لاستخراج نصي موثوق من المستندات العربية والإنجليزية المختلطة',
+      'سلّمت نظامَي إدارة مستودعات (Windows Forms) لجامعة حلب — حصل كلاهما على شكر العمداء، والأخير على تقدير من رئاسة الجامعة',
+      'طبّقت SDLC كاملاً: تحليل متطلبات، نمذجة UML، تصميم قاعدة بيانات، تنفيذ، ونشر على المتاجر — في جميع المشاريع الرئيسية',
+      'صمّمت معمارية offline-first (Hive، SQLite، stale-while-revalidate، إعادة محاولة أُسّية 3 مرات، أخطاء typed Either) على تطبيقات متعددة',
+    ];
+
+    // SE-specific advanced skills (Arabic)
+    translations.ar.advancedSkills = [
+      'دورة حياة تطوير البرمجيات كاملة (SDLC): تحليل متطلبات ← نمذجة UML ← تصميم قاعدة بيانات ← تنفيذ ← إصدار — مطبّقة من البداية للنهاية في كل المشاريع',
+      'Clean Architecture مع وحدات feature-based وطبقات UI ومجال وبيانات مفصولة تماماً — على 5 تطبيقات إنتاجية',
+      'أنظمة offline-first بـ Hive وSQLite وترقيم وstale-while-revalidate وأخطاء typed',
+      'تكامل لحظي بـ WebSockets وSupabase Realtime وZEGOCLOUD ZegoExpress وZIM — مع منطق إعادة اتصال مستقل لكل قناة',
+      'خطوط ML على الجهاز: OCR (ML Kit + Tesseract)، استنتاج TFLite، تسجيل متعدد المرشّحين، ومعالجة PDF آمنة من الذاكرة',
+      'تصميم قواعد بيانات علائقية: تطبيع المخطط، استعلامات SQL، استراتيجيات ترقية SQLite الآمنة (additive-only)',
+    ];
 
     translations.ar.experienceEntries = [
       {
-        role: 'مطوّر Flutter, عمل مستقل وتعاقدي',
+        role: 'مطوّر Flutter — مستقل وعقود',
         period: '07/2022 – حتى الآن',
         location: 'عن بُعد',
         items: [
-          'تطوير وصيانة تطبيقات Flutter لمشاريع مستقلة وتعاقدية.',
-          'بناء واجهات المستخدم وربط الخدمات الخلفية (APIs) وإدارة التخزين المحلي.',
-          'تصميم التطبيقات باستخدام: Clean Architecture، BLoC / Cubit، GetIt (Dependency Injection)، Feature-Based Architecture.',
-          'دمج العديد من الخدمات والتقنيات مثل: REST APIs، Supabase، Appwrite، Firebase، WebSockets، غرف الصوت المباشرة عبر Zego / LiveKit، أنظمة المحادثة والدردشة الفورية، عمليات الشراء داخل التطبيق.',
-          'تنفيذ حلول Offline-First باستخدام Hive وSQLite لضمان استمرار عمل التطبيق دون اتصال دائم بالإنترنت.',
-          'تطوير أنظمة Pagination ومعالجة الأخطاء وإعادة المحاولة بشكل احترافي.',
-          'تجهيز الإصدارات النهائية للتطبيقات باستخدام: App Flavors، ProGuard / R8، Crashlytics، Secure Storage.',
-          'استخدام Isolates والمهام الخلفية لمعالجة العمليات الثقيلة مثل: OCR، ملفات PDF، تشغيل ومعالجة الصوت.',
-          'نشر وصيانة التطبيقات على Google Play وApple App Store.',
-          'المساهمة في إطلاق تطبيق عام تجاوز عدد تنزيلاته 5000 تنزيل.',
+          'صممت وأطلقت أكثر من 5 تطبيقات Flutter إنتاجية من الصفر حتى النشر — مع التحكم الكامل بالمعمارية وإدارة الحالة وتكامل الخلفية والأداء والنشر على Google Play وApp Store.',
+          'بنيت منصة صوت اجتماعي لحظية (LKLK) مصمّمة لتحمّل 500 مستمع و20 مقعد ميكروفون، مع تكامل SDK صوت مزدوج (ZEGOCLOUD + LiveKit) وثلاثة قنوات لحظية متزامنة مع منطق إعادة اتصال لكل قناة — تجاوز التطبيق 5,000 تنزيل.',
+          'صممت منظومة تحقيق الدخل والتفاعل: مشتريات داخل التطبيق (6 باقات عملات)، محرّك رسوم هدايا SVGA/VAP بسعة 8 رسوم متزامنة وفاصل طابور أقل من 100ms، ونظام VIP وتحفيز متدرّج.',
+          'سلّمت سوق سيارات ثنائي اللغة (Wolfera) على Supabase (PostgreSQL مع Row-Level Security، مصادقة مع Google/Apple SSO، محادثة لحظية، تخزين)، مع فلترة NSFW على الجهاز بـ TFLite، وتنبيهات FCM عند انخفاض الأسعار، وبحث متقدم بأكثر من 15 فلتراً مع تمرير لانهائي.',
+          'بنيت ماسح مستندات offline-first (Office Archiving) بخط OCR مزدوج المحرّك (Google ML Kit + Tesseract) للعربية/الإنجليزية — متعدد الاتجاهات، معالجة مسبقة، اختيار أفضل نتيجة — إضافةً لمجموعة أدوات PDF كاملة وبحث نصي في SQLite، كل ذلك على الجهاز بلا خادم.',
+          'وحّدت أسلوب الهندسة عبر جميع التطبيقات: Clean Architecture مع وحدات feature-based وBLoC/Cubit وGetIt/Injectable، ومعالجة أخطاء typed Either، وisolates ومهام خلفية.',
+          'حصّنت الإصدارات بـ app flavors وProGuard/R8 وتخزين آمن وبيئات منفصلة وفلترة أعطال Crashlytics.',
         ],
       },
       {
-        role: 'مطوّر تطبيقات أندرويد Kotlin، مشاريع جامعية ومستقلة',
-        period: '2022 – 2022',
+        role: 'مطوّر Android (Kotlin) — مشاريع جامعية ومستقلة',
+        period: '2022',
         location: 'حلب، سوريا',
         items: [
-          'تطوير منصة تعليمية متخصصة في البرمجة (مشروع تخرج) تضم كورسات ومعلومات وأكواد برمجية (2022).',
-          'تطبيق "أنا مبرمج": قسم لاختصاصات البرمجة مع أفضل المصادر لتعلمها؛ قسم لمعلومات عامة عن البرمجة؛ قسم WebView لمواقع تنفيذ الأكواد البرمجية (كونسول) لـ 8 لغات؛ قسم لأسئلة أتمتة لـ 8 لغات برمجة مع حساب السكور.',
+          'بنيت تطبيق "أنا مبرمج": مسارات تعلّم لـ 8 لغات برمجية، كونسول تنفيذ أكواد عبر WebView، واختبارات تلقائية بتصحيح ذاتي.',
+          'مشروع التخرج: منصة تعليمية برمجية (كورسات، مقالات، وأكواد قابلة للتنفيذ) — شمل تحليل المتطلبات، تصميم النظام، والتنفيذ الكامل.',
         ],
       },
       {
-        role: 'مطوّر تطبيقات ويندوز – مشاريع جامعية',
+        role: 'مطوّر تطبيقات ويندوز — مشاريع جامعية',
         period: '2021 – 2022',
         location: 'حلب، سوريا',
         items: [
-          'تطوير نظام إدارة مستودعات لكلية الصيدلة باستخدام Windows Forms (2021) وحصل على شكر خاص من عميد كلية الصيدلة.',
-          'تطوير نظام إدارة مستودعات لكلية العلوم – قسم الكيمياء باستخدام Windows Forms (2022) وحصل على شكر خاص من عميد كلية العلوم وشكر خاص من رئاسة جامعة حلب.',
+          'سلّمت نظام إدارة مستودعات لكلية الصيدلة (Windows Forms، 2021) — حصل على شكر خاص من عميد كلية الصيدلة.',
+          'سلّمت نظام إدارة مستودعات لكلية العلوم / قسم الكيمياء (Windows Forms، 2022) — حصل على شكر من عميد كلية العلوم وتقدير إضافي من رئاسة جامعة حلب.',
         ],
       },
     ];
 
     translations.ar.additionalTechExperience = {
-      title: 'خبرة تقنية إضافية',
+      title: 'أسس علوم الحاسب وهندسة البرمجيات',
       sections: [
         {
-          title: 'برمجيات وصيانة أجهزة Android',
+          title: 'هندسة برمجيات أكاديمية وتطبيقية',
           items: [
-            'تثبيت وتحديث أنظمة Android الرسمية والمخصصة.',
-            'تنفيذ عمليات Flash واستعادة النظام للأجهزة.',
-            'التعامل مع Recovery Mode وBootloader.',
-            'تشخيص وحل المشكلات البرمجية المتعلقة بنظام Android.',
-            'خبرة عملية في صيانة وبرمجة أجهزة Android الشخصية على عدد من الأجهزة المختلفة.',
-          ],
-        },
-        {
-          title: 'المهارات البرمجية والتقنية العامة',
-          items: [
-            'لغة البرمجة C#',
-            'هياكل البيانات والخوارزميات (Data Structures & Algorithms)',
-            'هندسة البرمجيات (Software Engineering)',
-            'البرمجة كائنية التوجه (OOP)',
-            'تحليل وتصميم الأنظمة (Systems Analysis & Design)',
-            'تصميم قواعد البيانات العلائقية وكتابة استعلامات SQL',
-            'مخططات UML ونمذجة الأنظمة',
-            'دورة حياة تطوير البرمجيات (SDLC)',
-            'تحليل المتطلبات البرمجية وإعداد الوثائق التقنية',
+            'هياكل البيانات والخوارزميات — مطبّقة في البحث والترقيم والتخزين وخوارزميات التسجيل في التطبيقات الإنتاجية',
+            'البرمجة كائنية التوجه (OOP) — أساس جميع مشاريع Flutter وKotlin وC#',
+            'تحليل وتصميم الأنظمة — تجميع المتطلبات، نمذجة حالات الاستخدام، وكتابة المواصفات',
+            'تصميم قواعد البيانات العلائقية — تطبيع المخطط، استعلامات SQL، المفاتيح الخارجية، واستراتيجية الفهرسة',
+            'مخططات UML ونمذجة الأنظمة — مخططات الفئات والتسلسل والكيانات',
+            'دورة حياة تطوير البرمجيات (SDLC) — مطبّقة من المتطلبات حتى النشر على المتاجر في كل مشروع رئيسي',
+            'تحليل المتطلبات البرمجية والتوثيق التقني — موثّق في جميع المشاريع الجامعية والتعاقدية',
+            'لغة C# (مشاريع Windows Forms، مواد أكاديمية)',
           ],
         },
       ],

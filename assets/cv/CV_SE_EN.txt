@@ -1,0 +1,264 @@
+================================================================================
+MOHAMAD ADIB TAWIL
+Software Engineer & Flutter Developer
+================================================================================
+
+Email:     mohamad.adib.tawil@gmail.com
+Phone:     +963 992 688 759
+Location:  Remote (Syria, UTC+3)
+LinkedIn:  https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/
+GitHub:    https://github.com/Mohamad-Adib-Tawil
+Portfolio: https://mohamad-adib-tawil.github.io/CV
+Status:    Available for Freelance | Open to Full-time / Contract (Remote)
+
+--------------------------------------------------------------------------------
+PROFESSIONAL SUMMARY
+--------------------------------------------------------------------------------
+
+Flutter developer with 4 years designing, building, and shipping production
+mobile apps to Google Play and the App Store — including a live social-audio
+platform that surpassed 5,000+ downloads. Specialized in Clean Architecture,
+BLoC/Cubit state management, and offline-first systems, with deep hands-on work
+in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and
+multi-backend integration (Supabase, Firebase, Appwrite). Owns the full mobile
+lifecycle end-to-end: requirements, architecture, UI, backend integration,
+performance tuning, and store release. Grounded in a software-engineering
+foundation: systems analysis, databases, algorithms, and OOP.
+
+--------------------------------------------------------------------------------
+WORK EXPERIENCE
+--------------------------------------------------------------------------------
+
+Flutter Developer — Independent & Contract (Remote)            07/2022 – Present
+
+- Designed and shipped 5+ production Flutter apps end-to-end across social-audio,
+  marketplace, document-management, and content domains — owning architecture,
+  state management, backend integration, performance, and store release on
+  Google Play and the App Store.
+- Built a real-time social-audio platform (LKLK) architected for up to 500
+  listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD +
+  LiveKit) and three concurrent realtime channels (Appwrite Realtime, WebSockets,
+  ZIM) with per-channel reconnect and exponential backoff; app surpassed 5,000+
+  downloads.
+- Engineered the app's monetization and engagement stack: in-app purchases
+  (6 coin tiers), an SVGA/VAP virtual-gift animation engine (concurrency-capped
+  at 8, sub-100 ms queue interval), VIP tiers, and gamified progression.
+- Delivered a bilingual (AR/EN) car marketplace (Wolfera) on Supabase
+  (PostgreSQL with Row-Level Security, Auth + Google/Apple SSO, Realtime chat,
+  Storage), with on-device TFLite image moderation, FCM price-drop alerts, and
+  advanced search across 15+ filters with infinite scroll.
+- Built an offline-first document scanner (Office Archiving) with a dual-engine
+  OCR pipeline (Google ML Kit + Tesseract) for Arabic/English — multi-orientation,
+  preprocessing, best-result scoring — plus a full PDF toolkit (watermark, sign,
+  password-protect) and SQLite full-text search, all on-device with no backend.
+- Standardized engineering across apps: Clean Architecture with feature-based
+  modules, BLoC/Cubit + GetIt/Injectable, typed Either error handling,
+  offline-first caching with pagination and 3-retry exponential backoff, and
+  isolates/background tasks for OCR, PDF, and audio.
+- Hardened releases with app flavors, ProGuard/R8, secure storage, environment
+  separation, and Crashlytics crash filtering; published and maintained apps on
+  both Google Play and the Apple App Store.
+
+Android Developer (Kotlin) — University & Independent Projects          2022
+
+- Built "Ana Mubarmej": curated learning tracks for 8 languages, an in-app
+  WebView code console, and auto-graded quizzes with scoring.
+- Graduation project: a programming-education platform (courses, articles, and
+  runnable code samples).
+
+Windows Application Developer — University Projects               2021 – 2022
+
+- Delivered two warehouse-management systems (Faculty of Pharmacy; Faculty of
+  Science / Chemistry) in Windows Forms — both recognized by their deans, with a
+  University of Aleppo Presidency commendation for the latter.
+
+--------------------------------------------------------------------------------
+FEATURED PROJECTS
+--------------------------------------------------------------------------------
+
+LKLK — Real-time Social Audio Platform (Production, Google Play)
+Tech: Flutter · flutter_bloc (Cubit) · GetIt · ZEGOCLOUD · LiveKit · ZIM ·
+      Appwrite · Dio · Hive · in_app_purchase
+
+- Shipped a production Arabic-market live-audio app (Clubhouse/Yalla category),
+  architected for up to 500 listeners and 20 mic seats per room — surpassed
+  5,000+ downloads over 80+ iterative releases.
+- Integrated dual audio SDKs (ZEGOCLOUD ZegoExpress + LiveKit) behind an
+  AudioRepository interface, enabling SDK switchover as a DI change, not a rewrite.
+- Built a virtual-gift engine (SVGA + VAP alpha-video) with a queue manager
+  capped at 8 concurrent animations and asset pre-download — eliminating frame
+  drops during gift bursts.
+- Implemented a coin economy (6 IAP tiers), VIP system, and gamification on a
+  feature-based Clean Architecture with GetIt + global MultiBlocProvider.
+- Play Store: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+
+Wolfera — Bilingual Car Marketplace (Production, Google Play + iOS)
+Tech: Flutter · Supabase · Firebase (FCM/Crashlytics) · BLoC/Cubit · GoRouter ·
+      GetIt + Injectable · Freezed · TFLite
+
+- Built a full AR/EN marketplace for buying, selling, and renting cars
+  (6 rental pricing tiers), with an admin approval workflow enforced by
+  Supabase Postgres Row-Level Security — moderation without a separate web panel.
+- Implemented multi-provider auth (email, Google, Apple Sign-In with SHA-256
+  nonce flow) against Supabase, plus real-time buyer-to-seller chat over Supabase
+  Realtime — no third-party messaging SDK.
+- Shipped on-device TFLite NSFW moderation with a fail-open design, and targeted
+  FCM price-drop alerts that diff six price fields and notify only users who
+  favorited the car.
+- GitHub:     https://github.com/Mohamad-Adib-Tawil/Wolfera
+- Play Store: https://play.google.com/store/apps/details?id=com.wolfera.wolfera
+
+Office Archiving — Offline Document Scanning & OCR (Production, Google Play)
+Tech: Flutter · flutter_bloc (Cubit) · SQLite (sqflite) · Google ML Kit ·
+      Tesseract OCR · pdf · printing · flutter_doc_scanner
+
+- Built a fully on-device document manager (no account, no cloud) with a custom
+  multi-candidate OCR engine: runs ML Kit + Tesseract across 4 orientations and
+  3 preprocessing variants, then scores and selects the best result — reliable
+  extraction on mixed Arabic/English scans.
+- Shipped a complete PDF toolkit (create, edit, rotate/reorder, watermark,
+  canvas signature, password-protect) and SQLite full-text search across OCR text.
+- Engineered memory-safe PDF processing (page/DPI/size caps + streamed
+  rasterization) that survives large files on mid-range Android, and additive-only
+  SQLite migrations that never break existing users.
+- GitHub:     https://github.com/Mohamad-Adib-Tawil/office_archiving
+- Play Store: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
+
+Quran Ahmed Karasi — Offline Quran Reader & Audio (Production, iOS + Android)
+Tech: Flutter · flutter_bloc (Cubit) · GetIt · just_audio · audio_session ·
+      background_downloader · quran_library
+
+- Published on both the App Store and Google Play — an offline-capable reader and
+  audio app with Surah/Juz/Hizb navigation and a personal study hub.
+- Designed an explicit audio state machine (8-phase enum over just_audio streams)
+  with OS audio-focus, speed/repeat/sleep-timer, and stable-phase buffering — no
+  UI flicker while the engine buffers.
+- Optimized rebuilds with buildWhen/BlocSelector against high-frequency position
+  streams, and added HTTPS + allow-listed-domain validation on every audio URL.
+- App Store: https://apps.apple.com/app/id6759857104
+- Play Store: https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1
+
+Code Book — Offline-First Digital Library (Clean Architecture reference)
+Tech: Flutter · flutter_bloc (Cubit) · Dio · Google Books API · Hive · GetIt ·
+      GoRouter · WebView · dartz
+
+- Cross-platform book-discovery app on strict 3-layer Clean Architecture with a
+  generic UseCase<Result, Param> base and dartz Either typed failures.
+- Offline-first Hive cache (per-category x per-sort isolated boxes) for instant
+  cold-start; every network call retried 3x with exponential backoff.
+- Debounced search (400 ms) with multi-dimension filters and infinite scroll, and
+  an in-app WebView reader with HTTPS enforcement on every redirect.
+- GitHub: https://github.com/Mohamad-Adib-Tawil/Code-Books-
+
+--------------------------------------------------------------------------------
+CORE SKILLS
+--------------------------------------------------------------------------------
+
+Languages:
+  Dart, SQL, C# (academic), Kotlin (basic)
+
+Mobile & UI:
+  Flutter, Material 3, Android, iOS, responsive UI, RTL & localization (AR/EN),
+  image optimization
+
+Architecture & State Management:
+  Clean Architecture, SOLID, MVVM, feature-based modules, BLoC, Cubit, Provider,
+  GetIt, Injectable, Freezed, dartz/Either
+
+Backend & APIs:
+  REST, Dio (interceptors, retry/backoff), WebSockets,
+  Supabase (PostgreSQL, Auth, Realtime, Storage, RLS),
+  Firebase (Auth, FCM, Analytics, Crashlytics), Appwrite
+
+Real-time & Media:
+  ZEGOCLOUD (ZegoExpress), LiveKit, ZIM, just_audio, audio_session,
+  SVGA/VAP animation, background_downloader
+
+Storage & Offline:
+  Hive, SQLite (sqflite), secure storage, offline-first caching, pagination,
+  stale-while-revalidate, typed failures
+
+On-device ML & Documents:
+  Google ML Kit, Tesseract OCR, TFLite, PDF generation/editing, printing,
+  full-text search
+
+Release & Quality:
+  App flavors, ProGuard/R8, Crashlytics, secure storage, environment separation,
+  isolates & background tasks, in-app purchases,
+  Google Play & App Store publishing
+
+Navigation & Tools:
+  GoRouter, Git, GitHub, Postman, Figma, build_runner / codegen
+
+--------------------------------------------------------------------------------
+KEY ACHIEVEMENTS
+--------------------------------------------------------------------------------
+
+- Designed and shipped 5+ production apps to Google Play and the App Store
+- Built real-time social-audio rooms supporting up to 500 concurrent listeners
+  and 20 mic seats using ZEGOCLOUD + LiveKit
+- Delivered one public app (LKLK) with 5,000+ downloads over 80+ build releases
+- Implemented a custom dual-engine OCR pipeline (ML Kit + Tesseract) for reliable
+  Arabic/English extraction on mixed real-world documents
+- Engineered offline-first flows with Hive, SQLite, pagination, stale-while-
+  revalidate, 3-retry exponential backoff, and typed Either failures
+- Shipped on-device TFLite image moderation, PDF security, and AI summarization
+  without any backend dependency
+
+--------------------------------------------------------------------------------
+ADVANCED ENGINEERING CAPABILITIES
+--------------------------------------------------------------------------------
+
+- Clean Architecture with feature-based modules and strictly separated UI,
+  domain, and data layers — applied across 5 production apps
+- Offline-first systems using Hive, SQLite, pagination, stale-while-revalidate
+  caching, and typed failure responses
+- Real-time integrations with WebSockets, Supabase Realtime, ZEGOCLOUD
+  ZegoExpress, and ZIM signaling — with per-channel reconnect logic
+- On-device ML pipelines: OCR (ML Kit + Tesseract), TFLite inference,
+  multi-candidate scoring, and memory-safe PDF rasterization
+- Production release engineering: flavors, ProGuard/R8, Crashlytics, secure
+  storage, environment separation, isolates, and background tasks
+
+--------------------------------------------------------------------------------
+SERVICES OFFERED
+--------------------------------------------------------------------------------
+
+- End-to-end mobile app development (iOS & Android) from concept to store
+- Clean Architecture design: feature-based modules, BLoC/Cubit, DI setup
+- Real-time features: audio rooms, messaging flows, WebSockets, Supabase Realtime
+- OCR and document workflows: ML Kit, Tesseract, SQLite, PDF generation/editing
+- Offline-first architecture: caching, retry handling, predictable error states
+- Backend integration: Supabase, Appwrite, Firebase, REST APIs
+- Store publishing and production build preparation (Google Play & App Store)
+
+--------------------------------------------------------------------------------
+ADDITIONAL TECHNICAL EXPERIENCE
+--------------------------------------------------------------------------------
+
+CS & Engineering Foundations:
+  Data Structures & Algorithms, OOP, Software Engineering, Systems Analysis &
+  Design, relational database design, SQL, UML diagrams, SDLC, requirements
+  analysis and technical documentation
+
+Android System Experience:
+  ROM flashing (official and custom), Recovery/Bootloader operations,
+  system-level diagnostics — hands-on experience across multiple devices
+
+--------------------------------------------------------------------------------
+EDUCATION
+--------------------------------------------------------------------------------
+
+Diploma (2-yr) in Computer Engineering — Focus: Software Engineering
+University of Aleppo, Aleppo, Syria | 2020 – 2022 | GPA: 82.89%
+Coursework: Data Structures, Algorithms, OOP, Database Systems, Software
+  Engineering, C#.
+Final Project: Udemy-style programming-education platform (web, Windows, mobile).
+
+--------------------------------------------------------------------------------
+LANGUAGES
+--------------------------------------------------------------------------------
+
+Arabic — Native     |     English — Professional working proficiency (technical)
+
+================================================================================
