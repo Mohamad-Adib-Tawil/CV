@@ -26,7 +26,7 @@
   const stats = [
     {
       icon: "fas fa-calendar-alt",
-      value: 3,
+      value: 4,
       label: {
         en: "Years Experience",
         ar: "سنوات الخبرة",
@@ -50,7 +50,7 @@
     },
     {
       icon: "fas fa-star",
-      value: 3,
+      value: 4,
       label: {
         en: "Years Contract Work",
         ar: "سنوات عمل مستقل/عقود",
