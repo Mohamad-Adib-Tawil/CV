@@ -647,7 +647,7 @@
             )}" data-alt="${escapeHtml(shotAlt)}">
               <img src="${escapeHtml(shot.src)}" alt="${escapeHtml(
             shotAlt
-          )}" decoding="async">
+          )}" loading="lazy" decoding="async">
             </button>
           `;
         })
@@ -818,10 +818,15 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             window.setTimeout(() => entry.target.classList.add("fade-in"), 100);
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      // threshold:0 + rootMargin so very tall sections (e.g. the screenshots
+      // gallery, ~15000px on mobile) still reveal — a 0.1 threshold can never be
+      // met when the section is far taller than the viewport, which left the
+      // section stuck at opacity:0 and the thumbnails invisible on phones.
+      { threshold: 0, rootMargin: "0px 0px -80px 0px" }
     );
 
     targets.forEach((target) => observer.observe(target));
