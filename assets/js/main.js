@@ -963,7 +963,7 @@
 </head>
 <body>
   <h1>${escapeHtml(profile.name)}</h1>
-  <div class="contact">${escapeHtml(profile.email)} | ${escapeHtml(compactUrl(profile.linkedinUrl))} | ${escapeHtml(
+  <div class="contact">${escapeHtml(profile.email)} | ${escapeHtml(profile.phone)} | ${escapeHtml(compactUrl(profile.linkedinUrl))} | ${escapeHtml(
       compactUrl(profile.githubUrl)
     )}</div>
   <div class="job-title">${escapeHtml(dict.header.jobTitle)} | ${escapeHtml(dict.header.availability)}</div>
@@ -1021,7 +1021,7 @@
 </head>
 <body>
   <h1>${escapeHtml(profile.name.toUpperCase())}</h1>
-  <div class="contact">${escapeHtml(profile.email)} | ${escapeHtml(compactUrl(profile.linkedinUrl))} | ${escapeHtml(
+  <div class="contact">${escapeHtml(profile.email)} | ${escapeHtml(profile.phone)} | ${escapeHtml(compactUrl(profile.linkedinUrl))} | ${escapeHtml(
       compactUrl(profile.githubUrl)
     )}</div>
   <div class="job-title">${

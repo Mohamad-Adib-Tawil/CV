@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/abo_alhuda/Documents/flutter_projects_abo_alhuda/CV_project/CV/.claude)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(grep -n \"data-page\\\\|<body\" se.html downloads.html index.html; echo \"===STATS DATA===\"; grep -n \"stats\\\\s*:\\\\|stats:\" assets/js/cv-data.js | head; echo \"---\"; sed -n '/stats:/,/]/p' assets/js/cv-data.js | head -40)",
+      "Bash(echo \"- [CV signature redesign]\\(cv-signature-redesign.md\\) — Signal indigo→cyan identity; index-only via home.css; se/downloads pending\")",
+      "Bash(printf -- \"- [CV signature redesign]\\(cv-signature-redesign.md\\) — Signal indigo→cyan identity; index-only via home.css; se/downloads pending\\\\n\")"
+    ]
+  }
+}
