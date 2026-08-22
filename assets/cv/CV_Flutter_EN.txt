@@ -189,6 +189,6 @@ Final Project: Udemy-style programming-education platform (web, Windows, mobile)
 LANGUAGES
 --------------------------------------------------------------------------------
 
-Arabic — Native     |     English — Professional working proficiency (technical)
+Arabic — Native     |     English — Professional working proficiency
 
 ================================================================================

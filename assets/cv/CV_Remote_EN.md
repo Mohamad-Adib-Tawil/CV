@@ -9,7 +9,7 @@ LinkedIn: https://linkedin.com/in/mohamad-adib-tawil-54024b314
 GitHub: https://github.com/Mohamad-Adib-Tawil
 
 ## Profile
-Flutter developer with 3+ years of independent and contract experience building production-oriented mobile apps with Flutter and Dart. I work across UI implementation, API integration, offline storage, real-time features, release preparation, and store publishing. My strongest work is in Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase integrations, offline-first flows, audio features, OCR/document workflows, and apps that need to stay usable under weak network conditions.
+Flutter developer with 4 years of independent and contract experience building production-oriented mobile apps with Flutter and Dart. I work across UI implementation, API integration, offline storage, real-time features, release preparation, and store publishing. My strongest work is in Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase integrations, offline-first flows, audio features, OCR/document workflows, and apps that need to stay usable under weak network conditions.
 
 ## Experience
 ### Flutter Developer, Independent / Contract
@@ -47,4 +47,4 @@ Aleppo, Syria
 
 ## Languages
 - Arabic: Native
-- English: Technical working proficiency
+- English: Professional working proficiency

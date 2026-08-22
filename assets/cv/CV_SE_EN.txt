@@ -202,8 +202,8 @@ KEY ACHIEVEMENTS
   Arabic/English extraction on mixed real-world documents
 - Engineered offline-first flows with Hive, SQLite, pagination, stale-while-
   revalidate, 3-retry exponential backoff, and typed Either failures
-- Shipped on-device TFLite image moderation, PDF security, and AI summarization
-  without any backend dependency
+- Shipped on-device TFLite image moderation and production-grade PDF security
+  tooling
 
 --------------------------------------------------------------------------------
 ADVANCED ENGINEERING CAPABILITIES
@@ -259,6 +259,6 @@ Final Project: Udemy-style programming-education platform (web, Windows, mobile)
 LANGUAGES
 --------------------------------------------------------------------------------
 
-Arabic — Native     |     English — Professional working proficiency (technical)
+Arabic — Native     |     English — Professional working proficiency
 
 ================================================================================
