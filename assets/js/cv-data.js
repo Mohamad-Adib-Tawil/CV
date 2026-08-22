@@ -2,6 +2,8 @@
   const profile = {
     name: "Mohamad Adib Tawil",
     email: "mohamad.adib.tawil@gmail.com",
+    phone: "+963992688759",
+    whatsappUrl: "https://wa.me/963992688759",
     linkedinUrl: "https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/",
     githubUrl: "https://github.com/Mohamad-Adib-Tawil",
     avatarUrl:
