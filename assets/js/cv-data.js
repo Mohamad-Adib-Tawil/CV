@@ -350,13 +350,13 @@
         },
       },
       description: {
-        en: `Offline-first document scanning &amp; archiving app — no account, no cloud. Dual-engine OCR pipeline (Google ML Kit + Tesseract) for Arabic/English with preprocessing and best-result scoring, full-text SQLite search, a complete PDF toolkit (create, edit, watermark, sign, password-protect), AI translation/summarization with offline fallbacks, and a 16-theme engine — built with Flutter and flutter_bloc. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
-        ar: `تطبيق مسح وأرشفة مستندات offline-first — بلا حساب أو سحابة. خطّ OCR مزدوج (Google ML Kit + Tesseract) للعربية/الإنجليزية مع معالجة مسبقة واختيار أفضل نتيجة، وبحثًا نصيًا كاملًا في SQLite، وأدوات PDF متكاملة (إنشاء، تعديل، علامة مائية، توقيع، حماية بكلمة سر)، وترجمة/تلخيص AI مع بدائل دون اتصال، ومحرّك 16 ثيم — بـFlutter وflutter_bloc. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
+        en: `Offline-first document scanning &amp; archiving app — no account, no cloud. Dual-engine OCR pipeline (Google ML Kit + Tesseract) for Arabic/English with preprocessing and best-result scoring, full-text SQLite search, a complete PDF toolkit (create, edit, watermark, sign, password-protect), and a 16-theme engine — built with Flutter and flutter_bloc. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
+        ar: `تطبيق مسح وأرشفة مستندات offline-first — بلا حساب أو سحابة. خطّ OCR مزدوج (Google ML Kit + Tesseract) للعربية/الإنجليزية مع معالجة مسبقة واختيار أفضل نتيجة، وبحثًا نصيًا كاملًا في SQLite، وأدوات PDF متكاملة (إنشاء، تعديل، علامة مائية، توقيع، حماية بكلمة سر)، ومحرّك 16 ثيم — بـFlutter وflutter_bloc. <a href="https://github.com/Mohamad-Adib-Tawil/office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a> · <a href="https://play.google.com/store/apps/details?id=com.werewolf.office_archiving" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
       },
       slug: "office",
       bio: {
-        en: "An offline-first, privacy-focused app to scan, organize, and search documents entirely on-device — no account or cloud required. Covers desktop-grade PDF tooling and Arabic-first OCR. Solo project across architecture, the dual-engine OCR pipeline, PDF tools, AI services, and the fully bilingual UI.",
-        ar: "تطبيق offline-first يركّز على الخصوصية لمسح وتنظيم والبحث في المستندات على الجهاز بالكامل — بلا حساب أو سحابة. يوفّر أدوات PDF احترافية وOCR عربي أولًا. مشروع فردي شمل المعمارية، خطّ OCR المزدوج، أدوات PDF، خدمات AI، والواجهة الثنائية.",
+        en: "An offline-first, privacy-focused app to scan, organize, and search documents entirely on-device — no account or cloud required. Covers desktop-grade PDF tooling and Arabic-first OCR. Solo project across architecture, the dual-engine OCR pipeline, PDF tools, and the fully bilingual UI.",
+        ar: "تطبيق offline-first يركّز على الخصوصية لمسح وتنظيم والبحث في المستندات على الجهاز بالكامل — بلا حساب أو سحابة. يوفّر أدوات PDF احترافية وOCR عربي أولًا. مشروع فردي شمل المعمارية، خطّ OCR المزدوج، أدوات PDF، والواجهة الثنائية.",
       },
       linkedin: {
         en: "🗂️ Built Office Archiving — an offline-first Flutter document manager with dual-engine Arabic/English OCR (ML Kit + Tesseract), full-text SQLite search, and a complete on-device PDF toolkit (create, edit, watermark, sign, password-protect).\n\n#Flutter #OCR #OfflineFirst #FlutterBloc",
@@ -524,7 +524,7 @@
         subtitle: "Flutter Developer / Mobile Application Engineer • Remote from Syria",
         downloadsTitle: "CV Downloads",
         downloadsIntro:
-          'Place your DOCX/PDF files in <code>assets/downloads/</code>. Use the filenames below so links work automatically.',
+          "Download the latest English or Arabic CV in DOCX or PDF format.",
         englishLabel: "English",
         arabicLabel: "العربية",
         exportWord: "Generate Word (current language)",
@@ -533,7 +533,7 @@
         plainTextIntro: "You can copy the bilingual CV text directly from",
         fileUnavailable: "Soon — file will be available shortly.",
         atsSummary:
-          "Flutter Developer / Mobile Application Engineer with 3+ years of independent and contract experience. Production-oriented Flutter/Dart apps, Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase, offline-first flows, audio features, OCR/document workflows, and store publishing.",
+          "Flutter Developer / Mobile Application Engineer with 4 years of independent and contract experience. Production-oriented Flutter/Dart apps, Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase, offline-first flows, audio features, OCR/document workflows, and store publishing.",
         keywords: [
           "Flutter",
           "Dart",
@@ -588,7 +588,7 @@
         "Delivered one public app (LKLK) with 5,000+ downloads over 80+ build releases",
         "Implemented a custom dual-engine OCR pipeline (ML Kit + Tesseract) for reliable Arabic/English extraction on mixed real-world documents",
         "Engineered offline-first flows with Hive, SQLite, pagination, stale-while-revalidate, 3-retry exponential backoff, and typed Either failures",
-        "Shipped on-device TFLite image moderation, PDF security tooling, and AI summarization without any backend dependency",
+        "Shipped on-device TFLite image moderation and production-grade PDF security tooling",
       ],
       advancedSkills: [
         "Clean Architecture with feature-based modules and strictly separated UI, domain, and data layers — applied across 5 production apps",
@@ -606,7 +606,7 @@
         "Backend integration: Supabase, Appwrite, Firebase, REST APIs",
         "Store publishing and production build preparation (Google Play & App Store)",
       ],
-      languagesText: "Arabic (Native), English (Technical working proficiency)",
+      languagesText: "Arabic (Native), English (Professional working proficiency)",
       detailPage: {
         viewDetails: "View details",
         back: "Back to CV",
@@ -686,7 +686,7 @@
         subtitle: "مطوّر Flutter / مهندس تطبيقات موبايل • عن بُعد من سوريا",
         downloadsTitle: "تنزيلات السيرة الذاتية",
         downloadsIntro:
-          'ضع ملفات DOCX/PDF داخل <code>assets/downloads/</code>. استخدم أسماء الملفات التالية ليعمل الربط تلقائيًا.',
+          "نزّل أحدث نسخة من السيرة الذاتية بالعربية أو الإنجليزية بصيغة DOCX أو PDF.",
         englishLabel: "English",
         arabicLabel: "العربية",
         exportWord: "إنشاء ملف Word (للغة الحالية)",
@@ -695,7 +695,7 @@
         plainTextIntro: "يمكنك نسخ النسخة الثنائية اللغة مباشرة من",
         fileUnavailable: "قريبًا — الملف سيتوفر خلال وقت قصير.",
         atsSummary:
-          "مطوّر Flutter / مهندس تطبيقات موبايل بخبرة 3+ سنوات في العمل المستقل والعقود. خبرة في تطبيقات Flutter/Dart الإنتاجية، Clean Architecture، BLoC/Cubit، Supabase/Appwrite/Firebase، تدفقات offline-first، ميزات الصوت، OCR/المستندات، والنشر على المتاجر.",
+          "مطوّر Flutter / مهندس تطبيقات موبايل بخبرة 4 سنوات في العمل المستقل والعقود. خبرة في تطبيقات Flutter/Dart الإنتاجية، Clean Architecture، BLoC/Cubit، Supabase/Appwrite/Firebase، تدفقات offline-first، ميزات الصوت، OCR/المستندات، والنشر على المتاجر.",
         keywords: [
           "Flutter",
           "Dart",
@@ -750,7 +750,7 @@
         "تجاوز أحد التطبيقات العامة (LKLK) 5,000 تنزيل عبر أكثر من 80 إصداراً",
         "نفّذت خط OCR مزدوج المحرّك (ML Kit + Tesseract) لاستخراج نصي موثوق من المستندات العربية والإنجليزية المختلطة",
         "صممت أنظمة offline-first بـ Hive وSQLite وترقيم وstale-while-revalidate وإعادة محاولة أُسّية وأخطاء typed Either",
-        "أطلقت فلترة صور TFLite وأمان PDF وتلخيص AI بلا أي تبعية على خادم",
+        "أطلقت فلترة صور TFLite على الجهاز وأدوات أمان PDF بمستوى إنتاجي",
       ],
       advancedSkills: [
         "Clean Architecture مع وحدات feature-based وطبقات UI ومجال وبيانات مفصولة تماماً — مطبّقة على 5 تطبيقات إنتاجية",
@@ -768,7 +768,7 @@
         "تكامل خلفي: Supabase وAppwrite وFirebase وREST APIs",
         "نشر على المتاجر وإعداد إصدارات إنتاجية (Google Play وApp Store)",
       ],
-      languagesText: "العربية (لغة أم)، الإنجليزية (كفاءة عمل تقنية)",
+      languagesText: "العربية (لغة أم)، الإنجليزية (كفاءة مهنية في العمل)",
       detailPage: {
         viewDetails: "التفاصيل",
         back: "العودة إلى السيرة",
