@@ -15,11 +15,11 @@
     files: {
       en: {
         docx: "assets/downloads/CV_EN.docx",
-        pdf: "assets/downloads/CV_EN.pdf",
+        pdf: "assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf",
       },
       ar: {
         docx: "assets/downloads/CV_AR.docx",
-        pdf: "assets/downloads/CV_AR.pdf",
+        pdf: "assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf",
       },
     },
     plainTextPath: "assets/cv/CV_Text_EN_AR.md",
@@ -994,9 +994,9 @@
     };
 
     downloads.files.en.docx = 'assets/downloads/CV_SE_EN.docx';
-    downloads.files.en.pdf = 'assets/downloads/CV_SE_EN.pdf';
+    downloads.files.en.pdf = 'assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf';
     downloads.files.ar.docx = 'assets/downloads/CV_SE_AR.docx';
-    downloads.files.ar.pdf = 'assets/downloads/CV_SE_AR.pdf';
+    downloads.files.ar.pdf = 'assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf';
   }
 
   const CV_DATA = {
