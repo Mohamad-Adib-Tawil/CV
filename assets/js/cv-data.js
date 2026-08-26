@@ -645,7 +645,7 @@
         download: "تحميل السيرة",
       },
       header: {
-        jobTitle: "مطوّر Flutter / مهندس تطبيقات موبايل",
+        jobTitle: "مطوّر Flutter / مهندس تطبيقات للهواتف",
         availability: "متاح للعمل الحر",
         employment: "متاح لعقود/دوام كامل",
         badges: [
@@ -686,7 +686,7 @@
       downloadsPage: {
         backToCv: "العودة إلى السيرة",
         title: "تحميل السيرة الذاتية",
-        subtitle: "مطوّر Flutter / مهندس تطبيقات موبايل • عن بُعد من سوريا",
+        subtitle: "مطوّر Flutter / مهندس تطبيقات للهواتف • أعمل عن بُعد من سوريا",
         downloadsTitle: "تنزيلات السيرة الذاتية",
         downloadsIntro:
           "نزّل أحدث نسخة من السيرة الذاتية بالعربية أو الإنجليزية بصيغة DOCX أو PDF.",

@@ -668,7 +668,9 @@
   };
 
   const renderDownloadsPage = (dict) => {
-    setText("downloadsBackLink", dict.downloadsPage.backToCv);
+    const lang = state.currentLang;
+    const isSoftware = typeof window !== "undefined" && window.CV_VERSION === "se";
+    setText("downloadsBackText", dict.downloadsPage.backToCv);
     setText("downloadsPageTitle", dict.downloadsPage.title);
     setHeadingText("downloadsSectionTitle", dict.downloadsPage.downloadsTitle);
     setHeadingText("plainTextSectionTitle", dict.downloadsPage.plainTextTitle);
@@ -677,6 +679,17 @@
     setText("downloadArabicLabel", dict.downloadsPage.arabicLabel);
     setText("exportWordText", dict.downloadsPage.exportWord);
     setText("exportATSText", dict.downloadsPage.exportATS);
+    setText("downloadsEyebrow", lang === "ar" ? "مكتبة السيرة الذاتية" : "Resume library");
+    setText("downloadsSectionEyebrow", lang === "ar" ? "اختر اللغة والصيغة" : "Choose your format");
+    setText("downloadEnglishDescription", lang === "ar" ? "نسخة مهنية مكتوبة باللغة الإنجليزية." : "English-language professional resume.");
+    setText("downloadArabicDescription", lang === "ar" ? "نسخة عربية واضحة ومتوافقة مع اتجاه RTL." : "Clear Arabic resume with full RTL support.");
+    setText("downloadToolsEyebrow", lang === "ar" ? "هل تحتاج ملفاً قابلاً للتعديل؟" : "Need a tailored file?");
+    setText("downloadToolsTitle", lang === "ar" ? "أنشئ نسخة Word قابلة للتعديل" : "Generate an editable version");
+    setText("downloadToolsIntro", lang === "ar" ? "أنشئ ملف Word باستخدام اللغة المعروضة حالياً في الموقع." : "Create a Word document using the currently selected site language.");
+    setText("downloadsAvailability", lang === "ar" ? "متاح للعمل عن بُعد" : "Available for remote work");
+    setText("downloadsBrandRole", lang === "ar"
+      ? (isSoftware ? "مهندس برمجيات · مطوّر Flutter" : "مهندس تطبيقات للهواتف")
+      : (isSoftware ? "Software engineer · Flutter developer" : "Mobile application engineer"));
 
     const plainTextIntro = $("plainTextIntro");
     if (plainTextIntro) {
@@ -804,6 +817,9 @@
     if (notFound) notFound.hidden = true;
     if (detail) detail.hidden = false;
 
+    const media = project.media || {};
+    const screenshots = Array.isArray(media.screenshots) ? media.screenshots : [];
+
     const alt = project.image.alt[lang] || project.image.alt.en;
     document.title = `${project.name} — ${profile.name}`;
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -818,6 +834,36 @@
     }
 
     setText("detailName", project.name);
+    setText("detailEyebrow", lang === "ar" ? "دراسة مشروع" : "Project case study");
+    setText("detailHeroLabel", lang === "ar" ? "تطبيق هاتف جاهز للنشر" : "Production mobile application");
+    setText("detailBrandRole", lang === "ar" ? "مهندس تطبيقات للهواتف" : "Mobile application engineer");
+    setText("detailIndexLabel", lang === "ar" ? "محتويات الصفحة" : "On this page");
+    setText("detailOverviewNav", dict.detailPage.overview);
+    setText("detailScreensNavText", dict.detailPage.screenshots);
+    setText("detailVideoNavText", dict.detailPage.video);
+    setText("detailLinkedinNavText", dict.detailPage.linkedin);
+    setText("overviewEyebrow", lang === "ar" ? "عن التطبيق" : "The product");
+    setText("screensEyebrow", lang === "ar" ? "واجهات التطبيق" : "Interface gallery");
+    setText("videoEyebrow", lang === "ar" ? "جولة داخل التطبيق" : "Product walkthrough");
+    setText("linkedinEyebrow", lang === "ar" ? "نص جاهز للمشاركة" : "Ready to share");
+
+    const curatedHeroScreens = {
+      lklk: ["assets/images/portfolio/lklk-live-room.jpg", "assets/images/portfolio/lklk-levels.jpg"],
+      wolfera: ["assets/images/portfolio/wolfera-marketplace.jpg", "assets/images/portfolio/wolfera-listing.jpg"],
+      office: ["assets/images/portfolio/office-dashboard.jpg", "assets/images/portfolio/office-search.jpg"],
+    };
+    const heroSources = curatedHeroScreens[project.id]
+      || screenshots.slice(0, 2).map((shot) => shot.src)
+      || [];
+    const resolvedHeroSources = heroSources.length ? heroSources : [project.image.src];
+    const heroVisual = $("detailHeroVisual");
+    if (heroVisual) {
+      heroVisual.classList.toggle("is-single", resolvedHeroSources.length === 1);
+      heroVisual.setAttribute("aria-label", lang === "ar" ? `واجهات مختارة من ${project.name}` : `Selected ${project.name} screens`);
+      heroVisual.innerHTML = resolvedHeroSources.slice(0, 2).map((src, index) =>
+        `<img class="detail-hero-screen" src="${escapeHtml(src)}" alt="${escapeHtml(`${project.name} ${lang === "ar" ? "واجهة تطبيق" : "application screen"} ${index + 1}`)}" decoding="async"${index ? ' loading="lazy"' : ''}>`
+      ).join("");
+    }
 
     const techHost = $("detailTech");
     if (techHost) {
@@ -888,10 +934,9 @@
     }
 
     // Screenshots gallery
-    const media = project.media || {};
     const screensSection = $("detailScreens");
     const gallery = $("detailGallery");
-    const screenshots = Array.isArray(media.screenshots) ? media.screenshots : [];
+    const screensNav = $("detailScreensNav");
 
     if (gallery && screenshots.length) {
       const preferred = {
@@ -938,18 +983,22 @@
       });
 
       if (screensSection) screensSection.hidden = false;
+      if (screensNav) screensNav.hidden = false;
     } else if (screensSection) {
       screensSection.hidden = true;
+      if (screensNav) screensNav.hidden = true;
     }
 
     // LinkedIn post
     const linkedinSection = $("detailLinkedinSection");
+    const linkedinNav = $("detailLinkedinNav");
     if (linkedinSection) {
       const linkedinText = (project.linkedin && (project.linkedin[lang] || project.linkedin.en)) || "";
       if (linkedinText.trim()) {
         setText("detailLinkedinText", linkedinText);
         setText("linkedinCopyLabel", dict.detailPage.linkedinCopy);
         linkedinSection.hidden = false;
+        if (linkedinNav) linkedinNav.hidden = false;
         const copyBtn = $("linkedinCopyBtn");
         if (copyBtn) {
           copyBtn.onclick = () => {
@@ -964,12 +1013,14 @@
         }
       } else {
         linkedinSection.hidden = true;
+        if (linkedinNav) linkedinNav.hidden = true;
       }
     }
 
     // Video
     const videoSection = $("detailVideoSection");
     const videoHost = $("detailVideo");
+    const videoNav = $("detailVideoNav");
     if (videoHost && media.video) {
       const ytId = media.video;
       videoHost.innerHTML = `
@@ -983,8 +1034,10 @@
         ></iframe>
       `;
       if (videoSection) videoSection.hidden = false;
+      if (videoNav) videoNav.hidden = false;
     } else if (videoSection) {
       videoSection.hidden = true;
+      if (videoNav) videoNav.hidden = true;
     }
   };
 
@@ -997,6 +1050,21 @@
     // R-14 lock: switch font via class, not an inline body style, so the
     // language system never globally overrides the CSS font/typography system.
     body.classList.toggle("lang-ar", state.currentLang === "ar");
+
+    const languageControl = $("langSelect");
+    if (languageControl) languageControl.setAttribute("aria-label", state.currentLang === "ar" ? "اللغة" : "Language");
+    const themePresetControl = $("themePreset");
+    if (themePresetControl) {
+      themePresetControl.setAttribute("aria-label", state.currentLang === "ar" ? "اللون المميز" : "Theme preset");
+      const names = state.currentLang === "ar"
+        ? ["أزرق", "بنفسجي", "فيروزي", "رمادي", "ملكي", "فضي", "منتصف الليل"]
+        : ["Blue", "Purple", "Teal", "Slate", "Royal", "Silver", "Midnight"];
+      themePresetControl.querySelectorAll("option").forEach((option, index) => {
+        option.textContent = names[index] || option.textContent;
+      });
+    }
+    const detailIndex = document.querySelector(".detail-index");
+    if (detailIndex) detailIndex.setAttribute("aria-label", state.currentLang === "ar" ? "محتويات الصفحة" : "On this page");
 
     renderNav(dict);
     renderHeader(dict);

@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/tokens.css?v=20260826b" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260826b" />
-    <link rel="stylesheet" href="assets/css/home.css?v=20260826b" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=20260826e" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260826e" />
+    <link rel="stylesheet" href="assets/css/home.css?v=20260826e" />
   </head>
   <body data-page="downloads" class="home-redesign">
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -37,16 +37,26 @@
     </button>
 
     <main id="main">
-      <div class="container">
-        <nav class="top-nav" aria-label="Primary">
-          <a id="downloadsBackLink" href="index.html#top">Back to CV</a>
-          <a href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener">GitHub</a>
+      <div class="container inner-page-shell">
+        <nav class="top-nav inner-page-nav" aria-label="Primary">
+          <a class="inner-brand" href="index.html#top" aria-label="Mohamad Adib Tawil, home">
+            <span class="brand-mark" aria-hidden="true">MT</span>
+            <span><strong>Mohamad Adib Tawil</strong><small id="downloadsBrandRole">Mobile application engineer</small></span>
+          </a>
+          <div class="nav-controls">
+            <a id="downloadsBackLink" class="detail-back" href="index.html#top"><i class="fas fa-arrow-left" aria-hidden="true"></i> <span id="downloadsBackText">Back to CV</span></a>
+            <div class="lang-switcher">
+              <label for="langSelect" class="visually-hidden">Language</label>
+              <select id="langSelect" class="theme-select" aria-label="Language"><option value="en">English</option><option value="ar">العربية</option></select>
+            </div>
+            <a class="inner-nav-icon" href="https://github.com/Mohamad-Adib-Tawil" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
         </nav>
 
-        <header id="header">
-          <img src="assets/images/portfolio/ME_Profile.png" alt="Mohamad Adib Tawil" class="profile-pic floating" width="120" height="120" />
+        <header id="header" class="downloads-hero">
           <div class="header-info">
-            <h1 id="downloadsPageTitle" class="gradient-text">Download CV</h1>
+            <p id="downloadsEyebrow" class="eyebrow">Resume library</p>
+            <h1 id="downloadsPageTitle">Download CV</h1>
             <div id="jobTitle" class="title">Flutter Developer / Mobile Application Engineer • Remote from Syria</div>
             <div class="contact-info">
               <div class="contact-item">
@@ -63,37 +73,53 @@
               </div>
             </div>
           </div>
+          <div class="downloads-portrait">
+            <div class="downloads-portrait-frame">
+              <img src="assets/images/portfolio/ME_Profile.png" alt="Mohamad Adib Tawil" class="profile-pic" width="360" height="360" />
+              <span id="downloadsAvailability"><i class="fas fa-circle" aria-hidden="true"></i> Available for remote work</span>
+            </div>
+          </div>
         </header>
 
-        <section>
-          <h2 id="downloadsSectionTitle"><i class="fas fa-file-download"></i> CV Downloads</h2>
-          <p id="downloadsIntro">Download the latest English or Arabic CV in DOCX or PDF format.</p>
-          <div class="project-table download-list">
-            <ul>
-              <li>
-                <strong id="downloadEnglishLabel">English</strong> —
-                <a id="downloadEnglishDocx" href="assets/downloads/CV_EN.docx" download>DOCX</a> ·
-                <a id="downloadEnglishPdf" href="assets/downloads/CV_EN.pdf" target="_blank" rel="noopener">PDF</a>
-              </li>
-              <li>
-                <strong id="downloadArabicLabel">العربية</strong> —
-                <a id="downloadArabicDocx" href="assets/downloads/CV_AR.docx" download>DOCX</a> ·
-                <a id="downloadArabicPdf" href="assets/downloads/CV_AR.pdf" target="_blank" rel="noopener">PDF</a>
-              </li>
-            </ul>
+        <section class="resume-library">
+          <div class="downloads-section-heading">
+            <div><p id="downloadsSectionEyebrow" class="eyebrow">Choose your format</p><h2 id="downloadsSectionTitle">CV Downloads</h2></div>
+            <p id="downloadsIntro">Download the latest English or Arabic CV in DOCX or PDF format.</p>
           </div>
-          <div class="cta-buttons download-actions">
-            <button id="exportWordBtn" class="btn btn-primary"><i class="fas fa-file-word"></i> <span id="exportWordText">Generate Word (current language)</span></button>
-            <button id="exportATSBtn" class="btn btn-secondary"><i class="fas fa-robot"></i> <span id="exportATSText">Generate ATS Word</span></button>
+          <div class="resume-grid">
+            <article class="resume-card">
+              <div class="resume-card-top"><span class="resume-language-code">EN</span><i class="fas fa-file-lines" aria-hidden="true"></i></div>
+              <div><h3 id="downloadEnglishLabel">English</h3><p id="downloadEnglishDescription">English-language professional resume.</p></div>
+              <div class="resume-formats">
+                <a id="downloadEnglishPdf" class="resume-format resume-format--primary" href="assets/downloads/CV_EN.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>
+                <a id="downloadEnglishDocx" class="resume-format" href="assets/downloads/CV_EN.docx" download><i class="fas fa-file-word" aria-hidden="true"></i> DOCX</a>
+              </div>
+            </article>
+            <article class="resume-card">
+              <div class="resume-card-top"><span class="resume-language-code">AR</span><i class="fas fa-file-lines" aria-hidden="true"></i></div>
+              <div><h3 id="downloadArabicLabel">العربية</h3><p id="downloadArabicDescription">نسخة عربية واضحة ومتوافقة مع اتجاه RTL.</p></div>
+              <div class="resume-formats">
+                <a id="downloadArabicPdf" class="resume-format resume-format--primary" href="assets/downloads/CV_AR.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>
+                <a id="downloadArabicDocx" class="resume-format" href="assets/downloads/CV_AR.docx" download><i class="fas fa-file-word" aria-hidden="true"></i> DOCX</a>
+              </div>
+            </article>
+          </div>
+          <div class="download-toolbox">
+            <div><span id="downloadToolsEyebrow" class="eyebrow">Need a tailored file?</span><h3 id="downloadToolsTitle">Generate an editable version</h3><p id="downloadToolsIntro">Create a Word document using the currently selected site language.</p></div>
+            <div class="cta-buttons download-actions">
+              <button id="exportWordBtn" class="btn btn-primary"><i class="fas fa-file-word"></i> <span id="exportWordText">Generate Word (current language)</span></button>
+              <button id="exportATSBtn" class="btn btn-secondary"><i class="fas fa-robot"></i> <span id="exportATSText">Generate ATS Word</span></button>
+            </div>
           </div>
         </section>
 
-        <section>
-          <h2 id="plainTextSectionTitle"><i class="fas fa-file-alt"></i> Plain Text Version</h2>
+        <section class="plain-text-card">
+          <span class="plain-text-icon"><i class="fas fa-align-left" aria-hidden="true"></i></span>
+          <div><h2 id="plainTextSectionTitle">Plain Text Version</h2>
           <p id="plainTextIntro">
             You can copy the bilingual CV text directly from
             <a id="plainTextLink" href="assets/cv/CV_Text_EN_AR.md" target="_blank" rel="noopener">CV_Text_EN_AR.md</a>
-          </p>
+          </p></div>
         </section>
 
         <footer class="footer downloads-footer">
@@ -124,7 +150,7 @@
       </div>
     </main>
 
-    <script src="assets/js/cv-data.js?v=20260826b" defer></script>
-    <script src="assets/js/main.js?v=20260826b" defer></script>
+    <script src="assets/js/cv-data.js?v=20260826e" defer></script>
+    <script src="assets/js/main.js?v=20260826e" defer></script>
   </body>
 </html>
