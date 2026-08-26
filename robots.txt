@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohamad-adib-tawil.github.io/CV/sitemap.xml
