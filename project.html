@@ -32,9 +32,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/tokens.css?v=20260826b">
-        <link rel="stylesheet" href="assets/css/styles.css?v=20260826b">
-        <link rel="stylesheet" href="assets/css/home.css?v=20260826b">
+        <link rel="stylesheet" href="assets/css/tokens.css?v=20260826e">
+        <link rel="stylesheet" href="assets/css/styles.css?v=20260826e">
+        <link rel="stylesheet" href="assets/css/home.css?v=20260826e">
 </head>
 <body data-page="project" class="home-redesign">
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -48,12 +48,16 @@
     </button>
 
     <main id="main">
-    <div class="container">
-        <nav class="top-nav cv-nav" aria-label="Primary">
-            <a id="detailBackLink" class="detail-back" href="index.html#work">
-                <i class="fas fa-arrow-left" aria-hidden="true"></i> <span id="detailBackText">Back to CV</span>
+    <div class="container inner-page-shell">
+        <nav class="top-nav inner-page-nav" aria-label="Primary">
+            <a class="inner-brand" href="index.html#top" aria-label="Mohamad Adib Tawil, home">
+                <span class="brand-mark" aria-hidden="true">MT</span>
+                <span><strong>Mohamad Adib Tawil</strong><small id="detailBrandRole">Mobile application engineer</small></span>
             </a>
             <div class="nav-controls">
+                <a id="detailBackLink" class="detail-back" href="index.html#work">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> <span id="detailBackText">Back to CV</span>
+                </a>
                 <div class="theme-switcher">
                     <label for="themePreset" class="visually-hidden">Theme</label>
                     <select id="themePreset" class="theme-select" aria-label="Theme preset">
@@ -78,39 +82,73 @@
 
         <article id="projectDetail" class="project-detail" hidden>
             <header class="detail-hero">
-                <img id="detailIcon" class="detail-icon" width="96" height="96" decoding="async" alt="">
-                <div class="detail-hero-info">
-                    <h1 id="detailName" class="gradient-text"></h1>
-                    <ul id="detailTech" class="detail-tech" aria-label="Tech stack"></ul>
+                <div class="detail-hero-copy">
+                    <p id="detailEyebrow" class="eyebrow">Project case study</p>
+                    <div class="detail-title-lockup">
+                        <img id="detailIcon" class="detail-icon" width="96" height="96" decoding="async" alt="">
+                        <div>
+                            <h1 id="detailName"></h1>
+                            <p id="detailHeroLabel" class="detail-hero-label">Production mobile application</p>
+                        </div>
+                    </div>
+                    <div id="detailBio" class="detail-bio"></div>
                     <div id="detailActions" class="detail-actions"></div>
+                    <ul id="detailTech" class="detail-tech" aria-label="Tech stack"></ul>
                 </div>
+                <div id="detailHeroVisual" class="detail-hero-visual" aria-label="Selected application screens"></div>
             </header>
 
-            <section id="detailOverview" class="detail-section">
-                <h2><i class="fas fa-circle-info" aria-hidden="true"></i> <span id="overviewTitle"></span></h2>
-                <div id="detailBio" class="detail-bio"></div>
-                <div id="detailDescription" class="detail-description"></div>
-            </section>
+            <div class="detail-layout">
+                <aside class="detail-index" aria-label="On this page">
+                    <p id="detailIndexLabel">On this page</p>
+                    <nav>
+                        <a href="#detailOverview"><span>01</span><span id="detailOverviewNav">Overview</span></a>
+                        <a id="detailScreensNav" href="#detailScreens"><span>02</span><span id="detailScreensNavText">Screenshots</span></a>
+                        <a id="detailVideoNav" href="#detailVideoSection"><span>03</span><span id="detailVideoNavText">Video</span></a>
+                        <a id="detailLinkedinNav" href="#detailLinkedinSection"><span>04</span><span id="detailLinkedinNavText">LinkedIn post</span></a>
+                    </nav>
+                </aside>
 
-            <section id="detailVideoSection" class="detail-section">
-                <h2><i class="fas fa-circle-play" aria-hidden="true"></i> <span id="videoTitle"></span></h2>
-                <div id="detailVideo" class="detail-video"></div>
-            </section>
+                <div class="detail-content">
+                    <section id="detailOverview" class="detail-section">
+                        <div class="detail-section-heading">
+                            <span class="detail-section-number">01</span>
+                            <div><p class="eyebrow" id="overviewEyebrow">The product</p><h2 id="overviewTitle"></h2></div>
+                        </div>
+                        <div id="detailDescription" class="detail-description"></div>
+                    </section>
 
-            <section id="detailScreens" class="detail-section">
-                <h2><i class="fas fa-images" aria-hidden="true"></i> <span id="screensTitle"></span></h2>
-                <div id="detailGallery" class="detail-gallery"></div>
-            </section>
+                    <section id="detailScreens" class="detail-section detail-section--gallery">
+                        <div class="detail-section-heading">
+                            <span class="detail-section-number">02</span>
+                            <div><p class="eyebrow" id="screensEyebrow">Interface gallery</p><h2 id="screensTitle"></h2></div>
+                        </div>
+                        <div id="detailGallery" class="detail-gallery"></div>
+                    </section>
 
-            <section id="detailLinkedinSection" class="detail-section">
-                <h2><i class="fab fa-linkedin" aria-hidden="true"></i> <span id="linkedinTitle"></span></h2>
-                <div id="detailLinkedin" class="detail-linkedin">
-                    <p id="detailLinkedinText"></p>
-                    <button type="button" class="btn btn-secondary" id="linkedinCopyBtn">
-                        <i class="fas fa-copy" aria-hidden="true"></i> <span id="linkedinCopyLabel"></span>
-                    </button>
+                    <section id="detailVideoSection" class="detail-section">
+                        <div class="detail-section-heading">
+                            <span class="detail-section-number">03</span>
+                            <div><p class="eyebrow" id="videoEyebrow">Product walkthrough</p><h2 id="videoTitle"></h2></div>
+                        </div>
+                        <div id="detailVideo" class="detail-video"></div>
+                    </section>
+
+                    <section id="detailLinkedinSection" class="detail-section detail-section--linkedin">
+                        <div class="detail-section-heading">
+                            <span class="detail-section-number">04</span>
+                            <div><p class="eyebrow" id="linkedinEyebrow">Ready to share</p><h2 id="linkedinTitle"></h2></div>
+                        </div>
+                        <div id="detailLinkedin" class="detail-linkedin">
+                            <i class="fab fa-linkedin-in detail-linkedin-mark" aria-hidden="true"></i>
+                            <p id="detailLinkedinText"></p>
+                            <button type="button" class="btn btn-secondary" id="linkedinCopyBtn">
+                                <i class="fas fa-copy" aria-hidden="true"></i> <span id="linkedinCopyLabel"></span>
+                            </button>
+                        </div>
+                    </section>
                 </div>
-            </section>
+            </div>
         </article>
 
         <div id="projectNotFound" class="project-notfound" hidden>
@@ -135,8 +173,8 @@
     </div>
     </main>
 
-    <script src="assets/js/cv-data.js?v=20260826b" defer></script>
-    <script src="assets/js/main.js?v=20260826b" defer></script>
+    <script src="assets/js/cv-data.js?v=20260826e" defer></script>
+    <script src="assets/js/main.js?v=20260826e" defer></script>
     <!-- Analytics -->
     <script defer data-domain="mohamad-adib-tawil.github.io" src="https://plausible.io/js/script.js"></script>
 </body>
