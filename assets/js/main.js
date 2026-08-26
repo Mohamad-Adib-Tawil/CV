@@ -503,7 +503,7 @@
     if (brandSubtitle) {
       brandSubtitle.textContent = isSoftware
         ? (lang === "ar" ? "مهندس برمجيات · مطوّر Flutter" : "Software Engineer · Flutter Developer")
-        : (lang === "ar" ? "مهندس تطبيقات موبايل" : "Mobile Application Engineer");
+        : (lang === "ar" ? "مهندس تطبيقات للهواتف" : "Mobile Application Engineer");
     }
 
     const resumeLinks = [$("navResumeLink"), $("heroResumeLink")].filter(Boolean);
@@ -514,8 +514,8 @@
     });
 
     const heroNotes = document.querySelectorAll(".visual-note");
-    if (heroNotes[0]) heroNotes[0].innerHTML = `<span>5K+</span> ${lang === "ar" ? "تنزيلات LKLK" : "LKLK downloads"}`;
-    if (heroNotes[1]) heroNotes[1].innerHTML = `<span>500</span> ${lang === "ar" ? "مستخدم / غرفة" : "users / room"}`;
+    if (heroNotes[0]) heroNotes[0].innerHTML = `<span>5K+</span> ${lang === "ar" ? "تنزيل لتطبيق LKLK" : "LKLK downloads"}`;
+    if (heroNotes[1]) heroNotes[1].innerHTML = `<span>500</span> ${lang === "ar" ? "مستخدم في الغرفة" : "users / room"}`;
 
     const statsGrid = $("statsGrid");
     if (statsGrid) {
@@ -538,7 +538,7 @@
     ];
     titleMap.forEach(([id, value]) => setText(id, value));
     setText("processIntro", lang === "ar"
-      ? "تفيد المعمارية حين تحوّل التغيير والفشل والتوسع إلى قرارات يمكن إدارتها."
+      ? "أبدأ بفهم المشكلة، ثم أصمم حلاً واضحاً يمكن تطويره وصيانته بثقة."
       : "Architecture is useful when it turns change, failure, and scale into manageable decisions.");
 
     const featuredHost = $("featuredProjects");
