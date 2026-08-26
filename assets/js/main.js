@@ -22,6 +22,21 @@
     statsAnimated: false,
   };
 
+  const storage = {
+    get(key) {
+      try {
+        return window.localStorage.getItem(key);
+      } catch (_) {
+        return null;
+      }
+    },
+    set(key, value) {
+      try {
+        window.localStorage.setItem(key, value);
+      } catch (_) {}
+    },
+  };
+
   const profile = data.profile;
   const body = document.body;
   const page = body?.dataset.page || "home";
@@ -180,7 +195,7 @@
       return "silver";
     }
 
-    return preset || "blue";
+    return preset || "purple";
   };
 
   const applyPreset = (preset) => {
@@ -405,6 +420,242 @@
     renderProjects(state.currentLang);
   };
 
+  const getPortfolio = (lang = state.currentLang) =>
+    data.portfolio?.[lang] || data.portfolio?.en;
+
+  const getProject = (id) => data.projects.find((project) => project.id === id);
+
+  const projectDetailsHref = (id) => {
+    const from = typeof window !== "undefined" && window.CV_VERSION === "se" ? "&from=se" : "";
+    return `project.html?id=${encodeURIComponent(id)}${from}`;
+  };
+
+  const renderExternalProjectLinks = (project, labels, compact = false) => {
+    if (!project) {
+      return "";
+    }
+
+    const links = project.links || {};
+    const entries = [
+      [links.playStore, "fab fa-google-play", labels.playStore],
+      [links.appStore, "fab fa-apple", labels.appStore],
+      [links.github, "fab fa-github", labels.github],
+      [links.directDownload, "fas fa-download", labels.directDownload],
+    ];
+
+    return entries
+      .filter(([href]) => Boolean(href))
+      .map(([href, icon, label]) => `
+        <a class="${compact ? "text-link" : "text-link"}" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">
+          <i class="${icon}" aria-hidden="true"></i> ${escapeHtml(label)}
+        </a>
+      `)
+      .join("");
+  };
+
+  const renderPortfolio = (lang) => {
+    if (page !== "home") {
+      return;
+    }
+
+    const copy = getPortfolio(lang);
+    if (!copy) {
+      return;
+    }
+
+    const isSoftware = typeof window !== "undefined" && window.CV_VERSION === "se";
+    const section = copy.sections;
+    const resumePath = data.downloads.files[lang]?.pdf || data.downloads.files.en.pdf;
+
+    setText("navWork", copy.nav.work);
+    setText("navExpertise", copy.nav.expertise);
+    setText("navExperience", copy.nav.experience);
+    setText("navAbout", copy.nav.about);
+    setText("navContact", copy.nav.contact);
+    setText("switcherLabel", copy.switcher.label);
+    setText("switchFlutter", copy.switcher.flutter);
+    setText("switchSoftware", copy.switcher.software);
+    setText("heroEyebrow", copy.hero.eyebrow);
+    setText("heroTitle", isSoftware ? copy.hero.titleSoftware : copy.hero.titleFlutter);
+    setText("heroLead", copy.hero.lead);
+    setHtml("heroAvailability", `<span aria-hidden="true"></span> ${escapeHtml(copy.hero.availability)}`);
+    setHtml("heroPrimary", `${escapeHtml(copy.hero.primary)} <i class="fas fa-arrow-down" aria-hidden="true"></i>`);
+    setText("heroStackLabel", copy.hero.stackLabel);
+    setText("heroVisualLabel", copy.hero.visualLabel);
+
+    const navToggle = $("navToggle");
+    if (navToggle) navToggle.setAttribute("aria-label", copy.nav.menu);
+    if (themeToggle) themeToggle.setAttribute("aria-label", lang === "ar" ? "تبديل الوضع اللوني" : "Toggle color mode");
+    if (langSelect) langSelect.setAttribute("aria-label", lang === "ar" ? "اللغة" : "Language");
+
+    setText("themePresetLabel", lang === "ar" ? "اللون المميز" : "Accent");
+    const themeNames = lang === "ar"
+      ? ["بنفسجي", "أزرق", "فيروزي", "رمادي", "ملكي", "فضي", "منتصف الليل"]
+      : ["Violet", "Blue", "Teal", "Slate", "Royal", "Silver", "Midnight"];
+    presetSelect?.querySelectorAll("option").forEach((option, index) => {
+      option.textContent = themeNames[index] || option.textContent;
+    });
+
+    const scrollButton = $("scrollToTop");
+    if (scrollButton) scrollButton.setAttribute("aria-label", lang === "ar" ? "العودة إلى الأعلى" : "Back to top");
+
+    const brandSubtitle = document.querySelector(".brand-copy small");
+    if (brandSubtitle) {
+      brandSubtitle.textContent = isSoftware
+        ? (lang === "ar" ? "مهندس برمجيات · مطوّر Flutter" : "Software Engineer · Flutter Developer")
+        : (lang === "ar" ? "مهندس تطبيقات موبايل" : "Mobile Application Engineer");
+    }
+
+    const resumeLinks = [$("navResumeLink"), $("heroResumeLink")].filter(Boolean);
+    resumeLinks.forEach((link) => {
+      link.href = resumePath;
+      const iconClass = link.id === "navResumeLink" ? "fa-arrow-up-right-from-square" : "fa-download";
+      link.innerHTML = `${escapeHtml(link.id === "navResumeLink" ? copy.nav.resume : copy.hero.secondary)} <i class="fas ${iconClass}" aria-hidden="true"></i>`;
+    });
+
+    const heroNotes = document.querySelectorAll(".visual-note");
+    if (heroNotes[0]) heroNotes[0].innerHTML = `<span>5K+</span> ${lang === "ar" ? "تنزيلات LKLK" : "LKLK downloads"}`;
+    if (heroNotes[1]) heroNotes[1].innerHTML = `<span>500</span> ${lang === "ar" ? "مستخدم / غرفة" : "users / room"}`;
+
+    const statsGrid = $("statsGrid");
+    if (statsGrid) {
+      statsGrid.innerHTML = copy.metrics.map((metric) => `
+        <div class="metric"><strong>${escapeHtml(metric.value)}</strong><span>${escapeHtml(metric.label)}</span></div>
+      `).join("");
+    }
+
+    const titleMap = [
+      ["workEyebrow", section.workEyebrow], ["workTitle", section.workTitle], ["workLead", section.workLead],
+      ["otherWorkTitle", section.otherTitle], ["expertiseEyebrow", section.expertiseEyebrow],
+      ["expertiseTitle", section.expertiseTitle], ["expertiseLead", section.expertiseLead],
+      ["processEyebrow", section.processEyebrow], ["processTitle", section.processTitle],
+      ["pillarsEyebrow", section.pillarsEyebrow], ["pillarsTitle", section.pillarsTitle],
+      ["experienceEyebrow", section.experienceEyebrow], ["experienceTitle", section.experienceTitle],
+      ["stackEyebrow", section.stackEyebrow], ["stackTitle", section.stackTitle],
+      ["aboutEyebrow", section.aboutEyebrow], ["aboutTitle", section.aboutTitle],
+      ["servicesEyebrow", section.servicesEyebrow], ["servicesTitle", section.servicesTitle],
+      ["contactEyebrow", section.contactEyebrow], ["contactTitle", section.contactTitle],
+    ];
+    titleMap.forEach(([id, value]) => setText(id, value));
+    setText("processIntro", lang === "ar"
+      ? "تفيد المعمارية حين تحوّل التغيير والفشل والتوسع إلى قرارات يمكن إدارتها."
+      : "Architecture is useful when it turns change, failure, and scale into manageable decisions.");
+
+    const featuredHost = $("featuredProjects");
+    if (featuredHost) {
+      featuredHost.innerHTML = copy.featured.map((item) => {
+        const project = getProject(item.id);
+        const projectName = project?.name || item.id;
+        return `
+          <article class="case-study" aria-labelledby="case-${escapeHtml(item.id)}">
+            <div class="case-copy">
+              <div><span class="case-index">${escapeHtml(item.index)}</span><span class="case-category">${escapeHtml(item.category)}</span></div>
+              <h3 id="case-${escapeHtml(item.id)}">${escapeHtml(projectName)}</h3>
+              <div class="case-meta"><span>${escapeHtml(item.role)}</span><span>${escapeHtml(item.platform)}</span></div>
+              <p class="case-summary">${escapeHtml(item.summary)}</p>
+              <p class="case-outcome">${escapeHtml(item.outcome)}</p>
+              <ul class="case-metrics">${item.metrics.map((metric) => `<li>${escapeHtml(metric)}</li>`).join("")}</ul>
+              <ul class="case-tech">${item.tech.map((tech) => `<li class="tech-badge">${escapeHtml(tech)}</li>`).join("")}</ul>
+              <div class="case-actions">
+                <a class="button button--quiet" href="${escapeHtml(projectDetailsHref(item.id))}">${escapeHtml(copy.actions.caseStudy)} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                ${renderExternalProjectLinks(project, copy.actions)}
+              </div>
+            </div>
+            <div class="case-visual" aria-label="${escapeHtml(projectName)} product screens">
+              ${item.screens.map((screen) => `<figure class="case-screen"><img src="${escapeHtml(screen.src)}" alt="${escapeHtml(screen.alt)}" loading="lazy" decoding="async"></figure>`).join("")}
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    const otherHost = $("otherProjects");
+    if (otherHost) {
+      otherHost.innerHTML = copy.other.map((item) => {
+        const project = getProject(item.id);
+        return `
+          <article class="other-project">
+            <div>
+              <p class="project-category">${escapeHtml(item.category)}</p>
+              <h4>${escapeHtml(project?.name || item.id)}</h4>
+              <p>${escapeHtml(item.summary)}</p>
+              <p class="project-proof">${escapeHtml(item.proof)}</p>
+            </div>
+            <div>
+              <ul class="case-tech">${item.tech.map((tech) => `<li class="tech-badge">${escapeHtml(tech)}</li>`).join("")}</ul>
+              <div class="case-actions"><a class="text-link" href="${escapeHtml(projectDetailsHref(item.id))}">${escapeHtml(copy.actions.caseStudy)} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>${renderExternalProjectLinks(project, copy.actions, true)}</div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    const expertiseHost = $("expertiseGrid");
+    if (expertiseHost) {
+      expertiseHost.innerHTML = copy.expertise.map((item) => `
+        <article class="expertise-item"><span class="number">${escapeHtml(item.number)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></article>
+      `).join("");
+    }
+
+    const processHost = $("processFlow");
+    if (processHost) {
+      processHost.innerHTML = copy.process.map((item) => `<li class="process-item"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></li>`).join("");
+    }
+
+    const pillarIcons = ["fa-gauge-high", "fa-shield-halved", "fa-rotate"];
+    const pillarsHost = $("pillarsGrid");
+    if (pillarsHost) {
+      pillarsHost.innerHTML = copy.pillars.map((item, index) => `
+        <article class="pillar"><span class="pillar-icon"><i class="fas ${pillarIcons[index]}" aria-hidden="true"></i></span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></article>
+      `).join("");
+    }
+
+    const timelineHost = $("experienceTimeline");
+    if (timelineHost) {
+      timelineHost.innerHTML = copy.experience.map((entry) => `
+        <article class="timeline-entry">
+          <p class="timeline-period">${escapeHtml(entry.period)}<span class="timeline-place">${escapeHtml(entry.place)}</span></p>
+          <div class="timeline-content"><h3>${escapeHtml(entry.role)}</h3><ul>${entry.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></div>
+        </article>
+      `).join("");
+    }
+
+    const stackHost = $("stackList");
+    if (stackHost) {
+      stackHost.innerHTML = copy.stack.map((item) => `<div class="stack-row"><dt>${escapeHtml(item.label)}</dt><dd>${escapeHtml(item.value)}</dd></div>`).join("");
+    }
+
+    setText("aboutText", copy.about.text);
+    setText("aboutPrinciple", copy.about.principle);
+    const educationHost = $("educationBlock");
+    if (educationHost) {
+      educationHost.innerHTML = `
+        <h3>${escapeHtml(copy.about.educationTitle)}</h3>
+        <p class="education-primary">${escapeHtml(copy.about.education)}</p>
+        <p>${escapeHtml(copy.about.university)}</p>
+        <p>${escapeHtml(copy.about.coursework)}</p>
+        <p>${escapeHtml(copy.about.languages)}</p>
+      `;
+    }
+
+    const servicesHost = $("servicesGrid");
+    if (servicesHost) {
+      servicesHost.innerHTML = copy.services.map((item) => `<article class="service"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></article>`).join("");
+    }
+
+    setText("contactLead", copy.contact.lead);
+    setHtml("contactEmail", `${escapeHtml(copy.contact.email)} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>`);
+    setText("contactWhatsapp", copy.contact.whatsapp);
+    setText("contactLinkedin", copy.contact.linkedin);
+    setText("contactGithub", copy.contact.github);
+    setText("footerNote", copy.footer);
+
+    const skipLink = document.querySelector(".skip-link");
+    if (skipLink) skipLink.textContent = lang === "ar" ? "انتقل إلى المحتوى الرئيسي" : "Skip to main content";
+
+    document.title = `${profile.name} — ${isSoftware ? copy.hero.titleSoftware : copy.hero.titleFlutter}`;
+  };
+
   const renderFooter = (dict) => {
     setText("footerQuickLinksTitle", dict.footer.quickLinksTitle);
     setText("footerConnectTitle", dict.footer.connectTitle);
@@ -477,9 +728,10 @@
     lightbox.id = "lightbox";
     lightbox.setAttribute("role", "dialog");
     lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", state.currentLang === "ar" ? "عارض الصورة" : "Image viewer");
     lightbox.setAttribute("hidden", "");
     lightbox.innerHTML = `
-      <button type="button" class="lightbox-close" aria-label="Close">
+      <button type="button" class="lightbox-close" aria-label="${state.currentLang === "ar" ? "إغلاق" : "Close"}">
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
       <img class="lightbox-img" alt="">
@@ -495,6 +747,10 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && lightbox && !lightbox.hasAttribute("hidden")) {
         closeLightbox();
+      }
+      if (event.key === "Tab" && lightbox && !lightbox.hasAttribute("hidden")) {
+        event.preventDefault();
+        lightbox.querySelector(".lightbox-close")?.focus();
       }
     });
 
@@ -524,7 +780,7 @@
     const notFound = $("projectNotFound");
     const id = getQueryParam("id");
     const from = getQueryParam("from") === "se" ? "se.html" : "index.html";
-    const backHref = `${from}#projects`;
+    const backHref = `${from}#work`;
 
     setText("detailBackText", dict.detailPage.back);
     const backLink = $("detailBackLink");
@@ -638,20 +894,42 @@
     const screenshots = Array.isArray(media.screenshots) ? media.screenshots : [];
 
     if (gallery && screenshots.length) {
-      gallery.innerHTML = screenshots
-        .map((shot) => {
-          const shotAlt = (shot.alt && (shot.alt[lang] || shot.alt.en)) || alt;
-          return `
-            <button type="button" class="gallery-item" data-src="${escapeHtml(
-              shot.src
-            )}" data-alt="${escapeHtml(shotAlt)}">
-              <img src="${escapeHtml(shot.src)}" alt="${escapeHtml(
-            shotAlt
-          )}" loading="lazy" decoding="async">
-            </button>
-          `;
-        })
-        .join("");
+      const preferred = {
+        lklk: [72, 29],
+        wolfera: [23, 44],
+        office: [0, 29],
+      };
+      const previewSources = {
+        lklk: { 72: "assets/images/portfolio/lklk-live-room.jpg", 29: "assets/images/portfolio/lklk-levels.jpg" },
+        wolfera: { 23: "assets/images/portfolio/wolfera-marketplace.jpg", 44: "assets/images/portfolio/wolfera-listing.jpg" },
+        office: { 0: "assets/images/portfolio/office-dashboard.jpg", 29: "assets/images/portfolio/office-search.jpg" },
+      };
+      const primaryIndices = (preferred[project.id] || screenshots.map((_, index) => index).slice(0, 10))
+        .filter((index, position, values) => index < screenshots.length && values.indexOf(index) === position);
+      const primarySet = new Set(primaryIndices);
+      const remainingIndices = screenshots.map((_, index) => index).filter((index) => !primarySet.has(index));
+
+      const renderShot = (index) => {
+        const shot = screenshots[index];
+        const shotSrc = previewSources[project.id]?.[index] || shot.src;
+        const authoredAlt = shot.alt && (shot.alt[lang] || shot.alt.en);
+        const shotAlt = authoredAlt || `${project.name} ${lang === "ar" ? "لقطة شاشة" : "screenshot"} ${index + 1}`;
+        return `
+          <button type="button" class="gallery-item" data-src="${escapeHtml(shotSrc)}" data-alt="${escapeHtml(shotAlt)}">
+            <img src="${escapeHtml(shotSrc)}" alt="${escapeHtml(shotAlt)}" loading="lazy" decoding="async">
+          </button>
+        `;
+      };
+
+      gallery.innerHTML = `
+        <div class="gallery-grid">${primaryIndices.map(renderShot).join("")}</div>
+        ${remainingIndices.length ? `
+          <details class="gallery-more">
+            <summary>${escapeHtml(lang === "ar" ? `عرض المعرض الكامل (${remainingIndices.length} لقطة إضافية)` : `View full gallery (${remainingIndices.length} more)` )}</summary>
+            <div class="gallery-grid">${remainingIndices.map(renderShot).join("")}</div>
+          </details>
+        ` : ""}
+      `;
 
       gallery.querySelectorAll(".gallery-item").forEach((item) => {
         item.addEventListener("click", () => {
@@ -726,6 +1004,7 @@
     renderContentSections(dict);
     renderFooter(dict);
     renderDownloadsPage(dict);
+    renderPortfolio(state.currentLang);
     renderProjectDetail();
   };
 
@@ -756,8 +1035,8 @@
   };
 
   const initTheme = () => {
-    const savedTheme = localStorage.getItem("theme");
-    const savedPreset = normalizePreset(localStorage.getItem("themePreset"));
+    const savedTheme = storage.get("theme");
+    const savedPreset = normalizePreset(storage.get("themePreset"));
 
     applyThemeState(savedTheme !== "light");
     applyPreset(savedPreset);
@@ -768,32 +1047,32 @@
         const nextPreset = normalizePreset(event.target.value);
         enableThemeTransition();
         applyPreset(nextPreset);
-        localStorage.setItem("themePreset", nextPreset);
+        storage.set("themePreset", nextPreset);
 
         if (nextPreset === "midnight") {
           applyThemeState(true);
-          localStorage.setItem("theme", "dark");
+          storage.set("theme", "dark");
         }
       });
     }
 
     if (savedPreset === "midnight" && !themeRoot.classList.contains("dark-mode")) {
       applyThemeState(true);
-      localStorage.setItem("theme", "dark");
+      storage.set("theme", "dark");
     }
 
     if (themeToggle) {
       themeToggle.addEventListener("click", () => {
         const nextDarkMode = !themeRoot.classList.contains("dark-mode");
         applyThemeState(nextDarkMode);
-        localStorage.setItem("theme", nextDarkMode ? "dark" : "light");
+        storage.set("theme", nextDarkMode ? "dark" : "light");
         updateContrast();
       });
     }
   };
 
   const initLanguage = () => {
-    const savedLang = localStorage.getItem("lang") || "en";
+    const savedLang = storage.get("lang") || "en";
     applyLanguage(savedLang);
 
     if (langSelect) {
@@ -801,17 +1080,24 @@
       langSelect.addEventListener("change", (event) => {
         enableThemeTransition();
         applyLanguage(event.target.value);
-        localStorage.setItem("lang", state.currentLang);
+        storage.set("lang", state.currentLang);
       });
     }
   };
 
   const initRevealAnimations = () => {
-    const targets = document.querySelectorAll("section, .project-table, header");
+    const targets = document.querySelectorAll(".reveal");
 
     if (targets.length === 0) {
       return;
     }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+      targets.forEach((target) => target.classList.add("fade-in"));
+      return;
+    }
+
+    themeRoot.classList.add("motion-ready");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -826,7 +1112,7 @@
       // gallery, ~15000px on mobile) still reveal — a 0.1 threshold can never be
       // met when the section is far taller than the viewport, which left the
       // section stuck at opacity:0 and the thumbnails invisible on phones.
-      { threshold: 0, rootMargin: "0px 0px -80px 0px" }
+      { threshold: 0, rootMargin: "0px 0px -12% 0px" }
     );
 
     targets.forEach((target) => observer.observe(target));
@@ -862,7 +1148,7 @@
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0, rootMargin: "-30% 0px -62% 0px" }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -936,6 +1222,17 @@
       })
       .join("");
 
+  const buildExperienceExportMarkup = (dict) => {
+    if (Array.isArray(dict.experienceEntries) && dict.experienceEntries.length) {
+      return dict.experienceEntries.map((entry) => `
+        <h3>${escapeHtml(entry.role)} | ${escapeHtml(entry.period)} | ${escapeHtml(entry.location)}</h3>
+        <ul>${entry.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+      `).join("");
+    }
+
+    return `<h3>${escapeHtml(dict.experienceRole)}</h3><ul>${dict.experienceList.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  };
+
   const buildWordHtml = (lang) => {
     const dict = getDict(lang);
     const currentLang = lang === "ar" ? "ar" : "en";
@@ -975,8 +1272,7 @@
   <ul>${dict.skillsList.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
 
   <h2>${escapeHtml(dict.titles.experience)}</h2>
-  <h3>${escapeHtml(dict.experienceRole)}</h3>
-  <ul>${dict.experienceList.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+  ${buildExperienceExportMarkup(dict)}
 
   <h2>${escapeHtml(dict.titles.projects)}</h2>
   ${buildProjectExportMarkup(currentLang)}
@@ -1024,11 +1320,7 @@
   <div class="contact">${escapeHtml(profile.email)} | ${escapeHtml(profile.phone)} | ${escapeHtml(compactUrl(profile.linkedinUrl))} | ${escapeHtml(
       compactUrl(profile.githubUrl)
     )}</div>
-  <div class="job-title">${
-    currentLang === "ar"
-      ? escapeHtml("مطوّر Flutter متوسط المستوى")
-      : escapeHtml("MID-LEVEL FLUTTER DEVELOPER")
-  }</div>
+  <div class="job-title">${escapeHtml(dict.header.jobTitle)}</div>
 
   <h2>${escapeHtml(currentLang === "ar" ? "الملخص المهني" : "PROFESSIONAL SUMMARY")}</h2>
   <p>${escapeHtml(dict.downloadsPage.atsSummary)}</p>
@@ -1037,8 +1329,7 @@
   <ul>${dict.skillsList.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
 
   <h2>${escapeHtml(currentLang === "ar" ? "الخبرة العملية" : "PROFESSIONAL EXPERIENCE")}</h2>
-  <h3>${escapeHtml(currentLang === "ar" ? "مطوّر Flutter متوسط المستوى | 2022 – حتى الآن" : "MID-LEVEL FLUTTER DEVELOPER | 2022 – PRESENT")}</h3>
-  <ul>${dict.experienceList.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+  ${buildExperienceExportMarkup(dict)}
 
   <h2>${escapeHtml(currentLang === "ar" ? "المشاريع الرئيسية" : "KEY PROJECTS")}</h2>
   ${buildProjectExportMarkup(currentLang)}
@@ -1214,6 +1505,23 @@
     // Close the menu after navigating to a section.
     nav.querySelectorAll(".nav-links a").forEach((link) => {
       link.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("nav-open")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (nav.classList.contains("nav-open") && !nav.contains(event.target)) {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 920) setOpen(false);
     });
   };
 

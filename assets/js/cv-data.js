@@ -15,11 +15,11 @@
     files: {
       en: {
         docx: "assets/downloads/CV_EN.docx",
-        pdf: "assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf",
+        pdf: "assets/downloads/CV_EN.pdf",
       },
       ar: {
         docx: "assets/downloads/CV_AR.docx",
-        pdf: "assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf",
+        pdf: "assets/downloads/CV_AR.pdf",
       },
     },
     plainTextPath: "assets/cv/CV_Text_EN_AR.md",
@@ -306,15 +306,15 @@
       name: "Code Book",
       tech: ["Flutter", "flutter_bloc (Cubit)", "Dio", "Google Books API", "Hive", "GetIt", "GoRouter", "WebView", "dartz"],
       image: {
-        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Code-Books-/main/assets/images/logo.png?raw=1",
+        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Code-Books/main/assets/images/logo.png?raw=1",
         alt: {
           en: "Code Book educational app logo",
           ar: "شعار تطبيق Code Book",
         },
       },
       description: {
-        en: `Cross-platform book-discovery app consuming the Google Books REST API with an offline-first Hive cache for instant cold-start. Built on Clean Architecture (Dio + dartz Either typed errors, 3-retry exponential backoff), flutter_bloc Cubits, debounced search with advanced filters and infinite scroll, and an in-app WebView reader with HTTPS enforcement. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
-        ar: `تطبيق اكتشاف كتب عبر Google Books REST API مع تخزين Hive offline-first لإقلاع فوري. مبني على معمارية نظيفة (Dio + معالجة أخطاء dartz Either، إعادة محاولة أُسّية 3 مرات)، وflutter_bloc، وبحث مع فلاتر متقدمة وتمرير لانهائي، وقارئ WebView داخلي مع فرض HTTPS. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books-" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
+        en: `Cross-platform book-discovery app consuming the Google Books REST API with an offline-first Hive cache for instant cold-start. Built on Clean Architecture (Dio + dartz Either typed errors, 3-retry exponential backoff), flutter_bloc Cubits, debounced search with advanced filters and infinite scroll, and an in-app WebView reader with HTTPS enforcement. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
+        ar: `تطبيق اكتشاف كتب عبر Google Books REST API مع تخزين Hive offline-first لإقلاع فوري. مبني على معمارية نظيفة (Dio + معالجة أخطاء dartz Either، إعادة محاولة أُسّية 3 مرات)، وflutter_bloc، وبحث مع فلاتر متقدمة وتمرير لانهائي، وقارئ WebView داخلي مع فرض HTTPS. <a href="https://github.com/Mohamad-Adib-Tawil/Code-Books" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`,
       },
       slug: "codebook",
       bio: {
@@ -329,7 +329,7 @@
         directDownload: "https://github.com/Mohamad-Adib-Tawil/Code-Books/releases/download/codebook/codebook-latest.apk",
         playStore: "",
         appStore: "",
-        github: "https://github.com/Mohamad-Adib-Tawil/Code-Books-",
+        github: "https://github.com/Mohamad-Adib-Tawil/Code-Books",
         website: "",
       },
       media: {
@@ -579,8 +579,12 @@
         "Navigation & Tools: GoRouter, Git, GitHub, Postman, Figma, build_runner / codegen",
       ],
       education: {
-        heading: "Diploma in Computer Engineering, University of Aleppo (2020–2022)",
-        items: ["Focus: Software Engineering", "Aleppo, Syria"],
+        heading: "Diploma in Computer Engineering, University of Aleppo (Jun 2020–Aug 2022)",
+        items: [
+          "Software Engineering track · GPA 82.89% · Aleppo, Syria",
+          "Coursework: C#, Data Structures, Algorithms, Object-Oriented Programming, Database Systems, and Software Engineering",
+          "Final project: a programming-education platform with course-based learning across web, Windows, and mobile",
+        ],
       },
       achievements: [
         "Designed and shipped 5+ production apps to Google Play and the App Store",
@@ -741,8 +745,12 @@
         "التنقّل والأدوات: GoRouter، Git، GitHub، Postman، Figma، build_runner",
       ],
       education: {
-        heading: "دبلوم هندسة حاسبات، جامعة حلب (2020–2022)",
-        items: ["التركيز: هندسة البرمجيات", "حلب، سوريا"],
+        heading: "دبلوم هندسة حاسبات، جامعة حلب (يونيو 2020–أغسطس 2022)",
+        items: [
+          "مسار هندسة البرمجيات · المعدل 82.89% · حلب، سوريا",
+          "المواد: C# وهياكل البيانات والخوارزميات والبرمجة كائنية التوجه وقواعد البيانات وهندسة البرمجيات",
+          "مشروع التخرج: منصة تعليم برمجة بمسارات دورات على الويب وWindows والموبايل",
+        ],
       },
       achievements: [
         "صممت وأطلقت أكثر من 5 تطبيقات إنتاجية على Google Play وApp Store",
@@ -788,6 +796,421 @@
         notFound: "المشروع غير موجود",
         notFoundBody: "هذا المشروع غير موجود. عُد إلى السيرة لتصفّح كل المشاريع.",
       },
+    },
+  };
+
+  const portfolio = {
+    en: {
+      nav: {
+        work: "Work",
+        expertise: "Expertise",
+        experience: "Experience",
+        about: "About",
+        contact: "Contact",
+        resume: "Résumé",
+        menu: "Open navigation",
+      },
+      switcher: {
+        label: "Portfolio view",
+        flutter: "Flutter",
+        software: "Software Engineer",
+      },
+      hero: {
+        eyebrow: "Independent & contract · Remote · UTC+3",
+        titleFlutter: "Flutter Developer & Mobile Application Engineer",
+        titleSoftware: "Software Engineer building production mobile applications",
+        lead: "I turn complex product requirements into fast, resilient Flutter apps—from real-time audio and marketplaces to private, on-device document workflows.",
+        availability: "Available for freelance · Open to remote full-time and contract work",
+        primary: "Explore selected work",
+        secondary: "Download résumé",
+        stackLabel: "Production stack",
+        visualLabel: "Shipped mobile products",
+      },
+      metrics: [
+        { value: "4", label: "Years engineering mobile apps" },
+        { value: "5+", label: "Production applications" },
+        { value: "5K+", label: "Public downloads for LKLK" },
+        { value: "Google Play + App Store", label: "Published platforms" },
+      ],
+      sections: {
+        workEyebrow: "Selected work",
+        workTitle: "Products engineered for the real world.",
+        workLead: "A focused selection of production systems where architecture, interaction design, and operational constraints had to work together.",
+        otherTitle: "More shipped work",
+        expertiseEyebrow: "Engineering depth",
+        expertiseTitle: "Built beyond the interface.",
+        expertiseLead: "Product engineering across state, data, realtime infrastructure, device capabilities, and release operations.",
+        processEyebrow: "How I engineer",
+        processTitle: "A disciplined path from ambiguity to release.",
+        pillarsEyebrow: "Production quality",
+        pillarsTitle: "Performance, privacy, and reliability are product features.",
+        experienceEyebrow: "Experience",
+        experienceTitle: "Four years of end-to-end ownership.",
+        stackEyebrow: "Technology",
+        stackTitle: "A practical mobile stack, chosen by constraint.",
+        aboutEyebrow: "About",
+        aboutTitle: "Engineering with product judgment.",
+        servicesEyebrow: "Ways I can help",
+        servicesTitle: "From architecture to store release.",
+        contactEyebrow: "Start a conversation",
+        contactTitle: "Building a serious mobile product? Let’s talk.",
+      },
+      featured: [
+        {
+          id: "lklk",
+          index: "01",
+          category: "Real-time social audio",
+          role: "Sole Flutter Developer",
+          platform: "Google Play",
+          summary: "A production Arabic-market social audio platform with live rooms, animated gifts, VIP progression, and a complete in-app coin economy.",
+          outcome: "Architected the complete Flutter client across state, realtime channels, audio SDKs, monetization, and resilient reconnection flows.",
+          metrics: ["5,000+ downloads", "Up to 500 listeners", "20 mic seats", "6 IAP tiers"],
+          tech: ["Flutter", "Cubit", "ZEGOCLOUD", "LiveKit", "Appwrite", "Hive"],
+          screens: [
+            { src: "assets/images/portfolio/lklk-live-room.jpg", alt: "LKLK live audio room and virtual gift interface" },
+            { src: "assets/images/portfolio/lklk-levels.jpg", alt: "LKLK user level and progress interface" },
+          ],
+        },
+        {
+          id: "office",
+          index: "02",
+          category: "Private document intelligence",
+          role: "Solo Flutter Developer",
+          platform: "Google Play · Direct APK",
+          summary: "An offline-first document workspace for scanning, bilingual OCR, full-text search, and secure PDF creation and editing.",
+          outcome: "Kept the full workflow on-device with a dual-engine OCR pipeline, SQLite indexing, and memory-aware PDF operations—no account or backend required.",
+          metrics: ["Arabic + English OCR", "2 OCR engines", "16 visual themes", "No backend"],
+          tech: ["Flutter", "Cubit", "SQLite", "ML Kit", "Tesseract", "PDF"],
+          screens: [
+            { src: "assets/images/portfolio/office-dashboard.jpg", alt: "Office Archiving document dashboard" },
+            { src: "assets/images/portfolio/office-search.jpg", alt: "Office Archiving full-text document search" },
+          ],
+        },
+        {
+          id: "wolfera",
+          index: "03",
+          category: "Bilingual automotive marketplace",
+          role: "Sole Flutter Developer",
+          platform: "Google Play · GitHub",
+          summary: "A bilingual marketplace for buying, selling, and renting cars with realtime chat, favorites, and price-drop alerts.",
+          outcome: "Delivered the Flutter architecture, Supabase and Firebase integrations, listing workflow, advanced discovery, and on-device image moderation.",
+          metrics: ["15+ search filters", "Realtime chat", "Arabic + English", "On-device moderation"],
+          tech: ["Flutter", "Supabase", "Firebase", "Cubit", "TFLite", "GoRouter"],
+          screens: [
+            { src: "assets/images/portfolio/wolfera-marketplace.jpg", alt: "Wolfera vehicle marketplace home screen" },
+            { src: "assets/images/portfolio/wolfera-listing.jpg", alt: "Wolfera multi-step vehicle listing flow" },
+          ],
+        },
+      ],
+      other: [
+        {
+          id: "quran",
+          category: "Offline audio & reading",
+          summary: "Arabic/German Quran reading, listening, study, and per-surah background downloads with an explicit audio state machine.",
+          proof: "Published on Google Play and the App Store",
+          tech: ["Flutter", "Cubit", "just_audio", "Offline audio"],
+        },
+        {
+          id: "codebook",
+          category: "Offline-first book discovery",
+          summary: "A cross-platform Google Books client with strict Clean Architecture, Hive caching, typed failures, and a secure in-app reader.",
+          proof: "400ms debounced search · 3-retry backoff",
+          tech: ["Flutter", "Cubit", "Dio", "Hive", "dartz"],
+        },
+      ],
+      actions: {
+        caseStudy: "View case study",
+        playStore: "Google Play",
+        appStore: "App Store",
+        github: "GitHub",
+        directDownload: "Direct APK",
+      },
+      expertise: [
+        { number: "01", title: "Mobile product engineering", text: "Responsive Flutter interfaces, Material 3, localization and true Arabic RTL, navigation, device capabilities, and accessible interaction." },
+        { number: "02", title: "Architecture & state", text: "Feature-based Clean Architecture with BLoC/Cubit, dependency injection, immutable models, typed failures, and boundaries that stay testable." },
+        { number: "03", title: "Realtime & backend", text: "REST, WebSockets, Supabase, Firebase, Appwrite, LiveKit, ZEGOCLOUD, reconnect strategy, and realtime state coordination." },
+        { number: "04", title: "Offline, ML & documents", text: "Hive and SQLite caching, OCR with ML Kit and Tesseract, TFLite moderation, background work, and memory-aware PDF workflows." },
+      ],
+      process: [
+        { title: "Frame", text: "Turn requirements and constraints into explicit product and system decisions." },
+        { title: "Model", text: "Define domain boundaries, states, failures, and data ownership before UI complexity grows." },
+        { title: "Integrate", text: "Connect APIs, realtime channels, storage, and device services behind stable contracts." },
+        { title: "Harden", text: "Handle offline states, retries, lifecycle changes, memory pressure, security, and observability." },
+        { title: "Ship", text: "Prepare production builds, store assets, flavors, signing, R8, and post-release maintenance." },
+      ],
+      pillars: [
+        { title: "Performance", text: "Pagination, bounded animation queues, isolates, image optimization, and workload-aware rendering keep demanding flows responsive." },
+        { title: "Privacy", text: "On-device OCR and ML, secure storage, RLS-backed data access, and an offline document product with no account or server." },
+        { title: "Reliability", text: "Typed error paths, persistent caches, per-channel reconnect logic, retry/backoff, Crashlytics, and release hardening." },
+      ],
+      experience: [
+        {
+          period: "07/2022 — Present",
+          role: "Flutter Developer · Independent & Contract",
+          place: "Remote",
+          items: [
+            "Designed and shipped 5+ production Flutter applications across social audio, marketplaces, document management, and content.",
+            "Owned architecture, state, backend integrations, performance, monetization, and publishing to Google Play and the App Store.",
+            "Standardized Clean Architecture, Cubit, dependency injection, typed failures, offline-first caching, and background workloads across products.",
+          ],
+        },
+        {
+          period: "2022",
+          role: "Android Developer · Kotlin Projects",
+          place: "Aleppo, Syria",
+          items: [
+            "Built Ana Mubarmej with learning tracks for eight languages, a WebView code console, and auto-graded quizzes.",
+            "Delivered a programming-education graduation platform covering requirements, system design, and implementation.",
+          ],
+        },
+        {
+          period: "2021 — 2022",
+          role: "Windows Application Developer · University Projects",
+          place: "University of Aleppo",
+          items: [
+            "Delivered two Windows Forms warehouse systems for the Faculties of Pharmacy and Science.",
+            "Both received faculty recognition; the Science/Chemistry system was also commended by the University Presidency.",
+          ],
+        },
+      ],
+      stack: [
+        { label: "Core", value: "Flutter · Dart · Material 3 · Android · iOS" },
+        { label: "Architecture", value: "Clean Architecture · BLoC/Cubit · GetIt · Injectable · Freezed · dartz" },
+        { label: "Backend", value: "Supabase · Firebase · Appwrite · REST · Dio · WebSockets" },
+        { label: "Realtime & media", value: "ZEGOCLOUD · LiveKit · ZIM · just_audio · audio_session" },
+        { label: "Device & data", value: "Hive · SQLite · ML Kit · Tesseract · TFLite · PDF" },
+        { label: "Release", value: "Flavors · ProGuard/R8 · Crashlytics · Secure storage · Store publishing" },
+      ],
+      about: {
+        text: "I’m Mohamad Adib Tawil, a mobile engineer based in Syria and working remotely. I’m most useful where product decisions and implementation meet: shaping architecture, resolving difficult device or realtime behavior, refining the interface, and carrying the build through release.",
+        principle: "My standard is simple: clear systems, calm interfaces, measurable behavior, and no hidden operational surprises.",
+        educationTitle: "Education",
+        education: "Diploma in Computer Engineering · Software Engineering track",
+        university: "University of Aleppo · Jun 2020 — Aug 2022 · GPA 82.89%",
+        coursework: "Coursework: C#, Data Structures, Algorithms, OOP, Database Systems, and Software Engineering. Final project: a programming-education platform across web, Windows, and mobile.",
+        languages: "Arabic — Native · English — Professional working proficiency",
+      },
+      services: [
+        { title: "End-to-end app delivery", text: "Product implementation from architecture and UI through backend integration and store release." },
+        { title: "Architecture & modernization", text: "Feature boundaries, Cubit state, dependency injection, error models, and maintainable refactors." },
+        { title: "Realtime & offline systems", text: "Audio rooms, messaging, sync, caches, reconnect strategy, and predictable degraded states." },
+        { title: "On-device workflows", text: "OCR, document processing, local databases, TFLite, audio, background downloads, and PDF tooling." },
+      ],
+      contact: {
+        lead: "Share the product, the current constraint, and what success should look like. I’ll respond with direct technical questions and a practical next step.",
+        email: "Email me",
+        whatsapp: "WhatsApp",
+        linkedin: "LinkedIn",
+        github: "GitHub",
+        phone: "Phone",
+      },
+      footer: "Designed and engineered as a fast, accessible static portfolio.",
+    },
+    ar: {
+      nav: {
+        work: "الأعمال",
+        expertise: "الخبرات",
+        experience: "المسيرة",
+        about: "نبذة",
+        contact: "تواصل",
+        resume: "السيرة الذاتية",
+        menu: "فتح قائمة التنقل",
+      },
+      switcher: {
+        label: "عرض الملف",
+        flutter: "Flutter",
+        software: "مهندس برمجيات",
+      },
+      hero: {
+        eyebrow: "عمل مستقل وعقود · عن بُعد · UTC+3",
+        titleFlutter: "مطوّر Flutter ومهندس تطبيقات موبايل",
+        titleSoftware: "مهندس برمجيات يبني تطبيقات موبايل إنتاجية",
+        lead: "أحوّل متطلبات المنتجات المعقّدة إلى تطبيقات Flutter سريعة وموثوقة؛ من الصوت اللحظي والأسواق الرقمية إلى تدفّقات المستندات الخاصة على الجهاز.",
+        availability: "متاح للعمل الحر · ومنفتح على العمل عن بُعد بدوام كامل أو بعقد",
+        primary: "استعرض الأعمال المختارة",
+        secondary: "حمّل السيرة الذاتية",
+        stackLabel: "تقنيات الإنتاج",
+        visualLabel: "منتجات موبايل منشورة",
+      },
+      metrics: [
+        { value: "4", label: "سنوات في هندسة تطبيقات الموبايل" },
+        { value: "+5", label: "تطبيقات إنتاجية" },
+        { value: "+5K", label: "تنزيل عام لتطبيق LKLK" },
+        { value: "Google Play + App Store", label: "منصات النشر" },
+      ],
+      sections: {
+        workEyebrow: "أعمال مختارة",
+        workTitle: "منتجات صُممت للعمل في العالم الحقيقي.",
+        workLead: "نماذج مركّزة من أنظمة إنتاجية احتاجت إلى توازن فعلي بين المعمارية وتجربة الاستخدام والقيود التشغيلية.",
+        otherTitle: "أعمال منشورة أخرى",
+        expertiseEyebrow: "عمق هندسي",
+        expertiseTitle: "ما وراء الواجهة.",
+        expertiseLead: "هندسة منتج تشمل الحالة والبيانات والبنية اللحظية وقدرات الجهاز وعمليات الإصدار.",
+        processEyebrow: "منهجية العمل",
+        processTitle: "مسار منضبط من الغموض إلى الإصدار.",
+        pillarsEyebrow: "جودة الإنتاج",
+        pillarsTitle: "الأداء والخصوصية والموثوقية جزء من المنتج.",
+        experienceEyebrow: "الخبرة",
+        experienceTitle: "أربع سنوات من الملكية الكاملة للمنتج.",
+        stackEyebrow: "التقنيات",
+        stackTitle: "حزمة عملية يحددها احتياج المنتج.",
+        aboutEyebrow: "نبذة",
+        aboutTitle: "هندسة برمجيات بحسّ منتج.",
+        servicesEyebrow: "كيف يمكنني المساعدة",
+        servicesTitle: "من المعمارية حتى النشر على المتجر.",
+        contactEyebrow: "لنبدأ محادثة",
+        contactTitle: "تبني منتج موبايل جاداً؟ لنتحدث.",
+      },
+      featured: [
+        {
+          id: "lklk",
+          index: "01",
+          category: "صوت اجتماعي لحظي",
+          role: "مطوّر Flutter الوحيد",
+          platform: "Google Play",
+          summary: "منصة صوت اجتماعي إنتاجية للسوق العربي تضم غرفاً حيّة وهدايا متحركة ومستويات VIP واقتصاد عملات متكاملاً.",
+          outcome: "صممت عميل Flutter كاملاً: الحالة والقنوات اللحظية ومحركات الصوت وتحقيق الدخل وتدفّقات إعادة الاتصال الموثوقة.",
+          metrics: ["+5,000 تنزيل", "حتى 500 مستمع", "20 مقعد ميكروفون", "6 باقات شراء"],
+          tech: ["Flutter", "Cubit", "ZEGOCLOUD", "LiveKit", "Appwrite", "Hive"],
+          screens: [
+            { src: "assets/images/portfolio/lklk-live-room.jpg", alt: "غرفة صوت حيّة وواجهة هدايا في LKLK" },
+            { src: "assets/images/portfolio/lklk-levels.jpg", alt: "واجهة المستوى والتقدّم في LKLK" },
+          ],
+        },
+        {
+          id: "office",
+          index: "02",
+          category: "معالجة مستندات خاصة",
+          role: "مطوّر Flutter منفرد",
+          platform: "Google Play · APK مباشر",
+          summary: "مساحة مستندات تعمل دون اتصال للمسح وOCR ثنائي اللغة والبحث النصي وإنشاء ملفات PDF وتعديلها بأمان.",
+          outcome: "أبقيت سير العمل كاملاً على الجهاز بمحركي OCR وفهرسة SQLite ومعالجة PDF واعية للذاكرة، دون حساب أو خادم.",
+          metrics: ["OCR عربي وإنجليزي", "محركا OCR", "16 نمطاً بصرياً", "دون خادم"],
+          tech: ["Flutter", "Cubit", "SQLite", "ML Kit", "Tesseract", "PDF"],
+          screens: [
+            { src: "assets/images/portfolio/office-dashboard.jpg", alt: "لوحة مستندات Office Archiving" },
+            { src: "assets/images/portfolio/office-search.jpg", alt: "بحث نصي ضمن المستندات في Office Archiving" },
+          ],
+        },
+        {
+          id: "wolfera",
+          index: "03",
+          category: "سوق سيارات ثنائي اللغة",
+          role: "مطوّر Flutter الوحيد",
+          platform: "Google Play · GitHub",
+          summary: "سوق عربي/إنجليزي لبيع السيارات وشرائها وتأجيرها مع محادثة لحظية ومفضلة وتنبيهات انخفاض السعر.",
+          outcome: "نفذت معمارية Flutter وتكاملات Supabase وFirebase ومسار إضافة السيارة والاكتشاف المتقدم وفلترة الصور على الجهاز.",
+          metrics: ["+15 فلتر بحث", "محادثة لحظية", "عربي + إنجليزي", "فلترة على الجهاز"],
+          tech: ["Flutter", "Supabase", "Firebase", "Cubit", "TFLite", "GoRouter"],
+          screens: [
+            { src: "assets/images/portfolio/wolfera-marketplace.jpg", alt: "واجهة سوق السيارات في Wolfera" },
+            { src: "assets/images/portfolio/wolfera-listing.jpg", alt: "خطوات إضافة سيارة في Wolfera" },
+          ],
+        },
+      ],
+      other: [
+        {
+          id: "quran",
+          category: "قراءة وصوت دون اتصال",
+          summary: "قراءة واستماع ودراسة للقرآن بالعربية والألمانية مع تنزيل السور في الخلفية وحالة صوت واضحة.",
+          proof: "منشور على Google Play وApp Store",
+          tech: ["Flutter", "Cubit", "just_audio", "Offline audio"],
+        },
+        {
+          id: "codebook",
+          category: "اكتشاف كتب بنهج offline-first",
+          summary: "عميل Google Books متعدد المنصات بمعمارية نظيفة صارمة وتخزين Hive وأخطاء typed وقارئ آمن داخل التطبيق.",
+          proof: "بحث مؤجّل 400ms · 3 محاولات بتراجع أُسّي",
+          tech: ["Flutter", "Cubit", "Dio", "Hive", "dartz"],
+        },
+      ],
+      actions: {
+        caseStudy: "دراسة الحالة",
+        playStore: "Google Play",
+        appStore: "App Store",
+        github: "GitHub",
+        directDownload: "APK مباشر",
+      },
+      expertise: [
+        { number: "01", title: "هندسة منتجات الموبايل", text: "واجهات Flutter تكيّفية وMaterial 3 وتعريب عربي RTL حقيقي وتنقل وقدرات جهاز وتفاعل قابل للوصول." },
+        { number: "02", title: "المعمارية والحالة", text: "Clean Architecture بوحدات ميزات وBLoC/Cubit وحقن اعتماديات ونماذج ثابتة وأخطاء typed وحدود قابلة للاختبار." },
+        { number: "03", title: "الوقت الحقيقي والخلفية", text: "REST وWebSockets وSupabase وFirebase وAppwrite وLiveKit وZEGOCLOUD واستراتيجيات إعادة الاتصال." },
+        { number: "04", title: "Offline وML والمستندات", text: "تخزين Hive وSQLite وOCR عبر ML Kit وTesseract وفلترة TFLite ومهام خلفية وتدفّقات PDF واعية للذاكرة." },
+      ],
+      process: [
+        { title: "التأطير", text: "تحويل المتطلبات والقيود إلى قرارات منتج ونظام واضحة." },
+        { title: "النمذجة", text: "تحديد حدود المجال والحالات والأخطاء وملكية البيانات قبل تضخم الواجهة." },
+        { title: "التكامل", text: "ربط APIs والقنوات اللحظية والتخزين وخدمات الجهاز خلف عقود مستقرة." },
+        { title: "التحصين", text: "معالجة انقطاع الشبكة وإعادة المحاولة ودورة الحياة وضغط الذاكرة والأمان والمراقبة." },
+        { title: "الإطلاق", text: "تجهيز بناء الإنتاج والمتاجر وflavors والتوقيع وR8 والصيانة بعد النشر." },
+      ],
+      pillars: [
+        { title: "الأداء", text: "الترقيم وطوابير الرسوم المحدودة وisolates وتحسين الصور والرسم الواعي بالحمل تحافظ على سلاسة التدفّقات الثقيلة." },
+        { title: "الخصوصية", text: "OCR وML على الجهاز وتخزين آمن ووصول مدعوم بـRLS ومنتج مستندات دون حساب أو خادم." },
+        { title: "الموثوقية", text: "أخطاء typed وتخزين دائم وإعادة اتصال لكل قناة وretry/backoff وCrashlytics وتحصين للإصدارات." },
+      ],
+      experience: [
+        {
+          period: "07/2022 — حتى الآن",
+          role: "مطوّر Flutter · مستقل وعقود",
+          place: "عن بُعد",
+          items: [
+            "صممت وأطلقت أكثر من 5 تطبيقات Flutter إنتاجية في الصوت الاجتماعي والأسواق وإدارة المستندات والمحتوى.",
+            "توليت المعمارية والحالة وتكاملات الخلفية والأداء وتحقيق الدخل والنشر على Google Play وApp Store.",
+            "وحّدت Clean Architecture وCubit وحقن الاعتماديات والأخطاء typed والتخزين offline-first والمهام الخلفية عبر المنتجات.",
+          ],
+        },
+        {
+          period: "2022",
+          role: "مطوّر Android · مشاريع Kotlin",
+          place: "حلب، سوريا",
+          items: [
+            "بنيت تطبيق أنا مبرمج بمسارات لثماني لغات وكونسول WebView واختبارات مصححة آلياً.",
+            "سلّمت منصة تعليم برمجة كمشروع تخرج شملت المتطلبات وتصميم النظام والتنفيذ.",
+          ],
+        },
+        {
+          period: "2021 — 2022",
+          role: "مطوّر تطبيقات Windows · مشاريع جامعية",
+          place: "جامعة حلب",
+          items: [
+            "سلّمت نظامي مستودعات Windows Forms لكليتي الصيدلة والعلوم.",
+            "حصل النظامان على تقدير الكليتين، كما نال نظام العلوم/الكيمياء تقديراً من رئاسة الجامعة.",
+          ],
+        },
+      ],
+      stack: [
+        { label: "الأساس", value: "Flutter · Dart · Material 3 · Android · iOS" },
+        { label: "المعمارية", value: "Clean Architecture · BLoC/Cubit · GetIt · Injectable · Freezed · dartz" },
+        { label: "الخلفية", value: "Supabase · Firebase · Appwrite · REST · Dio · WebSockets" },
+        { label: "اللحظي والوسائط", value: "ZEGOCLOUD · LiveKit · ZIM · just_audio · audio_session" },
+        { label: "الجهاز والبيانات", value: "Hive · SQLite · ML Kit · Tesseract · TFLite · PDF" },
+        { label: "الإصدار", value: "Flavors · ProGuard/R8 · Crashlytics · Secure storage · نشر المتاجر" },
+      ],
+      about: {
+        text: "أنا محمد أديب طويل، مهندس تطبيقات موبايل مقيم في سوريا وأعمل عن بُعد. أقدّم أفضل قيمة عند تقاطع قرارات المنتج والتنفيذ: تشكيل المعمارية وحل سلوكيات الجهاز والوقت الحقيقي وصقل الواجهة ومرافقة البناء حتى الإصدار.",
+        principle: "معياري بسيط: أنظمة واضحة، واجهات هادئة، سلوك قابل للقياس، ودون مفاجآت تشغيلية مخفية.",
+        educationTitle: "التعليم",
+        education: "دبلوم هندسة حاسبات · مسار هندسة البرمجيات",
+        university: "جامعة حلب · يونيو 2020 — أغسطس 2022 · المعدل 82.89%",
+        coursework: "المواد: C# وهياكل البيانات والخوارزميات وOOP وقواعد البيانات وهندسة البرمجيات. مشروع التخرج: منصة تعليم برمجة على الويب وWindows والموبايل.",
+        languages: "العربية — لغة أم · الإنجليزية — كفاءة مهنية في العمل",
+      },
+      services: [
+        { title: "تسليم تطبيق متكامل", text: "تنفيذ المنتج من المعمارية والواجهة حتى تكامل الخلفية والنشر على المتجر." },
+        { title: "المعمارية والتحديث", text: "حدود الميزات وحالة Cubit وحقن الاعتماديات ونماذج الأخطاء وإعادة هيكلة قابلة للصيانة." },
+        { title: "أنظمة لحظية وoffline", text: "غرف صوت ورسائل ومزامنة وتخزين واستراتيجية إعادة اتصال وحالات تدهور واضحة." },
+        { title: "تدفّقات على الجهاز", text: "OCR ومعالجة مستندات وقواعد محلية وTFLite وصوت وتنزيلات خلفية وأدوات PDF." },
+      ],
+      contact: {
+        lead: "شارك المنتج والقيود الحالية وشكل النجاح المطلوب. سأعود بأسئلة تقنية مباشرة وخطوة عملية تالية.",
+        email: "راسلني",
+        whatsapp: "WhatsApp",
+        linkedin: "LinkedIn",
+        github: "GitHub",
+        phone: "الهاتف",
+      },
+      footer: "صُمم وهُندس كملف أعمال ثابت سريع وقابل للوصول.",
     },
   };
 
@@ -994,9 +1417,9 @@
     };
 
     downloads.files.en.docx = 'assets/downloads/CV_SE_EN.docx';
-    downloads.files.en.pdf = 'assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf';
+    downloads.files.en.pdf = 'assets/downloads/CV_SE_EN.pdf';
     downloads.files.ar.docx = 'assets/downloads/CV_SE_AR.docx';
-    downloads.files.ar.pdf = 'assets/downloads/Mohamad-Adib-Tawil_Flutter-Developer.pdf';
+    downloads.files.ar.pdf = 'assets/downloads/CV_SE_AR.pdf';
   }
 
   const CV_DATA = {
@@ -1005,6 +1428,7 @@
     stats,
     projects,
     translations,
+    portfolio,
   };
 
   if (typeof module !== "undefined" && module.exports) {
