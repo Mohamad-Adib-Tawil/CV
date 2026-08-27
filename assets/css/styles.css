@@ -474,7 +474,7 @@ body[data-page="downloads"] section {
 }
 .detail-hero::after { content: ""; position: absolute; z-index: -1; inset: auto -8rem -12rem auto; width: 28rem; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); border-radius: 50%; }
 .detail-title-lockup { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 1rem; margin-block: 1rem 1.5rem; }
-.detail-icon { width: clamp(4.5rem, 8vw, 6.5rem); height: clamp(4.5rem, 8vw, 6.5rem); object-fit: cover; border: 1px solid var(--line-strong); border-radius: var(--radius-xl); box-shadow: var(--shadow-soft); }
+.detail-icon { width: clamp(4.5rem, 8vw, 6.5rem); height: clamp(4.5rem, 8vw, 6.5rem); object-fit: cover; border: 1px solid var(--line-strong); border-radius: var(--radius-xl); box-shadow: var(--shadow-soft); animation: project-logo-float 3.8s ease-in-out infinite; will-change: transform; }
 .detail-hero h1 { max-width: 10ch; }
 .detail-hero-label { margin-block-start: .6rem; color: var(--subtle); font-family: var(--font-mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
 .detail-tech { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-block-start: 1.4rem; list-style: none; }
@@ -642,6 +642,7 @@ body[data-page="downloads"] section {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .motion-ready .reveal { opacity: 1; transform: none; }
+  .detail-icon { animation: none; }
 }
 
 @media print {

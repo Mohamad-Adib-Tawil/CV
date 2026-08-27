@@ -269,6 +269,8 @@
     tableBody.innerHTML = data.projects
       .map((project) => {
         const alt = project.image.alt[lang] || project.image.alt.en;
+        const logo = project.logo || project.image;
+        const logoAlt = logo.alt?.[lang] || logo.alt?.en || alt;
         const description = project.description[lang] || project.description.en;
         const slug = project.slug || project.id;
         const detailsHref = `project.html?id=${encodeURIComponent(slug)}${fromParam}`;
@@ -276,7 +278,10 @@
         return `
           <tr class="project-row" data-href="${escapeHtml(detailsHref)}" role="button" tabindex="0" aria-label="${escapeHtml(project.name)}">
             <td class="project-name">
-              ${escapeHtml(project.name)}
+              <span class="project-name-lockup">
+                <img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">
+                <span>${escapeHtml(project.name)}</span>
+              </span>
               <div class="project-tech">
                 ${project.tech
                   .map((item) => `<span class="tech-badge">${escapeHtml(item)}</span>`)
@@ -546,11 +551,16 @@
       featuredHost.innerHTML = copy.featured.map((item) => {
         const project = getProject(item.id);
         const projectName = project?.name || item.id;
+        const logo = project?.logo || project?.image;
+        const logoAlt = logo?.alt?.[lang] || logo?.alt?.en || `${projectName} logo`;
         return `
           <article class="case-study" aria-labelledby="case-${escapeHtml(item.id)}">
             <div class="case-copy">
               <div><span class="case-index">${escapeHtml(item.index)}</span><span class="case-category">${escapeHtml(item.category)}</span></div>
-              <h3 id="case-${escapeHtml(item.id)}">${escapeHtml(projectName)}</h3>
+              <h3 id="case-${escapeHtml(item.id)}" class="project-title-lockup">
+                ${logo ? `<img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">` : ""}
+                <span>${escapeHtml(projectName)}</span>
+              </h3>
               <div class="case-meta"><span>${escapeHtml(item.role)}</span><span>${escapeHtml(item.platform)}</span></div>
               <p class="case-summary">${escapeHtml(item.summary)}</p>
               <p class="case-outcome">${escapeHtml(item.outcome)}</p>
@@ -573,11 +583,16 @@
     if (otherHost) {
       otherHost.innerHTML = copy.other.map((item) => {
         const project = getProject(item.id);
+        const logo = project?.logo || project?.image;
+        const logoAlt = logo?.alt?.[lang] || logo?.alt?.en || `${project?.name || item.id} logo`;
         return `
           <article class="other-project">
             <div>
               <p class="project-category">${escapeHtml(item.category)}</p>
-              <h4>${escapeHtml(project?.name || item.id)}</h4>
+              <h4 class="project-title-lockup">
+                ${logo ? `<img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">` : ""}
+                <span>${escapeHtml(project?.name || item.id)}</span>
+              </h4>
               <p>${escapeHtml(item.summary)}</p>
               <p class="project-proof">${escapeHtml(item.proof)}</p>
             </div>
@@ -829,8 +844,9 @@
 
     const icon = $("detailIcon");
     if (icon) {
-      icon.src = project.image.src;
-      icon.alt = alt;
+      const logo = project.logo || project.image;
+      icon.src = logo.src;
+      icon.alt = logo.alt?.[lang] || logo.alt?.en || alt;
     }
 
     setText("detailName", project.name);
