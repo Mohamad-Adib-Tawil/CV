@@ -553,13 +553,17 @@
         const projectName = project?.name || item.id;
         const logo = project?.logo || project?.image;
         const logoAlt = logo?.alt?.[lang] || logo?.alt?.en || `${projectName} logo`;
+        const detailsHref = projectDetailsHref(item.id);
+        const detailsLabel = lang === "ar" ? `عرض تفاصيل مشروع ${projectName}` : `View ${projectName} project details`;
         return `
           <article class="case-study" aria-labelledby="case-${escapeHtml(item.id)}">
             <div class="case-copy">
               <div><span class="case-index">${escapeHtml(item.index)}</span><span class="case-category">${escapeHtml(item.category)}</span></div>
               <h3 id="case-${escapeHtml(item.id)}" class="project-title-lockup">
-                ${logo ? `<img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">` : ""}
-                <span>${escapeHtml(projectName)}</span>
+                <a class="project-title-link" href="${escapeHtml(detailsHref)}" data-project-transition="${escapeHtml(item.id)}" aria-label="${escapeHtml(detailsLabel)}">
+                  ${logo ? `<img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">` : ""}
+                  <span>${escapeHtml(projectName)}</span>
+                </a>
               </h3>
               <div class="case-meta"><span>${escapeHtml(item.role)}</span><span>${escapeHtml(item.platform)}</span></div>
               <p class="case-summary">${escapeHtml(item.summary)}</p>
@@ -567,13 +571,13 @@
               <ul class="case-metrics">${item.metrics.map((metric) => `<li>${escapeHtml(metric)}</li>`).join("")}</ul>
               <ul class="case-tech">${item.tech.map((tech) => `<li class="tech-badge">${escapeHtml(tech)}</li>`).join("")}</ul>
               <div class="case-actions">
-                <a class="button button--quiet" href="${escapeHtml(projectDetailsHref(item.id))}">${escapeHtml(copy.actions.caseStudy)} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="button button--quiet" href="${escapeHtml(detailsHref)}" data-project-transition="${escapeHtml(item.id)}">${escapeHtml(copy.actions.caseStudy)} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                 ${renderExternalProjectLinks(project, copy.actions)}
               </div>
             </div>
-            <div class="case-visual" aria-label="${escapeHtml(projectName)} product screens">
+            <a class="case-visual project-visual-link" href="${escapeHtml(detailsHref)}" data-project-transition="${escapeHtml(item.id)}" aria-label="${escapeHtml(detailsLabel)}">
               ${item.screens.map((screen) => `<figure class="case-screen"><img src="${escapeHtml(screen.src)}" alt="${escapeHtml(screen.alt)}" loading="lazy" decoding="async"></figure>`).join("")}
-            </div>
+            </a>
           </article>
         `;
       }).join("");
@@ -585,20 +589,25 @@
         const project = getProject(item.id);
         const logo = project?.logo || project?.image;
         const logoAlt = logo?.alt?.[lang] || logo?.alt?.en || `${project?.name || item.id} logo`;
+        const projectName = project?.name || item.id;
+        const detailsHref = projectDetailsHref(item.id);
+        const detailsLabel = lang === "ar" ? `عرض تفاصيل مشروع ${projectName}` : `View ${projectName} project details`;
         return `
           <article class="other-project">
             <div>
               <p class="project-category">${escapeHtml(item.category)}</p>
               <h4 class="project-title-lockup">
-                ${logo ? `<img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">` : ""}
-                <span>${escapeHtml(project?.name || item.id)}</span>
+                <a class="project-title-link" href="${escapeHtml(detailsHref)}" data-project-transition="${escapeHtml(item.id)}" aria-label="${escapeHtml(detailsLabel)}">
+                  ${logo ? `<img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">` : ""}
+                  <span>${escapeHtml(projectName)}</span>
+                </a>
               </h4>
               <p>${escapeHtml(item.summary)}</p>
               <p class="project-proof">${escapeHtml(item.proof)}</p>
             </div>
             <div>
               <ul class="case-tech">${item.tech.map((tech) => `<li class="tech-badge">${escapeHtml(tech)}</li>`).join("")}</ul>
-              <div class="case-actions"><a class="text-link" href="${escapeHtml(projectDetailsHref(item.id))}">${escapeHtml(copy.actions.caseStudy)} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>${renderExternalProjectLinks(project, copy.actions, true)}</div>
+              <div class="case-actions"><a class="text-link" href="${escapeHtml(detailsHref)}" data-project-transition="${escapeHtml(item.id)}">${escapeHtml(copy.actions.caseStudy)} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>${renderExternalProjectLinks(project, copy.actions, true)}</div>
             </div>
           </article>
         `;
@@ -831,6 +840,10 @@
 
     if (notFound) notFound.hidden = true;
     if (detail) detail.hidden = false;
+    if (detail && !detail.dataset.heroAnimated) {
+      detail.dataset.heroAnimated = "true";
+      window.requestAnimationFrame(() => detail.classList.add("detail-entered"));
+    }
 
     const media = project.media || {};
     const screenshots = Array.isArray(media.screenshots) ? media.screenshots : [];
@@ -1569,6 +1582,23 @@
     });
   };
 
+  const initProjectHeroTransitions = () => {
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[data-project-transition]");
+      if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      const source = link.closest(".case-study, .other-project");
+      if (!source) return;
+
+      document.querySelectorAll(".project-transition-source").forEach((element) => {
+        element.classList.remove("project-transition-source", "is-navigating");
+        element.style.removeProperty("view-transition-name");
+      });
+      source.classList.add("project-transition-source", "is-navigating");
+      source.style.setProperty("view-transition-name", "project-hero");
+    });
+  };
+
   const initMobileNav = () => {
     const nav = document.querySelector(".cv-nav");
     const toggle = $("navToggle");
@@ -1629,6 +1659,7 @@
     initExports();
     initDownloadGuard();
     initProjectRows();
+    initProjectHeroTransitions();
     updateThemeColorMeta();
     updateContrast();
     enableThemeTransition();
