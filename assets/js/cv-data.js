@@ -63,6 +63,10 @@
     {
       id: "lklk",
       name: "LKLK",
+      logo: {
+        src: "https://play-lh.googleusercontent.com/SprB1SlxKXYMOK-ZO4iOe1An9fgJ7dgDW-JhRYan9YMphWuEFiSoGH2l0lhNmJuYBtQ=w192-h192-rw",
+        alt: { en: "LKLK app logo", ar: "شعار تطبيق LKLK" },
+      },
       tech: ["Flutter", "flutter_bloc (Cubit)", "GetIt", "ZEGOCLOUD", "LiveKit", "ZIM", "Appwrite", "Dio", "Hive", "in_app_purchase"],
       image: {
         src: "https://play-lh.googleusercontent.com/SprB1SlxKXYMOK-ZO4iOe1An9fgJ7dgDW-JhRYan9YMphWuEFiSoGH2l0lhNmJuYBtQ=w480-h960-rw",
@@ -193,6 +197,10 @@
     {
       id: "wolfera",
       name: "Wolfera",
+      logo: {
+        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Wolfera/main/assets/images/appIcon.png",
+        alt: { en: "Wolfera app logo", ar: "شعار تطبيق Wolfera" },
+      },
       tech: ["Flutter", "Supabase", "Firebase (FCM/Crashlytics)", "BLoC/Cubit", "GoRouter", "GetIt + Injectable", "Freezed", "TFLite"],
       image: {
         src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Wolfera/main/assets/images/appIcon.png",
@@ -303,6 +311,10 @@
     {
       id: "codebook",
       name: "Code Book",
+      logo: {
+        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Code-Books/main/assets/images/logo.png?raw=1",
+        alt: { en: "Code Book app logo", ar: "شعار تطبيق Code Book" },
+      },
       tech: ["Flutter", "flutter_bloc (Cubit)", "Dio", "Google Books API", "Hive", "GetIt", "GoRouter", "WebView", "dartz"],
       image: {
         src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Code-Books/main/assets/images/logo.png?raw=1",
@@ -340,6 +352,10 @@
     {
       id: "office",
       name: "Office Archiving",
+      logo: {
+        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/office_archiving/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        alt: { en: "Office Archiving app logo", ar: "شعار تطبيق Office Archiving" },
+      },
       tech: ["Flutter", "flutter_bloc (Cubit)", "SQLite (sqflite)", "Google ML Kit", "Tesseract OCR", "pdf", "printing", "flutter_doc_scanner"],
       image: {
         src: "https://play-lh.googleusercontent.com/2xsTQC6G7T22nIa93fSh6dxw-l92NLMWhKXskipm7KbKs84NZUI9rwoWgWh3AGOReTM=w480-h960-rw",
@@ -427,6 +443,10 @@
     {
       id: "quran",
       name: "Quran Ahmed Karasi",
+      logo: {
+        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Quran/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        alt: { en: "Quran Ahmed Karasi app logo", ar: "شعار تطبيق قرآن أحمد كراسي" },
+      },
       tech: ["Flutter", "flutter_bloc (Cubit)", "GetIt", "just_audio", "audio_session", "background_downloader", "quran_library", "Offline Audio"],
       image: {
         src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Quran/main/assets/home/%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%A7%D8%AD%D9%85%D8%AF%20%D9%83%D8%B1%D8%A7%D8%B3%D9%8A%20%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9.png",
