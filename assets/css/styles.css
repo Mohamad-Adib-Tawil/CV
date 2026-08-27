@@ -227,6 +227,15 @@ h1, h2, h3, h4 {
   font-size: 0.72rem;
 }
 
+.brand-avatar {
+  padding: 0.12rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--surface);
+  box-shadow: 0 0.45rem 1.25rem color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
 .switcher-links { display: flex; padding: 0.2rem; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); }
 .switcher-links a { padding: 0.3rem 0.7rem; border-radius: var(--radius-pill); color: var(--muted); font-size: 0.7rem; font-weight: 700; }
 .switcher-links a.is-active { color: var(--text-strong); background: var(--surface-3); }
