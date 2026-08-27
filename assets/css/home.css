@@ -166,7 +166,27 @@ body[data-page="home"]::before {
 .contact-section { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr); align-items: end; gap: clamp(3rem, 8vw, 7rem); margin-block-end: var(--space-10); padding: clamp(2rem, 6vw, 5rem); border: 1px solid var(--line); border-radius: var(--radius-xl); background: var(--surface-2); }
 .contact-copy h2 { max-width: 14ch; font-size: var(--text-2xl); }
 .contact-copy > p:last-child { max-width: 43rem; margin-block-start: 1.2rem; color: var(--muted); }
-.contact-actions { display: grid; gap: 1.3rem; }
+.contact-actions { display: grid; width: min(100%, 19rem); justify-items: start; gap: 1.3rem; }
+.contact-portrait { position: relative; width: clamp(8.5rem, 12vw, 10rem); height: clamp(8.5rem, 12vw, 10rem); justify-self: center; animation: contact-portrait-float 4.6s ease-in-out infinite; }
+.contact-portrait::before { position: absolute; inset: 0.35rem -0.35rem -0.35rem 0.35rem; border: 1px solid var(--accent); border-radius: 50%; content: ""; opacity: 0.45; animation: contact-portrait-ring 2.8s ease-out infinite; }
+.contact-portrait img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: center top; border: 0.3rem solid var(--surface-2); border-radius: 50%; box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--accent) 22%, transparent); }
+@keyframes contact-portrait-float { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-0.55rem) rotate(1deg); } }
+@keyframes contact-portrait-ring { 0%, 100% { opacity: .45; transform: scale(1); } 55% { opacity: .08; transform: scale(1.09); } }
+.contact-actions > .button {
+  width: min(100%, 19rem);
+  min-height: 4.4rem;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1rem 2.4rem color-mix(in srgb, var(--accent) 28%, transparent);
+  font-size: 1.05rem;
+  animation: contact-cta-glow 3.2s ease-in-out infinite;
+}
+.contact-actions > .button i { display: grid; width: 2.15rem; height: 2.15rem; place-items: center; border-radius: 50%; background: color-mix(in srgb, white 16%, transparent); transition: transform var(--transition-fast); }
+.contact-actions > .button:hover { box-shadow: 0 1.35rem 3rem color-mix(in srgb, var(--accent) 38%, transparent); transform: translateY(-.2rem); }
+.contact-actions > .button:hover i { transform: translate(.2rem, -.2rem); }
+[dir="rtl"] .contact-actions > .button:hover i { transform: translate(-.2rem, -.2rem); }
+@keyframes contact-cta-glow { 0%, 100% { box-shadow: 0 1rem 2.4rem color-mix(in srgb, var(--accent) 22%, transparent); } 50% { box-shadow: 0 1.2rem 3rem color-mix(in srgb, var(--accent) 38%, transparent); } }
 .contact-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
 .contact-links a { color: var(--muted); font-size: 0.78rem; font-weight: 700; }
 .contact-links a:hover { color: var(--accent-ink); }
@@ -237,4 +257,5 @@ body[data-page="home"]::before {
 @media (prefers-reduced-motion: reduce) {
   .device--primary, .device--secondary { transform: none; }
   .project-logo--animated { animation: none; }
+  .contact-portrait, .contact-portrait::before, .contact-actions > .button { animation: none; }
 }
