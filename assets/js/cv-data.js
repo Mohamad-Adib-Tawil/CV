@@ -64,7 +64,7 @@
       id: "lklk",
       name: "LKLK",
       logo: {
-        src: "https://play-lh.googleusercontent.com/SprB1SlxKXYMOK-ZO4iOe1An9fgJ7dgDW-JhRYan9YMphWuEFiSoGH2l0lhNmJuYBtQ=w192-h192-rw",
+        src: "assets/images/logos/lklk.webp",
         alt: { en: "LKLK app logo", ar: "شعار تطبيق LKLK" },
       },
       tech: ["Flutter", "flutter_bloc (Cubit)", "GetIt", "ZEGOCLOUD", "LiveKit", "ZIM", "Appwrite", "Dio", "Hive", "in_app_purchase"],
@@ -198,7 +198,7 @@
       id: "wolfera",
       name: "Wolfera",
       logo: {
-        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Wolfera/main/assets/images/appIcon.png",
+        src: "assets/images/logos/wolfera.png",
         alt: { en: "Wolfera app logo", ar: "شعار تطبيق Wolfera" },
       },
       tech: ["Flutter", "Supabase", "Firebase (FCM/Crashlytics)", "BLoC/Cubit", "GoRouter", "GetIt + Injectable", "Freezed", "TFLite"],
@@ -312,7 +312,7 @@
       id: "codebook",
       name: "Code Book",
       logo: {
-        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Code-Books/main/assets/images/logo.png?raw=1",
+        src: "assets/images/logos/codebook.png",
         alt: { en: "Code Book app logo", ar: "شعار تطبيق Code Book" },
       },
       tech: ["Flutter", "flutter_bloc (Cubit)", "Dio", "Google Books API", "Hive", "GetIt", "GoRouter", "WebView", "dartz"],
@@ -353,7 +353,7 @@
       id: "office",
       name: "Office Archiving",
       logo: {
-        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/office_archiving/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        src: "assets/images/logos/office.png",
         alt: { en: "Office Archiving app logo", ar: "شعار تطبيق Office Archiving" },
       },
       tech: ["Flutter", "flutter_bloc (Cubit)", "SQLite (sqflite)", "Google ML Kit", "Tesseract OCR", "pdf", "printing", "flutter_doc_scanner"],
@@ -444,7 +444,7 @@
       id: "quran",
       name: "Quran Ahmed Karasi",
       logo: {
-        src: "https://raw.githubusercontent.com/Mohamad-Adib-Tawil/Quran/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        src: "assets/images/logos/quran.png",
         alt: { en: "Quran Ahmed Karasi app logo", ar: "شعار تطبيق قرآن أحمد كراسي" },
       },
       tech: ["Flutter", "flutter_bloc (Cubit)", "GetIt", "just_audio", "audio_session", "background_downloader", "quran_library", "Offline Audio"],
