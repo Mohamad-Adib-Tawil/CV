@@ -1174,8 +1174,15 @@
   };
 
   const initLanguage = () => {
+    const requestedLang = getQueryParam("lang");
     const savedLang = storage.get("lang") || "en";
-    applyLanguage(savedLang);
+    const initialLang = requestedLang === "ar" || requestedLang === "en"
+      ? requestedLang
+      : savedLang;
+    applyLanguage(initialLang);
+    if (requestedLang === "ar" || requestedLang === "en") {
+      storage.set("lang", state.currentLang);
+    }
 
     if (langSelect) {
       langSelect.value = state.currentLang;
