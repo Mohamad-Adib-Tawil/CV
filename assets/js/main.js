@@ -878,6 +878,10 @@
 
     const curatedHeroScreens = {
       lklk: ["assets/images/portfolio/lklk-live-room.jpg", "assets/images/portfolio/lklk-levels.jpg"],
+      beroya: [
+        "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.39 PM.png",
+        "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.53 PM.png",
+      ],
       wolfera: ["assets/images/portfolio/wolfera-marketplace.jpg", "assets/images/portfolio/wolfera-listing.jpg"],
       office: ["assets/images/portfolio/office-dashboard.jpg", "assets/images/portfolio/office-search.jpg"],
     };
@@ -970,6 +974,7 @@
     if (gallery && screenshots.length) {
       const preferred = {
         lklk: [72, 29],
+        beroya: [0, 1, 2, 3],
         wolfera: [23, 44],
         office: [0, 29],
       };

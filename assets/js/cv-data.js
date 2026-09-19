@@ -195,6 +195,65 @@
       },
     },
     {
+      id: "beroya",
+      name: "Beroya Cars",
+      logo: {
+        src: "assets/projects/beroya/beroya-logo.svg",
+        alt: { en: "Beroya Cars app logo", ar: "شعار تطبيق بيرويا للسيارات" },
+      },
+      tech: ["Flutter", "Dart", "Cubit", "Arabic RTL", "Localization", "Realtime Chat", "Push Notifications"],
+      image: {
+        src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.39 PM.png",
+        alt: {
+          en: "Beroya Cars marketplace home screen",
+          ar: "الصفحة الرئيسية لسوق بيرويا للسيارات",
+        },
+      },
+      description: {
+        en: "A bilingual automotive marketplace for discovering, buying, and selling cars. Beroya combines brand and price filtering, detailed vehicle listings, favorites, seller profiles, notifications, location-aware discovery, and direct in-app chat in an Arabic-first Flutter experience.",
+        ar: "سوق سيارات ثنائي اللغة لاكتشاف السيارات وشرائها وبيعها. يجمع بيرويا بين التصفية حسب الماركة والسعر، وتفاصيل السيارة، والمفضلة، وملفات البائعين، والإشعارات، والبحث حسب الموقع، والمحادثة المباشرة ضمن تجربة Flutter مصممة للعربية أولاً.",
+      },
+      slug: "beroya",
+      bio: {
+        en: "An Arabic-first car marketplace designed to make browsing listings, comparing vehicle details, managing ads, and contacting sellers feel direct and familiar. The product includes bilingual navigation, location-based discovery, favorites, notifications, seller profiles, and contextual chat around each listing.",
+        ar: "سوق سيارات مصمم للعربية أولاً ليجعل تصفح الإعلانات ومقارنة تفاصيل السيارات وإدارة الإعلانات والتواصل مع البائعين تجربة مباشرة وسهلة. يدعم التطبيق لغتين، والبحث حسب الموقع، والمفضلة، والإشعارات، وملفات البائعين، ومحادثة مرتبطة بكل إعلان.",
+      },
+      linkedin: {
+        en: "🚗 Built Beroya Cars — an Arabic-first automotive marketplace in Flutter with rich vehicle listings, brand and price discovery, favorites, notifications, seller profiles, and contextual in-app chat.\n\n#Flutter #Dart #MobileDevelopment #Marketplace #ArabicUI",
+        ar: "🚗 بنيت Beroya Cars — سوق سيارات مصمم للعربية أولاً باستخدام Flutter، ويضم إعلانات مفصلة، وبحثاً حسب الماركة والسعر، ومفضلة، وإشعارات، وملفات للبائعين، ومحادثة مباشرة مرتبطة بالإعلان.\n\n#Flutter #Dart #فلاتر #تطبيقات_الموبايل",
+      },
+      links: {
+        directDownload: "",
+        playStore: "",
+        appStore: "",
+        github: "",
+        website: "",
+      },
+      media: {
+        poster: "",
+        video: "kdsHxhWiutA",
+        screenshots: [
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.39 PM.png", alt: { en: "Marketplace home and recommended cars", ar: "الرئيسية والسيارات المقترحة" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.53 PM.png", alt: { en: "Vehicle listing details", ar: "تفاصيل إعلان السيارة" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.58 PM.png", alt: { en: "User profile and account management", ar: "الملف الشخصي وإدارة الحساب" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 8.11.45 PM.png", alt: { en: "Contextual chat with a vehicle seller", ar: "محادثة مباشرة مع بائع السيارة" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.58.10 PM.png", alt: { en: "Welcome and authentication screen", ar: "شاشة الترحيب وتسجيل الدخول" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.34 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.44 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.01 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.12 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.18 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.22 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.36 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.42 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.47 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 8.11.59 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 8.12.08 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 8.12.12 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
+        ],
+      },
+    },
+    {
       id: "wolfera",
       name: "Wolfera",
       logo: {
@@ -923,6 +982,13 @@
       ],
       other: [
         {
+          id: "beroya",
+          category: "Arabic-first automotive marketplace",
+          summary: "A bilingual marketplace for discovering vehicles, managing ads, saving favorites, and chatting directly with sellers.",
+          proof: "Rich listings · Contextual chat · Arabic RTL",
+          tech: ["Flutter", "Cubit", "Localization", "Realtime Chat"],
+        },
+        {
           id: "quran",
           category: "Offline audio & reading",
           summary: "Arabic/German Quran reading, listening, study, and per-surah background downloads with an explicit audio state machine.",
@@ -1128,6 +1194,13 @@
         },
       ],
       other: [
+        {
+          id: "beroya",
+          category: "سوق سيارات مصمم للعربية أولاً",
+          summary: "سوق ثنائي اللغة لاكتشاف السيارات وإدارة الإعلانات وحفظ المفضلة والتواصل المباشر مع البائعين.",
+          proof: "إعلانات مفصلة · محادثة مباشرة · دعم RTL",
+          tech: ["Flutter", "Cubit", "Localization", "Realtime Chat"],
+        },
         {
           id: "quran",
           category: "قراءة واستماع دون اتصال",
