@@ -198,10 +198,10 @@
       id: "beroya",
       name: "Beroya Cars",
       logo: {
-        src: "assets/projects/beroya/beroya-logo.svg",
+        src: "assets/images/logos/beroya.webp",
         alt: { en: "Beroya Cars app logo", ar: "شعار تطبيق بيرويا للسيارات" },
       },
-      tech: ["Flutter", "Dart", "Cubit", "Arabic RTL", "Localization", "Realtime Chat", "Push Notifications"],
+      tech: ["Flutter", "Dart", "Cubit", "Arabic RTL", "Localization", "In-app Chat"],
       image: {
         src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.39 PM.png",
         alt: {
@@ -210,17 +210,17 @@
         },
       },
       description: {
-        en: "A bilingual automotive marketplace for discovering, buying, and selling cars. Beroya combines brand and price filtering, detailed vehicle listings, favorites, seller profiles, notifications, location-aware discovery, and direct in-app chat in an Arabic-first Flutter experience.",
-        ar: "سوق سيارات ثنائي اللغة لاكتشاف السيارات وشرائها وبيعها. يجمع بيرويا بين التصفية حسب الماركة والسعر، وتفاصيل السيارة، والمفضلة، وملفات البائعين، والإشعارات، والبحث حسب الموقع، والمحادثة المباشرة ضمن تجربة Flutter مصممة للعربية أولاً.",
+        en: "A bilingual Arabic–English automotive marketplace for selling and renting cars. Beroya combines vehicle search, detailed listings, price updates, favorites, user profiles, and direct in-app chat between customers and administrators in a Flutter experience built for both RTL and LTR.",
+        ar: "تطبيق معرض سيارات بالعربية والإنجليزية لبيع السيارات وتأجيرها. يوفّر بيرويا البحث عن السيارات، وعرض تفاصيل الإعلانات، وتعديل الأسعار، وقسم المفضلة، وملفاً شخصياً للمستخدم، ومحادثة مباشرة بين العميل والأدمن، ضمن تجربة Flutter تدعم اتجاهي RTL وLTR.",
       },
       slug: "beroya",
       bio: {
-        en: "An Arabic-first car marketplace designed to make browsing listings, comparing vehicle details, managing ads, and contacting sellers feel direct and familiar. The product includes bilingual navigation, location-based discovery, favorites, notifications, seller profiles, and contextual chat around each listing.",
-        ar: "سوق سيارات مصمم للعربية أولاً ليجعل تصفح الإعلانات ومقارنة تفاصيل السيارات وإدارة الإعلانات والتواصل مع البائعين تجربة مباشرة وسهلة. يدعم التطبيق لغتين، والبحث حسب الموقع، والمفضلة، والإشعارات، وملفات البائعين، ومحادثة مرتبطة بكل إعلان.",
+        en: "A bilingual car showroom app designed to make selling and renting vehicles straightforward. Customers can search listings, inspect vehicle details, save favorites, manage their profiles, and chat directly with an administrator, while prices and listing information can be kept up to date.",
+        ar: "تطبيق معرض سيارات ثنائي اللغة يجعل بيع السيارات وتأجيرها أكثر سهولة. يستطيع العميل البحث في الإعلانات، ومراجعة تفاصيل السيارة، وحفظ السيارات التي أحبها، وإدارة ملفه الشخصي، والتواصل مباشرة مع الأدمن، مع إمكانية تحديث الأسعار وبيانات الإعلانات.",
       },
       linkedin: {
-        en: "🚗 Built Beroya Cars — an Arabic-first automotive marketplace in Flutter with rich vehicle listings, brand and price discovery, favorites, notifications, seller profiles, and contextual in-app chat.\n\n#Flutter #Dart #MobileDevelopment #Marketplace #ArabicUI",
-        ar: "🚗 بنيت Beroya Cars — سوق سيارات مصمم للعربية أولاً باستخدام Flutter، ويضم إعلانات مفصلة، وبحثاً حسب الماركة والسعر، ومفضلة، وإشعارات، وملفات للبائعين، ومحادثة مباشرة مرتبطة بالإعلان.\n\n#Flutter #Dart #فلاتر #تطبيقات_الموبايل",
+        en: "🚗 Built Beroya Cars — a bilingual Arabic–English Flutter app for selling and renting vehicles, with search, detailed listings, editable prices, favorites, user profiles, and direct customer-to-admin chat.\n\n#Flutter #Dart #MobileDevelopment #Marketplace #ArabicUI",
+        ar: "🚗 بنيت Beroya Cars — تطبيق Flutter بالعربية والإنجليزية لبيع السيارات وتأجيرها، مع البحث، وتفاصيل الإعلانات، وتعديل الأسعار، والمفضلة، والملف الشخصي، ومحادثة مباشرة بين العميل والأدمن.\n\n#Flutter #Dart #فلاتر #تطبيقات_الموبايل",
       },
       links: {
         directDownload: "",
@@ -236,7 +236,7 @@
           { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.39 PM.png", alt: { en: "Marketplace home and recommended cars", ar: "الرئيسية والسيارات المقترحة" } },
           { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.53 PM.png", alt: { en: "Vehicle listing details", ar: "تفاصيل إعلان السيارة" } },
           { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 4.00.58 PM.png", alt: { en: "User profile and account management", ar: "الملف الشخصي وإدارة الحساب" } },
-          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 8.11.45 PM.png", alt: { en: "Contextual chat with a vehicle seller", ar: "محادثة مباشرة مع بائع السيارة" } },
+          { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 8.11.45 PM.png", alt: { en: "Direct customer-to-admin chat", ar: "محادثة مباشرة بين العميل والأدمن" } },
           { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.58.10 PM.png", alt: { en: "Welcome and authentication screen", ar: "شاشة الترحيب وتسجيل الدخول" } },
           { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.34 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
           { src: "assets/projects/beroya/Screenshot iPhone 18 Pro 19-09-2026 at 3.59.44 PM.png", alt: { en: "Beroya Cars application screen", ar: "واجهة من تطبيق بيرويا" } },
@@ -984,9 +984,9 @@
         {
           id: "beroya",
           category: "Arabic-first automotive marketplace",
-          summary: "A bilingual marketplace for discovering vehicles, managing ads, saving favorites, and chatting directly with sellers.",
-          proof: "Rich listings · Contextual chat · Arabic RTL",
-          tech: ["Flutter", "Cubit", "Localization", "Realtime Chat"],
+          summary: "A bilingual car showroom for selling and renting vehicles, with search, editable prices, favorites, profiles, and customer-to-admin chat.",
+          proof: "Selling + rentals · Customer/admin chat · Arabic RTL",
+          tech: ["Flutter", "Cubit", "Localization", "In-app Chat"],
         },
         {
           id: "quran",
@@ -1197,9 +1197,9 @@
         {
           id: "beroya",
           category: "سوق سيارات مصمم للعربية أولاً",
-          summary: "سوق ثنائي اللغة لاكتشاف السيارات وإدارة الإعلانات وحفظ المفضلة والتواصل المباشر مع البائعين.",
-          proof: "إعلانات مفصلة · محادثة مباشرة · دعم RTL",
-          tech: ["Flutter", "Cubit", "Localization", "Realtime Chat"],
+          summary: "معرض سيارات ثنائي اللغة للبيع والتأجير، مع البحث وتعديل الأسعار والمفضلة والملف الشخصي ومحادثة العميل مع الأدمن.",
+          proof: "بيع وتأجير · محادثة عميل وأدمن · دعم RTL",
+          tech: ["Flutter", "Cubit", "Localization", "In-app Chat"],
         },
         {
           id: "quran",
