@@ -61,6 +61,28 @@
 
   const projects = [
     {
+      id: "hasobjy", slug: "hasobjy", name: "Hasobjy | حاسوبجي",
+      tech: ["Flutter", "Cubit", "Clean Architecture", "Dio", "Firebase Auth", "GoRouter"],
+      image: { src: "assets/projects/hasobjy/screenshots/screenshot-01.png", alt: { en: "Hasobjy student home design", ar: "تصميم الرئيسية للطالب في حاسوبجي" } },
+      description: {
+        en: "An educational platform in development for students of the Technical Institute of Computer Science in Aleppo and independent courses.",
+        ar: "منصة تعليمية قيد التطوير لطلاب المعهد التقني للحاسوب في حلب وللدورات المستقلة.",
+      },
+      bio: {
+        en: "I work on the Flutter mobile application using a feature-first architecture and Cubit, including student learning interfaces and authentication integration. Parts of the student experience remain previews with demo data, and production integration is ongoing. The gallery shows Figma designs.",
+        ar: "أعمل على تطبيق Flutter باستخدام معمارية منظّمة حسب الميزات وCubit، بما يشمل واجهات تعلّم الطالب وربط المصادقة. بعض واجهات الطالب ما زالت معاينات ببيانات تجريبية، ويستمر العمل على تكامل الإنتاج. يعرض المعرض تصاميم Figma.",
+      },
+      links: {},
+      media: { screenshots: [
+        { src: "assets/projects/hasobjy/screenshots/screenshot-01.png", alt: { en: "Student home design", ar: "تصميم الرئيسية للطالب" } },
+        { src: "assets/projects/hasobjy/screenshots/screenshot-02.png", alt: { en: "Subjects design", ar: "تصميم المواد" } },
+        { src: "assets/projects/hasobjy/screenshots/screenshot-03.png", alt: { en: "Subject details design", ar: "تصميم تفاصيل المادة" } },
+        { src: "assets/projects/hasobjy/screenshots/screenshot-04.png", alt: { en: "Lesson player design", ar: "تصميم مشغّل الدرس" } },
+        { src: "assets/projects/hasobjy/screenshots/screenshot-05.png", alt: { en: "PDF viewer design", ar: "تصميم عارض PDF" } },
+        { src: "assets/projects/hasobjy/screenshots/screenshot-06.png", alt: { en: "Exercises design", ar: "تصميم التمارين" } },
+      ] },
+    },
+    {
       id: "employees-funds",
       slug: "employees-funds",
       name: "Employees Funds System",
@@ -964,6 +986,17 @@
       },
       featured: [
         {
+          id: "hasobjy", index: "05", category: "Education · In development",
+          role: "Flutter Developer", platform: "Student mobile app",
+          summary: "An educational platform for institute students and independent courses, with an Arabic-first learning experience.",
+          outcome: "Developing the Flutter application with structured feature architecture, student interfaces, and authentication integration. Screens shown are Figma designs.",
+          metrics: ["Student learning", "Arabic RTL", "In development"], tech: ["Flutter", "Cubit", "Clean Architecture", "Firebase Auth"],
+          screens: [
+            { src: "assets/projects/hasobjy/screenshots/screenshot-01.png", alt: "Figma design of Hasobjy student home" },
+            { src: "assets/projects/hasobjy/screenshots/screenshot-02.png", alt: "Figma design of Hasobjy subjects" },
+          ],
+        },
+        {
           id: "employees-funds", index: "04", category: "Employee funds management",
           role: "Flutter Developer · Both apps", platform: "Manager app · Employee app",
           summary: "Two Flutter applications for managing employee funds at Able Real Estate in Saudi Arabia.",
@@ -1187,6 +1220,17 @@
         contactTitle: "هل لديك تطبيق جاد تريد تنفيذه؟ لنتحدث.",
       },
       featured: [
+        {
+          id: "hasobjy", index: "05", category: "التعليم · قيد التطوير",
+          role: "مطوّر Flutter", platform: "تطبيق الطالب",
+          summary: "منصة تعليمية لطلاب المعهد والدورات المستقلة، بتجربة تعلّم مصممة للعربية.",
+          outcome: "أطوّر تطبيق Flutter بمعمارية منظّمة حسب الميزات، مع واجهات الطالب وربط المصادقة. الواجهات المعروضة من تصميم Figma.",
+          metrics: ["تعلّم الطلاب", "واجهة عربية", "قيد التطوير"], tech: ["Flutter", "Cubit", "Clean Architecture", "Firebase Auth"],
+          screens: [
+            { src: "assets/projects/hasobjy/screenshots/screenshot-01.png", alt: "تصميم Figma لرئيسية الطالب في حاسوبجي" },
+            { src: "assets/projects/hasobjy/screenshots/screenshot-02.png", alt: "تصميم Figma للمواد في حاسوبجي" },
+          ],
+        },
         {
           id: "employees-funds", index: "04", category: "إدارة أموال الموظفين",
           role: "مطوّر Flutter للتطبيقين", platform: "تطبيق المدير · تطبيق الموظف",
