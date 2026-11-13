@@ -61,6 +61,35 @@
 
   const projects = [
     {
+      id: "employees-funds",
+      slug: "employees-funds",
+      name: "Employees Funds System",
+      tech: ["Flutter", "Cubit", "Dio", "Firebase Messaging"],
+      image: {
+        src: "assets/projects/employees-funds/screenshots/screenshot-01.png",
+        alt: { en: "Employees Funds manager interface", ar: "واجهة المدير في نظام أموال الموظفين" },
+      },
+      description: {
+        en: "A two-app employee funds management system for Able Real Estate in Saudi Arabia, built in Flutter for managers and employees.",
+        ar: "نظام لإدارة أموال الموظفين لشركة أبل عقارات في السعودية، يضم تطبيقين للمدير والموظف مبنيين باستخدام Flutter.",
+      },
+      bio: {
+        en: "I developed both Flutter applications for Able Real Estate: a manager app for employee accounts and financial operations, and an employee app for viewing balances, transaction history, and notifications. The gallery presents screens from the Figma design.",
+        ar: "طوّرت تطبيقي Flutter لشركة أبل عقارات: تطبيق المدير لإدارة حسابات الموظفين والعمليات المالية، وتطبيق الموظف لعرض الأرصدة وسجل الحركات والإشعارات. يعرض المعرض واجهات من تصميم Figma.",
+      },
+      links: {},
+      media: {
+        screenshots: [
+          { src: "assets/projects/employees-funds/screenshots/screenshot-01.png", alt: { en: "Manager app: employee list", ar: "تطبيق المدير: قائمة الموظفين" } },
+          { src: "assets/projects/employees-funds/screenshots/screenshot-02.png", alt: { en: "Employee app: home", ar: "تطبيق الموظف: الرئيسية" } },
+          { src: "assets/projects/employees-funds/screenshots/screenshot-03.png", alt: { en: "Manager app: employee details", ar: "تطبيق المدير: تفاصيل الموظف" } },
+          { src: "assets/projects/employees-funds/screenshots/screenshot-04.png", alt: { en: "Manager app: financial transaction", ar: "تطبيق المدير: عملية مالية" } },
+          { src: "assets/projects/employees-funds/screenshots/screenshot-05.png", alt: { en: "Employee app: transaction history", ar: "تطبيق الموظف: سجل الحركات" } },
+          { src: "assets/projects/employees-funds/screenshots/screenshot-06.png", alt: { en: "Employee app: notifications", ar: "تطبيق الموظف: الإشعارات" } },
+        ],
+      },
+    },
+    {
       id: "lklk",
       name: "LKLK",
       logo: {
@@ -935,6 +964,17 @@
       },
       featured: [
         {
+          id: "employees-funds", index: "04", category: "Employee funds management",
+          role: "Flutter Developer · Both apps", platform: "Manager app · Employee app",
+          summary: "Two Flutter applications for managing employee funds at Able Real Estate in Saudi Arabia.",
+          outcome: "Developed the manager and employee applications, covering employee accounts, financial operations, transaction history, and notifications.",
+          metrics: ["Manager app", "Employee app", "Arabic RTL"], tech: ["Flutter", "Cubit", "Dio", "Firebase Messaging"],
+          screens: [
+            { src: "assets/projects/employees-funds/screenshots/screenshot-01.png", alt: "Figma design of the manager's employee list" },
+            { src: "assets/projects/employees-funds/screenshots/screenshot-02.png", alt: "Figma design of the employee home screen" },
+          ],
+        },
+        {
           id: "lklk",
           index: "01",
           category: "Real-time social audio",
@@ -1147,6 +1187,17 @@
         contactTitle: "هل لديك تطبيق جاد تريد تنفيذه؟ لنتحدث.",
       },
       featured: [
+        {
+          id: "employees-funds", index: "04", category: "إدارة أموال الموظفين",
+          role: "مطوّر Flutter للتطبيقين", platform: "تطبيق المدير · تطبيق الموظف",
+          summary: "تطبيقان مبنيان باستخدام Flutter لإدارة أموال الموظفين في شركة أبل عقارات بالسعودية.",
+          outcome: "طوّرت تطبيقي المدير والموظف، بما يشمل حسابات الموظفين والعمليات المالية وسجل الحركات والإشعارات.",
+          metrics: ["تطبيق المدير", "تطبيق الموظف", "واجهة عربية"], tech: ["Flutter", "Cubit", "Dio", "Firebase Messaging"],
+          screens: [
+            { src: "assets/projects/employees-funds/screenshots/screenshot-01.png", alt: "تصميم Figma لقائمة الموظفين في تطبيق المدير" },
+            { src: "assets/projects/employees-funds/screenshots/screenshot-02.png", alt: "تصميم Figma للرئيسية في تطبيق الموظف" },
+          ],
+        },
         {
           id: "lklk",
           index: "01",
