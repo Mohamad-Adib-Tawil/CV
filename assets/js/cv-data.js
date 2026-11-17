@@ -184,8 +184,8 @@
         },
       },
       description: {
-        en: `Production real-time social audio platform — live rooms with up to 500 concurrent users and 20 mic seats. Dual audio SDKs (ZEGOCLOUD ZegoExpress + LiveKit), SVGA/VAP virtual-gift engine (8 concurrent), coin economy with 6 in-app purchase tiers, multi-tier VIP &amp; gamification, and Appwrite Realtime on Clean Architecture with flutter_bloc + GetIt. 5,000+ downloads. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
-        ar: `منصة صوتية اجتماعية منشورة تضم غرفاً مباشرة تستوعب حتى 500 مستخدم و20 مقعداً للميكروفون. استخدمت ZEGOCLOUD وLiveKit للصوت، وبنيت محركاً للهدايا المتحركة يدعم 8 هدايا في الوقت نفسه، ونظام عملات مع 6 باقات شراء، ومستويات VIP. يعتمد التطبيق على Appwrite للاتصال المباشر، وتجاوز 5,000 تنزيل. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
+        en: `Production real-time social audio platform — live rooms with up to 500 concurrent users and 20 mic seats. Dual audio SDKs (ZEGOCLOUD ZegoExpress + LiveKit), SVGA/VAP virtual-gift engine (8 concurrent), coin economy with 6 in-app purchase tiers, multi-tier VIP &amp; gamification, and Appwrite Realtime on Clean Architecture with flutter_bloc + GetIt. 10,000+ downloads. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>`,
+        ar: `منصة صوتية اجتماعية منشورة تضم غرفاً مباشرة تستوعب حتى 500 مستخدم و20 مقعداً للميكروفون. استخدمت ZEGOCLOUD وLiveKit للصوت، وبنيت محركاً للهدايا المتحركة يدعم 8 هدايا في الوقت نفسه، ونظام عملات مع 6 باقات شراء، ومستويات VIP. يعتمد التطبيق على Appwrite للاتصال المباشر، وتجاوز 10,000 تنزيل. <a href="https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Google Play</a>`,
       },
       // ── Detail page fields (all optional; the detail page hides empty sections) ──
       slug: "lklk",
@@ -194,8 +194,8 @@
         ar: "تطبيق صوتي اجتماعي للسوق العربي يضم غرفاً مباشرة وهدايا متحركة ومستويات VIP وشراء العملات داخل التطبيق. كنت المطوّر الوحيد لتطبيق Flutter، وتولّيت المعمارية وإدارة الحالة وربطه مع ZEGOCLOUD وLiveKit وAppwrite ونظام المشتريات.",
       },
       linkedin: {
-        en: "🎙️ Built a real-time social audio platform in Flutter — 500 users/room, dual audio SDKs (ZEGOCLOUD + LiveKit), a queued SVGA/VAP gift engine, and a full coin economy with 6 in-app purchase tiers. Live on Google Play with 5,000+ downloads.\n\n#Flutter #LiveAudio #FlutterBloc #ZEGOCLOUD #CleanArchitecture",
-        ar: "🎙️ بنيت منصة صوتية اجتماعية باستخدام Flutter تدعم حتى 500 مستخدم في الغرفة. ربطت محركي الصوت ZEGOCLOUD وLiveKit، وبنيت نظام الهدايا المتحركة والعملات مع 6 باقات شراء. التطبيق منشور على Google Play وتجاوز 5,000 تنزيل.\n\n#Flutter #فلاتر #FlutterBloc #LiveAudio",
+        en: "🎙️ Built a real-time social audio platform in Flutter — 500 users/room, dual audio SDKs (ZEGOCLOUD + LiveKit), a queued SVGA/VAP gift engine, and a full coin economy with 6 in-app purchase tiers. Live on Google Play with 10,000+ downloads.\n\n#Flutter #LiveAudio #FlutterBloc #ZEGOCLOUD #CleanArchitecture",
+        ar: "🎙️ بنيت منصة صوتية اجتماعية باستخدام Flutter تدعم حتى 500 مستخدم في الغرفة. ربطت محركي الصوت ZEGOCLOUD وLiveKit، وبنيت نظام الهدايا المتحركة والعملات مع 6 باقات شراء. التطبيق منشور على Google Play وتجاوز 10,000 تنزيل.\n\n#Flutter #فلاتر #FlutterBloc #LiveAudio",
       },
       links: {
         directDownload: "",
@@ -742,11 +742,11 @@
         ],
       },
       summaryText:
-        "Flutter developer with 4 years designing, building, and shipping production mobile apps to Google Play and the App Store — including a live social-audio platform that surpassed 5,000+ downloads. Specialized in Clean Architecture, BLoC/Cubit state management, and offline-first systems, with deep hands-on work in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and multi-backend integration (Supabase, Firebase, Appwrite). Owns the full mobile lifecycle end-to-end: requirements, architecture, UI, backend integration, performance tuning, and store release.",
+        "Flutter developer with 4 years designing, building, and shipping production mobile apps to Google Play and the App Store — including a live social-audio platform that surpassed 10,000+ downloads. Specialized in Clean Architecture, BLoC/Cubit state management, and offline-first systems, with deep hands-on work in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and multi-backend integration (Supabase, Firebase, Appwrite). Owns the full mobile lifecycle end-to-end: requirements, architecture, UI, backend integration, performance tuning, and store release.",
       experienceRole: "Flutter Developer — Independent & Contract (Remote) — 07/2022 – Present",
       experienceList: [
         "Designed and shipped 5+ production Flutter apps end-to-end across social-audio, marketplace, document-management, and content domains — owning architecture, state management, backend integration, performance, and store release on Google Play and the App Store.",
-        "Built a real-time social-audio platform (LKLK) architected for up to 500 listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD + LiveKit) and three concurrent realtime channels (Appwrite Realtime, WebSockets, ZIM) with per-channel reconnect and exponential backoff; app surpassed 5,000+ downloads.",
+        "Built a real-time social-audio platform (LKLK) architected for up to 500 listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD + LiveKit) and three concurrent realtime channels (Appwrite Realtime, WebSockets, ZIM) with per-channel reconnect and exponential backoff; app surpassed 10,000+ downloads.",
         "Engineered the app's monetization and engagement stack: in-app purchases (6 coin tiers), an SVGA/VAP virtual-gift animation engine (concurrency-capped at 8, sub-100 ms queue interval), VIP tiers, and gamified progression.",
         "Delivered a bilingual (AR/EN) car marketplace (Wolfera) on Supabase (PostgreSQL with Row-Level Security, Auth + Google/Apple SSO, Realtime chat, Storage), with on-device TFLite image moderation, FCM price-drop alerts, and advanced search across 15+ filters with infinite scroll.",
         "Built an offline-first document scanner (Office Archiving) with a dual-engine OCR pipeline (Google ML Kit + Tesseract) for Arabic/English — multi-orientation, preprocessing, best-result scoring — plus a full PDF toolkit (watermark, sign, password-protect) and SQLite full-text search, all on-device with no backend.",
@@ -775,7 +775,7 @@
       achievements: [
         "Designed and shipped 5+ production apps to Google Play and the App Store",
         "Built real-time social-audio rooms supporting up to 500 concurrent listeners and 20 mic seats using ZEGOCLOUD + LiveKit",
-        "Delivered one public app (LKLK) with 5,000+ downloads over 80+ build releases",
+        "Delivered one public app (LKLK) with 10,000+ downloads over 80+ build releases",
         "Implemented a custom dual-engine OCR pipeline (ML Kit + Tesseract) for reliable Arabic/English extraction on mixed real-world documents",
         "Engineered offline-first flows with Hive, SQLite, pagination, stale-while-revalidate, 3-retry exponential backoff, and typed Either failures",
         "Shipped on-device TFLite image moderation and production-grade PDF security tooling",
@@ -908,11 +908,11 @@
         ],
       },
       summaryText:
-        "مطوّر Flutter بخبرة 4 سنوات في تصميم وبناء ونشر تطبيقات موبايل إنتاجية على Google Play وApp Store — من بينها منصة صوت اجتماعي حيّة تجاوزت 5,000 تنزيل. متخصص في Clean Architecture وإدارة الحالة بـ BLoC/Cubit وأنظمة offline-first، مع خبرة عميقة في الصوت/الدردشة اللحظية (ZEGOCLOUD وLiveKit وWebSockets)، ومعالجة OCR على الجهاز، والتكامل مع خدمات خلفية متعددة (Supabase وFirebase وAppwrite). يمتلك دورة الحياة الكاملة للموبايل: المتطلبات، المعمارية، الواجهات، تكامل الخلفية، ضبط الأداء، والنشر على المتاجر.",
+        "مطوّر Flutter بخبرة 4 سنوات في تصميم وبناء ونشر تطبيقات موبايل إنتاجية على Google Play وApp Store — من بينها منصة صوت اجتماعي حيّة تجاوزت 10,000 تنزيل. متخصص في Clean Architecture وإدارة الحالة بـ BLoC/Cubit وأنظمة offline-first، مع خبرة عميقة في الصوت/الدردشة اللحظية (ZEGOCLOUD وLiveKit وWebSockets)، ومعالجة OCR على الجهاز، والتكامل مع خدمات خلفية متعددة (Supabase وFirebase وAppwrite). يمتلك دورة الحياة الكاملة للموبايل: المتطلبات، المعمارية، الواجهات، تكامل الخلفية، ضبط الأداء، والنشر على المتاجر.",
       experienceRole: "مطوّر Flutter — مستقل وعقود (عن بُعد) — 07/2022 – حتى الآن",
       experienceList: [
         "صممت وأطلقت أكثر من 5 تطبيقات Flutter إنتاجية من الصفر حتى النشر في مجالات الصوت الاجتماعي والمتاجر وإدارة المستندات والمحتوى — مع التحكم الكامل بالمعمارية وإدارة الحالة وتكامل الخلفية والأداء والنشر على Google Play وApp Store.",
-        "بنيت منصة صوت اجتماعي لحظية (LKLK) مصمّمة لتحمّل 500 مستمع و20 مقعد ميكروفون في الغرفة الواحدة، مع تكامل SDK صوت مزدوج (ZEGOCLOUD + LiveKit) وثلاثة قنوات لحظية متزامنة مع منطق إعادة اتصال لكل قناة — تجاوز التطبيق 5,000 تنزيل.",
+        "بنيت منصة صوت اجتماعي لحظية (LKLK) مصمّمة لتحمّل 500 مستمع و20 مقعد ميكروفون في الغرفة الواحدة، مع تكامل SDK صوت مزدوج (ZEGOCLOUD + LiveKit) وثلاثة قنوات لحظية متزامنة مع منطق إعادة اتصال لكل قناة — تجاوز التطبيق 10,000 تنزيل.",
         "صممت منظومة تحقيق الدخل والتفاعل: مشتريات داخل التطبيق (6 باقات عملات)، محرّك رسوم هدايا SVGA/VAP بسعة 8 رسوم متزامنة وفاصل طابور أقل من 100ms، ونظام VIP وتحفيز متدرّج.",
         "سلّمت سوق سيارات ثنائي اللغة (Wolfera) على Supabase (PostgreSQL مع Row-Level Security، مصادقة مع Google/Apple SSO، محادثة لحظية، تخزين)، مع فلترة NSFW على الجهاز بـ TFLite، وتنبيهات FCM عند انخفاض الأسعار، وبحث متقدم بأكثر من 15 فلتراً مع تمرير لانهائي.",
         "بنيت ماسح مستندات offline-first (Office Archiving) بخط OCR مزدوج المحرّك (Google ML Kit + Tesseract) للعربية/الإنجليزية — متعدد الاتجاهات، معالجة مسبقة، اختيار أفضل نتيجة — إضافةً لمجموعة أدوات PDF كاملة وبحث نصي في SQLite، كل ذلك على الجهاز بلا خادم.",
@@ -941,7 +941,7 @@
       achievements: [
         "صممت وأطلقت أكثر من 5 تطبيقات إنتاجية على Google Play وApp Store",
         "بنيت غرف صوت اجتماعية لحظية تدعم حتى 500 مستمع متزامن و20 مقعد ميكروفون باستخدام ZEGOCLOUD + LiveKit",
-        "تجاوز أحد التطبيقات العامة (LKLK) 5,000 تنزيل عبر أكثر من 80 إصداراً",
+        "تجاوز أحد التطبيقات العامة (LKLK) 10,000 تنزيل عبر أكثر من 80 إصداراً",
         "نفّذت خط OCR مزدوج المحرّك (ML Kit + Tesseract) لاستخراج نصي موثوق من المستندات العربية والإنجليزية المختلطة",
         "صممت أنظمة offline-first بـ Hive وSQLite وترقيم وstale-while-revalidate وإعادة محاولة أُسّية وأخطاء typed Either",
         "أطلقت فلترة صور TFLite على الجهاز وأدوات أمان PDF بمستوى إنتاجي",
@@ -1015,7 +1015,7 @@
       metrics: [
         { value: "4", label: "Years engineering mobile apps" },
         { value: "5+", label: "Production applications" },
-        { value: "5K+", label: "Public downloads for LKLK" },
+        { value: "10K+", label: "Public downloads for LKLK" },
         { value: "Google Play + App Store", label: "Published platforms" },
       ],
       sections: {
@@ -1081,7 +1081,7 @@
           platform: "Google Play",
           summary: "A production Arabic-market social audio platform with live rooms, animated gifts, VIP progression, and a complete in-app coin economy.",
           outcome: "Architected the complete Flutter client across state, realtime channels, audio SDKs, monetization, and resilient reconnection flows.",
-          metrics: ["5,000+ downloads", "Up to 500 listeners", "20 mic seats", "6 IAP tiers"],
+          metrics: ["10,000+ downloads", "Up to 500 listeners", "20 mic seats", "6 IAP tiers"],
           tech: ["Flutter", "Cubit", "ZEGOCLOUD", "LiveKit", "Appwrite", "Hive"],
           screens: [
             { src: "assets/images/portfolio/lklk-live-room.jpg", alt: "LKLK live audio room and virtual gift interface" },
@@ -1325,7 +1325,7 @@
           platform: "Google Play",
           summary: "منصة صوتية اجتماعية للسوق العربي تضم غرفاً مباشرة، وهدايا متحركة، ومستويات VIP، ونظاماً متكاملاً لشراء العملات داخل التطبيق.",
           outcome: "تولّيت بناء تطبيق Flutter كاملاً، بما في ذلك المعمارية، وإدارة الحالة، والاتصال المباشر، ومحركات الصوت، والمشتريات، وإعادة الاتصال عند انقطاع الشبكة.",
-          metrics: ["أكثر من 5,000 تنزيل", "حتى 500 مستخدم في الغرفة", "20 مقعداً للميكروفون", "6 باقات شراء داخل التطبيق"],
+          metrics: ["أكثر من 10,000 تنزيل", "حتى 500 مستخدم في الغرفة", "20 مقعداً للميكروفون", "6 باقات شراء داخل التطبيق"],
           tech: ["Flutter", "Cubit", "ZEGOCLOUD", "LiveKit", "Appwrite", "Hive"],
           screens: [
             { src: "assets/images/portfolio/lklk-live-room.jpg", alt: "غرفة صوت حيّة وواجهة هدايا في LKLK" },
@@ -1485,7 +1485,7 @@
     translations.en.nav.additionalExp = 'Add. Exp.';
 
     translations.en.summaryText =
-      'Software Engineer and Flutter Developer with 4 years designing, building, and shipping production mobile apps to Google Play and the App Store — including a live social-audio platform that surpassed 5,000+ downloads. Grounded in a software-engineering foundation: systems analysis, requirements analysis, relational database design, algorithms, OOP, and SDLC — applied from the first sketch to the shipped product. Specialized in Clean Architecture, BLoC/Cubit state management, and offline-first systems, with deep hands-on work in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and multi-backend integration (Supabase, Firebase, Appwrite). Owns the full software development lifecycle end-to-end.';
+      'Software Engineer and Flutter Developer with 4 years designing, building, and shipping production mobile apps to Google Play and the App Store — including a live social-audio platform that surpassed 10,000+ downloads. Grounded in a software-engineering foundation: systems analysis, requirements analysis, relational database design, algorithms, OOP, and SDLC — applied from the first sketch to the shipped product. Specialized in Clean Architecture, BLoC/Cubit state management, and offline-first systems, with deep hands-on work in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and multi-backend integration (Supabase, Firebase, Appwrite). Owns the full software development lifecycle end-to-end.';
 
     translations.en.downloadsPage.atsSummary =
       'Software Engineer and Flutter Developer with 4 years of independent and contract experience. Production-oriented Flutter/Dart apps, Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase, offline-first flows, real-time audio/chat, OCR/document workflows, systems analysis, relational DB design, and store publishing.';
@@ -1507,7 +1507,7 @@
     // SE-specific achievements — adds university recognition & SE scope
     translations.en.achievements = [
       'Designed and shipped 5+ production mobile apps end-to-end across social-audio, marketplace, document-management, and content domains',
-      'Built real-time social-audio rooms (LKLK) supporting up to 500 concurrent listeners and 20 mic seats — surpassed 5,000+ downloads',
+      'Built real-time social-audio rooms (LKLK) supporting up to 500 concurrent listeners and 20 mic seats — surpassed 10,000+ downloads',
       'Implemented a custom dual-engine OCR pipeline (ML Kit + Tesseract) for reliable Arabic/English extraction on mixed real-world documents',
       'Delivered two warehouse-management systems (Windows Forms) for the University of Aleppo — both recognized by faculty deans, one commended by the University Presidency',
       'Applied full SDLC: requirements analysis, UML system modeling, relational DB schema design, implementation, and store publishing — across all major projects',
@@ -1531,7 +1531,7 @@
         location: 'Remote',
         items: [
           'Designed and shipped 5+ production Flutter apps end-to-end — owning architecture, state management, backend integration, performance, and store release on Google Play and the App Store.',
-          'Built a real-time social-audio platform (LKLK) architected for up to 500 listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD + LiveKit) and three concurrent realtime channels with per-channel reconnect and exponential backoff; app surpassed 5,000+ downloads.',
+          'Built a real-time social-audio platform (LKLK) architected for up to 500 listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD + LiveKit) and three concurrent realtime channels with per-channel reconnect and exponential backoff; app surpassed 10,000+ downloads.',
           'Engineered the app\'s monetization and engagement stack: in-app purchases (6 coin tiers), an SVGA/VAP virtual-gift animation engine (concurrency-capped at 8, sub-100 ms queue interval), VIP tiers, and gamified progression.',
           'Delivered a bilingual (AR/EN) car marketplace (Wolfera) on Supabase (PostgreSQL with Row-Level Security, Auth + Google/Apple SSO, Realtime chat, Storage), with on-device TFLite image moderation, FCM price-drop alerts, and advanced search across 15+ filters with infinite scroll.',
           'Built an offline-first document scanner (Office Archiving) with a dual-engine OCR pipeline (ML Kit + Tesseract) for Arabic/English — multi-orientation, preprocessing, best-result scoring — plus a full PDF toolkit and SQLite full-text search, all on-device.',
@@ -1585,7 +1585,7 @@
     translations.ar.nav.additionalExp = 'أسس هندسة البرمجيات';
 
     translations.ar.summaryText =
-      'مهندس برمجيات ومطوّر Flutter بخبرة 4 سنوات في تصميم وبناء ونشر تطبيقات موبايل إنتاجية على Google Play وApp Store — من بينها منصة صوت اجتماعي حيّة تجاوزت 5,000 تنزيل. مدعوم بأساس هندسة برمجيات أكاديمي تطبيقي: تحليل الأنظمة، تحليل المتطلبات، تصميم قواعد البيانات العلائقية، الخوارزميات، OOP، وSDLC — مطبّقة من أول رسمة حتى المنتج المنشور. متخصص في Clean Architecture وBLoC/Cubit وأنظمة offline-first، مع خبرة عميقة في الصوت/الدردشة اللحظية ومعالجة OCR على الجهاز والتكامل مع خدمات خلفية متعددة.';
+      'مهندس برمجيات ومطوّر Flutter بخبرة 4 سنوات في تصميم وبناء ونشر تطبيقات موبايل إنتاجية على Google Play وApp Store — من بينها منصة صوت اجتماعي حيّة تجاوزت 10,000 تنزيل. مدعوم بأساس هندسة برمجيات أكاديمي تطبيقي: تحليل الأنظمة، تحليل المتطلبات، تصميم قواعد البيانات العلائقية، الخوارزميات، OOP، وSDLC — مطبّقة من أول رسمة حتى المنتج المنشور. متخصص في Clean Architecture وBLoC/Cubit وأنظمة offline-first، مع خبرة عميقة في الصوت/الدردشة اللحظية ومعالجة OCR على الجهاز والتكامل مع خدمات خلفية متعددة.';
 
     translations.ar.downloadsPage.atsSummary =
       'مهندس برمجيات ومطوّر Flutter بخبرة 4 سنوات في العمل المستقل والعقود. تطبيقات Flutter/Dart إنتاجية، Clean Architecture، BLoC/Cubit، Supabase/Appwrite/Firebase، تدفقات offline-first، صوت/دردشة لحظية، OCR/مستندات، تحليل أنظمة، تصميم قواعد بيانات، والنشر على المتاجر.';
@@ -1607,7 +1607,7 @@
     // SE-specific achievements (Arabic)
     translations.ar.achievements = [
       'صممت وأطلقت أكثر من 5 تطبيقات موبايل إنتاجية من الصفر حتى النشر في مجالات الصوت الاجتماعي والمتاجر وإدارة المستندات والمحتوى',
-      'بنيت غرف صوت اجتماعية لحظية (LKLK) تدعم حتى 500 مستمع متزامن و20 مقعد ميكروفون — تجاوزت 5,000 تنزيل',
+      'بنيت غرف صوت اجتماعية لحظية (LKLK) تدعم حتى 500 مستمع متزامن و20 مقعد ميكروفون — تجاوزت 10,000 تنزيل',
       'نفّذت خط OCR مزدوج المحرّك (ML Kit + Tesseract) لاستخراج نصي موثوق من المستندات العربية والإنجليزية المختلطة',
       'سلّمت نظامَي إدارة مستودعات (Windows Forms) لجامعة حلب — حصل كلاهما على شكر العمداء، والأخير على تقدير من رئاسة الجامعة',
       'طبّقت SDLC كاملاً: تحليل متطلبات، نمذجة UML، تصميم قاعدة بيانات، تنفيذ، ونشر على المتاجر — في جميع المشاريع الرئيسية',
@@ -1631,7 +1631,7 @@
         location: 'عن بُعد',
         items: [
           'صممت وأطلقت أكثر من 5 تطبيقات Flutter إنتاجية من الصفر حتى النشر — مع التحكم الكامل بالمعمارية وإدارة الحالة وتكامل الخلفية والأداء والنشر على Google Play وApp Store.',
-          'بنيت منصة صوت اجتماعي لحظية (LKLK) مصمّمة لتحمّل 500 مستمع و20 مقعد ميكروفون، مع تكامل SDK صوت مزدوج (ZEGOCLOUD + LiveKit) وثلاثة قنوات لحظية متزامنة مع منطق إعادة اتصال لكل قناة — تجاوز التطبيق 5,000 تنزيل.',
+          'بنيت منصة صوت اجتماعي لحظية (LKLK) مصمّمة لتحمّل 500 مستمع و20 مقعد ميكروفون، مع تكامل SDK صوت مزدوج (ZEGOCLOUD + LiveKit) وثلاثة قنوات لحظية متزامنة مع منطق إعادة اتصال لكل قناة — تجاوز التطبيق 10,000 تنزيل.',
           'صممت منظومة تحقيق الدخل والتفاعل: مشتريات داخل التطبيق (6 باقات عملات)، محرّك رسوم هدايا SVGA/VAP بسعة 8 رسوم متزامنة وفاصل طابور أقل من 100ms، ونظام VIP وتحفيز متدرّج.',
           'سلّمت سوق سيارات ثنائي اللغة (Wolfera) على Supabase (PostgreSQL مع Row-Level Security، مصادقة مع Google/Apple SSO، محادثة لحظية، تخزين)، مع فلترة NSFW على الجهاز بـ TFLite، وتنبيهات FCM عند انخفاض الأسعار، وبحث متقدم بأكثر من 15 فلتراً مع تمرير لانهائي.',
           'بنيت ماسح مستندات offline-first (Office Archiving) بخط OCR مزدوج المحرّك (Google ML Kit + Tesseract) للعربية/الإنجليزية — متعدد الاتجاهات، معالجة مسبقة، اختيار أفضل نتيجة — إضافةً لمجموعة أدوات PDF كاملة وبحث نصي في SQLite، كل ذلك على الجهاز بلا خادم.',

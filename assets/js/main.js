@@ -519,7 +519,7 @@
     });
 
     const heroNotes = document.querySelectorAll(".visual-note");
-    if (heroNotes[0]) heroNotes[0].innerHTML = `<span>5K+</span> ${lang === "ar" ? "تنزيل لتطبيق LKLK" : "LKLK downloads"}`;
+    if (heroNotes[0]) heroNotes[0].innerHTML = `<span>10K+</span> ${lang === "ar" ? "تنزيل لتطبيق LKLK" : "LKLK downloads"}`;
     if (heroNotes[1]) heroNotes[1].innerHTML = `<span>500</span> ${lang === "ar" ? "مستخدم في الغرفة" : "users / room"}`;
 
     const statsGrid = $("statsGrid");
