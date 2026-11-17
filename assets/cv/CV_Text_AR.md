@@ -22,7 +22,7 @@ GitHub: https://github.com/Mohamad-Adib-Tawil
 - تنفيذ سلوك offline-first باستخدام Hive وSQLite والترقيم وإعادة المحاولة وأخطاء typed لجعل التدفقات الأساسية أكثر توقّعية.
 - تجهيز إصدارات إنتاجية باستخدام app flavors وProGuard/R8 وCrashlytics والتخزين الآمن وبيئات تطوير/إنتاج منفصلة.
 - استخدام isolates والمعالجة الخلفية للأعمال الأثقل مثل OCR والتعامل مع PDF وميزات الصوت والمهام الخلفية.
-- نشر وصيانة تطبيقات على Google Play وApp Store، منها تطبيق عام واحد حقق 5,000+ تنزيل.
+- نشر وصيانة تطبيقات على Google Play وApp Store، منها تطبيق عام واحد حقق 10,000+ تنزيل.
 
 ## المهارات التقنية
 - Flutter والموبايل: Flutter، Dart، Material 3، Android، iOS
@@ -33,7 +33,7 @@ GitHub: https://github.com/Mohamad-Adib-Tawil
 - الإصدار والأدوات: ProGuard/R8، app flavors، isolates، background tasks، image optimization، Google Play، App Store، Git، GitHub، Postman، Figma
 
 ## أبرز المشاريع
-- LKLK، تطبيق اجتماعي لغرف الصوت المباشرة: Flutter، Zego Express، ZIM، Appwrite، BLoC، GetIt، Hive، ProGuard/R8، Crashlytics. النتيجة العامة: 5,000+ تنزيل. Google Play: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+- LKLK، تطبيق اجتماعي لغرف الصوت المباشرة: Flutter، Zego Express، ZIM، Appwrite، BLoC، GetIt، Hive، ProGuard/R8، Crashlytics. النتيجة العامة: 10,000+ تنزيل. Google Play: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
 - Wolfera، سوق سيارات: Flutter، Supabase، Clean Architecture، Dartz/Either، Infinite Pagination، GoRouter. GitHub: https://github.com/Mohamad-Adib-Tawil/Wolfera | Google Play: https://play.google.com/store/apps/details?id=com.wolfera.wolfera
 - Quran Ahmed Karasi، تطبيق قرآن للقراءة والصوت دون اتصال: Flutter، Clean Architecture، Cubit، just_audio، background_downloader، gen-i10n. GitHub: https://github.com/Mohamad-Adib-Tawil/Quran | Google Play: https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1 | App Store: https://apps.apple.com/app/id6759857104
 - Office Archiving، مسح مستندات وOCR: Flutter، Google ML Kit، Tesseract OCR، SQLite، PDF Processing. GitHub: https://github.com/Mohamad-Adib-Tawil/office_archiving | Google Play: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving

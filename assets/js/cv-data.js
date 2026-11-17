@@ -43,7 +43,7 @@
     },
     {
       icon: "fas fa-download",
-      value: 5000,
+      value: 10000,
       label: {
         en: "Total Downloads",
         ar: "إجمالي التنزيلات",
@@ -1259,7 +1259,7 @@
       metrics: [
         { value: "4", label: "سنوات من الخبرة العملية" },
         { value: "+5", label: "تطبيقات وصلت إلى مرحلة الإنتاج" },
-        { value: "+5K", label: "تنزيل لتطبيق LKLK" },
+        { value: "+10K", label: "تنزيل لتطبيق LKLK" },
         { value: "Google Play + App Store", label: "منشور على المتاجر" },
       ],
       sections: {

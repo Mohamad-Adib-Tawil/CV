@@ -22,7 +22,7 @@ Remote
 - Implemented offline-first behavior with Hive, SQLite, pagination, retry handling, and typed failure responses to make key flows more predictable.
 - Prepared production builds with app flavors, ProGuard/R8, Crashlytics, secure storage, and separate development/production environments.
 - Used isolates and background processing for heavier work such as OCR, PDF handling, audio features, and background tasks.
-- Published and maintained apps on Google Play and App Store, including one public app with 5,000+ downloads.
+- Published and maintained apps on Google Play and App Store, including one public app with 10,000+ downloads.
 
 ## Technical Skills
 - Flutter & Mobile: Flutter, Dart, Material 3, Android, iOS
@@ -37,7 +37,7 @@ Remote
 Tech: Flutter, Zego Express, ZIM, Appwrite, BLoC, GetIt, Hive, ProGuard/R8, Crashlytics
 - Built a social audio app with live rooms, messaging, virtual gifts, and in-app purchases.
 - Integrated Zego Express and ZIM for audio streaming/signaling, with Appwrite used for backend services.
-- Added local storage, crash reporting, and release hardening for the production build. Public result: 5,000+ downloads.
+- Added local storage, crash reporting, and release hardening for the production build. Public result: 10,000+ downloads.
 - Play Store: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
 
 ### Wolfera, Automotive Marketplace

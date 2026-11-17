@@ -22,7 +22,7 @@ GitHub: https://github.com/Mohamad-Adib-Tawil
 - تنفيذ سلوك offline-first باستخدام Hive وSQLite والترقيم وإعادة المحاولة وأخطاء typed لجعل التدفقات الأساسية أكثر توقّعية.
 - تجهيز إصدارات إنتاجية باستخدام app flavors وProGuard/R8 وCrashlytics والتخزين الآمن وبيئات تطوير/إنتاج منفصلة.
 - استخدام isolates والمعالجة الخلفية للأعمال الأثقل مثل OCR والتعامل مع PDF وميزات الصوت والمهام الخلفية.
-- نشر وصيانة تطبيقات على Google Play وApp Store، منها تطبيق عام واحد حقق 5,000+ تنزيل.
+- نشر وصيانة تطبيقات على Google Play وApp Store، منها تطبيق عام واحد حقق 10,000+ تنزيل.
 
 ## المهارات التقنية
 - Flutter والموبايل: Flutter، Dart، Material 3، Android، iOS
