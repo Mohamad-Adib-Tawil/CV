@@ -59,7 +59,64 @@
     },
   ];
 
+  const kivoScreenshots = [
+    { en: "Voice room discovery", ar: "استكشاف الغرف الصوتية" },
+    { en: "Inside a live voice room", ar: "داخل غرفة صوتية مباشرة" },
+    { en: "Search filters", ar: "خيارات البحث" },
+    { en: "People search results", ar: "نتائج البحث عن المستخدمين" },
+    { en: "Room search results", ar: "نتائج البحث عن الغرف" },
+    { en: "Community feed", ar: "منشورات المجتمع" },
+    { en: "Messaging inbox", ar: "صندوق الرسائل" },
+    { en: "Filtered conversations", ar: "المحادثات بعد التصفية" },
+    { en: "Conversation list", ar: "قائمة المحادثات" },
+    { en: "User profile", ar: "الملف الشخصي" },
+    { en: "Room profile", ar: "الملف التعريفي للغرفة" },
+    { en: "VIP overview", ar: "نظرة عامة على VIP" },
+    { en: "VIP benefits", ar: "مزايا VIP" },
+    { en: "Current wealth level", ar: "مستوى الثروة الحالي" },
+    { en: "Wealth level benefits", ar: "مزايا مستويات الثروة" },
+    { en: "Current charisma level", ar: "مستوى الجاذبية الحالي" },
+    { en: "Charisma level benefits", ar: "مزايا مستويات الجاذبية" },
+    { en: "Voice room controls", ar: "أدوات التحكم في الغرفة الصوتية" },
+    { en: "In-room gift picker", ar: "اختيار الهدايا داخل الغرفة" },
+    { en: "Leaderboard podium", ar: "صدارة الترتيب" },
+    { en: "Leaderboard rankings", ar: "قائمة الترتيب" },
+    { en: "Supervision dashboard", ar: "لوحة الإشراف" },
+    { en: "In-app event", ar: "فعالية داخل التطبيق" },
+    { en: "Event rewards", ar: "جوائز الفعالية" },
+    { en: "Weekly Star event", ar: "فعالية النجم الأسبوعي" },
+    { en: "App settings", ar: "إعدادات التطبيق" },
+    { en: "Admin dashboard overview", ar: "نظرة عامة على لوحة الإدارة" },
+    { en: "Admin financial statistics", ar: "الإحصاءات المالية في لوحة الإدارة" },
+    { en: "Admin management tools", ar: "أدوات الإدارة" },
+    { en: "Admin dashboard sections", ar: "أقسام لوحة الإدارة" },
+    { en: "Admin settings", ar: "إعدادات لوحة الإدارة" },
+  ].map((alt, index) => ({
+    src: `assets/projects/kivo/screenshots/screenshot-${String(index + 1).padStart(2, "0")}.webp`,
+    alt,
+  }));
+
+  const kivoTech = ["Flutter", "Bloc", "ZEGOCLOUD", "Firebase Messaging"];
+
   const projects = [
+    {
+      id: "kivo",
+      slug: "kivo",
+      name: "Kivo",
+      tech: kivoTech,
+      logo: { src: "assets/projects/kivo/icon.webp", alt: { en: "Kivo app icon", ar: "أيقونة تطبيق Kivo" } },
+      image: kivoScreenshots[0],
+      heroLabel: { en: "Live voice chat app", ar: "تطبيق دردشة صوتية مباشرة" },
+      description: {
+        en: "A Flutter app for live voice chat, with social rooms users can discover and join in real time.",
+        ar: "تطبيق Flutter للدردشة الصوتية المباشرة، يتيح للمستخدمين استكشاف الغرف الاجتماعية والانضمام إليها والتحدث فيها لحظياً.",
+      },
+      bio: {
+        en: "I worked on the Flutter mobile app. The experience includes live audio rooms, private messaging, a community feed, in-room gifts, and moderation tools.",
+        ar: "عملت على تطبيق الهاتف باستخدام Flutter. تشمل تجربة التطبيق غرف الصوت المباشر، والرسائل الخاصة، ومنشورات المجتمع، والهدايا داخل الغرف، وأدوات الإشراف.",
+      },
+      media: { screenshots: kivoScreenshots },
+    },
     {
       id: "hasobjy", slug: "hasobjy", name: "Hasobjy | حاسوبجي",
       tech: ["Flutter", "Cubit", "Clean Architecture", "Dio", "Firebase Auth", "GoRouter"],
@@ -986,6 +1043,15 @@
       },
       featured: [
         {
+          id: "kivo", index: "06", category: "Social audio",
+          role: "Flutter Developer", platform: "Mobile app",
+          summary: "A Flutter app for discovering and joining live voice rooms.",
+          outcome: "The app brings together room controls, private messaging, in-room gifts, and community moderation.",
+          metrics: ["Live voice rooms", "Private messaging", "Room moderation"],
+          tech: kivoTech,
+          screens: kivoScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.en })),
+        },
+        {
           id: "hasobjy", index: "05", category: "Education · In development",
           role: "Flutter Developer", platform: "Student mobile app",
           summary: "An educational platform for institute students and independent courses, with an Arabic-first learning experience.",
@@ -1220,6 +1286,15 @@
         contactTitle: "هل لديك تطبيق جاد تريد تنفيذه؟ لنتحدث.",
       },
       featured: [
+        {
+          id: "kivo", index: "06", category: "دردشة صوتية اجتماعية",
+          role: "مطوّر Flutter", platform: "تطبيق هاتف",
+          summary: "تطبيق Flutter لاستكشاف غرف الدردشة الصوتية المباشرة والانضمام إليها.",
+          outcome: "يجمع التطبيق أدوات التحكم في الغرف والرسائل الخاصة والهدايا وأدوات الإشراف على المجتمع.",
+          metrics: ["غرف صوتية مباشرة", "رسائل خاصة", "إشراف على الغرف"],
+          tech: kivoTech,
+          screens: kivoScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.ar })),
+        },
         {
           id: "hasobjy", index: "05", category: "التعليم · قيد التطوير",
           role: "مطوّر Flutter", platform: "تطبيق الطالب",

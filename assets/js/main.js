@@ -864,9 +864,9 @@
 
     setText("detailName", project.name);
     setText("detailEyebrow", lang === "ar" ? "دراسة مشروع" : "Project case study");
-    setText("detailHeroLabel", project.id === "hasobjy"
+    setText("detailHeroLabel", project.heroLabel?.[lang] || (project.id === "hasobjy"
       ? (lang === "ar" ? "تطبيق تعليمي قيد التطوير" : "Educational app in development")
-      : (lang === "ar" ? "تطبيق هاتف جاهز للنشر" : "Production mobile application"));
+      : (lang === "ar" ? "تطبيق هاتف جاهز للنشر" : "Production mobile application")));
     setText("detailBrandRole", lang === "ar" ? "مهندس تطبيقات للهواتف" : "Mobile application engineer");
     setText("detailIndexLabel", lang === "ar" ? "محتويات الصفحة" : "On this page");
     setText("detailOverviewNav", dict.detailPage.overview);
