@@ -548,7 +548,8 @@
 
     const featuredHost = $("featuredProjects");
     if (featuredHost) {
-      featuredHost.innerHTML = copy.featured.map((item) => {
+      featuredHost.innerHTML = copy.featured.map((item, index) => {
+        const caseNumber = String(index + 1).padStart(2, "0");
         const project = getProject(item.id);
         const projectName = project?.name || item.id;
         const logo = project?.logo || project?.image;
@@ -558,7 +559,7 @@
         return `
           <article class="case-study" aria-labelledby="case-${escapeHtml(item.id)}">
             <div class="case-copy">
-              <div><span class="case-index">${escapeHtml(item.index)}</span><span class="case-category">${escapeHtml(item.category)}</span></div>
+              <div><span class="case-index">${caseNumber}</span><span class="case-category">${escapeHtml(item.category)}</span></div>
               <h3 id="case-${escapeHtml(item.id)}" class="project-title-lockup">
                 <a class="project-title-link" href="${escapeHtml(detailsHref)}" data-project-transition="${escapeHtml(item.id)}" aria-label="${escapeHtml(detailsLabel)}">
                   ${logo ? `<img class="project-logo project-logo--animated" src="${escapeHtml(logo.src)}" alt="${escapeHtml(logoAlt)}" width="52" height="52" loading="lazy" decoding="async">` : ""}
