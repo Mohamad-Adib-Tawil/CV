@@ -445,6 +445,7 @@
       [links.playStore, "fab fa-google-play", labels.playStore],
       [links.appStore, "fab fa-apple", labels.appStore],
       [links.github, "fab fa-github", labels.github],
+      [links.figma, "fab fa-figma", labels.figma],
       [links.directDownload, "fas fa-download", labels.directDownload],
     ];
 
@@ -952,6 +953,7 @@
         [links.appStore, "fab fa-apple", dict.detailPage.appStore],
         [links.github, "fab fa-github", dict.detailPage.github],
         [links.website, "fas fa-globe", dict.detailPage.website],
+        [links.figma, "fab fa-figma", dict.detailPage.figma],
       ];
 
       external.forEach(([href, iconClass, label]) => {

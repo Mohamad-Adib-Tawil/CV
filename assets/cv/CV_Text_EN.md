@@ -1,83 +1,46 @@
 # Mohamad Adib Tawil
-Flutter Developer / Mobile Application Engineer
+Flutter Engineer | Mobile Application Development
 
-Email: mohamad.adib.tawil@gmail.com  
-Phone: +963 992 688 759  
-Location: Remote from Syria  
-CV: https://mohamad-adib-tawil.github.io/CV  
-LinkedIn: https://linkedin.com/in/mohamad-adib-tawil-54024b314  
-GitHub: https://github.com/Mohamad-Adib-Tawil
+Email: mohamad.adib.tawil@gmail.com\
+Phone: +963 992 688 759\
+Location: Remote (Syria, UTC+3)\
+LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/\
+GitHub: https://github.com/Mohamad-Adib-Tawil\
+Portfolio: https://mohamad-adib-tawil.github.io/CV\
 
-## Profile
-Flutter developer with 4 years of independent and contract experience building production-oriented mobile apps with Flutter and Dart. I work across UI implementation, API integration, offline storage, real-time features, release preparation, and store publishing. My strongest work is in Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase integrations, offline-first flows, audio features, OCR/document workflows, and apps that need to stay usable under weak network conditions.
+## Professional Summary
 
-## Experience
-### Flutter Developer, Independent / Contract
-07/2022 - Present  
-Remote
+Flutter engineer with 4+ years of independent and contract experience building and publishing Android and iOS apps. Built core live-audio features for LKLK, which surpassed 10,000 Google Play downloads. Experience includes real-time audio, offline storage, API integration, automated testing, and store releases.
 
-- Built and maintained Flutter applications for independent and contract projects, covering UI implementation, API integration, local persistence, release preparation, and publishing.
-- Structured medium-sized apps using Clean Architecture, BLoC/Cubit, GetIt, and feature-based modules to keep UI, business logic, and data layers separated.
-- Integrated REST APIs, Supabase, Appwrite, WebSockets, Zego audio rooms, messaging flows, Firebase services, and in-app purchases.
-- Implemented offline-first behavior with Hive, SQLite, pagination, retry handling, and typed failure responses to make key flows more predictable.
-- Prepared production builds with app flavors, ProGuard/R8, Crashlytics, secure storage, and separate development/production environments.
-- Used isolates and background processing for heavier work such as OCR, PDF handling, audio features, and background tasks.
-- Published and maintained apps on Google Play and App Store, including one public app with 10,000+ downloads.
+## Work Experience
+
+Flutter Developer | Independent & Contract | Jul 2022 – Present
+
+- Built LKLK’s live-room features, integrating ZEGOCLOUD and LiveKit behind a shared audio interface and adding automatic reconnection for real-time channels.
+- Contributed to Hasobjy’s student app, integrating Google sign-in and isolating cached data by account with Drift. Worked with the backend team on integration requirements. The app is in development.
+- Worked with automated Flutter tests covering navigation and student data after restart. Hasobjy uses GitHub Actions for static analysis and test runs.
+- Implemented permission-aware admin workflows in Kivo for granting, extending, and revoking VIP memberships. Worked with GitHub Actions workflows for signed mobile builds.
+- Prepared and maintained mobile releases using build flavors, environment configuration, app signing, and Crashlytics. Published apps on Google Play and the App Store.
 
 ## Technical Skills
-- Flutter & Mobile: Flutter, Dart, Material 3, Android, iOS
-- Architecture & State: Clean Architecture, SOLID, MVVM, BLoC, Cubit, Provider, GetIt, Injectable, Dartz/Either
-- APIs & Backend Services: REST APIs, Dio, Interceptors, WebSockets, Supabase, Appwrite, Firebase Auth, FCM, Analytics, Crashlytics
-- Storage & Offline: Hive, SQLite, Secure Storage, offline-first caching, pagination, retry handling
-- Media, OCR & Documents: Zego Express, ZIM, LiveKit, just_audio, audio recording, Google ML Kit, Tesseract OCR, PDF generation, printing
-- Release & Tools: ProGuard/R8, app flavors, isolates, background tasks, image optimization, Google Play, App Store, Git, GitHub, Postman, Figma
+
+- Mobile: Flutter, Dart, Android, iOS, responsive UI, Arabic/English localization, RTL
+- Architecture: Clean Architecture, feature-based modules, BLoC/Cubit, GetIt, GoRouter
+- Backend and data: REST, Dio, WebSockets, Supabase, PostgreSQL/RLS, Firebase, Appwrite
+- Storage: Drift, SQLite, Hive, secure storage, offline caching, retries
+- Quality and releases: Unit, widget and integration tests, GitHub Actions, Crashlytics, app signing
+- Audio and documents: LiveKit, ZEGOCLOUD, ML Kit, Tesseract OCR, PDF processing
 
 ## Selected Projects
-### LKLK, Real-time Audio Rooms Social App
-Tech: Flutter, Zego Express, ZIM, Appwrite, BLoC, GetIt, Hive, ProGuard/R8, Crashlytics
-- Built a social audio app with live rooms, messaging, virtual gifts, and in-app purchases.
-- Integrated Zego Express and ZIM for audio streaming/signaling, with Appwrite used for backend services.
-- Added local storage, crash reporting, and release hardening for the production build. Public result: 10,000+ downloads.
-- Play Store: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
 
-### Wolfera, Automotive Marketplace
-Tech: Flutter, Supabase, Clean Architecture, Dartz/Either, Infinite Pagination, GoRouter
-- Worked on marketplace flows for car discovery, search, authentication, media storage, and buyer/seller communication.
-- Used Supabase Auth, Storage, and Realtime for the main backend features.
-- Added typed error handling and infinite pagination for network-driven lists.
-- GitHub: https://github.com/Mohamad-Adib-Tawil/Wolfera
-- Play Store: https://play.google.com/store/apps/details?id=com.wolfera.wolfera
-
-### Quran Ahmed Karasi, Offline Quran Reader & Audio App
-Tech: Flutter, Clean Architecture, Cubit, just_audio, background_downloader, gen-i10n
-- Built a Quran reading and audio app with offline audio downloads, background playback, and ayah-level interaction.
-- Implemented Surah, Juz, and Hizb navigation with text-audio synchronization.
-- Added Arabic/German localization and a Material 3 interface for Android and iOS.
-- GitHub: https://github.com/Mohamad-Adib-Tawil/Quran
-- Play Store: https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1
-- Apple Store: https://apps.apple.com/app/id6759857104
-
-### Office Archiving, Document Scanning & OCR
-Tech: Flutter, Google ML Kit, Tesseract OCR, SQLite, PDF Processing
-- Built an offline-first document archiving app for local document organization.
-- Implemented Arabic/English OCR, PDF generation, printing, and local full-text search.
-- Used SQLite-backed storage so core document flows can work without a constant internet connection.
-- GitHub: https://github.com/Mohamad-Adib-Tawil/office_archiving
-- Play Store: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
-
-### Code Book, Offline Digital Library
-Tech: Flutter, Clean Architecture, BLoC, GetIt, Hive, Dio, WebView, Open Library API
-- Built a reading app that consumes Open Library APIs and supports cached content for offline access.
-- Implemented local caching, retry handling, deep linking, and structured navigation.
-- Supporting project for API integration, caching, and Flutter architecture practice.
-- GitHub: https://github.com/Mohamad-Adib-Tawil/Code-Books-
+- LKLK — Live social audio app with 10,000+ downloads. Built live rooms, virtual gifts, and in-app purchases. Google Play: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+- Hasobjy — Student app in development using a feature-based Flutter architecture and Cubit. Portfolio: https://mohamad-adib-tawil.github.io/CV/project.html?id=hasobjy
+- Wolfera — Arabic/English car marketplace with 15+ search filters, Supabase Realtime chat, and on-device TFLite image moderation. Google Play: https://play.google.com/store/apps/details?id=com.wolfera.wolfera
 
 ## Education
-Diploma in Computer Engineering, University of Aleppo  
-Focus: Software Engineering  
-2020 - 2022  
-Aleppo, Syria
+
+Diploma in Computer Engineering | Software Engineering track | University of Aleppo | 2020–2022 | GPA 82.89%
 
 ## Languages
-- Arabic: Native
-- English: Professional working proficiency
+
+Arabic: Native | English: Professional working proficiency

@@ -96,6 +96,14 @@
     alt,
   }));
 
+  const halalgramTech = ["Flutter", "Dart", "Supabase", "Realtime", "Arabic RTL"];
+  const halalgramScreenshots = [
+    { src: "assets/projects/halalgram/screenshots/feed.webp", alt: { en: "Halalgram Arabic feed with sample posts and stories", ar: "خلاصة حلال كرام العربية بمنشورات وقصص تجريبية" } },
+    { src: "assets/projects/halalgram/screenshots/reels.webp", alt: { en: "Halalgram short-video playback", ar: "تشغيل مقطع قصير في حلال كرام" } },
+    { src: "assets/projects/halalgram/screenshots/profile.webp", alt: { en: "Halalgram demo profile", ar: "ملف شخصي تجريبي في حلال كرام" } },
+    { src: "assets/projects/halalgram/screenshots/sign-in.webp", alt: { en: "Halalgram Arabic sign-in screen", ar: "شاشة تسجيل الدخول العربية في حلال كرام" } },
+  ];
+
   const kivoTech = ["Flutter", "Bloc", "ZEGOCLOUD", "Firebase Messaging"];
 
   const projects = [
@@ -259,6 +267,25 @@
           { src: "assets/projects/wolfera/screenshots/screenshot-72.png", alt: { en: "", ar: "" } },
         ],
       },
+    },
+    {
+      id: "halalgram",
+      slug: "halalgram",
+      name: "Halalgram | حلال كرام",
+      tech: halalgramTech,
+      logo: { src: "assets/projects/halalgram/icon.webp", alt: { en: "Halalgram camera and crescent icon", ar: "أيقونة حلال كرام بالكاميرا والهلال" } },
+      image: halalgramScreenshots[0],
+      heroLabel: { en: "Arabic-first social app in development", ar: "تطبيق تواصل اجتماعي بواجهة عربية قيد التطوير" },
+      description: {
+        en: "An Arabic-first Flutter social app with a feed, stories and highlights, short video, and private messaging. The app is in development. The screenshots show the running app with demo content.",
+        ar: "تطبيق تواصل اجتماعي مبني بـFlutter بواجهة عربية، يضم خلاصة منشورات وقصصًا وأبرز القصص ومقاطع قصيرة ورسائل خاصة. التطبيق قيد التطوير، وتعرض اللقطات التطبيق أثناء تشغيله بمحتوى تجريبي.",
+      },
+      bio: {
+        en: "I built the visual identity and app designs in Figma and implemented the Flutter experience with Supabase for authentication, media storage, and real-time updates. The app supports Arabic RTL and English, with user controls for content reporting and account blocking.",
+        ar: "صمّمت الهوية البصرية وواجهات التطبيق في Figma، ونفّذت تجربة Flutter باستخدام Supabase للمصادقة وتخزين الوسائط والتحديثات اللحظية. يدعم التطبيق العربية باتجاه RTL والإنجليزية، ويتيح للمستخدم الإبلاغ عن المحتوى وحظر الحسابات.",
+      },
+      links: { figma: "https://www.figma.com/design/GrZbhdRvzNSAPud2BlkWWK/Halalgram?node-id=1-38" },
+      media: { screenshots: halalgramScreenshots },
     },
     {
       id: "hasobjy", slug: "hasobjy", name: "Hasobjy | حاسوبجي",
@@ -665,7 +692,7 @@
         download: "Download CV",
       },
       header: {
-        jobTitle: "Flutter Developer / Mobile Application Engineer",
+        jobTitle: "Flutter Engineer | Mobile Application Development",
         availability: "Available for Freelance",
         employment: "Open to Full-time/Contract",
         badges: [
@@ -719,7 +746,7 @@
         plainTextIntro: "You can copy the bilingual CV text directly from",
         fileUnavailable: "Soon — file will be available shortly.",
         atsSummary:
-          "Flutter Developer / Mobile Application Engineer with 4 years of independent and contract experience. Production-oriented Flutter/Dart apps, Clean Architecture, BLoC/Cubit, Supabase/Appwrite/Firebase, offline-first flows, audio features, OCR/document workflows, and store publishing.",
+          "Flutter engineer with 4+ years of independent and contract experience building and publishing Android and iOS apps. Built core live-audio features for LKLK, which surpassed 10,000 Google Play downloads. Experience includes real-time audio, offline storage, API integration, automated testing, and store releases.",
         keywords: [
           "Flutter",
           "Dart",
@@ -742,27 +769,22 @@
         ],
       },
       summaryText:
-        "Flutter developer with 4 years designing, building, and shipping production mobile apps to Google Play and the App Store — including a live social-audio platform that surpassed 10,000+ downloads. Specialized in Clean Architecture, BLoC/Cubit state management, and offline-first systems, with deep hands-on work in real-time audio/chat (ZEGOCLOUD, LiveKit, WebSockets), on-device ML/OCR, and multi-backend integration (Supabase, Firebase, Appwrite). Owns the full mobile lifecycle end-to-end: requirements, architecture, UI, backend integration, performance tuning, and store release.",
+        "Flutter engineer with 4+ years of independent and contract experience building and publishing Android and iOS apps. Built core live-audio features for LKLK, which surpassed 10,000 Google Play downloads. Experience includes real-time audio, offline storage, API integration, automated testing, and store releases.",
       experienceRole: "Flutter Developer — Independent & Contract (Remote) — 07/2022 – Present",
       experienceList: [
-        "Designed and shipped 5+ production Flutter apps end-to-end across social-audio, marketplace, document-management, and content domains — owning architecture, state management, backend integration, performance, and store release on Google Play and the App Store.",
-        "Built a real-time social-audio platform (LKLK) architected for up to 500 listeners and 20 mic seats per room, integrating dual audio SDKs (ZEGOCLOUD + LiveKit) and three concurrent realtime channels (Appwrite Realtime, WebSockets, ZIM) with per-channel reconnect and exponential backoff; app surpassed 10,000+ downloads.",
-        "Engineered the app's monetization and engagement stack: in-app purchases (6 coin tiers), an SVGA/VAP virtual-gift animation engine (concurrency-capped at 8, sub-100 ms queue interval), VIP tiers, and gamified progression.",
-        "Delivered a bilingual (AR/EN) car marketplace (Wolfera) on Supabase (PostgreSQL with Row-Level Security, Auth + Google/Apple SSO, Realtime chat, Storage), with on-device TFLite image moderation, FCM price-drop alerts, and advanced search across 15+ filters with infinite scroll.",
-        "Built an offline-first document scanner (Office Archiving) with a dual-engine OCR pipeline (Google ML Kit + Tesseract) for Arabic/English — multi-orientation, preprocessing, best-result scoring — plus a full PDF toolkit (watermark, sign, password-protect) and SQLite full-text search, all on-device with no backend.",
-        "Standardized engineering across apps: Clean Architecture with feature-based modules, BLoC/Cubit + GetIt/Injectable, typed Either error handling, offline-first caching with pagination and 3-retry exponential backoff, and isolates/background tasks for OCR, PDF, and audio.",
-        "Hardened releases with app flavors, ProGuard/R8, secure storage, environment separation, and Crashlytics crash filtering; published and maintained apps on both Google Play and the Apple App Store.",
+        "Built LKLK’s live-room features, integrating ZEGOCLOUD and LiveKit behind a shared audio interface and adding automatic reconnection for real-time channels.",
+        "Contributed to Hasobjy’s student app, integrating Google sign-in and isolating cached data by account with Drift. Worked with the backend team on integration requirements. The app is in development.",
+        "Worked with automated Flutter tests covering navigation and student data after restart. Hasobjy uses GitHub Actions for static analysis and test runs.",
+        "Implemented permission-aware admin workflows in Kivo for granting, extending, and revoking VIP memberships. Worked with GitHub Actions workflows for signed mobile builds.",
+        "Prepared and maintained mobile releases using build flavors, environment configuration, app signing, and Crashlytics. Published apps on Google Play and the App Store.",
       ],
       skillsList: [
-        "Languages: Dart, SQL, C# (academic), Kotlin (basic)",
-        "Mobile & UI: Flutter, Material 3, Android, iOS, responsive UI, RTL & localization (AR/EN), image optimization",
-        "Architecture & State: Clean Architecture, SOLID, MVVM, feature-based modules, BLoC, Cubit, Provider, GetIt, Injectable, Freezed, dartz/Either",
-        "Backend & APIs: REST, Dio (interceptors, retry/backoff), WebSockets, Supabase (PostgreSQL, Auth, Realtime, Storage, RLS), Firebase (Auth, FCM, Analytics, Crashlytics), Appwrite",
-        "Real-time & Media: ZEGOCLOUD (ZegoExpress), LiveKit, ZIM, just_audio, audio_session, SVGA/VAP animation, background_downloader",
-        "Storage & Offline: Hive, SQLite (sqflite), secure storage, offline-first caching, pagination, stale-while-revalidate, typed failures",
-        "On-device ML & Docs: Google ML Kit, Tesseract OCR, TFLite, PDF generation/editing, printing, full-text search",
-        "Release & Quality: App flavors, ProGuard/R8, Crashlytics, secure storage, environment separation, isolates & background tasks, in-app purchases, Google Play & App Store publishing",
-        "Navigation & Tools: GoRouter, Git, GitHub, Postman, Figma, build_runner / codegen",
+        "Mobile: Flutter, Dart, Android, iOS, responsive UI, Arabic/English localization, RTL",
+        "Architecture: Clean Architecture, feature-based modules, BLoC/Cubit, GetIt, GoRouter",
+        "Backend and data: REST, Dio, WebSockets, Supabase, PostgreSQL/RLS, Firebase, Appwrite",
+        "Storage: Drift, SQLite, Hive, secure storage, offline caching, retries",
+        "Quality and releases: Unit, widget and integration tests, GitHub Actions, Crashlytics, app signing",
+        "Audio and documents: LiveKit, ZEGOCLOUD, ML Kit, Tesseract OCR, PDF processing",
       ],
       education: {
         heading: "Diploma in Computer Engineering, University of Aleppo (Jun 2020–Aug 2022)",
@@ -809,6 +831,7 @@
         appStore: "App Store",
         github: "GitHub",
         website: "Website",
+        figma: "Figma",
         techStack: "Tech Stack",
         comingSoon: "Coming soon",
         linkedin: "LinkedIn Post",
@@ -832,7 +855,7 @@
         download: "تحميل السيرة",
       },
       header: {
-        jobTitle: "مطوّر Flutter / مهندس تطبيقات للهواتف",
+        jobTitle: "مهندس Flutter | تطوير تطبيقات الهواتف",
         availability: "متاح للعمل الحر",
         employment: "متاح لعقود/دوام كامل",
         badges: [
@@ -885,7 +908,7 @@
         plainTextIntro: "يمكنك نسخ النسخة الثنائية اللغة مباشرة من",
         fileUnavailable: "قريبًا — الملف سيتوفر خلال وقت قصير.",
         atsSummary:
-          "مطوّر Flutter / مهندس تطبيقات موبايل بخبرة 4 سنوات في العمل المستقل والعقود. خبرة في تطبيقات Flutter/Dart الإنتاجية، Clean Architecture، BLoC/Cubit، Supabase/Appwrite/Firebase، تدفقات offline-first، ميزات الصوت، OCR/المستندات، والنشر على المتاجر.",
+          "مهندس Flutter بخبرة تزيد على أربع سنوات في العمل المستقل والعقود وتطوير تطبيقات Android وiOS ونشرها. طوّرت ميزات أساسية للصوت المباشر في LKLK، الذي تجاوز 10 آلاف تنزيل على Google Play. تشمل خبرتي الصوت اللحظي والتخزين دون اتصال وتكامل الواجهات البرمجية والاختبارات الآلية والنشر.",
         keywords: [
           "Flutter",
           "Dart",
@@ -908,27 +931,22 @@
         ],
       },
       summaryText:
-        "مطوّر Flutter بخبرة 4 سنوات في تصميم وبناء ونشر تطبيقات موبايل إنتاجية على Google Play وApp Store — من بينها منصة صوت اجتماعي حيّة تجاوزت 10,000 تنزيل. متخصص في Clean Architecture وإدارة الحالة بـ BLoC/Cubit وأنظمة offline-first، مع خبرة عميقة في الصوت/الدردشة اللحظية (ZEGOCLOUD وLiveKit وWebSockets)، ومعالجة OCR على الجهاز، والتكامل مع خدمات خلفية متعددة (Supabase وFirebase وAppwrite). يمتلك دورة الحياة الكاملة للموبايل: المتطلبات، المعمارية، الواجهات، تكامل الخلفية، ضبط الأداء، والنشر على المتاجر.",
+        "مهندس Flutter بخبرة تزيد على أربع سنوات في العمل المستقل والعقود وتطوير تطبيقات Android وiOS ونشرها. طوّرت ميزات أساسية للصوت المباشر في LKLK، الذي تجاوز 10 آلاف تنزيل على Google Play. تشمل خبرتي الصوت اللحظي والتخزين دون اتصال وتكامل الواجهات البرمجية والاختبارات الآلية والنشر.",
       experienceRole: "مطوّر Flutter — مستقل وعقود (عن بُعد) — 07/2022 – حتى الآن",
       experienceList: [
-        "صممت وأطلقت أكثر من 5 تطبيقات Flutter إنتاجية من الصفر حتى النشر في مجالات الصوت الاجتماعي والمتاجر وإدارة المستندات والمحتوى — مع التحكم الكامل بالمعمارية وإدارة الحالة وتكامل الخلفية والأداء والنشر على Google Play وApp Store.",
-        "بنيت منصة صوت اجتماعي لحظية (LKLK) مصمّمة لتحمّل 500 مستمع و20 مقعد ميكروفون في الغرفة الواحدة، مع تكامل SDK صوت مزدوج (ZEGOCLOUD + LiveKit) وثلاثة قنوات لحظية متزامنة مع منطق إعادة اتصال لكل قناة — تجاوز التطبيق 10,000 تنزيل.",
-        "صممت منظومة تحقيق الدخل والتفاعل: مشتريات داخل التطبيق (6 باقات عملات)، محرّك رسوم هدايا SVGA/VAP بسعة 8 رسوم متزامنة وفاصل طابور أقل من 100ms، ونظام VIP وتحفيز متدرّج.",
-        "سلّمت سوق سيارات ثنائي اللغة (Wolfera) على Supabase (PostgreSQL مع Row-Level Security، مصادقة مع Google/Apple SSO، محادثة لحظية، تخزين)، مع فلترة NSFW على الجهاز بـ TFLite، وتنبيهات FCM عند انخفاض الأسعار، وبحث متقدم بأكثر من 15 فلتراً مع تمرير لانهائي.",
-        "بنيت ماسح مستندات offline-first (Office Archiving) بخط OCR مزدوج المحرّك (Google ML Kit + Tesseract) للعربية/الإنجليزية — متعدد الاتجاهات، معالجة مسبقة، اختيار أفضل نتيجة — إضافةً لمجموعة أدوات PDF كاملة وبحث نصي في SQLite، كل ذلك على الجهاز بلا خادم.",
-        "وحّدت أسلوب الهندسة عبر جميع التطبيقات: Clean Architecture مع وحدات feature-based وBLoC/Cubit وGetIt/Injectable، معالجة أخطاء typed Either، تخزين offline-first مع ترقيم وإعادة محاولة أُسّية 3 مرات، وisolates ومهام خلفية لـ OCR وPDF والصوت.",
-        "حصّنت الإصدارات بـ app flavors وProGuard/R8 وتخزين آمن وبيئات منفصلة وفلترة أعطال Crashlytics؛ نشرت وصنت التطبيقات على Google Play وApple App Store.",
+        "طوّرت ميزات الغرف الصوتية في LKLK، ودمجت ZEGOCLOUD وLiveKit خلف واجهة برمجية مشتركة، وأضفت إعادة الاتصال التلقائي للقنوات اللحظية.",
+        "ساهمت في تطبيق الطالب في حاسوبجي بربط تسجيل الدخول عبر Google وعزل التخزين المحلي لكل حساب باستخدام Drift، وتعاونت مع فريق الخادم على متطلبات التكامل. التطبيق قيد التطوير.",
+        "عملت على فحوص Flutter الآلية التي تغطي التنقل وبيانات الطالب بعد إعادة التشغيل. يشغّل حاسوبجي التحليل والاختبارات عبر GitHub Actions.",
+        "نفّذت إجراءات منح عضوية VIP وتمديدها وإلغائها في Kivo وفق صلاحيات المشرف، وعملت مع مسارات GitHub Actions لبناء حزم إصدارات موقّعة.",
+        "جهّزت إصدارات التطبيقات وصنتها باستخدام نسخ بناء متعددة وتهيئة البيئات وتوقيع الحزم وCrashlytics، ونشرت تطبيقات على Google Play وApp Store.",
       ],
       skillsList: [
-        "اللغات: Dart، SQL، C# (أكاديمي)، Kotlin (أساسي)",
-        "الموبايل والواجهات: Flutter، Material 3، Android، iOS، واجهات تكيّفية، RTL وتعريب (عربي/إنجليزي)، تحسين الصور",
-        "المعمارية وإدارة الحالة: Clean Architecture، SOLID، MVVM، وحدات feature-based، BLoC، Cubit، Provider، GetIt، Injectable، Freezed، dartz/Either",
-        "الخلفية والـ APIs: REST، Dio (interceptors، إعادة المحاولة)، WebSockets، Supabase (PostgreSQL، Auth، Realtime، Storage، RLS)، Firebase (Auth، FCM، Analytics، Crashlytics)، Appwrite",
-        "الوقت الحقيقي والوسائط: ZEGOCLOUD (ZegoExpress)، LiveKit، ZIM، just_audio، audio_session، رسوم SVGA/VAP، background_downloader",
-        "التخزين ودون اتصال: Hive، SQLite (sqflite)، تخزين آمن، offline-first caching، ترقيم، stale-while-revalidate، أخطاء typed",
-        "ML والمستندات: Google ML Kit، Tesseract OCR، TFLite، إنشاء/تعديل PDF، طباعة، بحث نصي كامل",
-        "الإصدار والجودة: App flavors، ProGuard/R8، Crashlytics، تخزين آمن، بيئات منفصلة، isolates ومهام خلفية، مشتريات داخل التطبيق، نشر على Google Play وApp Store",
-        "التنقّل والأدوات: GoRouter، Git، GitHub، Postman، Figma، build_runner",
+        "تطبيقات الهواتف: Flutter، Dart، Android، iOS، واجهات متجاوبة، تعريب ودعم RTL",
+        "المعمارية: Clean Architecture، تنظيم حسب الميزات، BLoC/Cubit، GetIt، GoRouter",
+        "الخادم والبيانات: REST، Dio، WebSockets، Supabase، PostgreSQL/RLS، Firebase، Appwrite",
+        "التخزين: Drift، SQLite، Hive، تخزين آمن، تخزين دون اتصال، إعادة المحاولة",
+        "الجودة والإصدارات: اختبارات الوحدات والواجهات والتكامل، GitHub Actions، Crashlytics، توقيع الإصدارات",
+        "الصوت والمستندات: LiveKit، ZEGOCLOUD، ML Kit، Tesseract OCR، معالجة PDF",
       ],
       education: {
         heading: "دبلوم هندسة حاسبات، جامعة حلب (يونيو 2020–أغسطس 2022)",
@@ -975,6 +993,7 @@
         appStore: "App Store",
         github: "GitHub",
         website: "الموقع",
+        figma: "Figma",
         techStack: "التقنيات",
         comingSoon: "قريباً",
         linkedin: "منشور LinkedIn",
@@ -1077,10 +1096,19 @@
           ],
         },
         {
+          id: "halalgram", category: "Social app · In development",
+          role: "Brand Design & Flutter Development", platform: "Android · iOS",
+          summary: "An Arabic-first social app for posts, stories, short videos, and private messaging.",
+          outcome: "Designed the brand and screens in Figma, then implemented the app in Flutter with Supabase and user controls for reporting and blocking.",
+          metrics: ["Arabic RTL", "Stories & short video", "Private messaging"],
+          tech: halalgramTech,
+          screens: halalgramScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.en })),
+        },
+        {
           id: "hasobjy", category: "Education · In development",
           role: "Flutter Developer", platform: "Student mobile app",
           summary: "An educational platform for institute students and independent courses, with an Arabic-first learning experience.",
-          outcome: "Developing the Flutter application with structured feature architecture, student interfaces, and authentication integration. Screens shown are Figma designs.",
+          outcome: "Developing the Flutter application with structured feature architecture, Google sign-in and account-scoped Drift caching. Screens shown are Figma designs.",
           metrics: ["Student learning", "Arabic RTL", "In development"], tech: ["Flutter", "Cubit", "Clean Architecture", "Firebase Auth"],
           screens: [
             { src: "assets/projects/hasobjy/screenshots/screenshot-01.png", alt: "Figma design of Hasobjy student home" },
@@ -1145,6 +1173,7 @@
         appStore: "App Store",
         github: "GitHub",
         directDownload: "Direct APK",
+        figma: "Figma",
       },
       expertise: [
         { number: "01", title: "Mobile product engineering", text: "Responsive Flutter interfaces, Material 3, localization and true Arabic RTL, navigation, device capabilities, and accessible interaction." },
@@ -1172,7 +1201,9 @@
           items: [
             "Designed and shipped 5+ production Flutter applications across social audio, marketplaces, document management, and content.",
             "Owned architecture, state, backend integrations, performance, monetization, and publishing to Google Play and the App Store.",
-            "Standardized Clean Architecture, Cubit, dependency injection, typed failures, offline-first caching, and background workloads across products.",
+            "Integrated Google sign-in and account-scoped Drift caching in the Hasobjy student app, working with the backend team on integration requirements.",
+            "Worked with automated Flutter tests and GitHub Actions for analysis, testing, and signed build workflows.",
+            "Implemented permission-aware VIP membership administration in Kivo.",
           ],
         },
         {
@@ -1199,7 +1230,7 @@
         { label: "Architecture", value: "Clean Architecture · BLoC/Cubit · GetIt · Injectable · Freezed · dartz" },
         { label: "Backend", value: "Supabase · Firebase · Appwrite · REST · Dio · WebSockets" },
         { label: "Realtime & media", value: "ZEGOCLOUD · LiveKit · ZIM · just_audio · audio_session" },
-        { label: "Device & data", value: "Hive · SQLite · ML Kit · Tesseract · TFLite · PDF" },
+        { label: "Device & data", value: "Drift · Hive · SQLite · ML Kit · Tesseract · TFLite · PDF" },
         { label: "Release", value: "Flavors · ProGuard/R8 · Crashlytics · Secure storage · Store publishing" },
       ],
       about: {
@@ -1318,10 +1349,19 @@
           ],
         },
         {
+          id: "halalgram", category: "تواصل اجتماعي · قيد التطوير",
+          role: "تصميم الهوية وتطوير Flutter", platform: "Android · iOS",
+          summary: "تطبيق تواصل اجتماعي بواجهة عربية للمنشورات والقصص والمقاطع القصيرة والرسائل الخاصة.",
+          outcome: "صمّمت الهوية والواجهات في Figma ونفّذت التطبيق بـFlutter وSupabase، مع أدوات الإبلاغ عن المحتوى وحظر الحسابات.",
+          metrics: ["واجهة عربية RTL", "قصص ومقاطع قصيرة", "رسائل خاصة"],
+          tech: halalgramTech,
+          screens: halalgramScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.ar })),
+        },
+        {
           id: "hasobjy", category: "التعليم · قيد التطوير",
           role: "مطوّر Flutter", platform: "تطبيق الطالب",
           summary: "منصة تعليمية لطلاب المعهد والدورات المستقلة، بتجربة تعلّم مصممة للعربية.",
-          outcome: "أطوّر تطبيق Flutter بمعمارية منظّمة حسب الميزات، مع واجهات الطالب وربط المصادقة. الواجهات المعروضة من تصميم Figma.",
+          outcome: "أطوّر تطبيق Flutter بمعمارية منظّمة حسب الميزات، وربط تسجيل الدخول عبر Google وعزل التخزين المحلي لكل حساب باستخدام Drift. الواجهات المعروضة من تصميم Figma.",
           metrics: ["تعلّم الطلاب", "واجهة عربية", "قيد التطوير"], tech: ["Flutter", "Cubit", "Clean Architecture", "Firebase Auth"],
           screens: [
             { src: "assets/projects/hasobjy/screenshots/screenshot-01.png", alt: "تصميم Figma لرئيسية الطالب في حاسوبجي" },
@@ -1386,6 +1426,7 @@
         appStore: "App Store",
         github: "GitHub",
         directDownload: "APK مباشر",
+        figma: "Figma",
       },
       expertise: [
         { number: "01", title: "تطوير تطبيقات الهواتف", text: "أبني واجهات Flutter متجاوبة وسهلة الاستخدام، مع دعم كامل للعربية واتجاه RTL والتنقل وخصائص الجهاز وإمكانية الوصول." },
@@ -1413,7 +1454,9 @@
           items: [
             "صممت وأطلقت أكثر من 5 تطبيقات Flutter إنتاجية في الصوت الاجتماعي والأسواق وإدارة المستندات والمحتوى.",
             "توليت المعمارية والحالة وتكاملات الخلفية والأداء وتحقيق الدخل والنشر على Google Play وApp Store.",
-            "اعتمدت بنية موحّدة باستخدام Clean Architecture وCubit وحقن الاعتماديات، مع معالجة واضحة للأخطاء وحفظ محلي للبيانات والمهام الخلفية.",
+            "ربطت تسجيل الدخول عبر Google وعزلت التخزين المحلي لكل حساب باستخدام Drift في تطبيق حاسوبجي، بالتعاون مع فريق الخادم.",
+            "عملت مع اختبارات Flutter الآلية وGitHub Actions للتحليل والاختبارات وبناء الإصدارات الموقّعة.",
+            "نفّذت إجراءات إدارة عضويات VIP في Kivo وفق صلاحيات المشرف.",
           ],
         },
         {
@@ -1440,7 +1483,7 @@
         { label: "المعمارية", value: "Clean Architecture · BLoC/Cubit · GetIt · Injectable · Freezed · dartz" },
         { label: "الخلفية", value: "Supabase · Firebase · Appwrite · REST · Dio · WebSockets" },
         { label: "الاتصال والوسائط", value: "ZEGOCLOUD · LiveKit · ZIM · just_audio · audio_session" },
-        { label: "التخزين وخدمات الجهاز", value: "Hive · SQLite · ML Kit · Tesseract · TFLite · PDF" },
+        { label: "التخزين وخدمات الجهاز", value: "Drift · Hive · SQLite · ML Kit · Tesseract · TFLite · PDF" },
         { label: "الإصدار", value: "إعدادات متعددة للإصدار · ProGuard/R8 · مراقبة الأعطال · التخزين الآمن · النشر على المتاجر" },
       ],
       about: {

@@ -37,11 +37,16 @@ def set_run_font(run, *, size: float = 11, bold: bool = False, color=BODY) -> No
     run._element.get_or_add_rPr().rFonts.set(qn("w:cs"), "Arial")
     run.font.size = Pt(size)
     run.font.bold = bold
+    for tag, value in (("szCs", round(size * 2)), ("bCs", int(bold))):
+        prop = OxmlElement(f"w:{tag}")
+        prop.set(qn("w:val"), str(value))
+        run._element.get_or_add_rPr().append(prop)
     run.font.color.rgb = color
 
 
 def set_rtl(paragraph) -> None:
-    paragraph.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    paragraph._p.get_or_add_pPr().find(qn("w:jc")).set(qn("w:val"), "start")
     paragraph.paragraph_format.right_indent = Inches(0)
     paragraph.paragraph_format.left_indent = Inches(0)
     p_pr = paragraph._p.get_or_add_pPr()
@@ -91,15 +96,15 @@ def add_hyperlinked_text(paragraph, text: str, is_arabic: bool) -> None:
         set_rtl(paragraph)
 
 
-def configure_document(document: Document, is_arabic: bool) -> None:
+def configure_document(document: Document, is_arabic: bool, *, compact: bool) -> None:
     section = document.sections[0]
     section.start_type = WD_SECTION_START.NEW_PAGE
     section.page_width = Inches(8.5)
     section.page_height = Inches(11)
-    section.top_margin = Inches(0.62)
-    section.bottom_margin = Inches(0.62)
-    section.left_margin = Inches(0.7)
-    section.right_margin = Inches(0.7)
+    section.top_margin = Inches(0.46 if compact else 0.62)
+    section.bottom_margin = Inches(0.46 if compact else 0.62)
+    section.left_margin = Inches(0.58 if compact else 0.7)
+    section.right_margin = Inches(0.58 if compact else 0.7)
     section.header_distance = Inches(0.35)
     section.footer_distance = Inches(0.35)
 
@@ -110,8 +115,8 @@ def configure_document(document: Document, is_arabic: bool) -> None:
     normal._element.rPr.rFonts.set(qn("w:cs"), "Arial")
     normal.font.size = Pt(10)
     normal.font.color.rgb = BODY
-    normal.paragraph_format.space_after = Pt(3)
-    normal.paragraph_format.line_spacing = 1.15
+    normal.paragraph_format.space_after = Pt(2 if compact else 3)
+    normal.paragraph_format.line_spacing = 1.07 if compact else 1.15
 
     for style_name, size in (("Heading 1", 13), ("Heading 2", 11.5), ("Heading 3", 10.5)):
         style = document.styles[style_name]
@@ -122,7 +127,7 @@ def configure_document(document: Document, is_arabic: bool) -> None:
         style.font.size = Pt(size)
         style.font.bold = True
         style.font.color.rgb = ACCENT
-        style.paragraph_format.space_before = Pt(8)
+        style.paragraph_format.space_before = Pt(6 if compact else 8)
         style.paragraph_format.space_after = Pt(4)
         style.paragraph_format.keep_with_next = True
 
@@ -131,8 +136,8 @@ def configure_document(document: Document, is_arabic: bool) -> None:
     bullet.font.size = Pt(10)
     bullet.paragraph_format.left_indent = Inches(0.34)
     bullet.paragraph_format.first_line_indent = Inches(-0.18)
-    bullet.paragraph_format.space_after = Pt(2.5)
-    bullet.paragraph_format.line_spacing = 1.15
+    bullet.paragraph_format.space_after = Pt(1.5 if compact else 2.5)
+    bullet.paragraph_format.line_spacing = 1.07 if compact else 1.15
 
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -158,21 +163,21 @@ def is_section_heading(line: str, previous_blank: bool, next_blank: bool) -> boo
 def build_document(source_name: str, output_name: str, is_arabic: bool) -> None:
     lines = normalize_lines(SOURCE_DIR / source_name)
     document = Document()
-    configure_document(document, is_arabic)
+    configure_document(document, is_arabic, compact=source_name.startswith("CV_Flutter_"))
 
     content = [line for line in lines if line.strip()]
     title = content[0]
     subtitle = content[1]
 
     title_paragraph = document.add_paragraph()
-    title_paragraph.alignment = WD_ALIGN_PARAGRAPH.RIGHT if is_arabic else WD_ALIGN_PARAGRAPH.LEFT
+    title_paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
     title_paragraph.paragraph_format.space_after = Pt(2)
     set_run_font(title_paragraph.add_run(title), size=23, bold=True, color=ACCENT)
     if is_arabic:
         set_rtl(title_paragraph)
 
     subtitle_paragraph = document.add_paragraph()
-    subtitle_paragraph.alignment = title_paragraph.alignment
+    subtitle_paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
     subtitle_paragraph.paragraph_format.space_after = Pt(10)
     set_run_font(subtitle_paragraph.add_run(subtitle), size=12.5, bold=True, color=MUTED)
     if is_arabic:
@@ -240,6 +245,8 @@ def build_document(source_name: str, output_name: str, is_arabic: bool) -> None:
         if ":" in text and text.index(":") < 28:
             label, value = text.split(":", 1)
             set_run_font(paragraph.add_run(f"{label}:"), bold=True)
+            if is_arabic and value.lstrip().startswith("+"):
+                value = f" \u200e{value.strip()}\u200e"
             add_hyperlinked_text(paragraph, value, is_arabic)
         else:
             add_hyperlinked_text(paragraph, text, is_arabic)

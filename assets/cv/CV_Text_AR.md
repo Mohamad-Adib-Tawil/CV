@@ -1,50 +1,46 @@
 # محمد أديب طويل
-مطوّر Flutter / مهندس تطبيقات موبايل
+مهندس Flutter | تطوير تطبيقات الهواتف
 
-البريد: mohamad.adib.tawil@gmail.com  
-الهاتف: +963 992 688 759  
-الموقع: عن بُعد من سوريا  
-السيرة: https://mohamad-adib-tawil.github.io/CV  
-LinkedIn: https://linkedin.com/in/mohamad-adib-tawil-54024b314  
-GitHub: https://github.com/Mohamad-Adib-Tawil
+البريد الإلكتروني: mohamad.adib.tawil@gmail.com\
+الهاتف: +963 992 688 759\
+الموقع: عن بُعد (سوريا، UTC+3)\
+LinkedIn: https://www.linkedin.com/in/mohamad-adib-tawil-54024b314/\
+GitHub: https://github.com/Mohamad-Adib-Tawil\
+الملف المهني: https://mohamad-adib-tawil.github.io/CV\
 
-## الملخص
-مطوّر Flutter بخبرة 4 سنوات في العمل المستقل والعقود، مع بناء تطبيقات موبايل موجهة للإنتاج باستخدام Flutter وDart. أعمل على تنفيذ الواجهات، تكامل APIs، التخزين المحلي، ميزات الوقت الحقيقي، تجهيز الإصدارات، والنشر على المتاجر. أقوى خبراتي في Clean Architecture وBLoC/Cubit وتكامل Supabase/Appwrite/Firebase وتدفّقات offline-first وميزات الصوت وOCR/المستندات والتطبيقات التي يجب أن تبقى قابلة للاستخدام في ظروف الشبكة الضعيفة.
+## الملخص المهني
 
-## الخبرة
-### مطوّر Flutter، مستقل / عقود
-07/2022 - حتى الآن  
-عن بُعد
+مهندس Flutter بخبرة تزيد على أربع سنوات في العمل المستقل والعقود وتطوير تطبيقات Android وiOS ونشرها. طوّرت ميزات أساسية للصوت المباشر في LKLK، الذي تجاوز 10 آلاف تنزيل على Google Play. تشمل خبرتي الصوت اللحظي والتخزين دون اتصال وتكامل الواجهات البرمجية والاختبارات الآلية والنشر.
 
-- بناء وصيانة تطبيقات Flutter لمشاريع مستقلة وعقود تشمل تنفيذ الواجهات، تكامل APIs، التخزين المحلي، تجهيز الإصدارات، والنشر.
-- تنظيم تطبيقات متوسطة الحجم باستخدام Clean Architecture وBLoC/Cubit وGetIt ووحدات feature-based لفصل الواجهة ومنطق العمل وطبقة البيانات.
-- دمج REST APIs وSupabase وAppwrite وWebSockets وغرف Zego الصوتية وتدفّقات الرسائل وخدمات Firebase والمشتريات داخل التطبيق.
-- تنفيذ سلوك offline-first باستخدام Hive وSQLite والترقيم وإعادة المحاولة وأخطاء typed لجعل التدفقات الأساسية أكثر توقّعية.
-- تجهيز إصدارات إنتاجية باستخدام app flavors وProGuard/R8 وCrashlytics والتخزين الآمن وبيئات تطوير/إنتاج منفصلة.
-- استخدام isolates والمعالجة الخلفية للأعمال الأثقل مثل OCR والتعامل مع PDF وميزات الصوت والمهام الخلفية.
-- نشر وصيانة تطبيقات على Google Play وApp Store، منها تطبيق عام واحد حقق 10,000+ تنزيل.
+## الخبرة العملية
+
+مطوّر Flutter | عمل مستقل وعقود | منذ يوليو 2022
+
+- طوّرت ميزات الغرف الصوتية في LKLK، ودمجت ZEGOCLOUD وLiveKit خلف واجهة برمجية مشتركة، وأضفت إعادة الاتصال التلقائي للقنوات اللحظية.
+- ساهمت في تطبيق الطالب في حاسوبجي بربط تسجيل الدخول عبر Google وعزل التخزين المحلي لكل حساب باستخدام Drift، وتعاونت مع فريق الخادم على متطلبات التكامل. التطبيق قيد التطوير.
+- عملت على فحوص Flutter الآلية التي تغطي التنقل وبيانات الطالب بعد إعادة التشغيل. يشغّل حاسوبجي التحليل والاختبارات عبر GitHub Actions.
+- نفّذت إجراءات منح عضوية VIP وتمديدها وإلغائها في Kivo وفق صلاحيات المشرف، وعملت مع مسارات GitHub Actions لبناء حزم إصدارات موقّعة.
+- جهّزت إصدارات التطبيقات وصنتها باستخدام نسخ بناء متعددة وتهيئة البيئات وتوقيع الحزم وCrashlytics، ونشرت تطبيقات على Google Play وApp Store.
 
 ## المهارات التقنية
-- Flutter والموبايل: Flutter، Dart، Material 3، Android، iOS
-- المعمارية وإدارة الحالة: Clean Architecture، SOLID، MVVM، BLoC، Cubit، Provider، GetIt، Injectable، Dartz/Either
-- APIs وخدمات الخلفية: REST APIs، Dio، Interceptors، WebSockets، Supabase، Appwrite، Firebase Auth، FCM، Analytics، Crashlytics
-- التخزين والعمل دون اتصال: Hive، SQLite، Secure Storage، offline-first caching، pagination، retry handling
-- الوسائط وOCR والمستندات: Zego Express، ZIM، LiveKit، just_audio، audio recording، Google ML Kit، Tesseract OCR، PDF generation، printing
-- الإصدار والأدوات: ProGuard/R8، app flavors، isolates، background tasks، image optimization، Google Play، App Store، Git، GitHub، Postman، Figma
 
-## أبرز المشاريع
-- LKLK، تطبيق اجتماعي لغرف الصوت المباشرة: Flutter، Zego Express، ZIM، Appwrite، BLoC، GetIt، Hive، ProGuard/R8، Crashlytics. النتيجة العامة: 10,000+ تنزيل. Google Play: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
-- Wolfera، سوق سيارات: Flutter، Supabase، Clean Architecture، Dartz/Either، Infinite Pagination، GoRouter. GitHub: https://github.com/Mohamad-Adib-Tawil/Wolfera | Google Play: https://play.google.com/store/apps/details?id=com.wolfera.wolfera
-- Quran Ahmed Karasi، تطبيق قرآن للقراءة والصوت دون اتصال: Flutter، Clean Architecture، Cubit، just_audio، background_downloader، gen-i10n. GitHub: https://github.com/Mohamad-Adib-Tawil/Quran | Google Play: https://play.google.com/store/apps/details?id=com.ahmadkarasi.quran&pli=1 | App Store: https://apps.apple.com/app/id6759857104
-- Office Archiving، مسح مستندات وOCR: Flutter، Google ML Kit، Tesseract OCR، SQLite، PDF Processing. GitHub: https://github.com/Mohamad-Adib-Tawil/office_archiving | Google Play: https://play.google.com/store/apps/details?id=com.werewolf.office_archiving
-- Code Book، مكتبة رقمية دون اتصال: Flutter، Clean Architecture، BLoC، GetIt، Hive، Dio، WebView، Open Library API. GitHub: https://github.com/Mohamad-Adib-Tawil/Code-Books-
+- تطبيقات الهواتف: Flutter، Dart، Android، iOS، واجهات متجاوبة، تعريب ودعم RTL
+- المعمارية: Clean Architecture، تنظيم حسب الميزات، BLoC/Cubit، GetIt، GoRouter
+- الخادم والبيانات: REST، Dio، WebSockets، Supabase، PostgreSQL/RLS، Firebase، Appwrite
+- التخزين: Drift، SQLite، Hive، تخزين آمن، تخزين دون اتصال، إعادة المحاولة
+- الجودة والإصدارات: اختبارات الوحدات والواجهات والتكامل، GitHub Actions، Crashlytics، توقيع الإصدارات
+- الصوت والمستندات: LiveKit، ZEGOCLOUD، ML Kit، Tesseract OCR، معالجة PDF
+
+## المشاريع المختارة
+
+- LKLK — تطبيق صوت اجتماعي تجاوز 10 آلاف تنزيل. طوّرت الغرف الصوتية والهدايا الافتراضية والمشتريات داخل التطبيق. Google Play: https://play.google.com/store/apps/details?id=com.bwmatbw.lklklivechatapp
+- حاسوبجي — تطبيق طالب قيد التطوير بمعمارية Flutter منظّمة حسب الميزات مع Cubit. البورتفوليو: https://mohamad-adib-tawil.github.io/CV/project.html?id=hasobjy
+- Wolfera — سوق سيارات عربي وإنجليزي يضم أكثر من 15 فلتر بحث، ومحادثة عبر Supabase Realtime، وفحص الصور على الجهاز باستخدام TFLite. Google Play: https://play.google.com/store/apps/details?id=com.wolfera.wolfera
 
 ## التعليم
-دبلوم هندسة حاسبات، جامعة حلب  
-التركيز: هندسة البرمجيات  
-2020 - 2022  
-حلب، سوريا
+
+دبلوم هندسة حاسبات | مسار هندسة البرمجيات | جامعة حلب | 2020–2022 | المعدل 82.89%
 
 ## اللغات
-- العربية: لغة أم
-- الإنجليزية: كفاءة مهنية في العمل
+
+العربية: اللغة الأم | الإنجليزية: كفاءة مهنية
