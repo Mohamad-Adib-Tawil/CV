@@ -1096,15 +1096,6 @@
           ],
         },
         {
-          id: "halalgram", category: "Social app · In development",
-          role: "Brand Design & Flutter Development", platform: "Android · iOS",
-          summary: "An Arabic-first social app for posts, stories, short videos, and private messaging.",
-          outcome: "Designed the brand and screens in Figma, then implemented the app in Flutter with Supabase and user controls for reporting and blocking.",
-          metrics: ["Arabic RTL", "Stories & short video", "Private messaging"],
-          tech: halalgramTech,
-          screens: halalgramScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.en })),
-        },
-        {
           id: "hasobjy", category: "Education · In development",
           role: "Flutter Developer", platform: "Student mobile app",
           summary: "An educational platform for institute students and independent courses, with an Arabic-first learning experience.",
@@ -1142,6 +1133,15 @@
             { src: "assets/images/portfolio/office-dashboard.jpg", alt: "Office Archiving document dashboard" },
             { src: "assets/images/portfolio/office-search.jpg", alt: "Office Archiving full-text document search" },
           ],
+        },
+        {
+          id: "halalgram", category: "Social app · In development",
+          role: "Brand Design & Flutter Development", platform: "Android · iOS",
+          summary: "An Arabic-first social app for posts, stories, short videos, and private messaging.",
+          outcome: "Designed the brand and screens in Figma, then implemented the app in Flutter with Supabase and user controls for reporting and blocking.",
+          metrics: ["Arabic RTL", "Stories & short video", "Private messaging"],
+          tech: halalgramTech,
+          screens: halalgramScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.en })),
         },
       ],
       other: [
@@ -1349,15 +1349,6 @@
           ],
         },
         {
-          id: "halalgram", category: "تواصل اجتماعي · قيد التطوير",
-          role: "تصميم الهوية وتطوير Flutter", platform: "Android · iOS",
-          summary: "تطبيق تواصل اجتماعي بواجهة عربية للمنشورات والقصص والمقاطع القصيرة والرسائل الخاصة.",
-          outcome: "صمّمت الهوية والواجهات في Figma ونفّذت التطبيق بـFlutter وSupabase، مع أدوات الإبلاغ عن المحتوى وحظر الحسابات.",
-          metrics: ["واجهة عربية RTL", "قصص ومقاطع قصيرة", "رسائل خاصة"],
-          tech: halalgramTech,
-          screens: halalgramScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.ar })),
-        },
-        {
           id: "hasobjy", category: "التعليم · قيد التطوير",
           role: "مطوّر Flutter", platform: "تطبيق الطالب",
           summary: "منصة تعليمية لطلاب المعهد والدورات المستقلة، بتجربة تعلّم مصممة للعربية.",
@@ -1395,6 +1386,15 @@
             { src: "assets/images/portfolio/office-dashboard.jpg", alt: "لوحة مستندات Office Archiving" },
             { src: "assets/images/portfolio/office-search.jpg", alt: "بحث نصي ضمن المستندات في Office Archiving" },
           ],
+        },
+        {
+          id: "halalgram", category: "تواصل اجتماعي · قيد التطوير",
+          role: "تصميم الهوية وتطوير Flutter", platform: "Android · iOS",
+          summary: "تطبيق تواصل اجتماعي بواجهة عربية للمنشورات والقصص والمقاطع القصيرة والرسائل الخاصة.",
+          outcome: "صمّمت الهوية والواجهات في Figma ونفّذت التطبيق بـFlutter وSupabase، مع أدوات الإبلاغ عن المحتوى وحظر الحسابات.",
+          metrics: ["واجهة عربية RTL", "قصص ومقاطع قصيرة", "رسائل خاصة"],
+          tech: halalgramTech,
+          screens: halalgramScreenshots.slice(0, 2).map(({ src, alt }) => ({ src, alt: alt.ar })),
         },
       ],
       other: [
